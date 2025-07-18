@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Work_Sans } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import { i18n } from "@/lib/i18n.config";
 import "@/styles/globals.css";
 
