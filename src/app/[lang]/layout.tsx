@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, Work_Sans } from "next/font/google";
 import { i18n } from "@/lib/i18n.config";
 import "@/styles/globals.css";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "900"]
+const workSans = Work_Sans({
+  variable: "--font-work-sans",
+  subsets: ["latin"]
 });
 
 export const metadata: Metadata = {
@@ -33,7 +32,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`${poppins.className} antialiased`}
+        className={`${workSans.className} antialiased`}
       >
         {children}
       </body>
