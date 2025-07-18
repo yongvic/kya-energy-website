@@ -21,19 +21,6 @@ The two main objectives of this website are:
 
 ## Getting Started with Development
 
-This is a [Next.js](https://nextjs.org) project. To get started with development:
+This is a [Next.js](https://nextjs.org) project. For a complete guide on how to set up your local environment, install dependencies, and run the development server, please refer to the **[Getting Started Guide](./docs/getting-started.md)** in our documentation.
 
-1.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
-2.  **Run the development server:**
-    ```bash
-    npm run dev
-    ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the main page by modifying `src/app/page.tsx`.
-
----
-
-This `README.md` provides a clear overview for all stakeholders, from developers to business partners, ensuring everyone understands the purpose and goals of the Kya Energy website.
+For a deeper dive into the project, check out the main [documentation index](./docs/index.md).
