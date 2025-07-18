@@ -33,7 +33,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`${poppins.variable} antialiased`}
+        className={`${poppins.className} antialiased`}
       >
         {children}
       </body>
