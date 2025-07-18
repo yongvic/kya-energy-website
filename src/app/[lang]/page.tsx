@@ -1,6 +1,6 @@
-import { getDictionary } from "@/lib/get-dictionary";
+import { getTranslation } from "@/lib/get-translation";
 import { Locale } from "@/lib/i18n.config";
-import Type from "@/dictionaries/dictionaries.type";
+import TranslationsType from "@/translations/translations.definition";
 
 export default async function Home({
   params,
@@ -8,7 +8,7 @@ export default async function Home({
   params: Promise<{ lang: Locale }>;
 }) {
   const { lang } = await params;
-  const dictionary: Type = await getDictionary(lang);
+  const dictionary: TranslationsType = await getTranslation(lang);
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-8">
