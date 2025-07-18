@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import { i18n } from "@/lib/i18n.config";
+import Header from "@/components/Header";
 import "@/styles/globals.css";
 
 const workSans = Work_Sans({
@@ -34,6 +35,7 @@ export default async function RootLayout({
       <body
         className={`${workSans.className} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
