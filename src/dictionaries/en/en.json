@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Pioneering Sustainable Energy Solutions",
+    "subtitle": "Join us in building a cleaner, brighter future for everyone.",
+    "cta": "Schedule a Consultation"
+  }
+}
