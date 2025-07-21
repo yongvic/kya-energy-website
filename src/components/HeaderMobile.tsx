@@ -1,13 +1,16 @@
 import ThemeSwitcherButton from "@/components/ThemeSwitcherButton";
+import TranslationsType from "@/translations/translations.definition";
 
 export default function HeaderMobile({
-  className = ""
+  className = "",
+  dictionnary,
 }: {
-    className?: string
-  }) {
+  className?: string;
+  dictionnary: TranslationsType;
+}) {
   return (
     <div className={`${className}`}>
-      <ThemeSwitcherButton />
+      <ThemeSwitcherButton dictionnary={dictionnary} />
     </div>
   );
 }
