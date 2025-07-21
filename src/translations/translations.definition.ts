@@ -10,8 +10,13 @@ type Type = {
     subtitle: string;
     cta: string;
   };
-  theme: {
-    switcher: {
+  switcher: {
+    locale: {
+      en: string;
+      fr: string;
+      aria: string;
+    };
+    theme: {
       title: {
         light: string;
         dark: string;
