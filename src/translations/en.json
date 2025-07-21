@@ -10,8 +10,13 @@
     "subtitle": "Join us in building a cleaner, brighter future for everyone.",
     "cta": "Schedule a Consultation"
   },
-  "theme": {
-    "switcher": {
+  "switcher": {
+    "locale": {
+      "en": "English",
+      "fr": "French",
+      "aria": "Change language"
+    },
+    "theme": {
       "title": {
         "light": "Switch to light mode",
         "dark": "Switch to dark mode"
