@@ -6,7 +6,7 @@ import "@/styles/globals.css";
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
-  subsets: ["latin"]
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 /*
  * Generate differents versions of dynamic route [lang]
  * to avoid page rendering on demand and improve performance
-*/
+ */
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
@@ -33,8 +33,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`${workSans.className} antialiased`}
-      >
+        className={`bg-gray-100 dark:bg-gray-900 ${workSans.className} antialiased`}>
         <Header />
         {children}
       </body>
