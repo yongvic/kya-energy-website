@@ -8,9 +8,5 @@ export default function HeaderMobile({
   className?: string;
   dictionnary: TranslationsType;
 }) {
-  return (
-    <div className={`${className}`}>
-      <ThemeSwitcherButton dictionnary={dictionnary} />
-    </div>
-  );
+  return <div className={`${className}`}></div>;
 }
