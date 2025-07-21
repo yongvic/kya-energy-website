@@ -7,4 +7,5 @@
 
 body {
   font-family: var(--font-sans);
+  transition: all 300ms;
 }
