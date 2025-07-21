@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
-import { i18n } from "@/lib/i18n.config";
+import { i18n, Locale } from "@/lib/i18n.config";
+import { getTranslation } from "@/lib/get-translation";
+import TranslationsType from "@/translations/translations.definition";
 import Header from "@/components/Header";
 import "@/styles/globals.css";
 
@@ -27,14 +29,16 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ lang: string }>;
+  params: Promise<{ lang: Locale }>;
 }>) {
   const { lang } = await params;
+  const dictionary: TranslationsType = await getTranslation(lang);
+
   return (
     <html lang={lang}>
       <body
         className={`bg-gray-100 dark:bg-gray-900 ${workSans.className} antialiased`}>
-        <Header />
+        <Header dictionary={dictionary} />
         {children}
       </body>
     </html>
