@@ -9,5 +9,13 @@
     "title": "Pioneering Sustainable Energy Solutions",
     "subtitle": "Join us in building a cleaner, brighter future for everyone.",
     "cta": "Schedule a Consultation"
+  },
+  "theme": {
+    "switcher": {
+      "title": {
+        "light": "Switch to light mode",
+        "dark": "Switch to dark mode"
+      }
+    }
   }
 }
