@@ -10,8 +10,13 @@
     "subtitle": "Rejoignez-nous pour construire un avenir plus propre et plus lumineux pour tous.",
     "cta": "Planifier une Consultation"
   },
-  "theme": {
-    "switcher": {
+  "switcher": {
+    "locale": {
+      "en": "Anglais",
+      "fr": "Français",
+      "aria": "Changer la langue"
+    },
+    "theme": {
       "title": {
         "light": "Passer au mode clair",
         "dark": "Passer au mode sombre"
