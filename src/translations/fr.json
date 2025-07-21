@@ -9,5 +9,13 @@
     "title": "Pionnier des Solutions Énergétiques Durables",
     "subtitle": "Rejoignez-nous pour construire un avenir plus propre et plus lumineux pour tous.",
     "cta": "Planifier une Consultation"
+  },
+  "theme": {
+    "switcher": {
+      "title": {
+        "light": "Passer au mode clair",
+        "dark": "Passer au mode sombre"
+      }
+    }
   }
 }
