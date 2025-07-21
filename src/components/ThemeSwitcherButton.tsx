@@ -3,10 +3,15 @@
 import { useState, useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
+import TranslationsType from "@/translations/translations.definition";
 
 type Theme = "light" | "dark";
 
-export default function ThemeSwitcherButton() {
+export default function ThemeSwitcherButton({
+  dictionnary,
+}: {
+  dictionnary: TranslationsType;
+}) {
   const [theme, setTheme] = useState<Theme | null>(null);
 
   // Set initial theme from localStorage or system preference on component mount
@@ -50,7 +55,9 @@ export default function ThemeSwitcherButton() {
     <button
       onClick={changeTheme}
       title={
-        theme === "light" ? "Passer au mode sombre" : "Passer au mode clair"
+        theme === "light"
+          ? dictionnary.theme.switcher.title.dark
+          : dictionnary.theme.switcher.title.light
       }
       aria-label="Theme switcher"
       // This button acts as the "track" of the switch.
