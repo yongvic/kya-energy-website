@@ -10,7 +10,7 @@ export default function HeaderMobile({
 }) {
   return (
     <div className={`${className}`}>
-      <LocaleSwitcherButton dictionary={dictionnary} />
+      <LocaleSwitcherButton dictionary={dictionary} />
     </div>
   );
 }
