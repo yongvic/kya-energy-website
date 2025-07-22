@@ -3,10 +3,10 @@ import TranslationsType from "@/translations/translations.definition";
 
 export default function HeaderMobile({
   className = "",
-  dictionnary,
+  dictionary,
 }: {
   className?: string;
-  dictionnary: TranslationsType;
+  dictionary: TranslationsType;
 }) {
   return (
     <div className={`${className}`}>
