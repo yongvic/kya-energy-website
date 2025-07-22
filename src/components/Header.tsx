@@ -10,7 +10,7 @@ export default function Header({
   return (
     <header>
       <HeaderMobile dictionary={dictionary} />
-      <HeaderDesktop />
+      <HeaderDesktop dictionary={dictionary}/>
     </header>
   );
 }
