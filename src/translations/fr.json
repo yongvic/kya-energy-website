@@ -1,4 +1,7 @@
 {
+  "header": {
+    "logo": "Logo de KYA-Energy Group"
+  },
   "navigation": {
     "home": "Accueil",
     "about": "À Propos",
