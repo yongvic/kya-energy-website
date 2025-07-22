@@ -56,8 +56,8 @@ export default function ThemeSwitcherButton({
       onClick={changeTheme}
       title={
         theme === "light"
-          ? dictionnary.theme.switcher.title.dark
-          : dictionnary.theme.switcher.title.light
+          ? dictionnary.switcher.theme.title.dark
+          : dictionnary.switcher.theme.title.light
       }
       aria-label="Theme switcher"
       // This button acts as the "track" of the switch.
