@@ -8,9 +8,9 @@ import TranslationsType from "@/translations/translations.definition";
 type Theme = "light" | "dark";
 
 export default function ThemeSwitcherButton({
-  dictionnary,
+  dictionary,
 }: {
-  dictionnary: TranslationsType;
+  dictionary: TranslationsType;
 }) {
   const [theme, setTheme] = useState<Theme | null>(null);
 
@@ -56,8 +56,8 @@ export default function ThemeSwitcherButton({
       onClick={changeTheme}
       title={
         theme === "light"
-          ? dictionnary.switcher.theme.title.dark
-          : dictionnary.switcher.theme.title.light
+          ? dictionary.switcher.theme.title.dark
+          : dictionary.switcher.theme.title.light
       }
       aria-label="Theme switcher"
       // This button acts as the "track" of the switch.
