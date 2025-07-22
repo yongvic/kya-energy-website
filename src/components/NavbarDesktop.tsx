@@ -21,7 +21,7 @@ export default function NavbarDesktop() {
         {href: "/a-propos-de-kya", text: "À propos de KYA"},
         {href: "/actualites-et-engagement", text: "Actualités et engagement"}
       ].map((value) => (
-        <Navlink href={value.href} text={value.text}/>
+        <Navlink href={value.href} text={value.text} key={value.href} />
       ))}
     </nav>
   );
