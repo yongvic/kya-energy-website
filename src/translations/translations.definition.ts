@@ -1,4 +1,7 @@
 type Type = {
+  header: {
+    logo: string;
+  };
   navigation: {
     home: string;
     about: string;

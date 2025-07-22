@@ -9,8 +9,8 @@ export default function Header({
 }) {
   return (
     <header>
-      <HeaderMobile dictionary={dictionary} />
-      <HeaderDesktop />
+      <HeaderMobile dictionary={dictionary} className="md:hidden"/>
+      <HeaderDesktop dictionary={dictionary} className="hidden md:block"/>
     </header>
   );
 }

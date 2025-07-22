@@ -1,4 +1,7 @@
 {
+  "header": {
+    "logo": "KYA-Energy Group logo"
+  },
   "navigation": {
     "home": "Home",
     "about": "About",
