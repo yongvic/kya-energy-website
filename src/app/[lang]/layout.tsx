@@ -22,9 +22,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }): Promise<Metadata> {
-  const dictionary = await getTranslation(params.lang);
+  const { lang } = await params;
+  const dictionary = await getTranslation(lang);
   const { hero, header } = dictionary;
   const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
     ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
@@ -38,7 +39,7 @@ export async function generateMetadata({
     description: hero.subtitle,
     metadataBase: new URL(baseUrl),
     alternates: {
-      canonical: `/${params.lang}`,
+      canonical: `/${lang}`,
       languages: {
         "en-US": "/en",
         "fr-FR": "/fr",
@@ -47,7 +48,7 @@ export async function generateMetadata({
     openGraph: {
       title: "KYA Energy Group",
       description: hero.subtitle,
-      url: `/${params.lang}`,
+      url: `/${lang}`,
       siteName: "KYA Energy Group",
       images: [
         {
@@ -57,7 +58,7 @@ export async function generateMetadata({
           alt: header.logo,
         },
       ],
-      locale: params.lang,
+      locale: lang,
       type: "website",
     },
     twitter: {
