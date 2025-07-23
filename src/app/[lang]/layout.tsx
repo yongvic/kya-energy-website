@@ -90,7 +90,7 @@ export default async function RootLayout({
       <body
         className={`bg-gray-100 dark:bg-gray-900 ${raleway.className} antialiased`}>
         <Header dictionary={dictionary} />
-        {children}
+        <main className="pt-24 md:pt-36">{children}</main>
       </body>
     </html>
   );
