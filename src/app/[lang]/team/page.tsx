@@ -1,8 +1,7 @@
 "use client";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, useMotionValue, useSpring, PanInfo } from "framer-motion";
 import Image from "next/image";
-import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
+import { MouseEvent } from "react";
 
 const teamMembers = [
   { name: "Agbehadji", image: "/team/agbehadji.avif", role: "Lead Developer" },
@@ -14,81 +13,83 @@ const teamMembers = [
   { name: "Tchassama", image: "/team/tchassama.avif", role: "CTO" },
 ];
 
-const variants = {
-  enter: (direction: number) => ({
-    x: direction > 0 ? 1000 : -1000,
-    opacity: 0,
-  }),
-  center: {
-    zIndex: 1,
-    x: 0,
-    opacity: 1,
-  },
-  exit: (direction: number) => ({
-    zIndex: 0,
-    x: direction < 0 ? 1000 : -1000,
-    opacity: 0,
-  }),
-};
-
 export default function TeamCarousel() {
-  const [[page, direction], setPage] = useState([0, 0]);
+  const rotateY = useMotionValue(0);
+  const springRotateY = useSpring(rotateY, {
+    damping: 30,
+    stiffness: 100,
+    mass: 0.5,
+  });
 
-  const paginate = (newDirection: number) => {
-    setPage([(page + newDirection + teamMembers.length) % teamMembers.length, newDirection]);
+  const handlePan = (e: PointerEvent, info: PanInfo) => {
+    // Adjust sensitivity of the drag
+    rotateY.set(rotateY.get() + info.delta.x * 0.1);
   };
 
-  const member = teamMembers[page];
+  const handlePanEnd = (e: PointerEvent, info: PanInfo) => {
+    // Add inertia to the rotation
+    springRotateY.set(rotateY.get() + info.velocity.x * 0.1, true);
+  };
+
+  const radius = 350;
+  const angleIncrement = 360 / teamMembers.length;
 
   return (
-    <div className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
-      <AnimatePresence initial={false} custom={direction}>
+    <motion.div
+      onPan={handlePan}
+      onPanEnd={handlePanEnd}
+      className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden cursor-grab py-48"
+      whileTap={{ cursor: "grabbing" }}
+    >
+      <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center select-none">
+        Meet Our Team
+      </h2>
+      <motion.div
+        className="relative flex items-center justify-center"
+        style={{
+          width: "100%",
+          height: "500px",
+          perspective: "1000px",
+          transformStyle: "preserve-3d",
+        }}
+      >
         <motion.div
-          key={page}
-          custom={direction}
-          variants={variants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 },
+          className="absolute w-full h-full"
+          style={{
+            transformStyle: "preserve-3d",
+            rotateY: springRotateY,
           }}
-          className="absolute w-full h-full flex flex-col items-center justify-center"
         >
-          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-lg">
-            <Image
-              src={member.image}
-              alt={member.name}
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-          <h3 className="text-2xl font-semibold mt-4">{member.name}</h3>
-          <p className="text-lg text-gray-600 dark:text-gray-400">{member.role}</p>
+          {teamMembers.map((member, i) => {
+            const angle = i * angleIncrement;
+            return (
+              <div
+                key={member.name}
+                className="absolute w-64 md:w-72 text-center select-none"
+                style={{
+                  transform: `rotateY(${angle}deg) translateZ(${radius}px)`,
+                  top: "50%",
+                  left: "50%",
+                  margin: "-160px 0 0 -144px",
+                }}
+              >
+                <div className="relative w-full h-96 scale-75 bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg pointer-events-none">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
+                <p className="text-md text-gray-600 dark:text-gray-400">
+                  {member.role}
+                </p>
+              </div>
+            );
+          })}
         </motion.div>
-      </AnimatePresence>
-
-      <div className="absolute top-1/2 left-4 md:left-8 transform -translate-y-1/2 z-10">
-        <button onClick={() => paginate(-1)} className="bg-white/50 dark:bg-black/50 p-2 rounded-full">
-          <LuChevronLeft size={32} />
-        </button>
-      </div>
-      <div className="absolute top-1/2 right-4 md:right-8 transform -translate-y-1/2 z-10">
-        <button onClick={() => paginate(1)} className="bg-white/50 dark:bg-black/50 p-2 rounded-full">
-          <LuChevronRight size={32} />
-        </button>
-      </div>
-
-      <div className="absolute bottom-8 flex space-x-2 z-10">
-        {teamMembers.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setPage([i, i > page ? 1 : -1])}
-            className={`w-3 h-3 rounded-full ${page === i ? "bg-green-500" : "bg-gray-400"}`}
-          />
-        ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
