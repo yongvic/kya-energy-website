@@ -31,7 +31,7 @@ export default function HeaderDesktop({
         </div>
       </div>
       {/* Bottom nav */}
-      <NavbarDesktop />
+      <NavbarDesktop dictionary={dictionary} />
     </div>
   );
 }
