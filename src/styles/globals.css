@@ -2,7 +2,8 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme inline {
-  --font-sans: var(--font-work-sans);
+  --font-sans: var(--font-raleway);
+  --font-raleway: var(--font-raleway);
 }
 
 body {
@@ -11,7 +12,7 @@ body {
 }
 
 .navlink {
-  @apply font-medium relative;
+  @apply font-semibold relative;
 }
 
 .navlink::before {
@@ -19,13 +20,12 @@ body {
   transition-duration: 300ms;
   position: absolute;
   width: 0;
-  height: 2px;
-  bottom: -2px;
-  left: 50%;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
   background-color: green;
 }
 
 .navlink:hover::before {
-  width: 80%;
-  left: 10%;
+  width: 100%;
 }
