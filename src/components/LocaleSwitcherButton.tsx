@@ -45,7 +45,7 @@ export default function LocaleSwitcherButton({
     <div className="w-max relative" ref={switcherRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex h-12 items-center justify-center gap-2 bg-slate-200 px-4 rounded font-bold font-sans">
+        className="flex h-12 items-center justify-center gap-2 px-4 rounded font-bold font-sans">
         <Image
           src={getFlagUrl(currentLocale)}
           alt={dictionary.switcher.locale[currentLocale]}
