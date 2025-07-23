@@ -11,17 +11,67 @@ const raleway = Raleway({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Kya Energy",
-  description: "Sustainable Energy Solutions for a Brighter Future",
-};
-
 /*
  * Generate differents versions of dynamic route [lang]
  * to avoid page rendering on demand and improve performance
  */
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { lang: Locale };
+}): Promise<Metadata> {
+  const dictionary = await getTranslation(params.lang);
+  const { hero, header } = dictionary;
+  const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
+    ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+    : `http://localhost:${process.env.PORT || 3000}`;
+
+  return {
+    title: {
+      default: "KYA Energy Group",
+      template: `%s | KYA Energy Group`,
+    },
+    description: hero.subtitle,
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: `/${params.lang}`,
+      languages: {
+        "en-US": "/en",
+        "fr-FR": "/fr",
+      },
+    },
+    openGraph: {
+      title: "KYA Energy Group",
+      description: hero.subtitle,
+      url: `/${params.lang}`,
+      siteName: "KYA Energy Group",
+      images: [
+        {
+          url: "/logo.webp",
+          width: 800,
+          height: 600,
+          alt: header.logo,
+        },
+      ],
+      locale: params.lang,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "KYA Energy Group",
+      description: hero.subtitle,
+      images: ["/logo.webp"],
+    },
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+      apple: "/logo.webp",
+    },
+  };
 }
 
 export default async function RootLayout({
