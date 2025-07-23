@@ -2,6 +2,21 @@ type Type = {
   header: {
     logo: string;
   };
+  /*
+    Awards definition here
+    image: image name under public/awards folder
+    title: title that will be shown,
+    description: a small description of how/why/what of the award
+    order: the order of award winning starting from the first that has the 1 index
+    year: the year the award was won
+  */
+  awards: {
+      image: string;
+      title: string;
+      description: string;
+      order: number;
+      year: number; 
+  }[];
   navigation: {
     home: string;
     about: string;
