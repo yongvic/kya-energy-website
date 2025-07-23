@@ -69,7 +69,13 @@ function AwardSection({
       style={{ scale, opacity }}
       className="relative h-screen w-full flex flex-col md:flex-row items-center justify-center snap-start pt-24"
     >
-      <div className="w-full md:w-1/2 h-1/2 md:h-full relative px-4">
+      {/* Timeline Line */}
+      <div className="absolute top-0 right-8 md:right-16 w-0.5 h-full bg-gray-300 dark:bg-gray-700" />
+
+      {/* Timeline Bullet */}
+      <div className="absolute top-1/2 -translate-y-1/2 right-8 md:right-16 translate-x-1/2 w-8 h-8 rounded-full bg-green-500 border-4 border-white dark:border-gray-900" />
+
+      <div className="w-full md:w-1/2 h-1/2 md:h-full relative pl-24 pr-4">
         <Image
           src={award.image}
           alt={award.title}
