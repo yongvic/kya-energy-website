@@ -2,6 +2,92 @@
   "header": {
     "logo": "Logo de KYA-Energy Group"
   },
+  "awards": [
+    {
+      "image": "ecreee.avif",
+      "title": "Prix de l'installation des mini-centrales les plus propres",
+      "description": "KYA-Energy GROUP grâce à ses installations reçoit le prix des mini-centrales les plus propres de l'année 2024.",
+      "order": 12,
+      "year": 2024
+    },
+    {
+      "image": "cetef.avif",
+      "title": "Prix de l'idée lumineuse",
+      "description": "KYA-Energy GROUP a reçu le prix de l'idée lumineuse pour ses innovations dans le domaine de l'énergie solaire.",
+      "order": 11,
+      "year": 2024
+    },
+    {
+      "image": "geap.avif",
+      "title": "Prix du Global entrepreneur awards",
+      "description": "Le professeur Yao AZOUMAH a été nominé au global entrepreneur awards.",
+      "order": 10,
+      "year": 2024
+    },
+    {
+      "image": "hitech.avif",
+      "title": "Prix du meilleur partenaire avec HITECH",
+      "description": "KYA-Energy GROUP a reçu ce prix en 2023 des mains de HITECH pour sa bonne collaboration.",
+      "order": 9,
+      "year": 2023
+    },
+    {
+      "image": "pbea.avif",
+      "title": "Prix des bâtisseurs de l'économie africaine",
+      "description": "Pour sa capacité entrepreneuriale et sa contribution au KYA-Energy Group à faire partie des bâtisseurs.",
+      "order": 8,
+      "year": 2023
+    },
+    {
+      "image": "gpgmk.avif",
+      "title": "Grand Prix Général Mathieu Kérékou",
+      "description": "Le DG de KYA-Energy Group, a reçu le Grand Prix de Meilleur Acteur de développement eu égard à son amour du travail bien fait.",
+      "order": 7,
+      "year": 2023
+    },    
+    {
+      "image": "usaid.avif",
+      "title": "Lauréat de l'USAID pour l'électrification solaire",
+      "description": "La seule entreprise francophone parmi les 9 pays lauréats pour l'électrification solaire des centres de santé.",
+      "order": 6,
+      "year": 2023
+    },
+    {
+      "image": "pvri.avif",
+      "title": "Prix de la valorisation de la recherche et de l'innovation",
+      "description": "KYA-Energy GROUP a été nominé à TOGO TOP IMPACT 2022.",
+      "order": 5,
+      "year": 2022
+    },
+    {
+      "image": "padev.avif",
+      "title": "Prix PADEV",
+      "description": "Trophée du Prix Africain du Mérite et de l'Excellence dans le domaine des énergies renouvelables.",
+      "order": 4,
+      "year": 2022
+    },
+    {
+      "image": "piie.avif",
+      "title": "Palme internationale de l'innovation énergétique",
+      "description": "Lauréat de 100 Entreprises les plus Dynamiques du TOGO.",
+      "order": 3,
+      "year": 2021
+    },
+    {
+      "image": "ptet.avif",
+      "title": "Prix de la transition énergétique au Togo",
+      "description": "KYA-Energy Group nominé Emerging Leader 2020.",
+      "order": 2,
+      "year": 2020
+    },
+    {
+      "image": "boad.avif",
+      "title": "Prix BOAD du concours \"StartUp\"",
+      "description": "KYA-Energy GROUP lauréat du concours \"StartUp\" BOAD 2018.",
+      "order": 1,
+      "year": 2018
+    }
+  ],
   "navigation": {
     "home": "Accueil",
     "about": "À Propos",
