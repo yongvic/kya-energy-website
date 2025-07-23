@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Work_Sans } from "next/font/google";
+import { Raleway } from "next/font/google";
 import { i18n, Locale } from "@/lib/i18n.config";
 import { getTranslation } from "@/lib/get-translation";
 import TranslationsType from "@/translations/translations.definition";
 import Header from "@/components/Header";
 import "@/styles/globals.css";
 
-const workSans = Work_Sans({
-  variable: "--font-work-sans",
+const raleway = Raleway({
+  variable: "--font-raleway",
   subsets: ["latin"],
 });
 
@@ -37,7 +37,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`bg-gray-100 dark:bg-gray-900 ${workSans.className} antialiased`}>
+        className={`bg-gray-100 dark:bg-gray-900 ${raleway.className} antialiased`}>
         <Header dictionary={dictionary} />
         {children}
       </body>
