@@ -1,7 +1,6 @@
 "use client";
 import { motion, useMotionValue, useSpring, PanInfo } from "framer-motion";
 import Image from "next/image";
-import { MouseEvent } from "react";
 
 const teamMembers = [
   { name: "Agbehadji", image: "/team/agbehadji.avif", role: "Lead Developer" },
