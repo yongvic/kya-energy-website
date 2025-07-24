@@ -8,9 +8,9 @@ import LocaleSwitcherButton from "@/components/LocaleSwitcherButton";
 export default function HeaderDesktop({
   className, dictionary
 }: {
-    className?: string,
-    dictionary: TranslationsType
-  }) {
+  className?: string,
+  dictionary: TranslationsType
+}) {
   return (
     <div className={`${className} container mx-auto px-4`}>
       {/* Top header */}
@@ -24,8 +24,8 @@ export default function HeaderDesktop({
           />
         </div>
         <div className="flex items-center justify-center gap-2">
-          <Link href="" className="px-4 py-2 font-medium text-lg border rounded-md">Politique qualité</Link>
-          <Link href="" className="px-4 py-2 font-medium text-lg rounded-md bg-green-400 hover:bg-green-500 transition-colors duration-300">Contact</Link>
+          <Link href="" className="px-4 py-2 font-bold text-kya-green text-lg">Politique qualité</Link>
+          <Link href="" className="px-4 py-2 text-lg rounded bg-kya-green hover:bg-kya-green-light text-white font-bold transition-colors duration-300">Contact</Link>
           <LocaleSwitcherButton dictionary={dictionary} />
           <ThemeSwitcherButton dictionary={dictionary} />
         </div>
