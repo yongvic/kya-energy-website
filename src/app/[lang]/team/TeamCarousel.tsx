@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, PanInfo } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import Image from "next/image";
 import TranslationsType from "@/translations/translations.definition";
 
@@ -16,14 +16,16 @@ export default function TeamCarousel(
         mass: 0.5,
     });
 
-    const handlePan = (e: PointerEvent, info: PanInfo) => {
-        // Adjust sensitivity of the drag
-        rotateY.set(rotateY.get() + info.delta.x * 0.1);
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        const { clientX, currentTarget } = e;
+        const { left, width } = currentTarget.getBoundingClientRect();
+        const mouseX = clientX - left;
+        const percentage = (mouseX / width - 0.5) * 2; // Normalize to -1 to 1
+        rotateY.set(percentage * 180); // Rotate 180 degrees in each direction
     };
 
-    const handlePanEnd = (e: PointerEvent, info: PanInfo) => {
-        // Add inertia to the rotation
-        springRotateY.set(rotateY.get() + info.velocity.x * 0.1, true);
+    const handleMouseLeave = () => {
+        springRotateY.set(0, true);
     };
 
     const radius = 350;
@@ -31,10 +33,9 @@ export default function TeamCarousel(
 
     return (
         <motion.div
-            onPan={handlePan}
-            onPanEnd={handlePanEnd}
-            className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden cursor-grab py-48"
-            whileTap={{ cursor: "grabbing" }}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden py-48"
         >
             <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center select-none">
                 Meet Our Team
