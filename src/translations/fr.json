@@ -91,8 +91,8 @@
   "navigation": {
     "home": "Accueil",
     "about": "À Propos",
-    "services": "Services",
-    "contact": "Contact"
+    "products-and-services": "Produits et Services",
+    "news-and-engagement": "Actualités et Engagement"
   },
   "hero": {
     "title": "Pionnier des Solutions Énergétiques Durables",
