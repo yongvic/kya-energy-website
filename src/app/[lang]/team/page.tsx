@@ -1,18 +1,19 @@
 "use client";
+import { getTranslation } from "@/lib/get-translation";
+import { Locale } from "@/lib/i18n.config";
+import TranslationsType from "@/translations/translations.definition";
 import { motion, useMotionValue, useSpring, PanInfo } from "framer-motion";
 import Image from "next/image";
 
-const teamMembers = [
-  { name: "Agbehadji", image: "/team/agbehadji.avif", role: "Lead Developer" },
-  { name: "Azoumah", image: "/team/azoumah.avif", role: "CEO" },
-  { name: "Eklou", image: "/team/eklou.avif", role: "Project Manager" },
-  { name: "Fousseni", image: "/team/fousseni.avif", role: "Marketing Lead" },
-  { name: "Lawson", image: "/team/lawson.avif", role: "Designer" },
-  { name: "Shikpe", image: "/team/shikpe.avif", role: "COO" },
-  { name: "Tchassama", image: "/team/tchassama.avif", role: "CTO" },
-];
 
-export default function TeamCarousel() {
+export default async function TeamPage({
+  params,
+}: {
+  params: Promise<{ lang: Locale }>;
+}) {
+  const { lang } = await params;
+  const dictionary: TranslationsType = await getTranslation(lang);
+  const teamMembers = dictionary.team;
   const rotateY = useMotionValue(0);
   const springRotateY = useSpring(rotateY, {
     damping: 30,
