@@ -60,7 +60,7 @@ export default function TeamCarousel(
                         return (
                             <div
                                 key={member.name}
-                                className="absolute w-64 md:w-72 text-center select-none"
+                                className="absolute text-center select-none"
                                 style={{
                                     transform: `rotateY(${angle}deg) translateZ(${radius}px)`,
                                     top: "50%",
@@ -68,7 +68,7 @@ export default function TeamCarousel(
                                     margin: "-160px 0 0 -144px",
                                 }}
                             >
-                                <div className="relative w-[296px] h-[361px] scale-75 bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg pointer-events-none">
+                                <div className="scale-50 relative w-[296px] h-[361px] bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg pointer-events-none">
                                     <Image
                                         src={`/team/${member.image}`}
                                         alt={member.name}
@@ -77,7 +77,7 @@ export default function TeamCarousel(
                                         className="object-cover"
                                     />
                                 </div>
-                                <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
+                                <h3 className="text-xl font-semibold -mt-8">{member.name}</h3>
                                 <p className="text-md text-gray-600 dark:text-gray-400">
                                     {member.role}
                                 </p>
