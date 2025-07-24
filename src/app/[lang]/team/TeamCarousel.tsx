@@ -33,9 +33,9 @@ export default function TeamCarousel(
         rotateY.set(percentage * 180); // Rotate 180 degrees in each direction
     };
 
-    const handleMouseLeave = () => {
-        springRotateY.set(0, true);
-    };
+    // const handleMouseLeave = () => {
+    //     springRotateY.set(0, true);
+    // };
 
     const radius = 350;
     const angleIncrement = 360 / teamMembers.length;
@@ -43,10 +43,10 @@ export default function TeamCarousel(
     return (
         <motion.div
             onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
+            // onMouseLeave={handleMouseLeave}
             onTouchMove={handleTouchMove}
-            onTouchEnd={handleMouseLeave}
-            onTouchCancel={handleMouseLeave}
+            // onTouchEnd={handleMouseLeave}
+            // onTouchCancel={handleMouseLeave}
             className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden py-48"
         >
             <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center select-none">
