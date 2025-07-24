@@ -24,6 +24,14 @@ export default function TeamCarousel(
         rotateY.set(percentage * 180); // Rotate 180 degrees in each direction
     };
 
+    const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+        const { clientX, currentTarget } = e.touches[0];
+        const { left, width } = currentTarget.getBoundingClientRect();
+        const touchX = clientX - left;
+        const percentage = (touchX / width - 0.5) * 2; // Normalize to -1 to 1
+        rotateY.set(percentage * 180); // Rotate 180 degrees in each direction
+    };
+
     const handleMouseLeave = () => {
         springRotateY.set(0, true);
     };
@@ -35,6 +43,9 @@ export default function TeamCarousel(
         <motion.div
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleMouseLeave}
+            onTouchCancel={handleMouseLeave}
             className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden py-48"
         >
             <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center select-none">
