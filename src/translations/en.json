@@ -99,6 +99,43 @@
     "subtitle": "Join us in building a cleaner, brighter future for everyone.",
     "cta": "Schedule a Consultation"
   },
+  "team": [
+    {
+      "name": "Prof. Yao K. AZOUMAH",
+      "role": "General Manager",
+      "image": "azoumah.avif"
+    },
+    {
+      "name": "M. Yves LAWSON",
+      "role": "Deputy General Manager",
+      "image": "lawson.avif"
+    },
+    {
+      "name": "M. TCHASSAMA",
+      "role": "Technical and Operations Director",
+      "image": "tchassama.avif"
+    },
+    {
+      "name": "Mme Sylvie SHIKPE",
+      "role": "Sales and Marketing Director",
+      "image": "shikpe.avif"
+    },
+    {
+      "name": "M. Yaovi EKLOU",
+      "role": "Human Resources Director",
+      "image": "eklou.avif"
+    },
+    {
+      "name": "M. Mohammed FOUSSENI",
+      "role": "Financial and Accounting Director",
+      "image": "fousseni.avif"
+    },
+    {
+      "name": "Mme Massan AGBEHADJI",
+      "role": "Executive Assistant",
+      "image": "agbehadji.avif"
+    }
+  ],
   "switcher": {
     "locale": {
       "en": "English",
