@@ -68,7 +68,7 @@ export default function TeamCarousel(
                                     margin: "-160px 0 0 -144px",
                                 }}
                             >
-                                <div className="relative w-full h-96 scale-75 bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg pointer-events-none">
+                                <div className="relative w-[296px] h-[361px] scale-75 bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg pointer-events-none">
                                     <Image
                                         src={`/team/${member.image}`}
                                         alt={member.name}
