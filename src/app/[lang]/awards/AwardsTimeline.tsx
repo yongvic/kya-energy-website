@@ -39,8 +39,8 @@ function AwardSection({
       {/* Timeline Bullet */}
       <div
         className={`absolute top-1/2 -translate-y-1/2 ${isEven
-            ? "right-8 md:right-16 translate-x-1/2"
-            : "left-8 md:left-16 -translate-x-1/2"
+          ? "right-8 md:right-16 translate-x-1/2"
+          : "left-8 md:left-16 -translate-x-1/2"
           } w-8 h-8 rounded-full bg-green-500 border-4 border-white dark:border-gray-900`}
       />
 
@@ -73,13 +73,13 @@ function AwardSection({
 
 export default function AwardsTimeline({ awards }: { awards: Award[] }) {
   const targetRef = useRef(null);
+  const { scrollYProgress: sectionScrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "end start"],
+  });
   return (
     <div className="h-screen w-full snap-y snap-mandatory overflow-y-scroll">
       {awards.map((award, i) => {
-        const { scrollYProgress: sectionScrollYProgress } = useScroll({
-          target: targetRef,
-          offset: ["start end", "end start"],
-        });
 
         return (
           <div ref={targetRef} key={award.order}>
