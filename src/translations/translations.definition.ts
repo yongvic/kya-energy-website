@@ -20,8 +20,8 @@ type Type = {
   navigation: {
     home: string;
     about: string;
-    services: string;
-    contact: string;
+    "products-and-services": string;
+    "news-and-engagement": string;
   };
   hero: {
     title: string;
