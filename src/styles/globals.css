@@ -2,6 +2,9 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme inline {
+  /* KYA palette color */
+  --color-kya-green: #059a84;
+  --color-kya-orange: #f5a807;
   --font-sans: var(--font-raleway);
   --font-raleway: var(--font-raleway);
 }
