@@ -1,3 +1,5 @@
+"use client";
+
 import { motion, useMotionValue, useSpring, PanInfo } from "framer-motion";
 import Image from "next/image";
 import TranslationsType from "@/translations/translations.definition";
@@ -68,10 +70,11 @@ export default function TeamCarousel(
                             >
                                 <div className="relative w-full h-96 scale-75 bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg pointer-events-none">
                                     <Image
-                                        src={member.image}
+                                        src={`/team/${member.image}`}
                                         alt={member.name}
-                                        layout="fill"
-                                        objectFit="cover"
+                                        width={296}
+                                        height={361}
+                                        className="object-cover"
                                     />
                                 </div>
                                 <h3 className="text-xl font-semibold mt-4">{member.name}</h3>
