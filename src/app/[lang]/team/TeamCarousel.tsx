@@ -25,7 +25,8 @@ export default function TeamCarousel(
     };
 
     const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-        const { clientX, currentTarget } = e.touches[0];
+        const { clientX } = e.touches[0];
+        const { currentTarget } = e;
         const { left, width } = currentTarget.getBoundingClientRect();
         const touchX = clientX - left;
         const percentage = (touchX / width - 0.5) * 2; // Normalize to -1 to 1
