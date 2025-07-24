@@ -44,25 +44,25 @@ export function Navlink({ href, text, children, isMobile = false }: NavlinkArgs)
   }
 
   return (
-    <Link href={href} className="group block py-3">
+    <div className="group block py-3">
       {children ? (
         <>
-          <p className="flex items-center gap-2 navlink">
+          <Link href={href} className="flex items-center gap-2 navlink">
             {text}
             <LuChevronDown
               className="group-hover:rotate-180 transition-all duration-300"
               size={20}
             />
-          </p>
-          <div className="opacity-0 invisible group-hover:opacity-100 group-hover:visible absolute top-full left-0 w-full transition-all duration-300 bg-white shadow-lg p-4 rounded-lg mt-3 text-black z-10">
+          </Link>
+          <div className="opacity-0 invisible group-hover:opacity-100 group-hover:visible absolute top-full left-1/2 -translate-x-1/2 w-2/3 h-[20rem] transition-all duration-300 bg-white shadow-lg p-4 rounded-lg mt-3 text-black z-10">
             {children}
           </div>
         </>
       ) : (
-        <p className="navlink">
+        <Link href={href} className="navlink">
           <span>{text}</span>
-        </p>
+        </Link>
       )}
-    </Link>
+    </div>
   );
 }
