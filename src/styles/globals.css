@@ -1,9 +1,16 @@
 @import "tailwindcss";
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
+:root {
+  --kya-green: #059a84;
+  --kya-orange: #f5a807;
+  --kya-green-light: #059a847f;
+}
+
 @theme inline {
   /* KYA palette color */
   --color-kya-green: #059a84;
+  --color-kya-green-light: #2cb9a4;
   --color-kya-orange: #f5a807;
   --font-sans: var(--font-raleway);
   --font-raleway: var(--font-raleway);
