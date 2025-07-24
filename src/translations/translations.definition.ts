@@ -11,11 +11,11 @@ type Type = {
     year: the year the award was won
   */
   awards: {
-      image: string;
-      title: string;
-      description: string;
-      order: number;
-      year: number; 
+    image: string;
+    title: string;
+    description: string;
+    order: number;
+    year: number;
   }[];
   navigation: {
     home: string;
@@ -28,6 +28,11 @@ type Type = {
     subtitle: string;
     cta: string;
   };
+  team: {
+    name: string;
+    image: string;
+    role: string;
+  }[];
   switcher: {
     locale: {
       en: string;
