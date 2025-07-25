@@ -2,10 +2,10 @@
 import { Navlink, NavlinkArgs } from "@/components/Navlink";
 import TranslationsType from "@/translations/translations.definition";
 import Link from "next/link";
-import { getCurrentLocale, redirectedPathName } from "@/lib/locale-utils";
+import { getCurrentLocale } from "@/lib/locale-utils";
 import { usePathname } from "next/navigation";
 import { LuChevronRight } from "react-icons/lu";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function NavbarDesktop({
   dictionary,
@@ -30,7 +30,7 @@ export default function NavbarDesktop({
   const navlinks: NavlinkArgs[] = [
     {
       href: `/${currentLocale}`,
-      text: dictionary.navigation.home
+      text: dictionary.navigation.home,
     },
     {
       href: `/${currentLocale}/products-and-services`,
@@ -40,7 +40,7 @@ export default function NavbarDesktop({
     {
       href: `/${currentLocale}/about`,
       text: dictionary.navigation.about,
-      children: <About />
+      children: <About />,
     },
     {
       href: `/${currentLocale}/news-and-engagement`,
@@ -48,20 +48,15 @@ export default function NavbarDesktop({
       children: <NewsAndEngagement />,
     },
   ];
-  console.log(pathname);
 
   function Links() {
-    const [children, setChildren] = useState<NavlinkArgs>();
-
-    useEffect(() => {
-      if (!children) {
-        setChildren(navlinks.find(link => link.href === pathname));
-      }
-    }, []);
+    const [children, setChildren] = useState(
+      navlinks.find((link) => link.href === pathname),
+    );
 
     function handleHover(e: React.MouseEvent | React.TouchEvent) {
       const href = (e.currentTarget as HTMLAnchorElement).getAttribute("href");
-      const hoveredLink = navlinks.find(link => link.href === href);
+      const hoveredLink = navlinks.find((link) => link.href === href);
       setChildren(hoveredLink);
     }
 
@@ -69,7 +64,12 @@ export default function NavbarDesktop({
       <div className="w-max flex gap-2 items-stretch">
         <div className="space-y-2">
           {navlinks.map((link) => (
-            <Link href={link.href} key={link.href} onMouseMove={handleHover} onTouchMove={handleHover} className={`flex font-semibold items-center justify-between text-nowrap rounded w-full gap-2 p-2 hover:bg-kya-green hover:text-white transition-all duration-300 ${link.href === pathname ? "text-white bg-kya-green-light" : "text-gray-700"}`}>
+            <Link
+              href={link.href}
+              key={link.href}
+              onMouseMove={handleHover}
+              onTouchMove={handleHover}
+              className={`flex font-semibold items-center justify-between text-nowrap rounded w-full gap-2 p-2 hover:bg-kya-green hover:text-white transition-all duration-300 ${link.href === pathname ? "text-white bg-kya-green-light" : "text-gray-700"}`}>
               {link.text}
               {link.children && (
                 <LuChevronRight
@@ -80,16 +80,14 @@ export default function NavbarDesktop({
             </Link>
           ))}
         </div>
-        <div className="bg-gray-50 size-full">
-          {children?.children}
-        </div>
+        <div className="bg-gray-50 size-full">{children?.children}</div>
       </div>
     );
   }
 
   return (
     <nav className="relative flex items-center justify-center gap-6">
-      {navlinks.map((link) => (
+      {navlinks.map((link) =>
         link.children ? (
           <Navlink key={link.href} href={link.href} text={link.text}>
             <div className="flex gap-4">
@@ -98,7 +96,8 @@ export default function NavbarDesktop({
           </Navlink>
         ) : (
           <Navlink href={link.href} text={link.text} key={link.href} />
-        )))}
+        ),
+      )}
     </nav>
   );
 }
