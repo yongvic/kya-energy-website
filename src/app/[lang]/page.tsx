@@ -1,6 +1,5 @@
-"use client";
-// import { getTranslation } from "@/lib/get-translation";
-// import { Locale } from "@/lib/i18n.config";
+import { getTranslation } from "@/lib/get-translation";
+import { Locale } from "@/lib/i18n.config";
 import Link from "next/link";
 import Image from "next/image";
 import { FaCheckCircle } from "react-icons/fa";
@@ -25,12 +24,13 @@ import { LiaUserGraduateSolid } from "react-icons/lia";
 import { MdCardMembership, MdCo2 } from "react-icons/md";
 import { SiEnterprisedb } from "react-icons/si";
 
-export default function Home() {
-  // params,
-  // }: {
-  // params: Promise<{ lang: Locale }>;
-  // const { lang } = await params;
-  // await getTranslation(lang);
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ lang: Locale }>;
+}) {
+  const { lang } = await params;
+  await getTranslation(lang);
 
   return (
     <main>
