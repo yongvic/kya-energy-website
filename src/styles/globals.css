@@ -38,7 +38,7 @@ body {
   height: 3px;
   bottom: -3px;
   left: 0;
-  background-color: green;
+  background-color: var(--kya-green);
 }
 
 .navlink:hover::before {

@@ -10,7 +10,12 @@ export type NavlinkArgs = {
   isMobile?: boolean;
 };
 
-export function Navlink({ href, text, children, isMobile = false }: NavlinkArgs) {
+export function Navlink({
+  href,
+  text,
+  children,
+  isMobile = false,
+}: NavlinkArgs) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -24,9 +29,10 @@ export function Navlink({ href, text, children, isMobile = false }: NavlinkArgs)
       <div className="w-full">
         <div
           className="flex items-center justify-between w-full py-3 font-semibold"
-          onClick={handleToggle}
-        >
-          <Link href={href} className="flex-grow">{text}</Link>
+          onClick={handleToggle}>
+          <Link href={href} className="flex-grow">
+            {text}
+          </Link>
           {children && (
             <LuChevronDown
               className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
@@ -34,11 +40,7 @@ export function Navlink({ href, text, children, isMobile = false }: NavlinkArgs)
             />
           )}
         </div>
-        {children && isOpen && (
-          <div className="pb-4 pl-4">
-            {children}
-          </div>
-        )}
+        {children && isOpen && <div className="pb-4 pl-4">{children}</div>}
       </div>
     );
   }
@@ -54,7 +56,7 @@ export function Navlink({ href, text, children, isMobile = false }: NavlinkArgs)
               size={20}
             />
           </Link>
-          <div className="opacity-0 invisible group-hover:opacity-100 group-hover:visible absolute top-full left-1/2 -translate-x-1/2 w-2/3 h-[20rem] transition-all duration-300 bg-white shadow-lg p-4 rounded-lg mt-3 text-black z-10">
+          <div className="opacity-0 invisible group-hover:opacity-100 group-hover:visible absolute top-full left-1/2 -translate-x-1/2 w-2/3 h-[20rem] transition-all duration-300 bg-kya-white shadow-lg p-4 rounded-lg mt-3 text-black z-10">
             {children}
           </div>
         </>

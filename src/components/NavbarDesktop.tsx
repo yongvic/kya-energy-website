@@ -69,7 +69,7 @@ export default function NavbarDesktop({
               key={link.href}
               onMouseMove={handleHover}
               onTouchMove={handleHover}
-              className={`flex font-semibold items-center justify-between text-nowrap rounded w-full gap-2 p-2 hover:bg-kya-green hover:text-white transition-all duration-300 ${link.href === pathname ? "text-white bg-kya-green-light" : "text-gray-700"}`}>
+              className={`flex font-semibold items-center justify-between text-nowrap rounded w-full gap-2 p-2 hover:bg-kya-green hover:text-kya-white transition-all duration-300 ${link.href === pathname ? "text-kya-white bg-kya-green" : "text-black"}`}>
               {link.text}
               {link.children && (
                 <LuChevronRight

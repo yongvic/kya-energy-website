@@ -70,7 +70,7 @@ export default function LocaleSwitcherButton({
                   <Link
                     href={redirectedPathName(pathname, locale)}
                     key={index}
-                    className="font-bold flex items-center gap-2 px-4 h-12 rounded bg-blue-100 hover:bg-blue-200 transition-colors duration-300">
+                    className="font-bold flex items-center gap-2 px-4 h-12 rounded hover:bg-kya-yellow bg-kya-orange transition-colors duration-300">
                     <Image
                       src={getFlagUrl(locale)}
                       alt={dictionary.switcher.locale[locale]}
