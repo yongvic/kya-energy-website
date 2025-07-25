@@ -5,6 +5,7 @@ import { getTranslation } from "@/lib/get-translation";
 import TranslationsType from "@/translations/translations.definition";
 import Header from "@/components/Header";
 import "@/styles/globals.css";
+import Footer from "@/components/Footer";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -91,6 +92,7 @@ export default async function RootLayout({
         className={`bg-gray-100 dark:bg-gray-900 ${raleway.className} antialiased`}>
         <Header dictionary={dictionary} />
         <main className="pt-24 md:pt-36">{children}</main>
+        <Footer />
       </body>
     </html>
   );
