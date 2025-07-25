@@ -2,18 +2,23 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 :root {
-  --kya-green: #059a84;
-  --kya-orange: #f5a807;
-  --kya-green-light: #059a847f;
+  /* KYA Palette color */
+  --kya-green: #1ca18c;
+  --kya-orange: #f99d32;
+  --kya-white: #ffffff;
+  --kya-yellow: #e8e748;
+  --kya-coffee: #875028;
 }
 
 @theme inline {
   /* KYA palette color */
-  --color-kya-green: #059a84;
-  --color-kya-green-light: #2cb9a4;
-  --color-kya-orange: #f5a807;
-  --font-sans: var(--font-raleway);
-  --font-raleway: var(--font-raleway);
+  --color-kya-green: #1ca18c;
+  --color-kya-orange: #f99d32;
+  --color-kya-white: #ffffff;
+  --color-kya-yellow: #e8e748;
+  --color-kya-coffee: #875028;
+  --font-sans: var(--font-arial-narrow), Arial, sans-serif;
+  --font-serif: var(--font-times-new-roman), "Times New Roman", serif;
 }
 
 body {
@@ -26,7 +31,7 @@ body {
 }
 
 .navlink::before {
-  content: '';
+  content: "";
   transition-duration: 300ms;
   position: absolute;
   width: 0;
