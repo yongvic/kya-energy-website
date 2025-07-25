@@ -81,7 +81,7 @@ const socialNetworks = [
 export default function Footer() {
   return (
     <footer className="bg-[url('/background-earth.avif')] bg-cover bg-center">
-      <div className="backdrop-blur-xl p-8 md:p-16 lg:p-24 space-y-16 text-white">
+      <div className="backdrop-blur-xl p-8 md:p-16 lg:p-24 space-y-16 text-kya-white">
         {/* Logo and newsletter */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
@@ -94,26 +94,26 @@ export default function Footer() {
             />
           </div>
           <div className="flex flex-col items-end">
-            <p className="font-medium text-xl text-justify">
+            <p className="font-bold text-xl text-justify">
               Abonnez vous à notre newsletter pour ne manquer aucune
               information.
             </p>
             <form className="mt-4 w-full" method="post" action="#">
               <label
                 htmlFor="email"
-                className="flex items-center text-gray-900 bg-white">
+                className="flex items-center text-gray-900 bg-kya-white">
                 <FaEnvelope size={32} className="ml-4" />
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  className="w-full outline-none px-4 font-medium text-xl"
+                  className="w-full outline-none px-4 text-xl"
                   placeholder="Votre adresse email"
                   required
                 />
                 <button
                   type="submit"
-                  className="bg-orange-500 hover:bg-yellow-600 transition-all duration-300 text-white font-bold p-4">
+                  className="hover:bg-kya-orange bg-kya-green transition-all duration-300 text-kya-white font-bold p-4">
                   S&apos;abonner
                 </button>
               </label>
@@ -135,8 +135,8 @@ export default function Footer() {
             </strong>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col gap-2 font-medium text-lg">
-              <Link href="#" className="font-bold text-xl">
+            <div className="flex flex-col gap-2 text-lg *:hover:text-kya-green *:transition-all *:duration-300">
+              <Link href="#" className="font-bold text-2xl">
                 Solutions
               </Link>
               <Link href="#">Groupes électrosolaires</Link>
@@ -144,8 +144,8 @@ export default function Footer() {
               <Link href="#">Maintenance</Link>
               <Link href="#">Conseil</Link>
             </div>
-            <div className="flex flex-col gap-2 font-medium text-lg">
-              <Link href="#" className="font-bold text-xl">
+            <div className="flex flex-col gap-2 text-lg *:hover:text-kya-green *:transition-all *:duration-300">
+              <Link href="#" className="font-bold text-2xl">
                 Entreprise
               </Link>
               <Link href="#">À propos</Link>
@@ -153,8 +153,8 @@ export default function Footer() {
               <Link href="#">Certifications</Link>
               <Link href="#">Fondation KYA</Link>
             </div>
-            <div className="flex flex-col gap-2 font-medium text-lg">
-              <Link href="#" className="font-bold text-xl">
+            <div className="flex flex-col gap-2 text-lg *:hover:text-kya-green *:transition-all *:duration-300">
+              <Link href="#" className="font-bold text-2xl">
                 Contact
               </Link>
               <Link href="#">Nous contacter</Link>
@@ -165,46 +165,36 @@ export default function Footer() {
           </div>
         </div>
         {/* Contact and maps */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 font-medium">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
           <div className="space-y-8">
-            <div className="space-y-2">
+            <div className="space-y-2 text-xl ">
               <h1 className="text-2xl font-bold underline">Adresse</h1>
               <p>300m, rue en face du Centre Culturel Loyola (CCL),</p>
               <p>Route Mission Tové, Agoè Logopé</p>
               <p>08 BP 81101, Lomé - Togo</p>
             </div>
-            <div className="space-y-2 text-lg font-medium">
+            <div className="space-y-2 text-xl ">
               <h1 className="text-2xl font-bold underline">Horaires</h1>
               <p>Lundi - Vendredi</p>
               <p>07h30–12h00 | 14h00–17h30</p>
             </div>
-            <div className="space-y-2 text-lg font-medium">
+            <div className="space-y-2 text-xl ">
               <h1 className="text-2xl font-bold underline">Téléphone</h1>
-              <p>
-                <Link href="tel:+228 91 50 21 49" className="text-kya-green">
-                  +228 91 50 21 49
-                </Link>
-              </p>
-              <p>
-                <Link href="tel:+228 70 45 34 81" className="text-kya-green">
-                  +228 70 45 34 81
-                </Link>
-              </p>
-              <p>
-                <Link href="tel:+228 99 99 93 80" className="text-kya-green">
-                  +228 99 99 93 80
-                </Link>
-              </p>
+              <Link href="tel:+228 91 50 21 49">
+                <p className="text-kya-green">+228 91 50 21 49</p>
+              </Link>
+              <Link href="tel:+228 70 45 34 81">
+                <p className="text-kya-green">+228 70 45 34 81</p>
+              </Link>
+              <Link href="tel:+228 99 99 93 80">
+                <p className="text-kya-green">+228 99 99 93 80</p>
+              </Link>
             </div>
-            <div className="space-y-2 text-lg font-medium">
+            <div className="space-y-2 text-xl ">
               <h1 className="text-2xl font-bold underline">E-mail</h1>
-              <p>
-                <Link
-                  href="mailto:info@kya-energy.com"
-                  className="text-kya-green">
-                  info@kya-energy.com
-                </Link>
-              </p>
+              <Link href="mailto:info@kya-energy.com">
+                <p className="text-kya-green">info@kya-energy.com</p>
+              </Link>
             </div>
           </div>
           <div>
@@ -218,7 +208,7 @@ export default function Footer() {
               loading="lazy"></iframe>
           </div>
         </div>
-        <div className="h-1 bg-gray-900"></div>
+        <div className="h-1 bg-kya-green"></div>
         {/* Social networks and copyright */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex justify-start items-center flex-wrap">
@@ -228,7 +218,7 @@ export default function Footer() {
                 href={network.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${network.colors.background} ${network.colors.icon} p-4 rounded-full m-1 hover:scale-110  transition-all duration-300 *:size-6`}>
+                className={`${network.colors.background} ${network.colors.icon} p-4 rounded-full m-1 hover:scale-110 transition-all duration-300 *:size-6`}>
                 {network.icon}
               </Link>
             ))}
