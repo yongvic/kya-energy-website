@@ -136,6 +136,17 @@
       "image": "agbehadji.avif"
     }
   ],
+  "kyaFoundation": {
+    "title": "KYA Foundation",
+    "subtitle": "Empowering Communities Through Sustainable Energy",
+    "missionTitle": "Our Mission",
+    "missionText": "To foster sustainable development in underserved communities by providing access to clean, reliable, and affordable energy solutions. We believe that access to energy is a fundamental driver of economic growth, social progress, and environmental sustainability.",
+    "visionTitle": "Our Vision",
+    "visionText": "We envision a world where every community has the power to thrive. Through our initiatives in education, technology deployment, and local capacity building, we aim to create a lasting impact, empowering individuals and communities to build a brighter, more sustainable future for generations to come.",
+    "galleryTitle": "Our Impact in Pictures",
+    "ctaTitle": "Join Us in Making a Difference",
+    "ctaButton": "Donate Now"
+  },
   "switcher": {
     "locale": {
       "en": "English",
