@@ -137,15 +137,65 @@
     }
   ],
   "kyaFoundation": {
-    "title": "Fondation KYA",
-    "subtitle": "Autonomiser les communautés grâce à l'énergie durable",
-    "missionTitle": "Notre Mission",
-    "missionText": "Favoriser le développement durable dans les communautés mal desservies en donnant accès à des solutions énergétiques propres, fiables et abordables. Nous pensons que l'accès à l'énergie est un moteur fondamental de la croissance économique, du progrès social et de la durabilité environnementale.",
-    "visionTitle": "Notre Vision",
-    "visionText": "Nous envisageons un monde où chaque communauté a le pouvoir de prospérer. Grâce à nos initiatives en matière d'éducation, de déploiement de technologies et de renforcement des capacités locales, nous visons à créer un impact durable, en donnant aux individus et aux communautés les moyens de construire un avenir plus brillant et plus durable pour les générations à venir.",
-    "galleryTitle": "Notre impact en images",
-    "ctaTitle": "Rejoignez-nous pour faire la différence",
-    "ctaButton": "Faire un don"
+    "hero": {
+      "title": "NOS INITIATIVES",
+      "description": "La Fondation KYA est créée en octobre 2022. Elle a pour but de contribuer au développement socio-économique des populations africaines, issues des groupes les plus vulnérables par des interventions en faveur du développement en matière d'énergie, d'agriculture, de médecine, d'éducation et de l'environnement.",
+      "tagline": "Fondation KYA, pour un monde meilleur.",
+      "cta": "Télécharger la lettre d'engagement",
+      "stats": {
+        "employees": "Employés recrutés",
+        "mission": "Une mission",
+        "experience": "Années d'expérience"
+      }
+    },
+    "actions": {
+      "title": "Nos moyens d'actions",
+      "items": [
+        "L'octroi de bourses et subventions de formation",
+        "L'organisation des concours d'innovation",
+        "L'organisation des cours de formation, conférences, seminaires",
+        "L'appui aux entrepreneurs",
+        "Le soutien à l'autonomisation des femmes et des jeunes filles",
+        "L'appui à l'insertion socio-professionnelle des jeunes diplômés"
+      ]
+    },
+    "objectives": {
+      "title": "Nos objectifs",
+      "items": [
+        "Accroître l'accès aux services énergétiques durables en milieu rural",
+        "Promouvoir la science et la technologie chez les femmes",
+        "Promouvoir l'employabilité des jeunes en énergies renouvelables",
+        "Contribuer à l'amélioration de la qualité de l'éducation",
+        "Contribuer à l'autonomisation économique des femmes",
+        "Contribuer à la lutte contre les changements climatiques"
+      ]
+    },
+    "domains": {
+      "title": "Les domaines d'interventions",
+      "items": [
+        {
+          "title": "Education et formation",
+          "description": "La Fondation KYA soutient l’éducation des jeunes filles en sciences et technologies, en valorisant les talents et en offrant des bourses aux plus vulnérables."
+        },
+        {
+          "title": "Energies renouvelables",
+          "description": "La Fondation KYA facilite l’accès à l’énergie durable en zones rurales et forme gratuitement des filles à l’installation et à la maintenance de systèmes solaires."
+        },
+        {
+          "title": "Développement durable",
+          "description": "La Fondation KYA œuvre pour les Objectifs de Développement Durable, en se concentrant sur 7 priorités : lutte contre la pauvreté, éducation, égalité des sexes, énergie durable, emploi, climat et partenariats."
+        }
+      ]
+    },
+    "video": {
+      "title": "Découvrez notre approche et notre vision à travers cette présentation vidéo"
+    },
+    "gallery": {
+      "title": "Quelques images de nos activités"
+    },
+    "sponsors": {
+      "title": "Nos Sponsors OR"
+    }
   },
   "switcher": {
     "locale": {
