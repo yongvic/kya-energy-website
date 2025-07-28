@@ -136,6 +136,17 @@
       "image": "agbehadji.avif"
     }
   ],
+  "kyaFoundation": {
+    "title": "Fondation KYA",
+    "subtitle": "Autonomiser les communautés grâce à l'énergie durable",
+    "missionTitle": "Notre Mission",
+    "missionText": "Favoriser le développement durable dans les communautés mal desservies en donnant accès à des solutions énergétiques propres, fiables et abordables. Nous pensons que l'accès à l'énergie est un moteur fondamental de la croissance économique, du progrès social et de la durabilité environnementale.",
+    "visionTitle": "Notre Vision",
+    "visionText": "Nous envisageons un monde où chaque communauté a le pouvoir de prospérer. Grâce à nos initiatives en matière d'éducation, de déploiement de technologies et de renforcement des capacités locales, nous visons à créer un impact durable, en donnant aux individus et aux communautés les moyens de construire un avenir plus brillant et plus durable pour les générations à venir.",
+    "galleryTitle": "Notre impact en images",
+    "ctaTitle": "Rejoignez-nous pour faire la différence",
+    "ctaButton": "Faire un don"
+  },
   "switcher": {
     "locale": {
       "en": "Anglais",
