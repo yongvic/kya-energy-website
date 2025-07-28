@@ -197,6 +197,65 @@
       "title": "Nos Sponsors OR"
     }
   },
+  "faq": {
+    "hero": {
+      "title": "FAQ",
+      "subtitle": "Une question ? On a déjà sûrement la réponse.",
+      "searchPlaceholder": "Rechercher"
+    },
+    "categories": {
+      "general": "Général",
+      "maintenance": "Maintenance",
+      "financing": "Financement",
+      "installation": "Installation"
+    },
+    "questions": [
+      {
+        "question": "Qu'est-ce qu'un KYA-SoP ?",
+        "answer": "C'est un groupe électrosolaire intelligent et localement assemblé par KYA, conçu pour répondre efficacement aux besoins énergétiques en milieux ruraux et urbains."
+      },
+      {
+        "question": "Que fait le logiciel KYA-SolDesign ?",
+        "answer": "KYA-SolDesign est un logiciel de dimensionnement et de simulation de systèmes solaires photovoltaïques."
+      },
+      {
+        "question": "Quels sont les avantages d'un système solaire KYA ?",
+        "answer": "Les avantages sont nombreux : autonomie énergétique, réduction des factures d'électricité, utilisation d'une source d'énergie propre et durable, etc."
+      },
+      {
+        "question": "Faut-il entretenir les panneaux solaires ?",
+        "answer": "Oui, un entretien régulier est recommandé pour garantir un rendement optimal. Cela inclut le nettoyage des panneaux et la vérification des composants."
+      },
+      {
+        "question": "Est-ce que les solutions solaires sont accessibles à tous ?",
+        "answer": "Oui, nous proposons des solutions de financement et d'accompagnement pour rendre nos systèmes solaires accessibles au plus grand nombre."
+      },
+      {
+        "question": "Est-ce que vous vous occupez de l'installation ?",
+        "answer": "Oui, notre équipe de techniciens qualifiés se charge de l'installation complète de votre système solaire."
+      },
+      {
+        "question": "Existe-t-il des aides ou subventions ?",
+        "answer": "Selon votre pays et votre situation, il peut exister des aides gouvernementales ou des subventions pour l'installation de systèmes solaires."
+      },
+      {
+        "question": "Quelle est la durée de vie d'un système solaire ?",
+        "answer": "Un système solaire bien entretenu peut avoir une durée de vie de plus de 25 ans."
+      },
+      {
+        "question": "Quelle est la garantie sur vos produits ?",
+        "answer": "Nous offrons une garantie sur nos produits. La durée de la garantie varie en fonction des composants du système."
+      },
+      {
+        "question": "Comment puis-je vous contacter ?",
+        "answer": "Vous pouvez nous contacter via le formulaire de contact de notre site web, par email ou par téléphone."
+      },
+      {
+        "question": "Est-ce que les systèmes solaires KYA fonctionnent en cas de délestage ?",
+        "answer": "Oui, nos systèmes peuvent être équipés de batteries pour stocker l'énergie et vous fournir de l'électricité en cas de délestage."
+      }
+    ]
+  },
   "switcher": {
     "locale": {
       "en": "Anglais",
