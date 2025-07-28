@@ -33,6 +33,17 @@ const arialNarrow = localFont({
   variable: "--font-arial-narrow",
 });
 
+const facebookSans = localFont({
+  src: [
+    {
+      path: "../../../public/fonts/facebook-sans/FacebookSansHeavy.ttf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-facebook-sans",
+});
+
 const timesNewRoman = localFont({
   src: [
     {
@@ -126,7 +137,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`bg-gray-100 dark:bg-gray-900 ${arialNarrow.className} ${arialNarrow.variable} ${timesNewRoman.variable} antialiased`}>
+        className={`bg-gray-100 dark:bg-gray-900 ${arialNarrow.className} ${facebookSans.variable}  ${arialNarrow.variable} ${timesNewRoman.variable} antialiased`}>
         <Header dictionary={dictionary} />
         <main className="pt-24 md:pt-36">{children}</main>
         <Footer />
