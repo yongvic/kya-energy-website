@@ -2,16 +2,20 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 :root {
-  --kya-green: #059a84;
-  --kya-orange: #f5a807;
-  --kya-green-light: #059a847f;
+  /* KYA Brand Palette from new requirements */
+  --kya-green: #1ca18c;
+  --kya-orange: #f99d32;
+  --kya-white: #ffffff;
+  --kya-yellow: #e8e748;
+  --kya-brown: #875028;
+  --kya-green-light: #1ca18c7f;
 }
 
 @theme inline {
   /* KYA palette color */
-  --color-kya-green: #059a84;
-  --color-kya-green-light: #2cb9a4;
-  --color-kya-orange: #f5a807;
+  --color-kya-green: var(--kya-green);
+  --color-kya-green-light: var(--kya-green-light);
+  --color-kya-orange: var(--kya-orange);
   --font-sans: var(--font-raleway);
   --font-raleway: var(--font-raleway);
 }
@@ -33,7 +37,7 @@ body {
   height: 3px;
   bottom: -3px;
   left: 0;
-  background-color: green;
+  background-color: var(--kya-green);
 }
 
 .navlink:hover::before {

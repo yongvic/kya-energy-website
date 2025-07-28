@@ -148,5 +148,39 @@
         "dark": "Switch to dark mode"
       }
     }
+  },
+  "products": {
+    "kya-sop-description": "KYA-SoP are intelligent, local and reliable solar systems, suitable for all environments, with anti-shedding function.",
+    "kya-soldesign-description": "KYA-SolDesign is an innovative solar sizing software, combining technical reliability and economic accessibility.",
+    "kya-ecolabel-description": "KYA-EcoLabel is a labeling software that evaluates the ecological and economic performance of solar systems compared to diesel generators.",
+    "kya-flexycontrol-description": "KYA-FlexyControl is a remote monitoring module for solar installations, allowing real-time monitoring and intelligent management of consumption priorities.",
+    "promotional-offers": "Our promotional offers",
+    "product-range": "Our product ranges",
+    "product-subtitle": "Energy solutions adapted to all your needs, from residential to community.",
+    "catalog-prompt": "Consult our KYA product catalog to find out more about our innovative solar solutions.",
+    "see-more": "See More"
+  },
+  "services": {
+    "title": "Our services",
+    "subtitle": "Complete support from study to maintenance of your installations",
+    "installation-title": "INSTALLATION",
+    "installation-description": "Installation of solar mini-power plants (hybrid), solar street lights, multifunctional solar platforms...",
+    "audit-title": "STUDY, AUDIT AND MONITORING-CONTROL",
+    "audit-description": "Operation and maintenance audit of mini-power plants Monitoring and control of energy works...",
+    "training-title": "CAPACITY BUILDING",
+    "training-description": "Training programs for technicians, students and professionals",
+    "rental-title": "KYA-SOP RENTAL SERVICE",
+    "rental-description": "Turnkey rental of autonomous solar systems",
+    "learn-more": "Learn More"
+  },
+  "financing": {
+    "title": "Financing Lease-Sale KYA-SoP",
+    "subtitle": "Access solar energy without significant initial investment",
+    "down-payment": "Initial deposit only",
+    "repayment-period": "Maximum repayment period",
+    "maintenance-included": "Installation and maintenance included"
+  },
+  "contact": {
+    "contact_us": "Contact Us"
   }
 }
