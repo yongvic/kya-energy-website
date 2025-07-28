@@ -38,8 +38,7 @@ export default function HeaderMobile({
                 initial={{ rotate: 45, opacity: 0 }}
                 animate={{ rotate: 0, opacity: 1 }}
                 exit={{ rotate: -45, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
+                transition={{ duration: 0.3 }}>
                 {isOpen ? <LuX size={32} /> : <LuMenu size={32} />}
               </motion.div>
             </AnimatePresence>
@@ -54,28 +53,21 @@ export default function HeaderMobile({
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ type: "tween", ease: "easeInOut", duration: 0.4 }}
-          >
+            transition={{ type: "tween", ease: "easeInOut", duration: 0.4 }}>
             <div className="container mx-auto px-4 h-full">
               <div className="flex justify-end items-center h-24">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
-                  aria-label="Close menu"
-                >
+                  aria-label="Close menu">
                   <LuX size={32} />
                 </button>
               </div>
               <div className="flex flex-col items-center w-full pt-8">
-                <Navlink
-                  href="/"
-                  text={dictionary.navigation.home}
-                  isMobile
-                />
+                <Navlink href="/" text={dictionary.navigation.home} isMobile />
                 <Navlink
                   href="/produits-et-services"
                   text="Produits et Services"
-                  isMobile
-                >
+                  isMobile>
                   <p>Sub link 1</p>
                   <p>Sub link 2</p>
                 </Navlink>

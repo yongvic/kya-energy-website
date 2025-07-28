@@ -1,15 +1,52 @@
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
 import { i18n, Locale } from "@/lib/i18n.config";
 import { getTranslation } from "@/lib/get-translation";
 import TranslationsType from "@/translations/translations.definition";
 import Header from "@/components/Header";
 import "@/styles/globals.css";
 import Footer from "@/components/Footer";
+import localFont from "next/font/local";
 
-const raleway = Raleway({
-  variable: "--font-raleway",
-  subsets: ["latin"],
+const arialNarrow = localFont({
+  src: [
+    {
+      path: "../../../public/fonts/arialnarrow.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../../public/fonts/arialnarrow_italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../../public/fonts/arialnarrow_bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../../public/fonts/arialnarrow_bolditalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+  ],
+  variable: "--font-arial-narrow",
+});
+
+const timesNewRoman = localFont({
+  src: [
+    {
+      path: "../../../public/fonts/timesnewroman.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../../public/fonts/timesnewroman_italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+  ],
+  variable: "--font-times-new-roman",
 });
 
 /*
@@ -89,7 +126,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`bg-gray-100 dark:bg-gray-900 ${raleway.className} antialiased`}>
+        className={`bg-gray-100 dark:bg-gray-900 ${arialNarrow.className} ${arialNarrow.variable} ${timesNewRoman.variable} antialiased`}>
         <Header dictionary={dictionary} />
         <main className="pt-24 md:pt-36">{children}</main>
         <Footer />

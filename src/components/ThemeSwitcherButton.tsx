@@ -68,7 +68,7 @@ export default function ThemeSwitcherButton({
       }`}>
       {/* This is the sliding "thumb" of the switch. */}
       <motion.div
-        className="flex h-6 w-6 items-center justify-center rounded-full bg-white shadow-md"
+        className="flex h-6 w-6 items-center justify-center rounded-full bg-kya-white shadow-md"
         layout
         transition={{
           type: "spring",
@@ -85,9 +85,9 @@ export default function ThemeSwitcherButton({
             exit={{ y: 20, opacity: 0, rotate: 180 }}
             transition={{ duration: 0.25 }}>
             {theme === "light" ? (
-              <FaSun className="text-lg text-yellow-500" />
+              <FaSun className="text-lg text-kya-orange" />
             ) : (
-              <FaMoon className="text-lg text-slate-800" />
+              <FaMoon className="text-lg text-kya-coffee" />
             )}
           </motion.div>
         </AnimatePresence>

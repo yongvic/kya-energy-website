@@ -2,22 +2,41 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 :root {
-  /* KYA Brand Palette from new requirements */
+
   --kya-green: #1ca18c;
   --kya-orange: #f99d32;
   --kya-white: #ffffff;
   --kya-yellow: #e8e748;
+
   --kya-brown: #875028;
   --kya-green-light: #1ca18c7f;
+  --kya-coffee: #875028;
+}
+
+@layer utilities {
+  .clip-path-polygon {
+    clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+  }
 }
 
 @theme inline {
+  --animate-bounce-right: bounce-right 1s ease-in-out infinite;
   /* KYA palette color */
+
   --color-kya-green: var(--kya-green);
   --color-kya-green-light: var(--kya-green-light);
   --color-kya-orange: var(--kya-orange);
   --font-sans: var(--font-raleway);
   --font-raleway: var(--font-raleway);
+
+  --color-kya-green: #1ca18c;
+  --color-kya-orange: #f99d32;
+  --color-kya-white: #ffffff;
+  --color-kya-yellow: #e8e748;
+  --color-kya-coffee: #875028;
+  --font-sans: var(--font-arial-narrow), Arial, sans-serif;
+  --font-serif: var(--font-times-new-roman), "Times New Roman", serif;
+
 }
 
 body {
@@ -30,7 +49,7 @@ body {
 }
 
 .navlink::before {
-  content: '';
+  content: "";
   transition-duration: 300ms;
   position: absolute;
   width: 0;
@@ -42,4 +61,16 @@ body {
 
 .navlink:hover::before {
   width: 100%;
+}
+
+@keyframes bounce-right {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
