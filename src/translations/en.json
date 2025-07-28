@@ -137,15 +137,65 @@
     }
   ],
   "kyaFoundation": {
-    "title": "KYA Foundation",
-    "subtitle": "Empowering Communities Through Sustainable Energy",
-    "missionTitle": "Our Mission",
-    "missionText": "To foster sustainable development in underserved communities by providing access to clean, reliable, and affordable energy solutions. We believe that access to energy is a fundamental driver of economic growth, social progress, and environmental sustainability.",
-    "visionTitle": "Our Vision",
-    "visionText": "We envision a world where every community has the power to thrive. Through our initiatives in education, technology deployment, and local capacity building, we aim to create a lasting impact, empowering individuals and communities to build a brighter, more sustainable future for generations to come.",
-    "galleryTitle": "Our Impact in Pictures",
-    "ctaTitle": "Join Us in Making a Difference",
-    "ctaButton": "Donate Now"
+    "hero": {
+      "title": "OUR INITIATIVES",
+      "description": "The KYA Foundation was created in October 2022. Its purpose is to contribute to the socio-economic development of African populations from the most vulnerable groups through interventions in favor of development in the fields of energy, agriculture, medicine, education, and the environment.",
+      "tagline": "KYA Foundation, for a better world.",
+      "cta": "Download the commitment letter",
+      "stats": {
+        "employees": "Employees recruited",
+        "mission": "A mission",
+        "experience": "Years of experience"
+      }
+    },
+    "actions": {
+      "title": "Our means of action",
+      "items": [
+        "The granting of training scholarships and grants",
+        "The organization of innovation competitions",
+        "The organization of training courses, conferences, seminars",
+        "Support for entrepreneurs",
+        "Support for the empowerment of women and young girls",
+        "Support for the socio-professional integration of young graduates"
+      ]
+    },
+    "objectives": {
+      "title": "Our objectives",
+      "items": [
+        "Increase access to sustainable energy services in rural areas",
+        "Promote science and technology among women",
+        "Promote the employability of young people in renewable energies",
+        "Contribute to improving the quality of education",
+        "Contribute to the economic empowerment of women",
+        "Contribute to the fight against climate change"
+      ]
+    },
+    "domains": {
+      "title": "The areas of intervention",
+      "items": [
+        {
+          "title": "Education and training",
+          "description": "The KYA Foundation supports the education of young girls in science and technology, by valuing talents and offering scholarships to the most vulnerable."
+        },
+        {
+          "title": "Renewable energies",
+          "description": "The KYA Foundation facilitates access to sustainable energy in rural areas and provides free training for girls in the installation and maintenance of solar systems."
+        },
+        {
+          "title": "Sustainable development",
+          "description": "The KYA Foundation works for the Sustainable Development Goals, focusing on 7 priorities: fight against poverty, education, gender equality, sustainable energy, employment, climate and partnerships."
+        }
+      ]
+    },
+    "video": {
+      "title": "Discover our approach and our vision through this video presentation"
+    },
+    "gallery": {
+      "title": "Some images of our activities"
+    },
+    "sponsors": {
+      "title": "Our GOLD Sponsors"
+    }
   },
   "switcher": {
     "locale": {
