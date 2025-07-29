@@ -5,6 +5,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useAnimate, useInView, stagger, AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 
 // Icons
 import { FaGlobeAfrica, FaLeaf, FaSolarPanel } from "react-icons/fa";
@@ -14,7 +15,7 @@ import { RiArrowLeftLine, RiArrowRightLine, RiOrganizationChart, RiShakeHandsLin
 
 export default function Page() {
     // --- Carousel State ---
-    const imageUrls = ["/groupe1.png", "/groupe2.png", "/groupe3.png"];
+    const imageUrls = [undefined, undefined, undefined];
     const [index, setIndex] = useState(0);
 
     // --- Animation Hooks ---
@@ -145,7 +146,7 @@ export default function Page() {
                     <div className="flex justify-center items-center my-4">
                         <div className="h-1 w-32 bg-green-300"></div>
                     </div>
-                    <p className="text-center text-xl">KYA-Energy Group s&apos;engage dans la révolution énergétique africaine avec une ambition claire : devenir un leader incontournable des énergies renouvelables sur le continent.</p>
+                    <p className="text-center text-xl">KYA-Energy Group s&apos;engage dans la révolution énergétique africaine avec une ambition claire: devenir un leader incontournable des énergies renouvelables sur le continent.</p>
                 </div>
                 <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {[
@@ -167,7 +168,7 @@ export default function Page() {
                 {/* Image */}
                 <div className="founder-image opacity-0 w-max relative">
                     <div className="w-max rounded-xl overflow-hidden shadow-xl">
-                        <img src="/prof_yao.png" alt="Professeur Yao K. AZOUMAH" className="object-cover" />
+                        <Image width={296} height={361} src="/team/azoumah.avif" alt="Professeur Yao K. AZOUMAH" className="object-cover" />
                     </div>
                     <div className="flex items-center justify-center gap-2 absolute -top-4 right-3 px-4 py-2 rounded-full font-bold text-white bg-orange-400">
                         <p className="text-xl"><LuCrown /></p>
@@ -177,7 +178,7 @@ export default function Page() {
                 {/* Description */}
                 <div className="flex flex-col gap-8">
                     <h2 className="founder-content opacity-0 font-bold text-4xl text-center lg:text-left">Prof. Yao K. AZOUMAH</h2>
-                    <p className="founder-content opacity-0 text-green-600 text-2xl text-center lg:text-left">Fondateur et Directeur Général</p>
+                    <p className="founder-content opacity-0 text-green-600 text-2xl text-center lg:text-left font-medium">Fondateur et Directeur Général</p>
                     <p className="founder-content opacity-0 text-xl">Visionnaire et pionnier de l&apos;énergie renouvelable en Afrique, le Professeur Yao K. AZOUMAH combine expertise académique et vision entrepreneuriale pour révolutionner le secteur énergétique africain.</p>
                     <div className="space-y-8">
                         {[
@@ -186,10 +187,10 @@ export default function Page() {
                             { icon: <LuAward />, title: "Leader Visionnaire", desc: "Architecte de l'avenir énergétique" }
                         ].map((value, index) => (
                             <div key={index} className="founder-content opacity-0">
-                                <div className="flex items-center gap-4 p-8 bg-white shadow hover:shadow-xl transition-all duration-300 rounded-xl">
-                                    <div className="text-2xl text-green-700 w-max p-4 bg-green-300 rounded-full">{value.icon}</div>
+                                <div className="flex items-center gap-4 p-8 bg-linear-to-r from-[#87CEEB7f] to-[#7BF1A87F] shadow hover:shadow-xl transition-all duration-300 rounded-xl">
+                                    <div className="text-2xl text-kya-white w-max p-4 bg-kya-green rounded-full">{value.icon}</div>
                                     <div className="space-y-2">
-                                        <h3 className="font-bold text-2xl">{value.title}</h3>
+                                        <h3 className="font-bold text-2xl text-kya-green">{value.title}</h3>
                                         <p className="text-xl">{value.desc}</p>
                                     </div>
                                 </div>
@@ -214,18 +215,18 @@ export default function Page() {
                     </div>
                     <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
-                            { img: "/yao.png", name: "Prof. Yao K. AZOUMAH", role: "Directeur Général" },
-                            { img: "/yves.png", name: "M. Yves LAWSON", role: "Directeur Général Adjoint" },
-                            { img: "/tchassama.png", name: "M. TCHASSAMA", role: "Directeur Technique et des Opérations" },
-                            { img: "/sylvie.png", name: "Mme Sylvie SHIKPE", role: "Directrice Commerciale & Marketing" },
-                            { img: "/EKLOU.jpg", name: "M. Yaovi V. EKLOU", role: "Directeur des Ressources Humaines" },
-                            { img: "/fousseni.png", name: "M. Mohamed FOUSSENI", role: "Directeur Financier & Comptable" },
-                            { img: "/massan.png", name: "Mme Massan AGBEHADJI", role: "Assistante de Direction" }
+                            { img: "/team/azoumah.avif", name: "Prof. Yao K. AZOUMAH", role: "Directeur Général" },
+                            { img: "/team/lawson.avif", name: "M. Yves LAWSON", role: "Directeur Général Adjoint" },
+                            { img: "/team/tchassama.avif", name: "M. TCHASSAMA", role: "Directeur Technique et des Opérations" },
+                            { img: "/team/shikpe.avif", name: "Mme Sylvie SHIKPE", role: "Directrice Commerciale & Marketing" },
+                            { img: "/team/eklou.avif", name: "M. Yaovi V. EKLOU", role: "Directeur des Ressources Humaines" },
+                            { img: "/team/fousseni.avif", name: "M. Mohamed FOUSSENI", role: "Directeur Financier & Comptable" },
+                            { img: "/team/agbehadji.avif", name: "Mme Massan AGBEHADJI", role: "Assistante de Direction" }
                         ].map((value, index) => (
-                            <div key={index} className="team-card opacity-0 flex flex-col bg-white rounded-xl shadow hover:shadow-xl transition-all duration-300 overflow-hidden">
-                                <div className="flex-grow flex items-center justify-center bg-gray-100">
-                                    <img src={value.img} alt={`Photo de ${value.name}`} className="object-cover w-full h-80" />
-                                </div>
+                            <div key={index} className="flex flex-col bg-gray-100 rounded-xl shadow hover:shadow-xl transition-all duration-300 overflow-hidden">
+                                
+                                    <Image width={296} height={361} src={value.img} alt={`Photo de ${value.name}`} className="object-contain w-full" />
+                                
                                 <div className="text-center p-4 bg-green-50">
                                     <h3 className="font-bold text-xl">{value.name}</h3>
                                     <p className="text-lg text-gray-600">{value.role}</p>
