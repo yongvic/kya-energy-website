@@ -128,7 +128,7 @@ export default function Page() {
                 ))}
               </div>
               {/* Buttons */}
-              <div className="text-4xl text-green-700 flex items-center justify-center w-max gap-4 *:p-4 *:bg-white/60 *:hover:bg-green-300 *:rounded-full *:cursor-pointer *:transition-colors">
+              <div className="text-4xl text-kya-green flex items-center justify-center w-max gap-4 *:p-4 *:bg-white/60 *:hover:bg-green-300 *:rounded-full *:cursor-pointer *:transition-colors">
                 <button onClick={handlePrev}><RiArrowLeftLine /></button>
                 <button onClick={handleNext}><RiArrowRightLine /></button>
               </div>
@@ -141,7 +141,7 @@ export default function Page() {
       <div ref={visionScope} className="container mx-auto px-4 my-32">
         <div className="section-title opacity-0 px-4 lg:px-48">
           <div className="flex items-center justify-center my-4">
-            <p className="w-max rounded-full px-4 py-2 bg-green-700 text-white font-bold text-sm">Notre vision</p>
+            <p className="w-max rounded-full px-4 py-2 bg-kya-green text-white font-bold text-sm">Notre vision</p>
           </div>
           <h2 className="text-center text-4xl font-bold w-full">Transformer l&apos;Afrique par l&apos;Énergie Solaire</h2>
           <div className="flex justify-center items-center my-4">
@@ -156,7 +156,7 @@ export default function Page() {
             { icon: <LuTrophy />, title: "Impact Durable", desc: "Extension de notre influence pour un avenir énergétique durable en Afrique" }
           ].map((value, index) => (
             <div key={index} className="vision-card opacity-0 text-center flex flex-col items-center gap-4 p-8 bg-white rounded-xl shadow hover:shadow-xl hover:scale-105 transition-all duration-300">
-              <div className="w-max p-4 bg-green-200 text-green-700 rounded-full text-3xl">{value.icon}</div>
+              <div className="w-max p-4 bg-green-200 text-kya-green rounded-full text-3xl">{value.icon}</div>
               <h3 className="font-bold text-2xl">{value.title}</h3>
               <p className="text-xl text-gray-500">{value.desc}</p>
             </div>
@@ -171,7 +171,7 @@ export default function Page() {
           <div className="w-max rounded-xl overflow-hidden shadow-xl">
             <Image width={296} height={361} src="/team/azoumah.avif" alt="Professeur Yao K. AZOUMAH" className="object-cover" />
           </div>
-          <div className="flex items-center justify-center gap-2 absolute -top-4 right-3 px-4 py-2 rounded-full font-bold text-white bg-orange-400">
+          <div className="flex items-center justify-center gap-2 absolute -top-4 right-3 px-4 py-2 rounded-full font-bold text-white bg-kya-orange">
             <p className="text-xl"><LuCrown /></p>
             <p>Fondateur et CEO</p>
           </div>
@@ -179,7 +179,7 @@ export default function Page() {
         {/* Description */}
         <div className="flex flex-col gap-8">
           <h2 className="founder-content opacity-0 font-bold text-4xl text-center lg:text-left">Prof. Yao K. AZOUMAH</h2>
-          <p className="founder-content opacity-0 text-green-600 text-2xl text-center lg:text-left font-medium">Fondateur et Directeur Général</p>
+          <p className="founder-content opacity-0 text-kya-green text-2xl text-center lg:text-left font-medium">Fondateur et Directeur Général</p>
           <p className="founder-content opacity-0 text-xl">Visionnaire et pionnier de l&apos;énergie renouvelable en Afrique, le Professeur Yao K. AZOUMAH combine expertise académique et vision entrepreneuriale pour révolutionner le secteur énergétique africain.</p>
           <div className="space-y-8">
             {[
@@ -206,7 +206,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <div className="section-title opacity-0 px-4 lg:px-48">
             <div className="flex items-center justify-center my-4">
-              <p className="w-max rounded-full px-4 py-2 bg-green-700 text-white font-bold text-sm">Leadership</p>
+              <p className="w-max rounded-full px-4 py-2 bg-kya-green text-white font-bold text-sm">Leadership</p>
             </div>
             <h2 className="text-center text-4xl font-bold w-full">Comité de Direction</h2>
             <div className="flex justify-center items-center my-4">
@@ -232,25 +232,13 @@ export default function Page() {
                 </div>
               </div>
             ) : (<div key={index} className="group relative overflow-hidden w-32 h-max hover:scale-125 bg-white rounded-xl" onClick={() => setTeamMember(index)}>
-            <Image width={296} height={361} src={value.img} alt={`Photo de ${value.name}`} className="object-contain w-full h-full"/>
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="absolute top-0 left-0 w-full h-full hidden group-hover:flex flex-col justify-center items-center overflow-hidden text-center bg-[#0009] text-kya-white">
-            <h1 className="font-bold text-[8px]">{value.name}</h1>
-            <p className="text-[8px]">{value.role}</p>
-            </motion.div>
+              <Image width={296} height={361} src={value.img} alt={`Photo de ${value.name}`} className="object-contain w-full h-full" />
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="absolute top-0 left-0 w-full h-full hidden group-hover:flex flex-col justify-center items-center overflow-hidden text-center bg-[#0009] text-kya-white">
+                <h1 className="font-bold text-[8px]">{value.name}</h1>
+                <p className="text-[8px]">{value.role}</p>
+              </motion.div>
             </div>))}
           </div>
-          {/*
-
-<div key={index} className="flex flex-col bg-gray-100 rounded-xl shadow hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-110">
-
-                <Image width={296} height={361} src={value.img} alt={`Photo de ${value.name}`} className="object-contain w-full" />
-
-                <div className="text-center p-4 bg-green-50">
-                  <h3 className="font-bold text-xl">{value.name}</h3>
-                  <p className="text-lg text-gray-600">{value.role}</p>
-                </div>
-              </div>
-        */}
         </div>
       </div >
 
@@ -259,7 +247,7 @@ export default function Page() {
       < div ref={valuesScope} className="container mx-auto px-4 my-32" >
         <div className="section-title opacity-0 px-4 lg:px-48">
           <div className="flex items-center justify-center my-4">
-            <p className="w-max rounded-full px-4 py-2 bg-green-700 text-white font-bold text-sm">Nos valeurs</p>
+            <p className="w-max rounded-full px-4 py-2 bg-kya-green text-white font-bold text-sm">Nos valeurs</p>
           </div>
           <h2 className="text-center text-4xl font-bold w-full">Les Piliers de notre Excellence</h2>
           <div className="flex justify-center items-center my-4">
@@ -277,7 +265,7 @@ export default function Page() {
             { icon: <LuScale />, title: "Équité", desc: "Justice et fairness dans toutes nos relations" }
           ].map((value, index) => (
             <div key={index} className="value-card opacity-0 text-center flex flex-col items-center gap-4 p-8 bg-white rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <div className="w-max p-4 bg-green-200 text-green-700 rounded-full text-3xl">{value.icon}</div>
+              <div className="w-max p-4 bg-green-200 text-kya-green rounded-full text-3xl">{value.icon}</div>
               <h3 className="font-bold text-2xl">{value.title}</h3>
               <p className="text-xl text-gray-500">{value.desc}</p>
             </div>
@@ -289,7 +277,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <div className="section-title opacity-0 px-4 lg:px-48">
             <div className="flex items-center justify-center my-4">
-              <p className="w-max rounded-full px-4 py-2 bg-green-700 text-white font-bold text-sm">Notre impact</p>
+              <p className="w-max rounded-full px-4 py-2 bg-kya-green text-white font-bold text-sm">Notre impact</p>
             </div>
             <h2 className="text-center text-4xl font-bold w-full">Résultats Concrets</h2>
             <div className="flex justify-center items-center my-4">
@@ -305,10 +293,10 @@ export default function Page() {
               { icon: <FaGlobeAfrica />, stat: "15", title: "Pays d'Intervention", desc: "Présence continentale active" }
             ].map((value, index) => (
               <div key={index} className="impact-card opacity-0 text-center flex flex-col items-center gap-2 p-8 bg-white rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div className="w-max p-4 bg-green-200 text-green-700 rounded-full text-3xl">{value.icon}</div>
+                <div className="w-max p-4 bg-green-200 text-kya-green rounded-full text-3xl">{value.icon}</div>
                 <p className="font-bold text-4xl py-2">{value.stat}</p>
                 <h3 className="text-lg font-semibold">{value.title}</h3>
-                <p className="text-sm text-gray-500">{value.desc}</p>
+                <p className="text-sm text-kya-coffee">{value.desc}</p>
               </div>
             ))}
           </div>
@@ -323,15 +311,15 @@ export default function Page() {
               <p className="text-center text-xl">Découvrez nos opportunités et participez à la révolution énergétique africaine</p>
             </div>
             <div className="my-16">
-              <div className="flex flex-wrap items-center justify-center gap-8 my-8 text-white font-semibold">
+              <div className="flex flex-wrap items-center justify-center gap-8 my-8 text-white font-facebook-sans">
                 <Link href="#equipe">
-                  <div className="w-max px-6 py-4 gap-3 flex items-center justify-center rounded-full bg-orange-400 hover:bg-orange-500 transition-colors duration-300">
+                  <div className="w-max px-6 py-4 gap-3 flex items-center justify-center rounded-full bg-kya-orange transition-colors duration-300">
                     <p className="text-2xl"><RiOrganizationChart /></p>
                     <p>Voir l&apos;organigramme</p>
                   </div>
                 </Link>
                 <Link href="">
-                  <div className="w-max px-6 py-4 gap-3 flex items-center justify-center rounded-full bg-green-400 hover:bg-green-500 transition-colors duration-300">
+                  <div className="w-max px-6 py-4 gap-3 flex items-center justify-center rounded-full bg-kya-green transition-colors duration-300">
                     <p className="text-2xl"><RiShakeHandsLine /></p>
                     <p>Nous rejoindre</p>
                   </div>
