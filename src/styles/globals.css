@@ -57,14 +57,21 @@ body {
   0% {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(2px);
   }
+
   100% {
     transform: translateX(0);
   }
 }
 
 .team-member:hover {
- transform: scale(1.10) !important; 
+  transform: scale(1.10) !important;
+}
+
+.faq-effect {
+  color: #1ca18c;
+  text-shadow: 0 1px 10px #fff;
 }
