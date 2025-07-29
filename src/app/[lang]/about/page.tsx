@@ -213,7 +213,7 @@ export default function Page() {
                         </div>
                         <p className="text-center text-xl">Une équipe d&apos;experts chevronnés avec plus de 15 ans d&apos;expérience collective, unis par une vision commune d&apos;excellence et d&apos;innovation.</p>
                     </div>
-                    <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-7">
                         {[
                             { img: "/team/azoumah.avif", name: "Prof. Yao K. AZOUMAH", role: "Directeur Général" },
                             { img: "/team/lawson.avif", name: "M. Yves LAWSON", role: "Directeur Général Adjoint" },
@@ -223,7 +223,8 @@ export default function Page() {
                             { img: "/team/fousseni.avif", name: "M. Mohamed FOUSSENI", role: "Directeur Financier & Comptable" },
                             { img: "/team/agbehadji.avif", name: "Mme Massan AGBEHADJI", role: "Assistante de Direction" }
                         ].map((value, index) => (
-                            <div key={index} className="flex flex-col bg-gray-100 rounded-xl shadow hover:shadow-xl transition-all duration-300 overflow-hidden">
+                            <div key={index} className="team-member
+                            nth-[4]:scale-105 nth-[2]:scale-95 nth-[6]:scale-95 nth-[1]:scale-90 nth-[7]:scale-90 flex flex-col bg-gray-100 rounded-xl shadow hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-110">
                                 
                                     <Image width={296} height={361} src={value.img} alt={`Photo de ${value.name}`} className="object-contain w-full" />
                                 
