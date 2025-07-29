@@ -4,7 +4,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { useAnimate, useInView, stagger, motion } from "motion/react";
+import { useAnimate, useInView, stagger, motion } from "framer-motion";
 
 // Icons
 import { FaCalendarAlt, FaDownload, FaGlobeAfrica, FaHandshake, FaLeaf, FaLightbulb, FaPlay, FaRocket, FaTrophy } from "react-icons/fa";
