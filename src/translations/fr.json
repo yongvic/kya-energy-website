@@ -268,39 +268,5 @@
         "dark": "Passer au mode sombre"
       }
     }
-  },
-  "products": {
-    "kya-sop-description": "Les KYA-SoP sont des systèmes solaires intelligents, locaux et fiables, adaptés à tous les environnements, avec fonction anti-délestage.",
-    "kya-soldesign-description": "KYA-SolDesign est un logiciel innovant de dimensionnement solaire, alliant fiabilité technique et accessibilité économique.",
-    "kya-ecolabel-description": "KYA-EcoLabel est un logiciel d’étiquetage qui évalue les performances écologiques et économiques des systèmes solaires comparés aux générateurs diesel.",
-    "kya-flexycontrol-description": "KYA-FlexyControl est un module de supervision à distance des installations solaires, permettant le suivi en temps réel et la gestion intelligente des priorités de consommation.",
-    "promotional-offers": "Nos offres promotionnelles",
-    "product-range": "Nos gammes de produits",
-    "product-subtitle": "Solutions énergétiques adaptées à tous vos besoins, du résidentiel au communautaire",
-    "catalog-prompt": "Consultez notre catalogue de produits KYA pour en savoir plus sur nos solutions solaires innovantes.",
-    "see-more": "Voir Plus"
-  },
-  "services": {
-    "title": "Nos services",
-    "subtitle": "Un accompagnement complet de l'étude à la maintenance de vos installations",
-    "installation-title": "INSTALLATION",
-    "installation-description": "Installation de minicentrales solaires (hybrides), Lampadaires solaires, Plateformes multifonctionnelles solaires...",
-    "audit-title": "ÉTUDE, AUDIT ET SUIVI-CONTRÔLE",
-    "audit-description": "Audit à l'exploitation et la maintenance des minicentrales Suivi et contrôle des ouvrages énergétiques solaires...",
-    "training-title": "RENFORCEMENT DE CAPACITES",
-    "training-description": "Programmes de formation pour techniciens, élèves et professionnels",
-    "rental-title": "SERVICE DE LOCATION DES KYA-SOP",
-    "rental-description": "Location clé en main de systèmes solaires autonomes",
-    "learn-more": "En Savoir Plus"
-  },
-  "financing": {
-    "title": "Financement Location-Vente KYA-SoP",
-    "subtitle": "Accédez à l'énergie solaire sans investissement initial important",
-    "down-payment": "Acompte initial seulement",
-    "repayment-period": "Durée de remboursement maximum",
-    "maintenance-included": "Installation et maintenance incluses"
-  },
-  "contact": {
-    "contact_us": "Contactez-Nous"
   }
 }
