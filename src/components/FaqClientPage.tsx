@@ -44,28 +44,26 @@ const FaqClientPage: FC<Props> = ({ t }) => {
   return (
     <div className="bg-white dark:bg-gray-900">
       {/* Hero Section */}
-      <section className="bg-linear-to-r  from-[#1e9983] from-[19%] to-[#197867] to-[100%] text-white py-30 px-4 text-center relative">
+      <section className="bg-linear-to-r  from-[#1e9983] from-[19%] to-[#197867] to-[100%] text-white py-30 px-4 text-center relative overflow-hidden">
         <motion.div className="z-10 absolute w-full h-max -bottom-40 overflow-hidden left-0 flex flex-col justify-end items-start">
-          <p className="-rotate-z-[7deg] skew-10 font-black font-facebook-sans select-none  text-[#fff1] text-shadow[100px_0_1000px_#fff] text-[25rem] container mx-auto flex justify-between items-center">
+          <p className="faq-effect font-black font-facebook-sans select-none text-shadow[100px_0_1000px_#fff] text-[25rem] container mx-auto flex justify-between items-center">
             <span>faq</span>
-            <span>?</span>
+            <span className="skew-6 rotate-12">?</span>
           </p>
-          <div className="h-[30%] absolute w-full bottom-[40%] bg-linear-to-r  from-[#1e9983a0] from-[19%] to-[#197867a0] to-[100%]"></div>
+          {/* <div className="h-[30%] absolute w-full bottom-[40%] bg-linear-to-r  from-[#1e9983a0] from-[19%] to-[#197867a0] to-[100%]"></div> */}
         </motion.div>
         <motion.h1
-          className="z-20 container relative mx-auto text-6xl md:text-8xl font-bold mb-4 w-full lowercase text-left"
+          className="z-20 container relative mx-auto text-6xl md:text-8xl font-black mb-4 w-full lowercase text-left"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}>
           {t.hero.title}
         </motion.h1>
         <motion.p
-          className="z-20 relative text-2xl md:text-4xl mb-8"
+          className="z-20 relative text-2xl md:text-4xl mb-8 font-semibold"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}>
-          {t.hero.subtitle}
-        </motion.p>
+          transition={{ duration: 0.5, delay: 0.2 }} dangerouslySetInnerHTML={{ __html: t.hero.subtitle }} />
         <motion.div
           className="z-20 absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] sm:w-xl bg-kya-white rounded-full shadow-lg outline-none lg:w-2xl mx-auto"
           initial={{ scale: 0.9, opacity: 0 }}
@@ -88,11 +86,10 @@ const FaqClientPage: FC<Props> = ({ t }) => {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`py-2 px-6 rounded-full font-semibold transition-colors ${
-                activeCategory === cat.id
-                  ? "bg-kya-green text-white"
-                  : "bg-gray-200 text-gray-700 hover:bg-kya-green/80 hover:text-white dark:bg-gray-700 dark:text-gray-300"
-              }`}>
+              className={`py-2 px-6 rounded-full font-bold transition-colors ${activeCategory === cat.id
+                ? "bg-kya-green text-white"
+                : "bg-gray-200 text-gray-700 hover:bg-kya-green/80 hover:text-white dark:bg-gray-700 dark:text-gray-300"
+                }`}>
               {cat.label}
             </button>
           ))}
@@ -148,7 +145,7 @@ const AccordionItem: FC<{
     <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
       <button
         onClick={onClick}
-        className="w-full flex justify-between items-center p-4 text-left font-semibold text-kya-coffee dark:text-kya-white">
+        className="w-full flex justify-between items-center p-4 gap-1 text-left font-bold text-kya-coffee dark:text-kya-white">
         <span>{question}</span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
@@ -164,7 +161,7 @@ const AccordionItem: FC<{
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="overflow-hidden">
-            <div className="p-4 pt-0 text-gray-600 dark:text-gray-300">
+            <div className="p-4 pt-0 text-gray-600 dark:text-gray-300 font-medium">
               {answer}
             </div>
           </motion.div>
