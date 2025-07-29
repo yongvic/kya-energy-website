@@ -24,7 +24,7 @@
   --color-kya-white: #ffffff;
   --color-kya-yellow: #e8e748;
   --color-kya-coffee: #875028;
-  --font-sans: var(--font-arial-narrow), Arial, sans-serif;
+  --font-sans: var(--font-libre-franklin), Arial, sans-serif;
   --font-serif: var(--font-times-new-roman), "Times New Roman", serif;
   --font-facebook-sans: var(--font-facebook-sans);
 }
