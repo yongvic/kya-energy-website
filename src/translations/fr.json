@@ -182,5 +182,47 @@
   },
   "contact": {
     "contact_us": "Contactez-Nous"
+  },
+  "certification": {
+    "title": "Qualité et Certification",
+    "subtitle": "Notre engagement envers l'excellence est certifié. Nous respectons les normes internationales les plus strictes pour garantir la qualité et la fiabilité de tous nos projets.",
+    "card": {
+      "title": "Certifié ISO 9001:2015",
+      "description": "Cette certification atteste de notre système de management de la qualité et de notre capacité à fournir en permanence des produits et services conformes aux exigences des clients et aux exigences réglementaires."
+    },
+    "hero": {
+      "title": "Première entreprise en <span>énergie solaire au Togo</span>",
+      "subtitle": "KYA-Energy Group est la première entreprise certifiée ISO 9001:2015 dans la conception, l'assemblage et la commercialisation de produits et systèmes énergétiques à base d'énergies renouvelables."
+    },
+    "details": {
+      "mainTitle": "KYA-Energy GROUP certifié ISO 9001:2015",
+      "subtitle": "Une reconnaissance de notre engagement envers la qualité",
+      "award": "Certifié ISO 9001:2015",
+      "paragraph1": "Nous sommes fiers d'annoncer que KYA-Energy GROUP a obtenu la certification ISO 9001 : 2015 en 2024, délivrée par TÜV Rheinland. Cette certification témoigne de notre engagement indéfectible envers l'excellence, l'amélioration continue et la satisfaction de nos clients et partenaires.",
+      "paragraph2_strong": "Une reconnaissance de notre démarche qualité",
+      "paragraph3": "Depuis sa création, KYA-Energy GROUP s'est engagé à fournir des solutions innovantes et durables... nous garantissons que nos services répondent aux exigences les plus strictes en matière de performance, de fiabilité et d'amélioration continue."
+    },
+    "essentials": {
+      "title": "Pourquoi cette certification est essentielle ?",
+      "subtitle": "L'obtention de cette certification est le fruit d'un travail collectif et d'une volonté constante de renforcer nos pratiques internes. Elle nous permet de :",
+      "items": {
+        "customerSatisfaction": "Assurer une satisfaction optimale de nos clients en répondant efficacement à leurs besoins et attentes.",
+        "processImprovement": "Améliorer en continu nos processus pour garantir des prestations de haute qualité.",
+        "teamCohesion": "Renforcer la cohésion et la qualification de nos équipes à travers des formations et des méthodes de travail structurées.",
+        "healthyEnvironment": "Garantir un environnement de travail sain et performant, en adéquation avec nos valeurs."
+      }
+    },
+    "commitment": {
+      "title": "Notre engagement QHSE :",
+      "subtitle": "Un avenir durable et responsable",
+      "paragraph": "Au-delà de la qualité, notre engagement intègre également les aspects Hygiène, Sécurité et Environnement (HSE). Nous œuvrons chaque jour pour améliorer nos performances environnementales et sécuritaires...",
+      "thanksTitle": "Un grand merci à nos équipes et partenaires !",
+      "thanksParagraph1": "Cette certification est avant tout une réussite collective. Nous remercions chaleureusement tous nos collaborateurs... Nous remercions également nos clients et partenaires pour leur confiance et leur soutien indéfectible.",
+      "thanksParagraph2": "Chez KYA-Energy GROUP, nous continuons à viser l'excellence et à repousser les limites de l'innovation pour un avenir énergétique durable."
+    },
+    "cta": {
+      "title": "Faites Confiance à l'Excellence Certifiée",
+      "subtitle": "Choisissez KYA Energy Group pour vos projets d'énergie solaire et bénéficiez de notre expertise certifiée ISO 9001:2015."
+    }
   }
 }

@@ -72,6 +72,48 @@ type Type = {
   contact: {
     contact_us: string;
   };
+  certification: {
+    title: string;
+    subtitle: string;
+    card: {
+      title: string;
+      description: string;
+    };
+    hero: {
+      title: string;
+      subtitle: string;
+    };
+    details: {
+      mainTitle: string;
+      subtitle: string;
+      award: string;
+      paragraph1: string;
+      paragraph2_strong: string;
+      paragraph3: string;
+    };
+    essentials: {
+      title: string;
+      subtitle: string;
+      items: {
+        customerSatisfaction: string;
+        processImprovement: string;
+        teamCohesion: string;
+        healthyEnvironment: string;
+      };
+    };
+    commitment: {
+      title: string;
+      subtitle: string;
+      paragraph: string;
+      thanksTitle: string;
+      thanksParagraph1: string;
+      thanksParagraph2: string;
+    };
+    cta: {
+      title: string;
+      subtitle: string;
+    };
+  };
 };
 
 export default Type;

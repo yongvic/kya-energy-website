@@ -182,5 +182,47 @@
   },
   "contact": {
     "contact_us": "Contact Us"
+  },
+  "certification": {
+    "title": "Quality and Certification",
+    "subtitle": "Our commitment to excellence is certified. We adhere to the highest international standards to guarantee quality and reliability in all our projects.",
+    "card": {
+      "title": "ISO 9001:2015 Certified",
+      "description": "This certification attests to our quality management system and our ability to consistently provide products and services that meet customer and regulatory requirements."
+    },
+    "hero": {
+      "title": "First solar energy company in Togo",
+      "subtitle": "KYA-Energy Group is the first company certified ISO 9001:2015 in the design, assembly, and marketing of renewable energy-based products and systems."
+    },
+    "details": {
+      "mainTitle": "KYA-Energy GROUP certified ISO 9001:2015",
+      "subtitle": "A recognition of our commitment to quality",
+      "award": "Certified ISO 9001:2015",
+      "paragraph1": "We are proud to announce that KYA-Energy GROUP obtained the ISO 9001:2015 certification in 2024, issued by TÜV Rheinland. This certification demonstrates our unwavering commitment to excellence, continuous improvement, and the satisfaction of our customers and partners.",
+      "paragraph2_strong": "A recognition of our quality approach",
+      "paragraph3": "Since its creation, KYA-Energy GROUP has been committed to providing innovative and sustainable solutions... we guarantee that our services meet the strictest requirements in terms of performance, reliability, and continuous improvement."
+    },
+    "essentials": {
+      "title": "Why is this certification essential?",
+      "subtitle": "Obtaining this certification is the result of a collective effort and a constant desire to strengthen our internal practices. It allows us to:",
+      "items": {
+        "customerSatisfaction": "Ensure optimal customer satisfaction by effectively meeting their needs and expectations.",
+        "processImprovement": "Continuously improve our processes to ensure high-quality services.",
+        "teamCohesion": "Strengthen the cohesion and qualification of our teams through training and structured work methods.",
+        "healthyEnvironment": "Guarantee a healthy and efficient work environment, in line with our values."
+      }
+    },
+    "commitment": {
+      "title": "Our QHSE commitment:",
+      "subtitle": "A sustainable and responsible future",
+      "paragraph": "Beyond quality, our commitment also includes Health, Safety, and Environment (HSE) aspects. We work every day to improve our environmental and safety performance...",
+      "thanksTitle": "A big thank you to our teams and partners!",
+      "thanksParagraph1": "This certification is above all a collective success. We warmly thank all our collaborators... We also thank our customers and partners for their trust and unwavering support.",
+      "thanksParagraph2": "At KYA-Energy GROUP, we continue to strive for excellence and push the boundaries of innovation for a sustainable energy future."
+    },
+    "cta": {
+      "title": "Trust Certified Excellence",
+      "subtitle": "Choose KYA Energy Group for your solar energy projects and benefit from our ISO 9001:2015 certified expertise."
+    }
   }
 }
