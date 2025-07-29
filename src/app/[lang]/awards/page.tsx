@@ -5,7 +5,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { useAnimate, useInView, stagger, motion } from "framer-motion";
-
+import Image from "next/image";
 // Icons
 import { FaCalendarAlt, FaDownload, FaGlobeAfrica, FaHandshake, FaLeaf, FaLightbulb, FaPlay, FaRocket, FaTrophy } from "react-icons/fa";
 import { FaEarthAfrica, FaPeopleGroup } from "react-icons/fa6";
@@ -59,13 +59,13 @@ export default function Page() {
         <div className="relative h-[calc(100vh-6rem)]">
           {/* Image */}
           <div className="w-full h-full overflow-hidden">
-            <img src="/fondation_kya.avif" alt="Awards background" className="w-full h-full object-cover" />
+            <Image width={500} height={500} src="/fondation_kya.avif" alt="Awards background" className="w-full h-full object-cover" />
           </div>
           {/* Text Overlay */}
           <div ref={heroScope} className="absolute top-0 left-0 z-10 w-full h-full bg-black/70 flex flex-col items-center justify-center p-4">
             <div className="text-white w-[90%] md:w-[70%] lg:w-1/2 space-y-8">
               <div className="hero-badge opacity-0 flex justify-center items-center">
-                <div className="w-max py-4 px-8 flex items-center gap-2 bg-orange-500/50 rounded-full backdrop-blur-sm border border-orange-400/50">
+                <div className="w-max py-4 px-8 flex items-center gap-2 bg-kya-orange/75 rounded-full backdrop-blur-sm">
                   <p className="text-2xl"><FaTrophy /></p>
                   <p>Excellence reconnue</p>
                 </div>
@@ -76,14 +76,14 @@ export default function Page() {
                   initial={{ backgroundSize: "0% 100%" }}
                   animate={{ backgroundSize: "100% 100%" }}
                   transition={{ duration: 1.5, delay: 0.8, ease: "easeInOut" }}
-                  className="bg-gradient-to-r from-green-500 to-green-300 bg-no-repeat bg-clip-text text-transparent"
+                  className="bg-gradient-to-r from-kya-green to-kya-green/75 bg-no-repeat bg-clip-text text-transparent"
                 >
                   Nos prix
                 </motion.span> et <motion.span
                   initial={{ backgroundSize: "0% 100%" }}
                   animate={{ backgroundSize: "100% 100%" }}
                   transition={{ duration: 1.5, delay: 1, ease: "easeInOut" }}
-                  className="bg-gradient-to-r from-orange-500 to-orange-300 bg-no-repeat bg-clip-text text-transparent"
+                  className="bg-gradient-to-r from-kya-orange to-kya-orange/75 bg-no-repeat bg-clip-text text-transparent"
                 >
                   distinctions
                 </motion.span>
@@ -97,7 +97,7 @@ export default function Page() {
       </div>
 
       <div className="py-16 bg-gradient-to-b from-slate-50 to-slate-100">
-        <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-b from-green-600 to-green-800 bg-clip-text text-transparent">NOS PRIX ET DISTINCTIONS</h2>
+        <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold bg-kya-green bg-clip-text text-transparent">NOS PRIX ET DISTINCTIONS</h2>
       </div>
 
       {/* Nos prix et distinctions */}
@@ -117,9 +117,9 @@ export default function Page() {
             { img: "/start-up.png", year: "2018", title: "Prix BOAD du concours \"StartUp\"", desc: "KYA-Energy GROUP lauréat du concours \"StartUp\" BOAD 2018.", tag: "Startup Excellence" },
             { img: "/usaid.png", year: "2023", title: "Lauréat de l'USAID pour l'électrification solaire", desc: "La seule entreprise francophone parmi les 9 pays lauréats pour l'électrification solaire des centres de santé.", tag: "Impact Social Santé" }
           ].map((value, index) => (
-            <div key={index} className="award-card opacity-0 relative flex flex-col bg-white shadow rounded-xl hover:shadow-xl border-2 border-transparent hover:border-green-400 transition-all">
+            <div key={index} className="award-card opacity-0 relative flex flex-col bg-white shadow rounded-xl hover:shadow-xl border-2 border-transparent hover:border-kya-green transition-all">
               <div className="absolute -top-3 left-3">
-                <p className="w-max h-max bg-green-500 text-white rounded-full px-4 py-1.5 text-xs font-bold shadow-md">{value.tag}</p>
+                <p className="w-max h-max bg-kya-green text-white rounded-full px-4 py-1.5 text-xs font-bold shadow-md">{value.tag}</p>
               </div>
               <div className="bg-gray-50 p-4 h-48 flex items-center justify-center rounded-t-xl">
                 <img src={value.img} alt={`Logo for ${value.title}`} className="max-h-full max-w-full object-contain" />
@@ -127,7 +127,7 @@ export default function Page() {
               <div className="p-4 flex-grow flex flex-col">
                 <div className="flex justify-between items-start gap-2 mb-2">
                   <h3 className="font-bold text-lg">{value.title}</h3>
-                  <p className="w-max h-max font-bold px-2.5 py-1 text-sm bg-orange-400 text-white rounded-full">{value.year}</p>
+                  <p className="w-max h-max font-bold px-2.5 py-1 text-sm bg-kya-orange text-white rounded-full">{value.year}</p>
                 </div>
                 <p className="text-gray-500 text-sm flex-grow">{value.desc}</p>
               </div>
@@ -141,7 +141,7 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <div className="section-title opacity-0 px-4 lg:px-48">
             <div className="flex items-center justify-center my-4">
-              <p className="w-max rounded-full px-4 py-2 bg-green-700 text-white font-bold text-sm">Notre impact</p>
+              <p className="w-max rounded-full px-4 py-2 bg-kya-green text-white font-bold text-sm">Notre impact</p>
             </div>
             <h2 className="text-center text-4xl font-bold w-full">Des chiffres qui parlent</h2>
             <div className="flex justify-center items-center my-4">
@@ -157,8 +157,8 @@ export default function Page() {
               { icon: <FaPeopleGroup />, stat: "100%", title: "Satisfaction", desc: "Clients et partenaires satisfaits" }
             ].map((value, index) => (
               <div key={index} className="impact-card opacity-0 p-8 rounded-xl shadow hover:shadow-xl bg-white/70 backdrop-blur-sm text-center flex flex-col items-center gap-2">
-                <div className="text-3xl w-max bg-green-600 p-4 rounded-full text-white">{value.icon}</div>
-                <p className="text-6xl font-bold text-green-600">{value.stat}</p>
+                <div className="text-3xl w-max bg-kya-green p-4 rounded-full text-white">{value.icon}</div>
+                <p className="text-6xl font-bold text-kya-green">{value.stat}</p>
                 <h3 className="text-2xl font-bold">{value.title}</h3>
                 <p className="text-gray-500">{value.desc}</p>
               </div>
@@ -171,7 +171,7 @@ export default function Page() {
       <div ref={categoriesScope} className="container mx-auto px-4 my-32">
         <div className="section-title opacity-0 px-4 lg:px-48">
           <div className="flex items-center justify-center my-4">
-            <p className="w-max rounded-full px-4 py-2 bg-green-700 text-white font-bold text-sm">Domaines d&apos;Excellence</p>
+            <p className="w-max rounded-full px-4 py-2 bg-kya-green text-white font-bold text-sm">Domaines d&apos;Excellence</p>
           </div>
           <h2 className="text-center text-4xl font-bold w-full">Nos Catégories de Récompenses</h2>
           <div className="flex justify-center items-center my-4">
@@ -187,12 +187,12 @@ export default function Page() {
             { icon: <FaGlobeAfrica />, title: "Leadership Africain", count: "3", awards: ["Global entrepreneur awards 2024", "Bâtisseurs économie africaine 2023", "Grand Prix Mathieu Kérékou 2023"] }
           ].map((value, index) => (
             <div key={index} className="category-card opacity-0 group bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition-shadow">
-              <div className="h-1 bg-green-700 w-0 group-hover:w-full transition-all duration-500"></div>
+              <div className="h-1 bg-kya-green w-0 group-hover:w-full transition-all duration-500"></div>
               <div className="space-y-4 p-8">
-                <div className="text-3xl p-4 rounded-full bg-green-700 w-max text-white">{value.icon}</div>
+                <div className="text-3xl p-4 rounded-full bg-kya-green w-max text-white">{value.icon}</div>
                 <h3 className="font-bold text-2xl">{value.title}</h3>
-                <p className="text-sm px-4 py-1.5 rounded-full bg-orange-200 w-max text-orange-700 font-bold">{value.count} Prix</p>
-                <ul className="list-disc text-green-700 pl-5 space-y-2 pt-2">
+                <p className="text-sm px-4 py-1.5 rounded-full bg-orange-200 w-max text-kya-orange font-bold">{value.count} Prix</p>
+                <ul className="list-disc text-kya-green pl-5 space-y-2 pt-2">
                   {value.awards.map((_value, _index) => (
                     <li key={_index}><span className="text-gray-700">{_value}</span></li>
                   ))}
@@ -208,13 +208,13 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <div className="px-4 lg:px-48 text-center">
             <div className="flex items-center justify-center mb-8">
-              <p className="text-3xl p-6 rounded-full bg-green-700"><FaRocket /></p>
+              <p className="text-3xl p-6 rounded-full bg-kya-green"><FaRocket /></p>
             </div>
             <h2 className="text-4xl font-bold w-full">Rejoignez l&apos;Excellence</h2>
             <p className="mt-4 text-xl text-slate-300">Découvrez comment nos solutions primées peuvent transformer vos projets énergétiques et contribuer à un avenir plus durable.</p>
             <div className="mt-12 flex flex-wrap items-center justify-center gap-4 md:gap-8 font-bold">
               <Link href="#">
-                <div className="w-max px-8 py-4 gap-3 flex items-center justify-center rounded-xl bg-orange-500 hover:bg-orange-600 transition-all duration-300 transform hover:-translate-y-1">
+                <div className="w-max px-8 py-4 gap-3 flex items-center justify-center rounded-xl bg-kya-orange hover:bg-kya-orange/90 transition-all duration-300 transform hover:-translate-y-1">
                   <p className="text-xl"><FaPlay /></p>
                   <p>Démarrer un projet</p>
                 </div>
