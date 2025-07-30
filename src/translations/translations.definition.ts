@@ -1,6 +1,8 @@
 type Type = {
   header: {
     logo: string;
+    qualityPolicy: string;
+    contact: string;
   };
   /*
     Awards definition here
@@ -39,6 +41,8 @@ type Type = {
       description: string;
       tagline: string;
       cta: string;
+      foundationName: string;
+      watchVideo: string;
       stats: {
         employees: string;
         mission: string;
@@ -231,6 +235,112 @@ type Type = {
     "down-payment": string;
     "repayment-period": string;
     "maintenance-included": string;
+  };
+  home: {
+    hero: {
+      title: string;
+      subtitle: string;
+      vision: string;
+      cta: string;
+    };
+    stats: {
+      installations: string;
+      expertise: string;
+      satisfaction: string;
+      support: string;
+    };
+    "mission-and-values": {
+      title: string;
+      mission: {
+        title: string;
+        text: string;
+      };
+      values: {
+        title: string;
+        items: string[];
+      };
+    };
+    impacts: {
+      title: string;
+      items: {
+        value: string;
+        description: string;
+      }[];
+    };
+    discover: {
+      title: string;
+      text1: string;
+      text2: string;
+    };
+    "why-choose-us": {
+      title: string;
+      items: {
+        title: string;
+        description: string;
+      }[];
+    };
+    products: {
+      title: string;
+      subtitle: string;
+      items: {
+        title: string;
+        description: string;
+      }[];
+    };
+  };
+  footer: {
+    newsletter: {
+      title: string;
+      placeholder: string;
+      button: string;
+    };
+    description: string;
+    certified: string;
+    solutions: {
+      title: string;
+      items: {
+        solarKits: string;
+        installation: string;
+        maintenance: string;
+        consulting: string;
+      };
+    };
+    company: {
+      title: string;
+      items: {
+        about: string;
+        team: string;
+        certifications: string;
+        foundation: string;
+      };
+    };
+    contact: {
+      title: string;
+      items: {
+        contactUs: string;
+        support: string;
+        news: string;
+        qualityPolicy: string;
+      };
+    };
+    address: {
+      title: string;
+      line1: string;
+      line2: string;
+      line3: string;
+    };
+    schedule: {
+      title: string;
+      days: string;
+      hours: string;
+    };
+    phone: {
+      title: string;
+    };
+    email: {
+      title: string;
+    };
+    copyright: string;
   };
 };
 

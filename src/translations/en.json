@@ -1,6 +1,8 @@
 {
   "header": {
-    "logo": "KYA-Energy Group logo"
+    "logo": "KYA-Energy Group logo",
+    "qualityPolicy": "Quality policy",
+    "contact": "Contact"
   },
   "awards": [
     {
@@ -142,6 +144,8 @@
       "description": "The KYA Foundation was created in October 2022. Its purpose is to contribute to the socio-economic development of African populations from the most vulnerable groups through interventions in favor of development in the fields of energy, agriculture, medicine, education, and the environment.",
       "tagline": "KYA Foundation, for a better world.",
       "cta": "Download the commitment letter",
+      "foundationName": "KYA FOUNDATION",
+      "watchVideo": "Watch the video",
       "stats": {
         "employees": "Employees recruited",
         "mission": "A mission",
@@ -435,5 +439,170 @@
     "down-payment": "Initial contribution",
     "repayment-period": "Up to 10 years for repayment",
     "maintenance-included": "Maintenance and servicing included"
+  },
+  "home": {
+    "hero": {
+      "title": "With our KYA-SoP solar power systems",
+      "subtitle": "Become green energy owners.",
+      "vision": "Our vision: to democratize access to green and sustainable energy",
+      "cta": "Discover our solutions"
+    },
+    "stats": {
+      "installations": "Installations carried out",
+      "expertise": "Years of expertise",
+      "satisfaction": "Customer satisfaction",
+      "support": "Customer support"
+    },
+    "mission-and-values": {
+      "title": "Mission and values",
+      "mission": {
+        "title": "Our mission",
+        "text": "Innovatively transform renewable energy resources to produce clean, reliable, and affordable energy for all. We are committed to creating a sustainable energy future that benefits communities and preserves our planet."
+      },
+      "values": {
+        "title": "Our values",
+        "items": [
+          "Professionalism",
+          "Team spirit",
+          "Integrity",
+          "Equity",
+          "Rigor",
+          "Customer focus",
+          "Transparency",
+          "Innovation"
+        ]
+      }
+    },
+    "impacts": {
+      "title": "Our impacts",
+      "items": [
+        {
+          "value": "5 MWp",
+          "description": "of cumulative installed power to date"
+        },
+        {
+          "value": "396 t CO2/year",
+          "description": "of CO2 avoided"
+        },
+        {
+          "value": "500+",
+          "description": "jobs created"
+        },
+        {
+          "value": "10",
+          "description": "companies or agencies trained"
+        },
+        {
+          "value": "3200+",
+          "description": "people trained"
+        },
+        {
+          "value": "1000+",
+          "description": "homes powered"
+        }
+      ]
+    },
+    "discover": {
+      "title": "Discover KYA-Energy Group",
+      "text1": "KYA-ENERGY GROUP is an international company specializing in renewable energies (particularly solar energy) and energy efficiency. It works to meet the challenge of electrification in Africa in a sustainable way.",
+      "text2": "Founding member of the Synergy of Renewable Energy Actors (SAER-TOGO), and of international associations like the Global Off-Grid Lighting Association (GOGLA) and the Africa Minigrid Developers Association (AMDA)."
+    },
+    "why-choose-us": {
+      "title": "Why Choose KYA-Energy Group?",
+      "items": [
+        {
+          "title": "Complete Support",
+          "description": "From study to maintenance, we support you."
+        },
+        {
+          "title": "Proven Reliability",
+          "description": "Durable equipment with extended warranties."
+        },
+        {
+          "title": "ISO 9001:2015 Certification",
+          "description": "Quality guaranteed according to the most demanding international standards."
+        },
+        {
+          "title": "Innovative Solutions",
+          "description": "Cutting-edge technologies for maximum energy efficiency."
+        },
+        {
+          "title": "Environmental Impact",
+          "description": "Significant reduction of your carbon footprint."
+        }
+      ]
+    },
+    "products": {
+      "title": "Our products",
+      "subtitle": "Discover our complete range of solar power systems adapted to all your energy needs.",
+      "items": [
+        {
+          "title": "Residential KYA-SoP",
+          "description": "Solutions adapted to homes and small buildings."
+        },
+        {
+          "title": "Commercial KYA-SoP",
+          "description": "High-performance systems for businesses and industries."
+        },
+        {
+          "title": "Community KYA-SoP",
+          "description": "Large-scale project for communities and institutions."
+        }
+      ]
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Subscribe to our newsletter to not miss any information.",
+      "placeholder": "Your email address",
+      "button": "Subscribe"
+    },
+    "description": "Your partner for a sustainable and responsible energy transition.",
+    "certified": "Certified ISO 9001:2015",
+    "solutions": {
+      "title": "Solutions",
+      "items": {
+        "solarKits": "Solar kits",
+        "installation": "Installation",
+        "maintenance": "Maintenance",
+        "consulting": "Consulting"
+      }
+    },
+    "company": {
+      "title": "Company",
+      "items": {
+        "about": "About",
+        "team": "Our team",
+        "certifications": "Certifications",
+        "foundation": "KYA Foundation"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "items": {
+        "contactUs": "Contact us",
+        "support": "Support",
+        "news": "News",
+        "qualityPolicy": "Quality policy"
+      }
+    },
+    "address": {
+      "title": "Address",
+      "line1": "300m, street opposite the Loyola Cultural Center (CCL),",
+      "line2": "Route Mission Tové, Agoè Logopé",
+      "line3": "08 BP 81101, Lomé - Togo"
+    },
+    "schedule": {
+      "title": "Schedule",
+      "days": "Monday - Friday",
+      "hours": "07:30 AM–12:00 PM | 02:00 PM–05:30 PM"
+    },
+    "phone": {
+      "title": "Phone"
+    },
+    "email": {
+      "title": "E-mail"
+    },
+    "copyright": "© {year} KYA-Energy Group. All rights reserved."
   }
 }

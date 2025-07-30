@@ -1,6 +1,8 @@
 {
   "header": {
-    "logo": "Logo de KYA-Energy Group"
+    "logo": "Logo de KYA-Energy Group",
+    "qualityPolicy": "Politique qualité",
+    "contact": "Contact"
   },
   "awards": [
     {
@@ -142,6 +144,8 @@
       "description": "La Fondation KYA est créée en octobre 2022. Elle a pour but de contribuer au développement socio-économique des populations africaines, issues des groupes les plus vulnérables par des interventions en faveur du développement en matière d'énergie, d'agriculture, de médecine, d'éducation et de l'environnement.",
       "tagline": "Fondation KYA, pour un monde meilleur.",
       "cta": "Télécharger la lettre d'engagement",
+      "foundationName": "FONDATION KYA",
+      "watchVideo": "Regarder la vidéo",
       "stats": {
         "employees": "Employés recrutés",
         "mission": "Une mission",
@@ -371,31 +375,40 @@
     },
     "list": [
       {
-        "id": "verasol",
-        "name": "Certification VeraSol",
-        "issuer": "VeraSol",
-        "date": "2023-11-01",
-        "logo": "/certifications/verasol.png",
-        "description": "VeraSol est un programme d'assurance qualité pour les solutions solaires hors réseau. Cette certification confirme que nos produits respectent les standards internationaux en matière de qualité, de durabilité et de performance. Elle garantit à nos clients des produits fiables et durables.",
-        "link": "https://data.verasol.org/products/pvm/kya-energy-group-kya-sop-m2"
-      },
-      {
-        "id": "iecee",
-        "name": "Certification IECEE CB",
-        "issuer": "IECEE",
-        "date": "2022-07-15",
-        "logo": "/certifications/iecee.png",
-        "description": "Le système IECEE CB est un système international d'acceptation mutuelle des rapports d'essais et des certificats concernant les composants, équipements et produits électriques et électroniques. Cette certification facilite le commerce international en harmonisant les normes.",
-        "link": "https://www.iecee.org/"
-      },
-      {
-        "id": "iso9001",
+        "id": "iso-9001",
         "name": "ISO 9001:2015",
-        "issuer": "ISO",
-        "date": "2021-05-20",
-        "logo": "/certifications/iso9001.png",
-        "description": "L'ISO 9001:2015 est la norme internationale pour les systèmes de management de la qualité. Cette certification démontre notre capacité à fournir de manière constante des produits et des services qui répondent aux exigences des clients et aux exigences réglementaires.",
-        "link": "https://www.iso.org/standard/62085.html"
+        "issuer": "Bureau Veritas",
+        "date": "2023-11-21",
+        "logo": "/certifications/bureau-veritas.png",
+        "description": "Certification pour notre système de management de la qualité, démontrant notre engagement envers la satisfaction client et l'amélioration continue.",
+        "link": "https://www.bureauveritas.fr/besoin/certification-iso-9001"
+      },
+      {
+        "id": "iso-14001",
+        "name": "ISO 14001:2015",
+        "issuer": "AFNOR Certification",
+        "date": "2024-03-15",
+        "logo": "/certifications/afnor.png",
+        "description": "Reconnaissance de notre engagement pour la performance environnementale et la maîtrise de nos impacts.",
+        "link": "https://certification.afnor.org/qualite/certification-iso-14001-management-environnemental"
+      },
+      {
+        "id": "qualipv",
+        "name": "QualiPV",
+        "issuer": "Qualit'EnR",
+        "date": "2023-09-01",
+        "logo": "/certifications/qualipv.png",
+        "description": "Label de qualité pour l'installation de systèmes solaires photovoltaïques, garantissant notre savoir-faire et le respect des normes.",
+        "link": "https://www.qualit-enr.org/qualifications/qualipv/"
+      },
+      {
+        "id": "rge",
+        "name": "RGE (Reconnu Garant de l'Environnement)",
+        "issuer": "ADEME",
+        "date": "2023-07-12",
+        "logo": "/certifications/rge.png",
+        "description": "Mention attestant de notre compétence en matière de travaux d'efficacité énergétique et d'énergies renouvelables.",
+        "link": "https://www.ademe.fr/particuliers-eco-citoyens/financer-projet/aides-financieres/label-rge-reconnu-garant-lenvironnement"
       }
     ],
     "cta": {
@@ -435,5 +448,170 @@
     "down-payment": "Apport initial",
     "repayment-period": "Jusqu'à 10 ans pour le remboursement",
     "maintenance-included": "Maintenance et entretien inclus"
+  },
+  "home": {
+    "hero": {
+      "title": "Avec nos groupes électrosolaires KYA-SoP",
+      "subtitle": "Devenez propriétaires énergétiques verts.",
+      "vision": "Notre vision: démocratiser l'accès à l'énergie verte et durable",
+      "cta": "Découvrir nos solutions"
+    },
+    "stats": {
+      "installations": "Installations réalisées",
+      "expertise": "Années d'expertise",
+      "satisfaction": "Satisfaction client",
+      "support": "Support client"
+    },
+    "mission-and-values": {
+      "title": "Mission et valeurs",
+      "mission": {
+        "title": "Notre mission",
+        "text": "Transformer les ressources énergétiques renouvelables de manière innovante pour produire une énergie propre, fiable et abordable pour tous. Nous nous engageons à créer un avenir énergétique durable qui profite aux communautés et préserve notre planète."
+      },
+      "values": {
+        "title": "Nos valeurs",
+        "items": [
+          "Professionnalisme",
+          "Esprit d'équipe",
+          "Intégrité",
+          "Equité",
+          "Rigueur",
+          "Écoute du client",
+          "Transparence",
+          "Innovation"
+        ]
+      }
+    },
+    "impacts": {
+      "title": "Nos impacts",
+      "items": [
+        {
+          "value": "5 MWc",
+          "description": "de puissance cumulée installée à ce jour"
+        },
+        {
+          "value": "396 t CO2/an",
+          "description": "de CO2 évité"
+        },
+        {
+          "value": "500 +",
+          "description": "emplois crées"
+        },
+        {
+          "value": "10",
+          "description": "entreprises ou agences formées"
+        },
+        {
+          "value": "3200 +",
+          "description": "personnes formées"
+        },
+        {
+          "value": "1000 +",
+          "description": "foyers alimentés"
+        }
+      ]
+    },
+    "discover": {
+      "title": "Découvrez KYA-Energy Group",
+      "text1": "KYA-ENERGY GROUP est une entreprise internationale spécialisée dans les énergies renouvelables (énergie solaire en particulier) et l’efficacité énergétique. Elle œuvre pour relever le défi de l’électrification en Afrique de façon durable.",
+      "text2": "Membre fondateur de la Synergie des Acteurs des Energies Renouvelables (SAER-TOGO), et d'associations internationales comme Global Off Grid Lightning Association (GOGLA) et Africa Minigrid Developers Association (AMDA)."
+    },
+    "why-choose-us": {
+      "title": "Pourquoi choisir KYA-Energy Group ?",
+      "items": [
+        {
+          "title": "Accompagnement Complet",
+          "description": "De l'étude à la maintenance, nous vous accompagnons."
+        },
+        {
+          "title": "Fiabilité Prouvée",
+          "description": "Équipements durables avec garanties étendues."
+        },
+        {
+          "title": "Certification ISO 9001:2015",
+          "description": "Qualité garantie selon les standards internationaux les plus exigeants."
+        },
+        {
+          "title": "Solutions innovantes",
+          "description": "Technologies de pointe pour une efficacité énergétique maximale."
+        },
+        {
+          "title": "Impact environnemental",
+          "description": "Réduction significatique de votre empreinte carbone."
+        }
+      ]
+    },
+    "products": {
+      "title": "Nos produits",
+      "subtitle": "Découvrez notre gamme complète de groupes électrosolaires adaptés à tous vos besoins énergetiques.",
+      "items": [
+        {
+          "title": "KYA-SoP Résidentiel",
+          "description": "Solutions adaptées aux maisons et aux petits bâtiments."
+        },
+        {
+          "title": "KYA-SoP Commercial",
+          "description": "Systèmes hautes performances pour les entreprises et les industries."
+        },
+        {
+          "title": "KYA-SoP Communautaire",
+          "description": "Projet d'envergure pour collectivités et institutions."
+        }
+      ]
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Abonnez vous à notre newsletter pour ne manquer aucune information.",
+      "placeholder": "Votre adresse email",
+      "button": "S'abonner"
+    },
+    "description": "Votre partenaire pour une transition énergétique durable et responsable.",
+    "certified": "Certifié ISO 9001:2015",
+    "solutions": {
+      "title": "Solutions",
+      "items": {
+        "solarKits": "Groupes électrosolaires",
+        "installation": "Installation",
+        "maintenance": "Maintenance",
+        "consulting": "Conseil"
+      }
+    },
+    "company": {
+      "title": "Entreprise",
+      "items": {
+        "about": "À propos",
+        "team": "Notre équipe",
+        "certifications": "Certifications",
+        "foundation": "Fondation KYA"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "items": {
+        "contactUs": "Nous contacter",
+        "support": "Support",
+        "news": "Actualités",
+        "qualityPolicy": "Politique qualité"
+      }
+    },
+    "address": {
+      "title": "Adresse",
+      "line1": "300m, rue en face du Centre Culturel Loyola (CCL),",
+      "line2": "Route Mission Tové, Agoè Logopé",
+      "line3": "08 BP 81101, Lomé - Togo"
+    },
+    "schedule": {
+      "title": "Horaires",
+      "days": "Lundi - Vendredi",
+      "hours": "07h30–12h00 | 14h00–17h30"
+    },
+    "phone": {
+      "title": "Téléphone"
+    },
+    "email": {
+      "title": "E-mail"
+    },
+    "copyright": "© {year} KYA-Energy Group. Tous droits réservés."
   }
 }

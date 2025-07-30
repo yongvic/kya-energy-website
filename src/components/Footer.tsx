@@ -11,6 +11,7 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 import Image from "next/image";
+import TranslationsType from "@/translations/translations.definition";
 
 const socialNetworks = [
   {
@@ -78,7 +79,11 @@ const socialNetworks = [
   },
 ];
 
-export default function Footer() {
+export default function Footer({
+  dictionary,
+}: {
+  dictionary: TranslationsType;
+}) {
   return (
     <footer className="bg-[url('/background-earth.avif')] bg-cover bg-center">
       <div className="backdrop-blur-xl p-8 md:p-16 lg:p-24 space-y-16 text-kya-white">
@@ -87,7 +92,7 @@ export default function Footer() {
           <div>
             <Image
               src="/logo.webp"
-              alt="KYA Energy Group Logo"
+              alt={dictionary.header.logo}
               width={96}
               height={96}
               className="h-24 w-auto"
@@ -95,8 +100,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col items-end">
             <p className="font-bold text-xl text-justify">
-              Abonnez vous à notre newsletter pour ne manquer aucune
-              information.
+              {dictionary.footer.newsletter.title}
             </p>
             <form className="mt-4 w-full" method="post" action="#">
               <label
@@ -108,13 +112,13 @@ export default function Footer() {
                   name="email"
                   id="email"
                   className="w-full outline-none px-4 text-xl"
-                  placeholder="Votre adresse email"
+                  placeholder={dictionary.footer.newsletter.placeholder}
                   required
                 />
                 <button
                   type="submit"
                   className="hover:bg-kya-orange bg-kya-green transition-all duration-300 text-kya-white font-bold p-4">
-                  S&apos;abonner
+                  {dictionary.footer.newsletter.button}
                 </button>
               </label>
             </form>
@@ -124,43 +128,54 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
             <strong>
-              <span className="text-4xl">
-                Votre partenaire pour une transition énergétique durable et
-                responsable.
-              </span>
+              <span className="text-4xl">{dictionary.footer.description}</span>
               <span className="flex items-center gap-2 text-kya-green mt-8 text-2xl">
                 <FaShield />
-                <span>Certifié ISO 9001:2015</span>
+                <span>{dictionary.footer.certified}</span>
               </span>
             </strong>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col gap-2 text-lg *:hover:text-kya-green *:transition-all *:duration-300">
               <Link href="#" className="font-bold text-2xl">
-                Solutions
+                {dictionary.footer.solutions.title}
               </Link>
-              <Link href="#">Groupes électrosolaires</Link>
-              <Link href="#">Installation</Link>
-              <Link href="#">Maintenance</Link>
-              <Link href="#">Conseil</Link>
+              <Link href="#">
+                {dictionary.footer.solutions.items.solarKits}
+              </Link>
+              <Link href="#">
+                {dictionary.footer.solutions.items.installation}
+              </Link>
+              <Link href="#">
+                {dictionary.footer.solutions.items.maintenance}
+              </Link>
+              <Link href="#">
+                {dictionary.footer.solutions.items.consulting}
+              </Link>
             </div>
             <div className="flex flex-col gap-2 text-lg *:hover:text-kya-green *:transition-all *:duration-300">
               <Link href="#" className="font-bold text-2xl">
-                Entreprise
+                {dictionary.footer.company.title}
               </Link>
-              <Link href="#">À propos</Link>
-              <Link href="#">Notre équipe</Link>
-              <Link href="#">Certifications</Link>
-              <Link href="#">Fondation KYA</Link>
+              <Link href="#">{dictionary.footer.company.items.about}</Link>
+              <Link href="#">{dictionary.footer.company.items.team}</Link>
+              <Link href="#">
+                {dictionary.footer.company.items.certifications}
+              </Link>
+              <Link href="#">
+                {dictionary.footer.company.items.foundation}
+              </Link>
             </div>
             <div className="flex flex-col gap-2 text-lg *:hover:text-kya-green *:transition-all *:duration-300">
               <Link href="#" className="font-bold text-2xl">
-                Contact
+                {dictionary.footer.contact.title}
               </Link>
-              <Link href="#">Nous contacter</Link>
-              <Link href="#">Support</Link>
-              <Link href="#">Actualités</Link>
-              <Link href="#">Politique qualité</Link>
+              <Link href="#">{dictionary.footer.contact.items.contactUs}</Link>
+              <Link href="#">{dictionary.footer.contact.items.support}</Link>
+              <Link href="#">{dictionary.footer.contact.items.news}</Link>
+              <Link href="#">
+                {dictionary.footer.contact.items.qualityPolicy}
+              </Link>
             </div>
           </div>
         </div>
@@ -168,18 +183,24 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
           <div className="space-y-8">
             <div className="space-y-2 text-xl ">
-              <h1 className="text-2xl font-bold underline">Adresse</h1>
-              <p>300m, rue en face du Centre Culturel Loyola (CCL),</p>
-              <p>Route Mission Tové, Agoè Logopé</p>
-              <p>08 BP 81101, Lomé - Togo</p>
+              <h1 className="text-2xl font-bold underline">
+                {dictionary.footer.address.title}
+              </h1>
+              <p>{dictionary.footer.address.line1}</p>
+              <p>{dictionary.footer.address.line2}</p>
+              <p>{dictionary.footer.address.line3}</p>
             </div>
             <div className="space-y-2 text-xl ">
-              <h1 className="text-2xl font-bold underline">Horaires</h1>
-              <p>Lundi - Vendredi</p>
-              <p>07h30–12h00 | 14h00–17h30</p>
+              <h1 className="text-2xl font-bold underline">
+                {dictionary.footer.schedule.title}
+              </h1>
+              <p>{dictionary.footer.schedule.days}</p>
+              <p>{dictionary.footer.schedule.hours}</p>
             </div>
             <div className="space-y-2 text-xl ">
-              <h1 className="text-2xl font-bold underline">Téléphone</h1>
+              <h1 className="text-2xl font-bold underline">
+                {dictionary.footer.phone.title}
+              </h1>
               <Link href="tel:+228 91 50 21 49">
                 <p className="text-kya-green">+228 91 50 21 49</p>
               </Link>
@@ -191,7 +212,9 @@ export default function Footer() {
               </Link>
             </div>
             <div className="space-y-2 text-xl ">
-              <h1 className="text-2xl font-bold underline">E-mail</h1>
+              <h1 className="text-2xl font-bold underline">
+                {dictionary.footer.email.title}
+              </h1>
               <Link href="mailto:info@kya-energy.com">
                 <p className="text-kya-green">info@kya-energy.com</p>
               </Link>
@@ -224,8 +247,10 @@ export default function Footer() {
             ))}
           </div>
           <div className="text-right">
-            &copy; {new Date().getFullYear()} KYA-Energy Group. Tous droits
-            réservés.
+            {dictionary.footer.copyright.replace(
+              "{year}",
+              new Date().getFullYear().toString(),
+            )}
           </div>
         </div>
       </div>

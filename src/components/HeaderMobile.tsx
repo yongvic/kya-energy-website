@@ -66,19 +66,19 @@ export default function HeaderMobile({
                 <Navlink href="/" text={dictionary.navigation.home} isMobile />
                 <Navlink
                   href="/produits-et-services"
-                  text="Produits et Services"
+                  text={dictionary.navigation["products-and-services"]}
                   isMobile>
                   <p>Sub link 1</p>
                   <p>Sub link 2</p>
                 </Navlink>
                 <Navlink
                   href="/a-propos-de-kya"
-                  text="À propos de KYA"
+                  text={dictionary.navigation.about}
                   isMobile
                 />
                 <Navlink
                   href="/actualites-et-engagement"
-                  text="Actualités et engagement"
+                  text={dictionary.navigation["news-and-engagement"]}
                   isMobile
                 />
               </div>

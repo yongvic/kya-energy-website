@@ -93,7 +93,7 @@ const KyaFoundationClientPage: FC<Props> = ({
             initial="hidden"
             animate="visible"
             className="bg-kya-green inline-block px-4 py-1 rounded-full text-sm mb-4">
-            FONDATION KYA
+            {t.hero.foundationName}
           </motion.div>
           <motion.h1
             className="text-5xl md:text-7xl font-bold mb-4"
@@ -128,7 +128,7 @@ const KyaFoundationClientPage: FC<Props> = ({
             transition={{ delay: 0.8 }}>
             <button className="flex items-center gap-2 bg-kya-green py-3 px-6 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
               <FaPlay />
-              <span>Regarder la vidéo</span>
+              <span>{t.hero.watchVideo}</span>
             </button>
             <button className="flex items-center gap-2 border border-kya-green py-3 px-6 rounded-lg font-semibold hover:bg-kya-green transition-colors">
               <FaDownload />
