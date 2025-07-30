@@ -6,26 +6,29 @@ import { LuX, LuArrowRight } from "react-icons/lu";
 
 function Popup({ title, setClicked }: { title: string; setClicked: any; }) {
   return (
-    <div className="z-[100] fixed top-0 left-0 w-full h-full bg-kya-coffee/10 flex justify-center items-center">
-      <div className="mx-auto px-8 w-full sm:w-96">
-        <form action="" method="POST" className="bg-white">
-          <div className="flex items-center justify-between p-4 font-bold">
-            <h1>{title}</h1>
-            <button className="px-4 rounded-full bg-kya-coffee" onClick={() => setClicked(null)}><LuX /></button>
+    <div className="z-[100] fixed top-0 left-0 w-full h-full bg-kya-coffee/10 backdrop-blur-sm flex justify-center items-center">
+      <div className="mx-auto px-8 w-full sm:w-[500px]">
+        <form action="" method="POST" className="bg-white rounded-lg shadow-lg p-6">
+          <div className="flex items-center justify-between mb-4">
+            <h1 className="text-xl font-bold text-kya-coffee">{title}</h1>
+            <button className="p-2 rounded-full hover:bg-gray-200" onClick={() => setClicked(null)}><LuX size={20} /></button>
           </div>
-          <div>
-            <p>Veuillez entrer votre numéro de téléphone. Notre équipe se chargera de vous contacter.</p>
-            <label htmlFor="phone-number">
-              <p>Numéro de téléphone</p>
-              <div>
-                <input type="text" name="phone-number" id="phone-number" pattern="^\d*$" required />
-              </div>
+          <div className="space-y-4">
+            <p className="text-gray-600 text-center">Veuillez entrer votre numéro de téléphone. Notre équipe se chargera de vous contacter.</p>
+            <label htmlFor="phone-number" className="block">
+              <span className="text-gray-700 font-semibold">Numéro de téléphone</span>
+              <input
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                pattern="^\d*$"
+                required
+                className="mt-1 block w-full px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-kya-green focus:border-kya-green"
+              />
             </label>
-            <button className="w-full">
-              <div className="flex px-8 justify-between items-center group font-bold text-xl bg-kya-green py-4">
-                <p>Contactez-moi</p>
-                <LuArrowRight className="-translate-x-1.5 group-hover:translate-x-1.5 transition-all duration-300" />
-              </div>
+            <button className="w-full flex justify-center items-center group font-bold text-xl bg-kya-green py-3 px-4 text-white rounded-md hover:bg-kya-green/90 transition-all duration-300">
+              <span>Contactez-moi</span>
+              <LuArrowRight className="ml-2 -translate-x-1.5 group-hover:translate-x-0 transition-transform duration-300" />
             </button>
           </div>
         </form>
