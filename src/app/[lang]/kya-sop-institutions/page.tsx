@@ -75,9 +75,8 @@ export default function KyaSopInstitutions() {
                     <li key={index}>{value}</li>
                   ))}
                 </ul>
-                <a href={value.buyHref} className="relative">
-                  <div className="bg-kya-orange p-4 w-max relative z-10 hover:-translate-0.5 font-bold text-kya-white">Demander un devis</div>
-                  <div className="absolute top-0 left-0 w-full h-full bg-kya-orange z-[9]"></div>
+                <a href={value.buyHref}>
+                  <div className="bg-kya-orange p-4 w-max hover:-translate-0.5 font-bold text-kya-white">Demander un devis</div>
                 </a>
               </div>
             </div>
