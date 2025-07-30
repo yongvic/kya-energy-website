@@ -268,5 +268,172 @@
         "dark": "Passer au mode sombre"
       }
     }
+  },
+  "productsAndServices": {
+    "hero": {
+      "title": "Nos Produits et Services",
+      "subtitle": "Des solutions sur mesure pour chaque besoin",
+      "video": "Voir la présentation"
+    },
+    "promo": {
+      "title": "Offre Spéciale",
+      "description": "Découvrez nos promotions exclusives sur une sélection de produits KYA-SoP. Valable pour une durée limitée.",
+      "cta": "En savoir plus"
+    },
+    "categories": {
+      "residential": {
+        "title": "Pour les Ménages",
+        "description": "Une énergie fiable et abordable pour votre foyer."
+      },
+      "commercial": {
+        "title": "Pour les Entreprises",
+        "description": "Des solutions personnalisées pour assurer la continuité de vos activités."
+      },
+      "community": {
+        "title": "Pour les Communautés",
+        "description": "Une énergie durable pour les villages et les collectivités."
+      }
+    },
+    "kyaSop": {
+      "title": "KYA-SoP : Le Groupe Électrosolaire Intelligent",
+      "description": "Un groupe électrosolaire intelligent et localement assemblé par KYA, conçu pour répondre efficacement aux besoins énergétiques en milieux ruraux et urbains. Il offre une alternative fiable, durable et abordable aux sources d'énergie conventionnelles.",
+      "benefits": {
+        "title": "Avantages Clés",
+        "items": [
+          "Autonomie énergétique",
+          "Réduction des factures d'électricité",
+          "Énergie propre et durable",
+          "Installation et maintenance faciles"
+        ]
+      },
+      "cta": "Demander un devis"
+    },
+    "kyaBackup": {
+      "title": "KYA-Backup : L'Alimentation Sans Interruption",
+      "description": "Le KYA-Backup est une source d'énergie automatique et mobile conçue pour prendre le relais en cas de coupure de courant. Il assure une alimentation continue et stable pour vos équipements sensibles, vous protégeant des perturbations et des pertes de données.",
+      "benefits": {
+        "title": "Avantages Clés",
+        "items": [
+          "Alimentation électrique continue",
+          "Protection des équipements sensibles",
+          "Mobilité et facilité d'utilisation",
+          "Silencieux et écologique"
+        ]
+      },
+      "cta": "Découvrir nos modèles"
+    },
+    "kyaSolDesign": {
+      "title": "KYA-SolDesign : Le Dimensionnement de Systèmes PV",
+      "description": "KYA-SolDesign est un logiciel de dimensionnement et de simulation de systèmes solaires photovoltaïques. Il permet une conception précise et optimale des installations solaires, adaptée aux besoins spécifiques de chaque projet.",
+      "benefits": {
+        "title": "Avantages Clés",
+        "items": [
+          "Dimensionnement précis et optimal",
+          "Simulation de performance",
+          "Analyse technique et économique",
+          "Convivial et intuitif"
+        ]
+      },
+      "cta": "Essayer KYA-SolDesign"
+    }
+  },
+  "certifications": {
+    "hero": {
+      "title": "Nos Certifications",
+      "subtitle": "Un gage de notre engagement envers la qualité et l'excellence.",
+      "description": "Chez KYA Energy Group, nous nous engageons à fournir des solutions énergétiques fiables et performantes. Nos certifications, délivrées par des organismes reconnus internationalement, attestent de la qualité de nos produits et de notre respect des normes les plus strictes."
+    },
+    "details": {
+      "mainTitle": "Certification ISO 9001:2015",
+      "subtitle": "Un gage de qualité et de confiance",
+      "award": "ISO 9001:2015",
+      "paragraph1": "KYA Energy Group est fier d'être certifié ISO 9001:2015. Cette certification, reconnue internationalement, atteste de notre engagement dans un système de management de la qualité rigoureux. Elle garantit que nos produits et services répondent de manière constante aux exigences de nos clients et sont conformes aux réglementations en vigueur.",
+      "paragraph2_strong": "Cette certification est le fruit d'un effort collectif et d'une vision partagée : placer la qualité au cœur de toutes nos activités.",
+      "paragraph3": "Pour nos clients, c'est l'assurance de bénéficier de solutions énergétiques fiables, performantes et durables, soutenues par un service client d'excellence. Pour notre équipe, c'est une source de motivation pour s'améliorer et innover en permanence."
+    },
+    "essentials": {
+      "title": "Les essentiels de notre démarche qualité",
+      "subtitle": "Notre démarche qualité repose sur quatre piliers fondamentaux qui guident nos actions au quotidien.",
+      "items": {
+        "customerSatisfaction": "La satisfaction client au cœur de nos préoccupations",
+        "processImprovement": "L'amélioration continue de nos processus",
+        "teamCohesion": "La cohésion d'équipe et l'implication de nos collaborateurs",
+        "healthyEnvironment": "Un environnement de travail sain et sécurisé"
+      }
+    },
+    "commitment": {
+      "title": "Notre engagement pour la qualité",
+      "subtitle": "La direction de KYA Energy Group s'engage à :",
+      "paragraph": "Maintenir et améliorer en permanence notre système de management de la qualité conformément aux exigences de la norme ISO 9001:2015. Fournir les ressources nécessaires pour atteindre nos objectifs qualité. Promouvoir une culture de la qualité à tous les niveaux de l'entreprise.",
+      "thanksTitle": "Merci de votre confiance",
+      "thanksParagraph1": "Nous remercions nos clients, partenaires et collaborateurs pour leur contribution à l'obtention de cette certification.",
+      "thanksParagraph2": "Ensemble, nous continuons à construire un avenir énergétique durable."
+    },
+    "list": [
+      {
+        "id": "verasol",
+        "name": "Certification VeraSol",
+        "issuer": "VeraSol",
+        "date": "2023-11-01",
+        "logo": "/certifications/verasol.png",
+        "description": "VeraSol est un programme d'assurance qualité pour les solutions solaires hors réseau. Cette certification confirme que nos produits respectent les standards internationaux en matière de qualité, de durabilité et de performance. Elle garantit à nos clients des produits fiables et durables.",
+        "link": "https://data.verasol.org/products/pvm/kya-energy-group-kya-sop-m2"
+      },
+      {
+        "id": "iecee",
+        "name": "Certification IECEE CB",
+        "issuer": "IECEE",
+        "date": "2022-07-15",
+        "logo": "/certifications/iecee.png",
+        "description": "Le système IECEE CB est un système international d'acceptation mutuelle des rapports d'essais et des certificats concernant les composants, équipements et produits électriques et électroniques. Cette certification facilite le commerce international en harmonisant les normes.",
+        "link": "https://www.iecee.org/"
+      },
+      {
+        "id": "iso9001",
+        "name": "ISO 9001:2015",
+        "issuer": "ISO",
+        "date": "2021-05-20",
+        "logo": "/certifications/iso9001.png",
+        "description": "L'ISO 9001:2015 est la norme internationale pour les systèmes de management de la qualité. Cette certification démontre notre capacité à fournir de manière constante des produits et des services qui répondent aux exigences des clients et aux exigences réglementaires.",
+        "link": "https://www.iso.org/standard/62085.html"
+      }
+    ],
+    "cta": {
+      "title": "Une question ?",
+      "description": "Notre équipe est à votre disposition pour répondre à toutes vos questions sur nos certifications et notre engagement qualité.",
+      "subtitle": "Notre équipe est à votre disposition pour répondre à toutes vos questions sur nos certifications et notre engagement qualité.",
+      "button": "Contactez-nous"
+    }
+  },
+  "products": {
+    "promotional-offers": "Offres Promotionnelles",
+    "product-range": "Notre Gamme de Produits",
+    "product-subtitle": "Découvrez notre gamme complète de groupes électrosolaires adaptés à tous vos besoins énergétiques.",
+    "kya-sop-description": "Groupe électrosolaire intelligent et assemblé localement.",
+    "kya-soldesign-description": "Logiciel de dimensionnement et de simulation de systèmes solaires photovoltaïques.",
+    "kya-ecolabel-description": "Label d'efficacité énergétique pour les bâtiments.",
+    "kya-flexycontrol-description": "Système de contrôle et de monitoring intelligent à distance.",
+    "catalog-prompt": "Vous voulez en savoir plus ?",
+    "see-more": "Voir plus"
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Un accompagnement personnalisé pour vos projets énergétiques.",
+    "installation-title": "Installation et Mise en Service",
+    "installation-description": "Nos experts assurent une installation rapide et conforme de vos équipements solaires.",
+    "audit-title": "Audit Énergétique et Conseil",
+    "audit-description": "Nous analysons vos besoins pour vous proposer la solution la plus adaptée et économique.",
+    "training-title": "Formation et Transfert de Technologie",
+    "training-description": "Nous formons vos équipes à l'utilisation et à la maintenance des systèmes solaires.",
+    "rental-title": "Location de Matériel",
+    "rental-description": "Des solutions de location flexibles pour répondre à vos besoins énergétiques ponctuels.",
+    "learn-more": "En savoir plus"
+  },
+  "financing": {
+    "title": "Solutions de Financement",
+    "subtitle": "Des options flexibles pour concrétiser vos projets.",
+    "down-payment": "Apport initial",
+    "repayment-period": "Jusqu'à 10 ans pour le remboursement",
+    "maintenance-included": "Maintenance et entretien inclus"
   }
 }

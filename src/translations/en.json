@@ -268,5 +268,172 @@
         "dark": "Switch to dark mode"
       }
     }
+  },
+  "productsAndServices": {
+    "hero": {
+      "title": "Our Products and Services",
+      "subtitle": "Tailored solutions for every need",
+      "video": "Watch Presentation"
+    },
+    "promo": {
+      "title": "Special Offer",
+      "description": "Discover our exclusive promotions on a selection of KYA-SoP products. Valid for a limited time.",
+      "cta": "Learn More"
+    },
+    "categories": {
+      "residential": {
+        "title": "For Households",
+        "description": "Reliable and affordable energy for your home."
+      },
+      "commercial": {
+        "title": "For Businesses",
+        "description": "Customized solutions to ensure your business continuity."
+      },
+      "community": {
+        "title": "For Communities",
+        "description": "Sustainable energy for villages and communities."
+      }
+    },
+    "kyaSop": {
+      "title": "KYA-SoP: Smart Solar Power",
+      "description": "An intelligent and locally assembled solar power system by KYA, designed to efficiently meet energy needs in rural and urban areas. It provides a reliable, sustainable, and affordable alternative to conventional energy sources.",
+      "benefits": {
+        "title": "Key Benefits",
+        "items": [
+          "Energy autonomy",
+          "Reduced electricity bills",
+          "Clean and sustainable energy",
+          "Easy installation and maintenance"
+        ]
+      },
+      "cta": "Request a Quote"
+    },
+    "kyaBackup": {
+      "title": "KYA-Backup: Uninterruptible Power Supply",
+      "description": "The KYA-Backup is an automatic and mobile energy source designed to take over during power outages. It ensures a continuous and stable power supply for your sensitive equipment, protecting you from disruptions and data loss.",
+      "benefits": {
+        "title": "Key Benefits",
+        "items": [
+          "Continuous power supply",
+          "Protection for sensitive equipment",
+          "Mobility and ease of use",
+          "Silent and eco-friendly"
+        ]
+      },
+      "cta": "Discover our models"
+    },
+    "kyaSolDesign": {
+      "title": "KYA-SolDesign: Photovoltaic System Sizing",
+      "description": "KYA-SolDesign is a software for sizing and simulating solar photovoltaic systems. It allows for precise and optimal design of solar installations, tailored to each project's specific needs.",
+      "benefits": {
+        "title": "Key Benefits",
+        "items": [
+          "Precise and optimal sizing",
+          "Performance simulation",
+          "Technical and economic analysis",
+          "User-friendly and intuitive"
+        ]
+      },
+      "cta": "Try KYA-SolDesign"
+    }
+  },
+  "certifications": {
+    "hero": {
+      "title": "Our Certifications",
+      "subtitle": "A testament to our commitment to quality and excellence.",
+      "description": "At KYA Energy Group, we are committed to providing reliable and high-performing energy solutions. Our certifications, issued by internationally recognized organizations, attest to the quality of our products and our adherence to the strictest standards."
+    },
+    "details": {
+      "mainTitle": "ISO 9001:2015 Certification",
+      "subtitle": "A guarantee of quality and trust",
+      "award": "ISO 9001:2015",
+      "paragraph1": "KYA Energy Group is proud to be ISO 9001:2015 certified. This internationally recognized certification attests to our commitment to a rigorous quality management system. It ensures that our products and services consistently meet our customers' requirements and comply with applicable regulations.",
+      "paragraph2_strong": "This certification is the result of a collective effort and a shared vision: to place quality at the heart of all our activities.",
+      "paragraph3": "For our customers, it is the assurance of benefiting from reliable, high-performing, and sustainable energy solutions, supported by excellent customer service. For our team, it is a source of motivation to continuously improve and innovate."
+    },
+    "essentials": {
+      "title": "The Essentials of Our Quality Approach",
+      "subtitle": "Our quality approach is based on four fundamental pillars that guide our daily actions.",
+      "items": {
+        "customerSatisfaction": "Customer satisfaction at the heart of our concerns",
+        "processImprovement": "Continuous improvement of our processes",
+        "teamCohesion": "Team cohesion and involvement of our employees",
+        "healthyEnvironment": "A healthy and safe working environment"
+      }
+    },
+    "commitment": {
+      "title": "Our Commitment to Quality",
+      "subtitle": "The management of KYA Energy Group is committed to:",
+      "paragraph": "Maintaining and continuously improving our quality management system in accordance with the requirements of the ISO 9001:2015 standard. Providing the necessary resources to achieve our quality objectives. Promoting a culture of quality at all levels of the company.",
+      "thanksTitle": "Thank you for your trust",
+      "thanksParagraph1": "We thank our customers, partners, and employees for their contribution to obtaining this certification.",
+      "thanksParagraph2": "Together, we continue to build a sustainable energy future."
+    },
+    "list": [
+      {
+        "id": "verasol",
+        "name": "VeraSol Certification",
+        "issuer": "VeraSol",
+        "date": "2023-11-01",
+        "logo": "/certifications/verasol.png",
+        "description": "VeraSol is a quality assurance program for off-grid solar solutions. This certification confirms that our products meet international standards for quality, durability, and performance. It ensures our customers receive reliable and sustainable products.",
+        "link": "https://data.verasol.org/products/pvm/kya-energy-group-kya-sop-m2"
+      },
+      {
+        "id": "iecee",
+        "name": "IECEE CB Certification",
+        "issuer": "IECEE",
+        "date": "2022-07-15",
+        "logo": "/certifications/iecee.png",
+        "description": "The IECEE CB scheme is an international system for the mutual acceptance of test reports and certificates for electrical and electronic components, equipment, and products. This certification facilitates international trade by harmonizing standards.",
+        "link": "https://www.iecee.org/"
+      },
+      {
+        "id": "iso9001",
+        "name": "ISO 9001:2015",
+        "issuer": "ISO",
+        "date": "2021-05-20",
+        "logo": "/certifications/iso9001.png",
+        "description": "ISO 9001:2015 is the international standard for quality management systems. This certification demonstrates our ability to consistently provide products and services that meet customer and regulatory requirements.",
+        "link": "https://www.iso.org/standard/62085.html"
+      }
+    ],
+    "cta": {
+      "title": "Have a Question?",
+      "description": "Our team is at your disposal to answer all your questions about our certifications and our commitment to quality.",
+      "subtitle": "Our team is at your disposal to answer all your questions about our certifications and our commitment to quality.",
+      "button": "Contact Us"
+    }
+  },
+  "products": {
+    "promotional-offers": "Promotional Offers",
+    "product-range": "Our Product Range",
+    "product-subtitle": "Discover our complete range of solar power systems adapted to all your energy needs.",
+    "kya-sop-description": "Intelligent and locally assembled solar power system.",
+    "kya-soldesign-description": "Software for sizing and simulating solar photovoltaic systems.",
+    "kya-ecolabel-description": "Energy efficiency label for buildings.",
+    "kya-flexycontrol-description": "Intelligent remote control and monitoring system.",
+    "catalog-prompt": "Want to know more?",
+    "see-more": "See more"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Personalized support for your energy projects.",
+    "installation-title": "Installation and Commissioning",
+    "installation-description": "Our experts ensure a quick and compliant installation of your solar equipment.",
+    "audit-title": "Energy Audit and Consulting",
+    "audit-description": "We analyze your needs to offer you the most suitable and economical solution.",
+    "training-title": "Training and Technology Transfer",
+    "training-description": "We train your teams in the use and maintenance of solar systems.",
+    "rental-title": "Equipment Rental",
+    "rental-description": "Flexible rental solutions to meet your temporary energy needs.",
+    "learn-more": "Learn more"
+  },
+  "financing": {
+    "title": "Financing Solutions",
+    "subtitle": "Flexible options to make your projects a reality.",
+    "down-payment": "Initial contribution",
+    "repayment-period": "Up to 10 years for repayment",
+    "maintenance-included": "Maintenance and servicing included"
   }
 }

@@ -1,15 +1,13 @@
 import { getTranslation } from "@/lib/get-translation";
 import { Locale } from "@/lib/i18n.config";
-import { FC } from "react";
 import KyaFoundationClientPage from "@/components/KyaFoundationClientPage";
 
-interface Props {
-  params: {
-    lang: Locale;
-  };
-}
-
-const KyaFoundationPage: FC<Props> = async ({ params: { lang } }) => {
+const KyaFoundationPage = async ({
+  params,
+}: {
+  params: Promise<{ lang: Locale }>;
+}) => {
+  const { lang } = await params;
   const t = await getTranslation(lang);
   const foundationT = t.kyaFoundation;
 

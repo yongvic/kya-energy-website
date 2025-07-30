@@ -121,8 +121,8 @@ export default function Page() {
               <div className="absolute -top-3 left-3">
                 <p className="w-max h-max bg-kya-green text-white rounded-full px-4 py-1.5 text-xs font-bold shadow-md">{value.tag}</p>
               </div>
-              <div className="bg-gray-50 p-4 h-48 flex items-center justify-center rounded-t-xl">
-                <img src={value.img} alt={`Logo for ${value.title}`} className="max-h-full max-w-full object-contain" />
+              <div className="relative bg-gray-50 p-4 h-48 flex items-center justify-center rounded-t-xl">
+                <Image src={value.img} alt={`Logo for ${value.title}`} fill className="object-contain" />
               </div>
               <div className="p-4 flex-grow flex flex-col">
                 <div className="flex justify-between items-start gap-2 mb-2">

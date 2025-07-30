@@ -11,10 +11,11 @@ import { LuInbox } from "react-icons/lu";
 
 
 export default async function ProductsAndServicesPage({
-  params: { lang },
+  params,
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
+  const { lang } = await params;
   const t = await getTranslation(lang);
 
   const products = [

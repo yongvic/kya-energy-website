@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { LuX, LuArrowRight } from "react-icons/lu";
 
-function Popup({ title, setClicked }: { title: string; setClicked: any; }) {
+function Popup({ title, setClicked }: { title: string; setClicked: React.Dispatch<React.SetStateAction<number | null>>; }) {
   return (
     <div className="z-[100] fixed top-0 left-0 w-full h-full bg-kya-coffee/10 backdrop-blur-sm flex justify-center items-center">
       <div className="mx-auto px-8 w-full sm:w-[500px]">
