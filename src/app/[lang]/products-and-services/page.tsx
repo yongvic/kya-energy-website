@@ -4,6 +4,7 @@ import type { Locale } from "@/lib/i18n.config";
 import styles from "@/styles/products-and-services.module.css";
 import PromotionalCarousel from "./PromotionalCarousel";
 import ProductAccordion from "./ProductAccordion";
+import PartnersCarousel from "./PartnersCarousel";
 import { MotionDiv } from "./ClientMotion"; // Corrected import
 import { RiCoinsLine } from "react-icons/ri";
 import { FiClock } from "react-icons/fi";
@@ -168,6 +169,14 @@ export default async function ProductsAndServicesPage({
             <div className={`${styles.financing_card_value} ${styles.blue}`}>100%</div>
             <div className={styles.financing_card_label}>{t.financing["maintenance-included"]}</div>
           </MotionDiv>
+        </div>
+      </section>
+
+      {/* 5. Partners Section */}
+      <section className={styles.partners_section}>
+        <div className={styles.partners_container}>
+          <h2 className={styles.partners_title}>{t.partners.title}</h2>
+          <PartnersCarousel />
         </div>
       </section>
     </main>

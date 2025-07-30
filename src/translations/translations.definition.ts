@@ -49,6 +49,9 @@ type Type = {
     "catalog-prompt": string;
     "see-more": string;
   };
+  partners: {
+    title: string;
+  };
   services: {
     title: string;
     subtitle: string;
@@ -114,6 +117,12 @@ type Type = {
       subtitle: string;
     };
   };
+  productsAndServices: {
+      partners: {
+        title: string;
+        description: string;
+      };
+    };
 };
 
 export default Type;
