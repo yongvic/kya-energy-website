@@ -2,6 +2,20 @@
   "header": {
     "logo": "KYA-Energy Group logo"
   },
+  "detail-products": {
+    "certified_title": "KYA-Energy GROUP ISO 9001:2015 Certified",
+    "certified_description": "KYA-SoP solar power systems are intelligent, optimally designed (with a new sizing approach) and locally assembled by KYA Energy Group for productive applications in both rural and urban areas. They consist of:",
+    "certified_item1": "A solar PV generator composed of solar PV modules",
+    "certified_item2": "An electrical box containing inverters, batteries, and protection elements, which can be used in backup mode as an anti-load-shedding system.",
+    "ranges_title": "The different ranges of our solar power systems (KYA-SoP)",
+    "residential_title": "KYA-SoP Residential",
+    "residential_description": "Solutions adapted for individual homes and small buildings.",
+    "commercial_title": "KYA-SoP Commercial",
+    "commercial_description": "High-performance systems for businesses and industries.",
+    "community_title": "KYA-SoP Community",
+    "community_description": "Solutions designed for the energy needs of communities and public infrastructures.",
+    "testimonials_title": "Customer Testimonials"
+  },
   "awards": [
     {
       "image": "ecreee.avif",

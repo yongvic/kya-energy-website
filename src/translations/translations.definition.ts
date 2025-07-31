@@ -2,6 +2,20 @@ type Type = {
   header: {
     logo: string;
   };
+  "detail-products": {
+    certified_title: string;
+    certified_description: string;
+    certified_item1: string;
+    certified_item2: string;
+    ranges_title: string;
+    residential_title: string;
+    residential_description: string;
+    commercial_title: string;
+    commercial_description: string;
+    community_title: string;
+    community_description: string;
+    testimonials_title: string;
+  };
   awards: {
     image: string;
     title: string;

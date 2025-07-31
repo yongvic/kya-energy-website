@@ -2,6 +2,20 @@
   "header": {
     "logo": "Logo de KYA-Energy Group"
   },
+  "detail-products": {
+    "certified_title": "KYA-Energy GROUP certifié ISO 9001:2015",
+    "certified_description": "Les groupes électrosolaires KYA-SoP sont des systèmes solaires intelligents conçus de façon optimale (avec une nouvelle approche de dimensionnement) et assemblés localement par KYA Energy Group pour des applications productives, tant pour le milieu rural qu’urbain. Ils sont composés de :",
+    "certified_item1": "Un générateur solaire PV composé de modules solaires PV",
+    "certified_item2": "Un coffret électrique contenant des onduleurs, des batteries et des éléments de protection, pouvant être utilisé en mode back-up, comme système anti-délestage.",
+    "ranges_title": "Les différents gammes de nos groupes électrosolaires (KYA-SoP)",
+    "residential_title": "KYA-SoP Résidentiel",
+    "residential_description": "Solutions adaptées aux maisons individuelles et petits bâtiments.",
+    "commercial_title": "KYA-SoP Commercial",
+    "commercial_description": "Systèmes haute performance pour entreprises et industries.",
+    "community_title": "KYA-SoP Communautaire",
+    "community_description": "Solutions conçues pour les besoins énergétiques des communautés et des infrastructures publiques.",
+    "testimonials_title": "Témoignages de nos clients"
+  },
   "awards": [
     {
       "image": "ecreee.avif",
