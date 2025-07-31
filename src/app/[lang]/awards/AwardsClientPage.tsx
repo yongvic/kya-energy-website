@@ -53,7 +53,7 @@ export default function AwardsClientPage({ t }: { t: TranslationsType }) {
         <div className="relative h-[calc(100vh-6rem)]">
           {/* Image */}
           <div className="w-full h-full overflow-hidden">
-            <Image width={500} height={500} src="/fondation_kya.avif" alt="Awards background" className="w-full h-full object-cover" />
+            <Image width={500} height={500} src="/awards/group.avif" alt="Awards background" className="w-full h-full object-cover" />
           </div>
           {/* Text Overlay */}
           <div ref={heroScope} className="absolute top-0 left-0 z-10 w-full h-full bg-black/70 flex flex-col items-center justify-center p-4">
@@ -100,7 +100,7 @@ export default function AwardsClientPage({ t }: { t: TranslationsType }) {
           {t.awards.map((value, index) => (
             <div key={index} className="award-card opacity-0 relative flex flex-col bg-white shadow rounded-xl hover:shadow-xl border-2 border-transparent hover:border-kya-green transition-all">
               <div className="absolute -top-3 left-3">
-                
+
               </div>
               <div className="relative bg-gray-50 p-4 h-48 flex items-center justify-center rounded-t-xl">
                 <Image src={`/awards/${value.image}`} alt={`Logo for ${value.title}`} fill className="object-contain" />
@@ -185,27 +185,29 @@ export default function AwardsClientPage({ t }: { t: TranslationsType }) {
       </div>
 
       {/* Call to Action */}
-      <div ref={ctaScope} className="bg-gradient-to-bl from-zinc-900 to-zinc-700 py-32 text-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="px-4 lg:px-48 text-center">
-            <div className="flex items-center justify-center mb-8">
-              <p className="text-3xl p-6 rounded-full bg-kya-green"><FaRocket /></p>
-            </div>
-            <h2 className="text-4xl font-bold w-full">Rejoignez l&apos;Excellence</h2>
-            <p className="mt-4 text-xl text-slate-300">Découvrez comment nos solutions primées peuvent transformer vos projets énergétiques et contribuer à un avenir plus durable.</p>
-            <div className="mt-12 flex flex-wrap items-center justify-center gap-4 md:gap-8 font-bold">
-              <Link href="#">
-                <div className="w-max px-8 py-4 gap-3 flex items-center justify-center rounded-xl bg-kya-orange hover:bg-kya-orange/90 transition-all duration-300 transform hover:-translate-y-1">
-                  <p className="text-xl"><FaPlay /></p>
-                  <p>Démarrer un projet</p>
-                </div>
-              </Link>
-              <Link href="#">
-                <div className="w-max px-8 py-4 gap-3 flex items-center justify-center rounded-xl bg-transparent transition-all duration-300 border-2 border-white text-white hover:bg-white hover:text-gray-900 transform hover:-translate-y-1">
-                  <p className="text-xl"><FaDownload /></p>
-                  <p>Télécharger notre portfolio</p>
-                </div>
-              </Link>
+      <div ref={ctaScope} className="h-screen relative magic-3d-pattern text-gray-900">
+        <div className="h-screen absolute top-0 left-0 size-full backdrop-blur-xs flex items-center justify-center">
+          <div className="container mx-auto px-4">
+            <div className="px-4 lg:px-48 text-center">
+              <div className="flex items-center justify-center mb-8">
+                <p className="text-3xl p-6 rounded-full bg-kya-green"><FaRocket /></p>
+              </div>
+              <h2 className="text-4xl font-bold w-full">Rejoignez l&apos;Excellence</h2>
+              <p className="mt-4 text-xl text-kya-coffee">Découvrez comment nos solutions primées peuvent transformer vos projets énergétiques et contribuer à un avenir plus durable.</p>
+              <div className="mt-12 flex flex-wrap items-center justify-center gap-4 md:gap-8 font-bold">
+                <Link href="mailto:marketing@kya-energy.com">
+                  <div className="w-max px-8 py-4 gap-3 flex items-center justify-center rounded-xl bg-kya-orange hover:bg-kya-orange/90 transition-all duration-300 transform hover:-translate-y-1">
+                    <p className="text-xl"><FaPlay /></p>
+                    <p>Démarrer un projet</p>
+                  </div>
+                </Link>
+                <Link href="https://www.linkedin.com/company/kya-energy" target="_blank">
+                  <div className="w-max px-8 py-4 gap-3 flex items-center justify-center rounded-xl bg-transparent transition-all duration-300 border-2  transform hover:-translate-y-1">
+                    <p className="text-xl"><FaDownload /></p>
+                    <p>Visualiser notre portfolio</p>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

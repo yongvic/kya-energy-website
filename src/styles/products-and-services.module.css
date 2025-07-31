@@ -20,7 +20,7 @@
 
 /* Green underline for titles */
 .section_title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -75,7 +75,7 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
 }
 
@@ -167,7 +167,6 @@
   align-items: center;
   cursor: pointer;
   gap: 1rem;
-
 }
 
 .accordion_header_content {
@@ -183,7 +182,7 @@
   background-color: var(--kya-white);
   border-radius: 0.5rem;
   padding: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .accordion_description {
@@ -200,13 +199,15 @@
 .accordion_content {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 500ms cubic-bezier(0.4, 0, 0.2, 1), padding 500ms ease-in-out;
+  transition:
+    max-height 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    padding 500ms ease-in-out;
   text-align: left;
   padding: 0 1rem;
 }
 
 .accordion_content_inner {
-    padding: 1rem 0;
+  padding: 1rem 0;
 }
 
 /* Services Section */
@@ -228,8 +229,8 @@
 }
 
 .service_card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .service_card_image_container {
@@ -254,10 +255,9 @@
 }
 
 .service_card_description {
-    color: #555;
-    margin-bottom: 1.5rem;
+  color: #555;
+  margin-bottom: 1.5rem;
 }
-
 
 .service_card_cta {
   background-color: var(--kya-green);
@@ -270,7 +270,7 @@
 }
 
 .service_card_cta:hover {
-    background-color: #15803d;
+  background-color: #15803d;
 }
 
 /* Financing Section */
@@ -339,9 +339,15 @@
   font-weight: 800;
   margin-bottom: 0.5rem;
 }
-.financing_card_value.orange { color: var(--kya-orange); }
-.financing_card_value.green { color: var(--kya-green); }
-.financing_card_value.blue { color: #3b82f6; } /* Keeping blue for 100% */
+.financing_card_value.orange {
+  color: var(--kya-orange);
+}
+.financing_card_value.green {
+  color: var(--kya-green);
+}
+.financing_card_value.blue {
+  color: #3b82f6;
+} /* Keeping blue for 100% */
 
 .financing_card_label {
   font-size: 1.125rem;
@@ -376,7 +382,7 @@
 }
 
 .catalogue_link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Promo Modal Styles */
@@ -429,13 +435,15 @@
 .promo_image {
   border-radius: 8px;
   object-fit: contain;
-  width: 90%;
+  width: 70%;
   height: auto;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .promo_image {
-    width: 60%;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -460,7 +468,7 @@
 }
 
 .partners_title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -15px; /* Adjusted position */
   left: 50%;
@@ -527,7 +535,7 @@
   padding: 3rem 1rem;
 }
 
-.certified{
+.certified {
   color: #1ca18dfc;
   font-size: large;
   font-weight: 600;
@@ -578,7 +586,7 @@
 }
 
 .certifiedSection li {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .productGrid {
@@ -597,7 +605,9 @@
 .productCard {
   background-color: white;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
   overflow: hidden;
   transition: transform 0.3s;
 }
@@ -766,7 +776,6 @@
   object-fit: cover;
 }
 
-
 .carouselNav {
   position: absolute;
   top: 50%;
@@ -811,7 +820,9 @@
   background-color: white;
   border-radius: 0.75rem;
   padding: 2rem;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
   position: relative;
   margin-bottom: 2rem;
 }

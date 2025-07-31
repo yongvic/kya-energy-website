@@ -159,7 +159,7 @@ export default function AboutClientPage({ t }: { t: TranslationsType }) {
       </div>
 
       {/* Fondateur */}
-      <div ref={founderScope} className="container mx-auto px-4 my-32 flex flex-col lg:flex-row gap-8 items-center overflow-hidden">
+      <div ref={founderScope} id="dg" className="container mx-auto px-4 my-32 flex flex-col lg:flex-row gap-8 items-center overflow-hidden">
         {/* Image */}
         <div className="founder-image opacity-0 w-max relative">
           <div className="w-max rounded-xl overflow-hidden shadow-xl">
@@ -196,7 +196,7 @@ export default function AboutClientPage({ t }: { t: TranslationsType }) {
       </div>
 
       {/* Equipe */}
-      <div ref={teamScope} className="bg-gradient-to-tr from-orange-200 to-green-200 py-32" id="equipe">
+      <div ref={teamScope} id="equipe" className="bg-gradient-to-tr from-orange-200 to-green-200 py-32">
         <div className="container mx-auto px-4">
           <div className="section-title opacity-0 px-4 lg:px-48">
             <div className="flex items-center justify-center my-4">

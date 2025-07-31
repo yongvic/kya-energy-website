@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FC } from "react";
+import Link from "next/link";
 import {
   FaDownload,
   FaGlobe,
@@ -130,10 +131,10 @@ const KyaFoundationClientPage: FC<Props> = ({
               <FaPlay />
               <span>{t.hero.watchVideo}</span>
             </button>
-            <button className="flex items-center gap-2 border border-kya-green py-3 px-6 rounded-lg font-semibold hover:bg-kya-green transition-colors">
+            <Link href="/kya-foundation/lettre-d-engagement.pdf" className="flex items-center gap-2 border border-kya-green py-3 px-6 rounded-lg font-semibold hover:bg-kya-green transition-colors">
               <FaDownload />
               <span>{t.hero.cta}</span>
-            </button>
+            </Link>
           </motion.div>
           <motion.div
             className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-4xl"
@@ -234,9 +235,8 @@ const KyaFoundationClientPage: FC<Props> = ({
               whileInView="visible"
               viewport={{ once: true }}>
               <div
-                className={`w-full h-80 relative ${
-                  index % 2 === 1 ? "md:order-last" : ""
-                }`}>
+                className={`w-full h-80 relative ${index % 2 === 1 ? "md:order-last" : ""
+                  }`}>
                 <Image
                   src={interventionDomains[index].imageSrc}
                   alt={domain.title}

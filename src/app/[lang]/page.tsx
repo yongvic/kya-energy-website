@@ -51,7 +51,7 @@ export default async function Home({
             </span>
           </p>
           <Link
-            href=""
+            href="/products-and-services"
             className="group w-max flex items-center gap-4 text-lg font-bold text-kya-white bg-kya-orange p-4 hover:bg-kya-green hover:text-kya-white transition-all duration-300">
             <span>{dictionary.home.hero.cta}</span>
             <FaArrowRight className="-translate-x-2 group-hover:translate-0 transition-all duration-300" />
@@ -202,12 +202,14 @@ export default async function Home({
           <div className="relative">
             <div className="absolute -right-4 top-0 w-4 h-full bg-kya-yellow rounded-r-3xl"></div>
             <div className="absolute -right-10 top-1/2 p-16 rounded-full -translate-y-1/2 bg-kya-orange"></div>
-            <div className="absolute group z-[2] -right-8 top-1/2 p-4 rounded-full -translate-y-1/2 bg-kya-yellow">
-              <FaArrowRight
-                size={24}
-                className="text-kya-coffee group-hover:translate-x-1 transition-all duration-300 hover:animate-bounce-right"
-              />
-            </div>
+            <Link href="about">
+              <div className="absolute group z-[2] -right-8 top-1/2 p-4 rounded-full -translate-y-1/2 bg-kya-yellow">
+                <FaArrowRight
+                  size={24}
+                  className="text-kya-coffee group-hover:translate-x-1 transition-all duration-300 hover:animate-bounce-right"
+                />
+              </div>
+            </Link>
             <div className="overflow-hidden shadow-lg z-[1] relative">
               <iframe
                 className="w-full aspect-video"
@@ -292,37 +294,42 @@ export default async function Home({
               image: "/kya-sop-residentiel.avif",
               title: dictionary.home.products.items[0].title,
               description: dictionary.home.products.items[0].description,
+              link: "/kya-sop-menages",
             },
             {
               image: "/kya-sop-commercial.avif",
               title: dictionary.home.products.items[1].title,
               description: dictionary.home.products.items[1].description,
+              link: "/kya-sop-institutions",
             },
             {
               image: "/kya-sop-communautaire.avif",
               title: dictionary.home.products.items[2].title,
               description: dictionary.home.products.items[2].description,
+              link: "/kya-backup",
             },
           ].map((product, index) => (
-            <div key={index} className="w-full relative bg-white shadow-lg group z-10">
-              <div className="overflow-hidden">
-                <div className="h-64 w-max mx-auto">
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    className="h-64 w-auto object-scale-down"
-                    width={225}
-                    height={321}
-                  />
-                </div>
-                <div className="p-6 bg-white z-10">
-                  <h3 className="text-2xl font-bold text-kya-coffee mb-2">
-                    {product.title}
-                  </h3>
-                  <p className="text-gray-700">{product.description}</p>
+            <Link href={product.link} key={index}>
+              <div key={index} className="w-full relative bg-white shadow-lg group z-10">
+                <div className="overflow-hidden">
+                  <div className="h-64 w-max mx-auto">
+                    <Image
+                      src={product.image}
+                      alt={product.title}
+                      className="h-64 w-auto object-scale-down"
+                      width={225}
+                      height={321}
+                    />
+                  </div>
+                  <div className="p-6 bg-white z-10">
+                    <h3 className="text-2xl font-bold text-kya-coffee mb-2">
+                      {product.title}
+                    </h3>
+                    <p className="text-gray-700">{product.description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

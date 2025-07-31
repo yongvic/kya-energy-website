@@ -69,22 +69,50 @@ export default function Header({
               <div className="flex flex-col items-center w-full pt-8">
                 <Navlink href="/" text={dictionary.navigation.home} isMobile />
                 <Navlink
-                  href="/produits-et-services"
+                  href="/products-and-services"
                   text={dictionary.navigation["products-and-services"]}
                   isMobile>
-                  <p>Sub link 1</p>
-                  <p>Sub link 2</p>
+                  <div className="flex justify-around items-center size-full gap-4 text-center *:hover:text-kya-green">
+                    <Link href="/detail-products">
+                      <Image width={300} height={300} src="/products/kya-sop.png" alt="KYA-SoP" className="w-32 object-contain" />
+                    </Link>
+                    <Link href="/detail-products" className="font-bold text-xl">Voir nos KYA-SoP</Link>
+                    <Link href="/products-and-services" className="font-bold text-xl">Voir tous nos produits</Link>
+                  </div>
                 </Navlink>
                 <Navlink
-                  href="/a-propos-de-kya"
+                  href="/about"
                   text={dictionary.navigation.about}
                   isMobile
-                />
+                >
+                  <div className="flex justify-around items-center size-full gap-4 text-cennter *:hover:text-kya-green">
+                    <Link href="/about#dg" className="flex flex-col justify-center items-center gap-2">
+                      <Image width={300} height={300} src="/team/azoumah.avif" alt="Prof. Yao AZOUMAH" className="w-32 bject-contain" />
+                      <p>Prof. Yao K. AZOUMAH</p>
+                    </Link>
+                    <Link href="/about#equipe" className="font-bold text-xl">Voir notre équipe</Link>
+                    <Link href="/awards" className="font-bold text-xl">Nos récompenses</Link>
+                  </div>
+                </Navlink>
                 <Navlink
-                  href="/actualites-et-engagement"
+                  href="/kya-foundation"
                   text={dictionary.navigation["news-and-engagement"]}
                   isMobile
-                />
+                >
+                  <div className="flex justify-around items-center size-full gap-4 text-center *:hover:text-kya-green">
+                    <Link href="/certifications" className="flex flex-col justify-center items-center gap-2">
+                      <Image width={300} height={300} src="/certification/certif.avif" alt="Certification" className="w-32 object-contain" />
+                      <p>Notre certification ISO 9001:2015<br />Une reconnaissance de notre <br />engagement vers la qualité</p>
+                    </Link>
+                    <Link href="/kya-foundation" className="font-bold text-xl">
+                      La Fondation KYA
+                    </Link>
+                    <Link href="#" className="flex flex-col justify-center items-center gap-2">
+                      <Image width={300} height={300} src="https://static.wixstatic.com/media/2fcfb1_aca3321056bb4a33b40806f4d2060990~mv2.jpg/v1/fill/w_514,h_386,fp_0.50_0.50,q_90,enc_avif,quality_auto/2fcfb1_aca3321056bb4a33b40806f4d2060990~mv2.jpg" alt="Notre info" className="w-32 object-contain" />
+                      <p>Voir nos infos</p>
+                    </Link>
+                  </div>
+                </Navlink>
               </div>
             </div>
           </motion.nav>

@@ -1,4 +1,4 @@
-type Type = {
+type TranslationsType = {
   header: {
     logo: string;
     qualityPolicy: string;
@@ -18,14 +18,6 @@ type Type = {
     community_description: string;
     testimonials_title: string;
   };
-  /*
-    Awards definition here
-    image: image name under public/awards folder
-    title: title that will be shown,
-    description: a small description of how/why/what of the award
-    order: the order of award winning starting from the first that has the 1 index
-    year: the year the award was won
-  */
   awards: {
     image: string;
     title: string;
@@ -46,8 +38,8 @@ type Type = {
   };
   team: {
     name: string;
-    image: string;
     role: string;
+    image: string;
   }[];
   kyaFoundation: {
     hero: {
@@ -178,7 +170,6 @@ type Type = {
     hero: {
       title: string;
       subtitle: string;
-      description: string;
     };
     details: {
       mainTitle: string;
@@ -206,6 +197,11 @@ type Type = {
       thanksParagraph1: string;
       thanksParagraph2: string;
     };
+    cta: {
+      title: string;
+      subtitle: string;
+      button: string;
+    };
     list: {
       id: string;
       name: string;
@@ -215,21 +211,15 @@ type Type = {
       description: string;
       link: string;
     }[];
-    cta: {
-      title: string;
-      description: string;
-      subtitle: string;
-      button: string;
-    };
   };
   products: {
-    "promotional-offers": string;
-    "product-range": string;
-    "product-subtitle": string;
     "kya-sop-description": string;
     "kya-soldesign-description": string;
     "kya-ecolabel-description": string;
     "kya-flexycontrol-description": string;
+    "promotional-offers": string;
+    "product-range": string;
+    "product-subtitle": string;
     "catalog-prompt": string;
     "see-more": string;
   };
@@ -369,4 +359,4 @@ type Type = {
   };
 };
 
-export default Type;
+export default TranslationsType;
