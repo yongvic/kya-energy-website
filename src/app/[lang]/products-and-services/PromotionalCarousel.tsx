@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, EffectCreative } from "swiper/modules";
 import styles from "@/styles/products-and-services.module.css";
 import PromoModal from "./PromoModal";
+import TranslationsType from "@/translations/translations.definition";
 
 // Import Swiper styles
 import "swiper/css";
@@ -33,7 +34,7 @@ const promotions: Promo[] = [
   },
 ];
 
-export default function PromotionalCarousel() {
+export default function PromotionalCarousel({ t }: { t: TranslationsType }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPromo, setSelectedPromo] = useState<Promo | null>(null);
 
@@ -98,6 +99,7 @@ export default function PromotionalCarousel() {
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         promo={selectedPromo}
+        t={t}
       />
     </>
   );

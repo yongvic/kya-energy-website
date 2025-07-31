@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import styles from "@/styles/products-and-services.module.css";
+import TranslationsType from "@/translations/translations.definition";
 
 type Promo = {
   image: string;
@@ -12,12 +13,14 @@ type PromoModalProps = {
   isOpen: boolean;
   onClose: () => void;
   promo: Promo | null;
+  t: TranslationsType;
 };
 
 export default function PromoModal({
   isOpen,
   onClose,
   promo,
+  t,
 }: PromoModalProps) {
   if (!isOpen || !promo) {
     return null;
@@ -38,8 +41,7 @@ export default function PromoModal({
         />
         <h3 className={styles.modal_title}>{promo.title}</h3>
         <p>
-          Detailed description of the promotional offer will go here. Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit.
+          {t.productsAndServices.promo.description}
         </p>
       </div>
     </div>

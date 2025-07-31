@@ -4,6 +4,20 @@
     "qualityPolicy": "Quality policy",
     "contact": "Contact"
   },
+  "detail-products": {
+    "certified_title": "KYA-Energy GROUP ISO 9001:2015 Certified",
+    "certified_description": "KYA-SoP solar power systems are intelligent, optimally designed (with a new sizing approach) and locally assembled by KYA Energy Group for productive applications in both rural and urban areas. They consist of:",
+    "certified_item1": "A solar PV generator composed of solar PV modules",
+    "certified_item2": "An electrical box containing inverters, batteries, and protection elements, which can be used in backup mode as an anti-load-shedding system.",
+    "ranges_title": "The different ranges of our solar power systems (KYA-SoP)",
+    "residential_title": "KYA-SoP Residential",
+    "residential_description": "Solutions adapted for individual homes and small buildings.",
+    "commercial_title": "KYA-SoP Commercial",
+    "commercial_description": "High-performance systems for businesses and industries.",
+    "community_title": "KYA-SoP Community",
+    "community_description": "Solutions designed for the energy needs of communities and public infrastructures.",
+    "testimonials_title": "Customer Testimonials"
+  },
   "awards": [
     {
       "image": "ecreee.avif",
@@ -339,39 +353,46 @@
         ]
       },
       "cta": "Try KYA-SolDesign"
+    },
+    "partners": {
+      "title": "They Trust Us"
     }
   },
   "certifications": {
     "hero": {
-      "title": "Our Certifications",
-      "subtitle": "A testament to our commitment to quality and excellence.",
-      "description": "At KYA Energy Group, we are committed to providing reliable and high-performing energy solutions. Our certifications, issued by internationally recognized organizations, attest to the quality of our products and our adherence to the strictest standards."
+      "title": "First solar energy company in Togo",
+      "subtitle": "KYA-Energy Group is the first company certified ISO 9001:2015 in the design, assembly, and marketing of renewable energy-based products and systems."
     },
     "details": {
-      "mainTitle": "ISO 9001:2015 Certification",
-      "subtitle": "A guarantee of quality and trust",
-      "award": "ISO 9001:2015",
-      "paragraph1": "KYA Energy Group is proud to be ISO 9001:2015 certified. This internationally recognized certification attests to our commitment to a rigorous quality management system. It ensures that our products and services consistently meet our customers' requirements and comply with applicable regulations.",
-      "paragraph2_strong": "This certification is the result of a collective effort and a shared vision: to place quality at the heart of all our activities.",
-      "paragraph3": "For our customers, it is the assurance of benefiting from reliable, high-performing, and sustainable energy solutions, supported by excellent customer service. For our team, it is a source of motivation to continuously improve and innovate."
+      "mainTitle": "KYA-Energy GROUP certified ISO 9001:2015",
+      "subtitle": "A recognition of our commitment to quality",
+      "award": "Certified ISO 9001:2015",
+      "paragraph1": "We are proud to announce that KYA-Energy GROUP obtained the ISO 9001:2015 certification in 2024, issued by TÜV Rheinland. This certification demonstrates our unwavering commitment to excellence, continuous improvement, and the satisfaction of our customers and partners.",
+      "paragraph2_strong": "A recognition of our quality approach",
+      "paragraph3": "Since its creation, KYA-Energy GROUP has been committed to providing innovative and sustainable solutions... we guarantee that our services meet the strictest requirements in terms of performance, reliability, and continuous improvement."
     },
     "essentials": {
-      "title": "The Essentials of Our Quality Approach",
-      "subtitle": "Our quality approach is based on four fundamental pillars that guide our daily actions.",
+      "title": "Why is this certification essential?",
+      "subtitle": "Obtaining this certification is the result of a collective effort and a constant desire to strengthen our internal practices. It allows us to:",
       "items": {
-        "customerSatisfaction": "Customer satisfaction at the heart of our concerns",
-        "processImprovement": "Continuous improvement of our processes",
-        "teamCohesion": "Team cohesion and involvement of our employees",
-        "healthyEnvironment": "A healthy and safe working environment"
+        "customerSatisfaction": "Ensure optimal customer satisfaction by effectively meeting their needs and expectations.",
+        "processImprovement": "Continuously improve our processes to ensure high-quality services.",
+        "teamCohesion": "Strengthen the cohesion and qualification of our teams through training and structured work methods.",
+        "healthyEnvironment": "Guarantee a healthy and efficient work environment, in line with our values."
       }
     },
     "commitment": {
-      "title": "Our Commitment to Quality",
-      "subtitle": "The management of KYA Energy Group is committed to:",
-      "paragraph": "Maintaining and continuously improving our quality management system in accordance with the requirements of the ISO 9001:2015 standard. Providing the necessary resources to achieve our quality objectives. Promoting a culture of quality at all levels of the company.",
-      "thanksTitle": "Thank you for your trust",
-      "thanksParagraph1": "We thank our customers, partners, and employees for their contribution to obtaining this certification.",
-      "thanksParagraph2": "Together, we continue to build a sustainable energy future."
+      "title": "Our QHSE commitment:",
+      "subtitle": "A sustainable and responsible future",
+      "paragraph": "Beyond quality, our commitment also includes Health, Safety, and Environment (HSE) aspects. We work every day to improve our environmental and safety performance...",
+      "thanksTitle": "A big thank you to our teams and partners!",
+      "thanksParagraph1": "This certification is above all a collective success. We warmly thank all our collaborators... We also thank our customers and partners for their trust and unwavering support.",
+      "thanksParagraph2": "At KYA-Energy GROUP, we continue to strive for excellence and push the boundaries of innovation for a sustainable energy future."
+    },
+    "cta": {
+      "title": "Trust Certified Excellence",
+      "subtitle": "Choose KYA Energy Group for your solar energy projects and benefit from our ISO 9001:2015 certified expertise.",
+      "button": "Contact Us"
     },
     "list": [
       {
@@ -401,49 +422,43 @@
         "description": "ISO 9001:2015 is the international standard for quality management systems. This certification demonstrates our ability to consistently provide products and services that meet customer and regulatory requirements.",
         "link": "https://www.iso.org/standard/62085.html"
       }
-    ],
-    "cta": {
-      "title": "Have a Question?",
-      "description": "Our team is at your disposal to answer all your questions about our certifications and our commitment to quality.",
-      "subtitle": "Our team is at your disposal to answer all your questions about our certifications and our commitment to quality.",
-      "button": "Contact Us"
-    }
+    ]
   },
   "products": {
-    "promotional-offers": "Promotional Offers",
-    "product-range": "Our Product Range",
-    "product-subtitle": "Discover our complete range of solar power systems adapted to all your energy needs.",
-    "kya-sop-description": "Intelligent and locally assembled solar power system.",
-    "kya-soldesign-description": "Software for sizing and simulating solar photovoltaic systems.",
-    "kya-ecolabel-description": "Energy efficiency label for buildings.",
-    "kya-flexycontrol-description": "Intelligent remote control and monitoring system.",
-    "catalog-prompt": "Want to know more?",
-    "see-more": "See more"
+    "kya-sop-description": "KYA-SoP are intelligent, local and reliable solar systems, suitable for all environments, with anti-shedding function.",
+    "kya-soldesign-description": "KYA-SolDesign is an innovative solar sizing software, combining technical reliability and economic accessibility.",
+    "kya-ecolabel-description": "KYA-EcoLabel is a labeling software that evaluates the ecological and economic performance of solar systems compared to diesel generators.",
+    "kya-flexycontrol-description": "KYA-FlexyControl is a remote monitoring module for solar installations, allowing real-time monitoring and intelligent management of consumption priorities.",
+    "promotional-offers": "Our promotional offers",
+    "product-range": "Our product ranges",
+    "product-subtitle": "Energy solutions adapted to all your needs, from residential to community.",
+    "catalog-prompt": "Consult our KYA product catalog to find out more about our innovative solar solutions.",
+    "see-more": "See More"
   },
   "services": {
-    "title": "Our Services",
-    "subtitle": "Personalized support for your energy projects.",
-    "installation-title": "Installation and Commissioning",
-    "installation-description": "Our experts ensure a quick and compliant installation of your solar equipment.",
-    "audit-title": "Energy Audit and Consulting",
-    "audit-description": "We analyze your needs to offer you the most suitable and economical solution.",
-    "training-title": "Training and Technology Transfer",
-    "training-description": "We train your teams in the use and maintenance of solar systems.",
-    "rental-title": "Equipment Rental",
-    "rental-description": "Flexible rental solutions to meet your temporary energy needs.",
-    "learn-more": "Learn more"
+    "title": "Our services",
+    "subtitle": "Complete support from study to maintenance of your installations",
+    "installation-title": "INSTALLATION",
+    "installation-description": "Installation of solar mini-power plants (hybrid), solar street lights, multifunctional solar platforms...",
+    "audit-title": "STUDY, AUDIT AND MONITORING-CONTROL",
+    "audit-description": "Operation and maintenance audit of mini-power plants Monitoring and control of energy works...",
+    "training-title": "CAPACITY BUILDING",
+    "training-description": "Training programs for technicians, students and professionals",
+    "rental-title": "KYA-SOP RENTAL SERVICE",
+    "rental-description": "Turnkey rental of autonomous solar systems",
+    "learn-more": "Learn More"
   },
   "financing": {
-    "title": "Financing Solutions",
-    "subtitle": "Flexible options to make your projects a reality.",
-    "down-payment": "Initial contribution",
-    "repayment-period": "Up to 10 years for repayment",
-    "maintenance-included": "Maintenance and servicing included"
+    "title": "Financing Lease-Sale KYA-SoP",
+    "subtitle": "Access solar energy without significant initial investment",
+    "down-payment": "Initial deposit only",
+    "repayment-period": "Maximum repayment period",
+    "maintenance-included": "Installation and maintenance included"
   },
   "home": {
     "hero": {
-      "title": "With our KYA-SoP solar power systems",
-      "subtitle": "Become green energy owners.",
+      "title": "With our <span className=\"text-kya-orange\">KYA-SoP</span> solar power systems",
+      "subtitle": "Become <span className=\"text-kya-green\">green</span> <span className=\"text-kya-orange text-shadow-2xs text-shadow-kya-coffee\">energy owners</span>.",
       "vision": "Our vision: to democratize access to green and sustainable energy",
       "cta": "Discover our solutions"
     },
@@ -505,7 +520,7 @@
     "discover": {
       "title": "Discover KYA-Energy Group",
       "text1": "KYA-ENERGY GROUP is an international company specializing in renewable energies (particularly solar energy) and energy efficiency. It works to meet the challenge of electrification in Africa in a sustainable way.",
-      "text2": "Founding member of the Synergy of Renewable Energy Actors (SAER-TOGO), and of international associations like the Global Off-Grid Lighting Association (GOGLA) and the Africa Minigrid Developers Association (AMDA)."
+      "text2": "Founding member of the <Link href=\"https://saer-togo.org\" className=\"text-kya-green hover:underline font-semibold\">Synergy of Renewable Energy Actors (SAER-TOGO)</Link>, and of international associations like the <Link href=\"https://gogla.org\" className=\"text-kya-green hover:underline font-semibold\">Global Off-Grid Lighting Association (GOGLA)</Link> and the <Link href=\"https://africamda.org\" className=\"text-kya-green hover:underline font-semibold\">Africa Minigrid Developers Association (AMDA)</Link>."
     },
     "why-choose-us": {
       "title": "Why Choose KYA-Energy Group?",
@@ -589,7 +604,7 @@
     "address": {
       "title": "Address",
       "line1": "300m, street opposite the Loyola Cultural Center (CCL),",
-      "line2": "Route Mission Tové, Agoè Logopé",
+      "line2": "Mission Tové Road, Agoè Logopé",
       "line3": "08 BP 81101, Lomé - Togo"
     },
     "schedule": {
@@ -604,5 +619,13 @@
       "title": "E-mail"
     },
     "copyright": "© {year} KYA-Energy Group. All rights reserved."
+  },
+  "certification": {
+    "title": "Quality and Certification",
+    "subtitle": "Our commitment to excellence is certified. We adhere to the highest international standards to guarantee quality and reliability in all our projects.",
+    "card": {
+      "title": "ISO 9001:2015 Certified",
+      "description": "This certification attests to our quality management system and our ability to consistently provide products and services that meet customer and regulatory requirements."
+    }
   }
 }

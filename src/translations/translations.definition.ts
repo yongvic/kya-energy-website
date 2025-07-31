@@ -4,6 +4,20 @@ type Type = {
     qualityPolicy: string;
     contact: string;
   };
+  "detail-products": {
+    certified_title: string;
+    certified_description: string;
+    certified_item1: string;
+    certified_item2: string;
+    ranges_title: string;
+    residential_title: string;
+    residential_description: string;
+    commercial_title: string;
+    commercial_description: string;
+    community_title: string;
+    community_description: string;
+    testimonials_title: string;
+  };
   /*
     Awards definition here
     image: image name under public/awards folder
@@ -155,6 +169,9 @@ type Type = {
         items: string[];
       };
       cta: string;
+    };
+    partners: {
+      title: string;
     };
   };
   certifications: {
@@ -341,6 +358,14 @@ type Type = {
       title: string;
     };
     copyright: string;
+  };
+  certification: {
+    title: string;
+    subtitle: string;
+    card: {
+      title: string;
+      description: string;
+    };
   };
 };
 

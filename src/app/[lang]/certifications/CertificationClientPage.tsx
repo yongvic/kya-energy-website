@@ -68,7 +68,7 @@ export function CertificationClientPage({ t }: CertificationClientPageProps) {
             <div className="image-container">
               <Image
                 src="/certification/certif.avif"
-                alt="Certification ISO 9001:2015"
+                alt={t.certifications.details.mainTitle}
                 width={500}
                 height={350}
               />
@@ -129,7 +129,7 @@ export function CertificationClientPage({ t }: CertificationClientPageProps) {
           <motion.div variants={itemVariants}>
             <Image
               src="/certification/engagement-qualite.png"
-              alt="Engagement qualité"
+              alt={t.certifications.commitment.title}
               width={600}
               height={400}
             />

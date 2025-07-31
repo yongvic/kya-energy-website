@@ -4,6 +4,20 @@
     "qualityPolicy": "Politique qualité",
     "contact": "Contact"
   },
+  "detail-products": {
+    "certified_title": "KYA-Energy GROUP certifié ISO 9001:2015",
+    "certified_description": "Les groupes électrosolaires KYA-SoP sont des systèmes solaires intelligents conçus de façon optimale (avec une nouvelle approche de dimensionnement) et assemblés localement par KYA Energy Group pour des applications productives, tant pour le milieu rural qu’urbain. Ils sont composés de :",
+    "certified_item1": "Un générateur solaire PV composé de modules solaires PV",
+    "certified_item2": "Un coffret électrique contenant des onduleurs, des batteries et des éléments de protection, pouvant être utilisé en mode back-up, comme système anti-délestage.",
+    "ranges_title": "Les différents gammes de nos groupes électrosolaires (KYA-SoP)",
+    "residential_title": "KYA-SoP Résidentiel",
+    "residential_description": "Solutions adaptées aux maisons individuelles et petits bâtiments.",
+    "commercial_title": "KYA-SoP Commercial",
+    "commercial_description": "Systèmes haute performance pour entreprises et industries.",
+    "community_title": "KYA-SoP Communautaire",
+    "community_description": "Solutions conçues pour les besoins énergétiques des communautés et des infrastructures publiques.",
+    "testimonials_title": "Témoignages de nos clients"
+  },
   "awards": [
     {
       "image": "ecreee.avif",
@@ -339,39 +353,46 @@
         ]
       },
       "cta": "Essayer KYA-SolDesign"
+    },
+    "partners": {
+      "title": "Ils nous font confiance"
     }
   },
   "certifications": {
     "hero": {
-      "title": "Nos Certifications",
-      "subtitle": "Un gage de notre engagement envers la qualité et l'excellence.",
-      "description": "Chez KYA Energy Group, nous nous engageons à fournir des solutions énergétiques fiables et performantes. Nos certifications, délivrées par des organismes reconnus internationalement, attestent de la qualité de nos produits et de notre respect des normes les plus strictes."
+      "title": "Première entreprise en <span>énergie solaire au Togo</span>",
+      "subtitle": "KYA-Energy Group est la première entreprise certifiée ISO 9001:2015 dans la conception, l'assemblage et la commercialisation de produits et systèmes énergétiques à base d'énergies renouvelables."
     },
     "details": {
-      "mainTitle": "Certification ISO 9001:2015",
-      "subtitle": "Un gage de qualité et de confiance",
-      "award": "ISO 9001:2015",
-      "paragraph1": "KYA Energy Group est fier d'être certifié ISO 9001:2015. Cette certification, reconnue internationalement, atteste de notre engagement dans un système de management de la qualité rigoureux. Elle garantit que nos produits et services répondent de manière constante aux exigences de nos clients et sont conformes aux réglementations en vigueur.",
-      "paragraph2_strong": "Cette certification est le fruit d'un effort collectif et d'une vision partagée : placer la qualité au cœur de toutes nos activités.",
-      "paragraph3": "Pour nos clients, c'est l'assurance de bénéficier de solutions énergétiques fiables, performantes et durables, soutenues par un service client d'excellence. Pour notre équipe, c'est une source de motivation pour s'améliorer et innover en permanence."
+      "mainTitle": "KYA-Energy GROUP certifié ISO 9001:2015",
+      "subtitle": "Une reconnaissance de notre engagement envers la qualité",
+      "award": "Certifié ISO 9001:2015",
+      "paragraph1": "Nous sommes fiers d'annoncer que KYA-Energy GROUP a obtenu la certification ISO 9001 : 2015 en 2024, délivrée par TÜV Rheinland. Cette certification témoigne de notre engagement indéfectible envers l'excellence, l'amélioration continue et la satisfaction de nos clients et partenaires.",
+      "paragraph2_strong": "Une reconnaissance de notre démarche qualité",
+      "paragraph3": "Depuis sa création, KYA-Energy GROUP s'est engagé à fournir des solutions innovantes et durables... nous garantissons que nos services répondent aux exigences les plus strictes en matière de performance, de fiabilité et d'amélioration continue."
     },
     "essentials": {
-      "title": "Les essentiels de notre démarche qualité",
-      "subtitle": "Notre démarche qualité repose sur quatre piliers fondamentaux qui guident nos actions au quotidien.",
+      "title": "Pourquoi cette certification est essentielle ?",
+      "subtitle": "L'obtention de cette certification est le fruit d'un travail collectif et d'une volonté constante de renforcer nos pratiques internes. Elle nous permet de :",
       "items": {
-        "customerSatisfaction": "La satisfaction client au cœur de nos préoccupations",
-        "processImprovement": "L'amélioration continue de nos processus",
-        "teamCohesion": "La cohésion d'équipe et l'implication de nos collaborateurs",
-        "healthyEnvironment": "Un environnement de travail sain et sécurisé"
+        "customerSatisfaction": "Assurer une satisfaction optimale de nos clients en répondant efficacement à leurs besoins et attentes.",
+        "processImprovement": "Améliorer en continu nos processus pour garantir des prestations de haute qualité.",
+        "teamCohesion": "Renforcer la cohésion et la qualification de nos équipes à travers des formations et des méthodes de travail structurées.",
+        "healthyEnvironment": "Garantir un environnement de travail sain et performant, en adéquation avec nos valeurs."
       }
     },
     "commitment": {
-      "title": "Notre engagement pour la qualité",
-      "subtitle": "La direction de KYA Energy Group s'engage à :",
-      "paragraph": "Maintenir et améliorer en permanence notre système de management de la qualité conformément aux exigences de la norme ISO 9001:2015. Fournir les ressources nécessaires pour atteindre nos objectifs qualité. Promouvoir une culture de la qualité à tous les niveaux de l'entreprise.",
-      "thanksTitle": "Merci de votre confiance",
-      "thanksParagraph1": "Nous remercions nos clients, partenaires et collaborateurs pour leur contribution à l'obtention de cette certification.",
-      "thanksParagraph2": "Ensemble, nous continuons à construire un avenir énergétique durable."
+      "title": "Notre engagement QHSE :",
+      "subtitle": "Un avenir durable et responsable",
+      "paragraph": "Au-delà de la qualité, notre engagement intègre également les aspects Hygiène, Sécurité et Environnement (HSE). Nous œuvrons chaque jour pour améliorer nos performances environnementales et sécuritaires...",
+      "thanksTitle": "Un grand merci à nos équipes et partenaires !",
+      "thanksParagraph1": "Cette certification est avant tout une réussite collective. Nous remercions chaleureusement tous nos collaborateurs... Nous remercions également nos clients et partenaires pour leur confiance et leur soutien indéfectible.",
+      "thanksParagraph2": "Chez KYA-Energy GROUP, nous continuons à viser l'excellence et à repousser les limites de l'innovation pour un avenir énergétique durable."
+    },
+    "cta": {
+      "title": "Faites Confiance à l'Excellence Certifiée",
+      "subtitle": "Choisissez KYA Energy Group pour vos projets d'énergie solaire et bénéficiez de notre expertise certifiée ISO 9001:2015.",
+      "button": "Contactez-nous"
     },
     "list": [
       {
@@ -410,13 +431,7 @@
         "description": "Mention attestant de notre compétence en matière de travaux d'efficacité énergétique et d'énergies renouvelables.",
         "link": "https://www.ademe.fr/particuliers-eco-citoyens/financer-projet/aides-financieres/label-rge-reconnu-garant-lenvironnement"
       }
-    ],
-    "cta": {
-      "title": "Une question ?",
-      "description": "Notre équipe est à votre disposition pour répondre à toutes vos questions sur nos certifications et notre engagement qualité.",
-      "subtitle": "Notre équipe est à votre disposition pour répondre à toutes vos questions sur nos certifications et notre engagement qualité.",
-      "button": "Contactez-nous"
-    }
+    ]
   },
   "products": {
     "promotional-offers": "Offres Promotionnelles",
@@ -451,8 +466,8 @@
   },
   "home": {
     "hero": {
-      "title": "Avec nos groupes électrosolaires KYA-SoP",
-      "subtitle": "Devenez propriétaires énergétiques verts.",
+      "title": "Avec nos groupes électrosolaires <span className=\"text-kya-orange\">KYA-SoP<\/span>",
+      "subtitle": "Devenez <span className=\"text-kya-orange text-shadow-2xs text-shadow-kya-coffee\"propriétaires énergétiques<\/span> <span className=\"text-kya-green\">verts<\/span>.",
       "vision": "Notre vision: démocratiser l'accès à l'énergie verte et durable",
       "cta": "Découvrir nos solutions"
     },
@@ -514,7 +529,7 @@
     "discover": {
       "title": "Découvrez KYA-Energy Group",
       "text1": "KYA-ENERGY GROUP est une entreprise internationale spécialisée dans les énergies renouvelables (énergie solaire en particulier) et l’efficacité énergétique. Elle œuvre pour relever le défi de l’électrification en Afrique de façon durable.",
-      "text2": "Membre fondateur de la Synergie des Acteurs des Energies Renouvelables (SAER-TOGO), et d'associations internationales comme Global Off Grid Lightning Association (GOGLA) et Africa Minigrid Developers Association (AMDA)."
+      "text2": "Membre fondateur de la <Link href=\"https://saer-togo.org\" className=\"text-kya-green hover:underline font-semibold\">Synergie des Acteurs des Energies Renouvelables (SAER-TOGO)<\/span>, et d'associations internationales comme <Link href=\"https://gogla.org\" className=\"text-kya-green hover:underline font-semibold\">Global Off Grid Lightning Association (GOGLA)<\/span> et <Link href=\"https://gogla.org\" className=\"text-kya-green hover:underline font-semibold\">Africa Minigrid Developers Association (AMDA)<\/span>."
     },
     "why-choose-us": {
       "title": "Pourquoi choisir KYA-Energy Group ?",
@@ -613,5 +628,13 @@
       "title": "E-mail"
     },
     "copyright": "© {year} KYA-Energy Group. Tous droits réservés."
+  },
+  "certification": {
+    "title": "Qualité et Certification",
+    "subtitle": "Notre engagement envers l'excellence est certifié. Nous respectons les normes internationales les plus strictes pour garantir la qualité et la fiabilité de tous nos projets.",
+    "card": {
+      "title": "Certifié ISO 9001:2015",
+      "description": "Cette certification atteste de notre système de management de la qualité et de notre capacité à fournir en permanence des produits et services conformes aux exigences des clients et aux exigences réglementaires."
+    }
   }
 }

@@ -47,7 +47,7 @@ const FaqClientPage: FC<Props> = ({ t }) => {
       <section className="bg-linear-to-r  from-[#1e9983] from-[19%] to-[#197867] to-[100%] text-white py-30 px-4 text-center relative overflow-hidden">
         <motion.div className="z-10 absolute w-full h-max -bottom-40 overflow-hidden left-0 flex flex-col justify-end items-start">
           <p className="faq-effect font-black font-facebook-sans select-none text-shadow[100px_0_1000px_#fff] text-[25rem] container mx-auto flex justify-between items-center">
-            <span>faq</span>
+            <span>{t.hero.title.toLowerCase()}</span>
             <span className="skew-6 rotate-12">?</span>
           </p>
           {/* <div className="h-[30%] absolute w-full bottom-[40%] bg-linear-to-r  from-[#1e9983a0] from-[19%] to-[#197867a0] to-[100%]"></div> */}

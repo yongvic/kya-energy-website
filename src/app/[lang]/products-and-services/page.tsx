@@ -70,7 +70,7 @@ export default async function ProductsAndServicesPage({
       <section className={styles.section}>
         <h2 className={styles.section_title}>{t.products["promotional-offers"]}</h2>
         <div className={styles.promo_container}>
-          <PromotionalCarousel />
+          <PromotionalCarousel t={t} />
           <button className={styles.promo_button}>{t.services["learn-more"]}</button>
         </div>
       </section>
