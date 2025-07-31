@@ -146,7 +146,7 @@ export default async function RootLayout({
       <body
         className={`bg-gray-100 dark:bg-gray-900 ${libreFranklin.variable} ${libreFranklin.className} ${facebookSans.variable}  ${arialNarrow.variable} ${timesNewRoman.variable} antialiased`}>
         <Header dictionary={dictionary} />
-        <main className="min-h-screen mt-26 md:mt-36">{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer dictionary={dictionary} />
       </body>
     </html>
