@@ -20,6 +20,8 @@ interface Props {
       description: string;
       tagline: string;
       cta: string;
+      foundationName: string;
+      watchVideo: string;
       stats: {
         employees: string;
         mission: string;

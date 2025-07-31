@@ -7,6 +7,8 @@ import { Locale } from '@/lib/i18n.config'
 import styles from '@/styles/products-and-services.module.css';
 import Link from "next/link";
 
+
+
 // Reusable Title Component
 const SectionTitle = ({ children }: { children: React.ReactNode }) => (
   <div className={styles.detailSectionTitle}>
@@ -16,7 +18,8 @@ const SectionTitle = ({ children }: { children: React.ReactNode }) => (
 );
 
 
-const DetailProducts = async ({ params: { lang } }: { params: { lang: Locale } }) => {
+const DetailProducts = async ({ params }: { params: Promise<{ lang: Locale }> }) => {
+  const { lang } = await params;
   const t = await getTranslation(lang);
 
   return (
