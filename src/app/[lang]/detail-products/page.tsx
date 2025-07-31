@@ -27,10 +27,10 @@ const DetailProducts = async ({ params: { lang } }: { params: { lang: Locale } }
                 {t['detail-products'].certified_description}
             </p>
             <ol>
-                <li>
+                <li className={styles.certified}>
                     {t['detail-products'].certified_item1}
                 </li>
-                <li>
+                <li className={styles.certified}>
                     {t['detail-products'].certified_item2}
                 </li>
             </ol>
@@ -93,7 +93,8 @@ const DetailProducts = async ({ params: { lang } }: { params: { lang: Locale } }
                         <Image
                             src="/products/gamme-kya-sop/kya-sop-communautaire.png"
                             alt={t['detail-products'].community_title}
-                            layout="fill"
+                            width="157"
+                            height="119"
                             className={styles.productCardImage}
                         />
                     </div>
