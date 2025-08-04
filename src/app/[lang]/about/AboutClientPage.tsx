@@ -14,7 +14,7 @@ import TranslationsType from "@/translations/translations.definition";
 
 export default function AboutClientPage({ t }: { t: TranslationsType }) {
   // --- Carousel State ---
-  const imageUrls = [undefined, undefined, undefined];
+  const imageUrls = ["/team/groupe1.avif", "/team/groupe2.avif", "/team/groupe3.avif"];
   const [teamMember, setTeamMember] = useState(0);
   const [index, setIndex] = useState(0);
 
