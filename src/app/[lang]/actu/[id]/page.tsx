@@ -1,6 +1,7 @@
 import config from "@/lib/config";
 import { marked } from "marked";
 import Image from "next/image";
+import Link from "next/link";
 import { FaHeart } from "react-icons/fa6";
 
 interface ArticlePageProps {
@@ -9,30 +10,47 @@ interface ArticlePageProps {
   };
 }
 
-async function getArticle(id: string) {
-  const response = await fetch(`${config.strapiUrl}/api/articles/${id}?populate=*`, {
+async function getArticleData(id: string) {
+  const articleResponse = await fetch(`${config.strapiUrl}/api/articles/${id}?populate=*`, {
     headers: {
       Authorization: `Bearer ${config.strapiApiKey}`,
     },
     cache: "no-store",
   });
 
-  if (!response.ok) {
+  if (!articleResponse.ok) {
     throw new Error("Failed to fetch article");
   }
 
-  return response.json();
+  const articleJson = await articleResponse.json();
+
+  const recommendationsResponse = await fetch(
+    `${config.strapiUrl}/api/articles?sort=Date:desc&pagination[limit]=3&populate=*&filters[id][$ne]=${articleJson.data.id}`,
+    {
+      headers: {
+        Authorization: `Bearer ${config.strapiApiKey}`,
+      },
+      cache: "no-store",
+    }
+  );
+
+  const recommendationsJson = await recommendationsResponse.json();
+
+  return {
+    article: articleJson.data,
+    recommendations: recommendationsJson.data,
+  };
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
   const { id } = params;
-  const article = await getArticle(id);
+  const { article, recommendations } = await getArticleData(id);
 
-  if (!article.data) {
+  if (!article) {
     return <div>Article not found</div>;
   }
 
-  const { Titre, Contenu, Like, Date: publishedAt, PhotoCouverture } = article.data;
+  const { Titre, Contenu, Like, Date: publishedAt, PhotoCouverture } = article;
   const imageUrl = PhotoCouverture.url;
 
   const publicationDate = new Date(publishedAt).toLocaleDateString("fr-FR", {
@@ -43,33 +61,66 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
   return (
     <main className="container mx-auto py-12">
-      <article className="bg-kya-white p-8 rounded-lg shadow-lg">
-        {imageUrl && (
-          <div className="mb-8 overflow-hidden rounded-lg">
-            <Image
-              src={`${config.strapiUrl}${imageUrl}`}
-              alt={Titre || "Article image"}
-              width={1200}
-              height={600}
-              className="w-full h-auto object-cover"
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="lg:col-span-2">
+          <article className="bg-kya-white p-8 rounded-lg shadow-lg">
+            {imageUrl && (
+              <div className="mb-8 overflow-hidden rounded-lg">
+                <Image
+                  src={`${config.strapiUrl}${imageUrl}`}
+                  alt={Titre || "Article image"}
+                  width={1200}
+                  height={600}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            )}
+            <div className="flex justify-between items-center mb-4">
+              <h1 className="text-4xl font-bold text-kya-coffee">{Titre}</h1>
+              <span className="text-lg font-semibold text-kya-orange">
+                {publicationDate}
+              </span>
+            </div>
+            <div
+              className="prose prose-lg max-w-none"
+              dangerouslySetInnerHTML={{ __html: marked(Contenu) }}
             />
+            <div className="mt-8 flex items-center gap-2 text-gray-500">
+              <FaHeart className="text-red-500" />
+              <span className="font-medium">{Like}</span>
+            </div>
+          </article>
+        </div>
+        <aside>
+          <div className="sticky top-24">
+            <h2 className="text-2xl font-bold text-kya-coffee mb-4">
+              Autres articles
+            </h2>
+            <div className="space-y-6">
+              {recommendations.map((rec: any) => (
+                <Link href={`/actu/${rec.documentId}`} key={rec.id} className="inline-block">
+                  <div className="bg-kya-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                    {rec.PhotoCouverture.url && (
+                      <div className="mb-4 overflow-hidden rounded-lg">
+                        <Image
+                          src={`${config.strapiUrl}${rec.PhotoCouverture.url}`}
+                          alt={rec.Titre || "Recommendation image"}
+                          width={400}
+                          height={200}
+                          className="w-full h-auto object-cover"
+                        />
+                      </div>
+                    )}
+                    <h3 className="font-bold text-lg line-clamp-2 text-kya-coffee">
+                      {rec.Titre}
+                    </h3>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
-        )}
-        <div className="flex justify-between items-center mb-4">
-          <h1 className="text-4xl font-bold text-kya-coffee">{Titre}</h1>
-          <span className="text-lg font-semibold text-kya-orange">
-            {publicationDate}
-          </span>
-        </div>
-        <div
-          className="prose prose-lg max-w-none"
-          dangerouslySetInnerHTML={{ __html: marked(Contenu) }}
-        />
-        <div className="mt-8 flex items-center gap-2 text-gray-500">
-          <FaHeart className="text-red-500" />
-          <span className="font-medium">{Like}</span>
-        </div>
-      </article>
+        </aside>
+      </div>
     </main>
   );
 }
