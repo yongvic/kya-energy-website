@@ -3,6 +3,7 @@ import { marked } from "marked";
 import Image from "next/image";
 import Link from "next/link";
 import { FaHeart } from "react-icons/fa6";
+import "@/styles/post.css";
 
 interface ArticlePageProps {
   params: {
