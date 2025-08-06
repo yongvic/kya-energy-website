@@ -3,7 +3,8 @@
 import config from "@/lib/config";
 import { marked } from "marked";
 import Image from "next/image";
-import { FaArrowRight, FaHeart } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
+import { IoHeartOutline } from "react-icons/io5";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
@@ -21,8 +22,14 @@ interface Post {
   };
 }
 
+interface Pagination {
+  page: number;
+  pageCount: number;
+}
+
 export default function Post() {
   const [posts, setPosts] = useState<Post[]>([]);
+  const [pagination, setPagination] = useState<Pagination | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [pinnedPostId, setPinnedPostId] = useState<string | null>(null);
@@ -79,6 +86,7 @@ export default function Post() {
 
         const responseJson = await request.json();
         setPosts(responseJson.data);
+        setPagination(responseJson.meta.pagination);
       } catch {
         setError("Failed to fetch contents");
       } finally {
@@ -91,6 +99,39 @@ export default function Post() {
 
   const handlePageChange = (newPage: number) => {
     router.push(`${pathname}?page=${newPage}`);
+  };
+
+  const generatePagination = () => {
+    if (!pagination) return null;
+
+    const { page, pageCount } = pagination;
+    const pages = [];
+
+    if (pageCount <= 5) {
+      for (let i = 1; i <= pageCount; i++) {
+        pages.push(i);
+      }
+    } else {
+      pages.push(1);
+      if (page > 3) {
+        pages.push("...");
+      }
+      if (page > 2) {
+        pages.push(page - 1);
+      }
+      if (page !== 1 && page !== pageCount) {
+        pages.push(page);
+      }
+      if (page < pageCount - 1) {
+        pages.push(page + 1);
+      }
+      if (page < pageCount - 2) {
+        pages.push("...");
+      }
+      pages.push(pageCount);
+    }
+
+    return pages;
   };
 
   if (loading) {
@@ -108,6 +149,8 @@ export default function Post() {
   if (error) {
     return <p>Error: {error}</p>;
   }
+
+  const paginationLinks = generatePagination();
 
   return (
     <section className="container mx-auto my-8">
@@ -143,7 +186,7 @@ export default function Post() {
                 </div>
                 <div className="flex justify-between items-center mt-4">
                   <div className="flex items-center gap-2 text-gray-500">
-                    <FaHeart className="text-red-500" />
+                    <IoHeartOutline className="text-red-500" />
                     <span className="font-medium">{post.Like}</span>
                   </div>
                   <div className="flex items-center gap-2 text-kya-orange font-bold">
@@ -164,12 +207,22 @@ export default function Post() {
         >
           Précédent
         </button>
-        <span className="font-bold">{page}</span>
+        {paginationLinks && paginationLinks.map((p, i) =>
+          p === "..." ? (
+            <span key={i} className="px-4 py-2">...</span>
+          ) : (
+            <button
+              key={i}
+              onClick={() => handlePageChange(p as number)}
+              className={`px-4 py-2 rounded-lg ${p === page ? 'bg-kya-orange text-kya-white' : 'bg-kya-green text-kya-white'}`}
+            >
+              {p}
+            </button>
+          )
+        )}
         <button
           onClick={() => handlePageChange(page + 1)}
-          // A simple way to disable the next button if there are no more posts.
-          // This could be improved with pagination metadata from Strapi.
-          disabled={posts.length < 6}
+          disabled={page >= (pagination?.pageCount || 1)}
           className="px-4 py-2 bg-kya-green text-kya-white rounded-lg disabled:opacity-50"
         >
           Suivant
