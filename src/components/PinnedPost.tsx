@@ -7,8 +7,10 @@ import { MdPushPin } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa6";
 import { IoHeartOutline } from "react-icons/io5";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 interface PinnedPost {
+  documentId: string;
   Titre: string;
   Contenu: string;
   Like: number;
@@ -80,7 +82,8 @@ export default function PinnedPost() {
     return null;
   }
 
-  const { Titre, Contenu, Like, Date: publishedAt, PhotoCouverture } = post;
+  const { documentId, Titre, Contenu, Like, Date: publishedAt, PhotoCouverture } = post;
+
   const imageUrl = PhotoCouverture.url;
 
   const publicationDate = new Date(publishedAt).toLocaleDateString("fr-FR", {
@@ -97,47 +100,49 @@ export default function PinnedPost() {
         </p>
         <p>Post épinglé</p>
       </div>
-      <article className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-kya-white p-6 rounded-b-lg rounded-tr-lg shadow-lg">
-        <div className="overflow-hidden rounded-lg">
-          {imageUrl ? (
-            <Image
-              src={`${config.strapiUrl}${imageUrl}`}
-              alt={Titre || "Pinned post image"}
-              width={500}
-              height={500}
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-            />
-          ) : (
-            <div className="w-full h-full bg-gray-200 animate-pulse"></div>
-          )}
-        </div>
-        <div className="flex flex-col justify-between">
-          <div>
-            <p className="flex items-center justify-end gap-4 mb-2">
-              <span className="text-sm font-semibold text-kya-orange">
-                {publicationDate}
-              </span>
-            </p>
-            <h1 className="font-bold text-2xl line-clamp-2 mb-2 text-kya-coffee">
-              {Titre}
-            </h1>
-            <div
-              className="prose prose-sm line-clamp-3 text-gray-600"
-              dangerouslySetInnerHTML={{ __html: marked(Contenu) }}
-            />
+      <Link href={`/actu/${documentId}`}>
+        <article className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-kya-white p-6 rounded-b-lg rounded-tr-lg shadow-lg cursor-pointer">
+          <div className="overflow-hidden rounded-lg">
+            {imageUrl ? (
+              <Image
+                src={`${config.strapiUrl}${imageUrl}`}
+                alt={Titre || "Pinned post image"}
+                width={500}
+                height={500}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            ) : (
+              <div className="w-full h-full bg-gray-200 animate-pulse"></div>
+            )}
           </div>
-          <div className="flex justify-between items-center mt-4">
-            <button className="flex items-center gap-2 px-4 py-2 bg-kya-orange text-kya-white font-bold rounded-full hover:bg-kya-yellow hover:text-kya-coffee transition-colors duration-300">
-              <span>Lire</span>
-              <FaArrowRight />
-            </button>
-            <div className="flex items-center gap-2 text-gray-500">
-              <IoHeartOutline className="text-red-500" />
-              <span className="font-medium">{Like}</span>
+          <div className="flex flex-col justify-between">
+            <div>
+              <p className="flex items-center justify-end gap-4 mb-2">
+                <span className="text-sm font-semibold text-kya-orange">
+                  {publicationDate}
+                </span>
+              </p>
+              <h1 className="font-bold text-2xl line-clamp-2 mb-2 text-kya-coffee">
+                {Titre}
+              </h1>
+              <div
+                className="prose prose-sm line-clamp-3 text-gray-600"
+                dangerouslySetInnerHTML={{ __html: marked(Contenu) }}
+              />
+            </div>
+            <div className="flex justify-between items-center mt-4">
+              <button className="flex items-center gap-2 px-4 py-2 bg-kya-orange text-kya-white font-bold rounded-full hover:bg-kya-yellow hover:text-kya-coffee transition-colors duration-300">
+                <span>Lire</span>
+                <FaArrowRight />
+              </button>
+              <div className="flex items-center gap-2 text-gray-500">
+                <IoHeartOutline className="text-red-500" />
+                <span className="font-medium">{Like}</span>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
+        </article>
+      </Link>
     </section>
   );
 }
