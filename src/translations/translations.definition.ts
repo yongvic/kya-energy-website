@@ -357,6 +357,11 @@ type TranslationsType = {
       description: string;
     };
   };
+  actu: {
+    title: string;
+    description: string;
+    search: string;
+  };
 };
 
 export default TranslationsType;

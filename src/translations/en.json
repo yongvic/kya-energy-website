@@ -627,5 +627,10 @@
       "title": "ISO 9001:2015 Certified",
       "description": "This certification attests to our quality management system and our ability to consistently provide products and services that meet customer and regulatory requirements."
     }
+  },
+  "actu": {
+    "title": "News page",
+    "description": "Find our news, innovations and advice on solar energy and our sustainable solutions here.",
+    "search": "Search"
   }
 }
