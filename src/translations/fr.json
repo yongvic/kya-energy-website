@@ -1,4 +1,9 @@
 {
+  "notFound": {
+    "title": "Page Introuvable",
+    "description": "Vérifiez l'URL du site internet et réessayez, ou trouvez ce dont vous avez besoin sur notre page d'accueil.",
+    "homeButton": "Retour à la page d'accueil"
+  },
   "header": {
     "logo": "Logo de KYA-Energy Group"
   },

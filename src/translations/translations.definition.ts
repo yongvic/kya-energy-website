@@ -1,4 +1,9 @@
 type Type = {
+  notFound: {
+    title: string;
+    description: string;
+    homeButton: string;
+  };
   header: {
     logo: string;
   };

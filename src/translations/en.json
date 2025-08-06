@@ -1,4 +1,9 @@
 {
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Please check the URL and try again, or find what you need on our homepage.",
+    "homeButton": "Back to homepage"
+  },
   "header": {
     "logo": "KYA-Energy Group logo"
   },
