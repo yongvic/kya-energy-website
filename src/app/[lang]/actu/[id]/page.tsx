@@ -93,7 +93,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         </div>
         <aside>
           <div className="sticky top-24">
-            <h2 className="text-2xl font-bold text-kya-coffee mb-4">
+            <h2 className="text-2xl font-bold text-kya-coffee mb-4 mx-4">
               Autres articles
             </h2>
             <div className="space-y-6">
