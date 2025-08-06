@@ -1,16 +1,11 @@
 import PinnedPost from "@/components/PinnedPost";
+import Post from "@/components/Post";
 import { getTranslation } from "@/lib/get-translation";
 import { Locale } from "@/lib/i18n.config";
+import { Suspense } from "react";
 import { FaSearch } from "react-icons/fa";
 
-export default async function Actu({
-  params
-}: {
-  params: Promise<{ lang: Locale }>
-}) {
-  const { lang } = await params;
-  const dictionary = await getTranslation(lang);
-
+function ActuPageContent({ dictionary }: { dictionary: any }) {
   return (
     <>
       <div className="h-svh relative bg-[url(/actu/background-actu.png)]">
@@ -33,7 +28,23 @@ export default async function Actu({
       </div>
       <div>
         {/* Tous les autres post */}
+        <Post />
       </div>
     </>
+  );
+}
+
+export default async function Actu({
+  params
+}: {
+  params: Promise<{ lang: Locale }>
+}) {
+  const { lang } = await params;
+  const dictionary = await getTranslation(lang);
+
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ActuPageContent dictionary={dictionary} />
+    </Suspense>
   );
 }
