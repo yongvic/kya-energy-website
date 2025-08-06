@@ -75,14 +75,15 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 />
               </div>
             )}
-            <div className="flex justify-between items-center mb-4">
-              <h1 className="text-4xl font-bold text-kya-coffee">{Titre}</h1>
-              <span className="text-lg font-semibold text-kya-orange">
+            <div className="flex justify-between items-start mb-4 w-full flex-col gap-4">
+              <span className="text-lg font-semibold text-kya-orange text-nowrap self-end">
                 {publicationDate}
               </span>
+              <h1 className="text-2xl font-bold text-kya-coffee text-justify">{Titre}</h1>
             </div>
             <div
-              className="prose prose-lg max-w-none"
+              className="prose prose-lg max-w-none text-justify leading-8"
+
               dangerouslySetInnerHTML={{ __html: marked(Contenu) }}
             />
             <div className="mt-8 flex items-center gap-2 text-gray-500">
