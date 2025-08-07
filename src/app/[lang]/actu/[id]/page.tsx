@@ -6,11 +6,14 @@ import { FaHeart } from "react-icons/fa6";
 import "@/styles/post.css";
 import Script from "next/script";
 
-interface ArticlePageProps {
-  params: {
-    id: string;
-  };
-}
+type ArticleRecord = {
+  documentId: string;
+  id: string;
+  Titre: string;
+  PhotoCouverture: {
+    url: string;
+  }
+};
 
 async function getArticleData(id: string) {
   const articleResponse = await fetch(`${config.strapiUrl}/api/articles/${id}?populate=*`, {
@@ -44,8 +47,8 @@ async function getArticleData(id: string) {
   };
 }
 
-export default async function ArticlePage({ params }: ArticlePageProps) {
-  const { id } = params;
+export default async function ArticlePage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   const { article, recommendations } = await getArticleData(id);
 
   if (!article) {
@@ -100,7 +103,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               Autres articles
             </h2>
             <div className="space-y-6">
-              {recommendations.map((rec: any) => (
+              {recommendations.map((rec: ArticleRecord) => (
                 <Link href={`/actu/${rec.documentId}`} key={rec.id} className="inline-block">
                   <div className="bg-kya-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
                     {rec.PhotoCouverture.url && (
