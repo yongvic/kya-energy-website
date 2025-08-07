@@ -4,8 +4,9 @@ import { getTranslation } from "@/lib/get-translation";
 import { Locale } from "@/lib/i18n.config";
 import { Suspense } from "react";
 import { FaSearch } from "react-icons/fa";
+import TranslationsType from "@/translations/translations.definition";
 
-function ActuPageContent({ dictionary }: { dictionary: any }) {
+function ActuPageContent({ dictionary }: { dictionary: TranslationsType }) {
   return (
     <>
       <div className="h-svh relative bg-[url(/actu/background-actu.png)]">

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaHeart } from "react-icons/fa6";
 import "@/styles/post.css";
+import Script from "next/script";
 
 interface ArticlePageProps {
   params: {
@@ -16,7 +17,7 @@ async function getArticleData(id: string) {
     headers: {
       Authorization: `Bearer ${config.strapiApiKey}`,
     },
-    cache: "no-store",
+    cache: "force-cache",
   });
 
   if (!articleResponse.ok) {
@@ -31,7 +32,7 @@ async function getArticleData(id: string) {
       headers: {
         Authorization: `Bearer ${config.strapiApiKey}`,
       },
-      cache: "no-store",
+      cache: "force-cache",
     }
   );
 
@@ -123,6 +124,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </div>
         </aside>
       </div>
+      <Script src="/scripts/actu.js" defer />
     </main>
   );
 }
