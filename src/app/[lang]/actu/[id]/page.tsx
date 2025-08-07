@@ -84,7 +84,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               <h1 className="text-2xl font-bold text-kya-coffee text-justify">{Titre}</h1>
             </div>
             <div
-              className="prose prose-lg max-w-none text-justify leading-8"
+              className="article prose prose-lg max-w-none text-justify leading-8"
 
               dangerouslySetInnerHTML={{ __html: marked(Contenu) }}
             />
