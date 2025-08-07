@@ -1,9 +1,6 @@
-import { i18n } from "@/lib/i18n.config";
-import { getTranslation } from "@/lib/get-translation";
 import { Libre_Franklin } from "next/font/google";
-import Header from "@/components/Header";
 import "@/styles/globals.css";
-import Footer from "@/components/Footer";
+import NextTopLoader from "nextjs-toploader";
 
 const libreFranklin = Libre_Franklin({
   subsets: ["latin"],
@@ -15,14 +12,13 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const dictionary = await getTranslation(i18n.defaultLocale);
+
   return (
     <html lang="fr">
       <body
         className={`bg-gray-100 dark:bg-gray-900 ${libreFranklin.variable} ${libreFranklin.className} antialiased`}>
-        <Header dictionary={dictionary} />
+        <NextTopLoader showForHashAnchor color="#f9ad32" showSpinner={false} />
         <main className="min-h-screen">{children}</main>
-        <Footer dictionary={dictionary} />
       </body>
     </html>
   );

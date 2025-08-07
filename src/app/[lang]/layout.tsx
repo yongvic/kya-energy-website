@@ -142,13 +142,15 @@ export default async function RootLayout({
   const dictionary: TranslationsType = await getTranslation(lang);
 
   return (
-    <html lang={lang}>
+    <>
+      {/*<html lang={lang}>
       <body
-        className={`bg-gray-100 dark:bg-gray-900 ${libreFranklin.variable} ${libreFranklin.className} ${facebookSans.variable}  ${arialNarrow.variable} ${timesNewRoman.variable} antialiased`}>
-        <Header dictionary={dictionary} />
-        <main className="min-h-screen">{children}</main>
-        <Footer dictionary={dictionary} />
-      </body>
-    </html>
+        className={`bg-gray-100 dark:bg-gray-900 ${libreFranklin.variable} ${libreFranklin.className} ${facebookSans.variable}  ${arialNarrow.variable} ${timesNewRoman.variable} antialiased`}>*/}
+      <Header dictionary={dictionary} />
+      <main className="min-h-screen">{children}</main>
+      <Footer dictionary={dictionary} />
+      {/*</body>
+    </html>*/}
+    </>
   );
 }
