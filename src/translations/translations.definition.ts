@@ -362,6 +362,11 @@ type TranslationsType = {
     description: string;
     search: string;
   };
+  notFound: {
+    title: string;
+    description: string;
+    homeButton: string;
+  };
 };
 
 export default TranslationsType;

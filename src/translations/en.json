@@ -632,5 +632,10 @@
     "title": "News page",
     "description": "Find our news, innovations and advice on solar energy and our sustainable solutions here.",
     "search": "Search"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Please check the URL and try again, or find what you need on our homepage.",
+    "homeButton": "Back to homepage"
   }
 }

@@ -641,5 +641,10 @@
     "title": "Page d'actualités",
     "description": "Retrouvez ici nos actualités, innovations et conseils autour de l’énergie solaire et de nos solutions durables.",
     "search": "Rechercher"
+  },
+  "notFound": {
+    "title": "Page Introuvable",
+    "description": "Vérifiez l'URL du site internet et réessayez, ou trouvez ce dont vous avez besoin sur notre page d'accueil.",
+    "homeButton": "Retour à la page d'accueil"
   }
 }
