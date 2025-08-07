@@ -18,7 +18,7 @@ export default function Header({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="sticky top-0 left-0 w-full z-40 bg-[#f3f4f60a] dark:bg-[#1018280a] backdrop-blur-xs">
+    <header className="sticky top-0 md:top-[-90px] left-0 w-full z-40 bg-gray-50/95 dark:bg-gray-900/95 dark:text-kya-white backdrop-blur-xs">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div>
           <Image
