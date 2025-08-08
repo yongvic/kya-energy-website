@@ -1,6 +1,7 @@
 import { getTranslation } from "@/lib/get-translation";
 import { Locale } from "@/lib/i18n.config";
 import FaqClientPage from "@/components/FaqClientPage";
+import { Metadata } from "next";
 
 const FaqPage = async ({
   params,
@@ -15,3 +16,17 @@ const FaqPage = async ({
 };
 
 export default FaqPage;
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ lang: Locale }>
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const dictionary = await getTranslation(lang);
+
+  return {
+    title: dictionary.faq.metadata.title,
+    description: dictionary.faq.metadata.description,
+  };
+}
