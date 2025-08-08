@@ -33,7 +33,6 @@ export default function Header({
           <FancyButton href="" className="px-4 py-2 text-lg rounded bg-kya-green text-white font-bold" bgColor="#f99d32">{dictionary.header.contact}</FancyButton>
           <div className="hidden md:flex items-center">
             <LocaleSwitcherButton dictionary={dictionary} />
-            <ThemeSwitcherButton dictionary={dictionary} />
           </div>
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
             <AnimatePresence initial={false} mode="wait">
