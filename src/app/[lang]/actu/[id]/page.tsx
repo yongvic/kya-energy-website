@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FaHeart } from "react-icons/fa6";
 import "@/styles/post.css";
 import Script from "next/script";
+import { Metadata } from "next";
 
 type ArticleRecord = {
   documentId: string;
@@ -131,3 +132,17 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
     </main>
   );
 }
+
+export const metadata: Metadata = {
+  title: "",
+  description: "",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+    notranslate: false
+  }
+};
