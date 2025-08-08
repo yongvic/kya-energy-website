@@ -12,6 +12,7 @@ import {
 } from "react-icons/fa6";
 import Image from "next/image";
 import TranslationsType from "@/translations/translations.definition";
+import FancyButton from "./FancyButton";
 
 const socialNetworks = [
   {
@@ -115,11 +116,8 @@ export default function Footer({
                   placeholder={dictionary.footer.newsletter.placeholder}
                   required
                 />
-                <button
-                  type="submit"
-                  className="hover:bg-kya-orange bg-kya-green transition-all duration-300 text-kya-white font-bold p-4">
-                  {dictionary.footer.newsletter.button}
-                </button>
+                <FancyButton bgColor="#f99d32"
+                  className="bg-kya-green transition-all duration-300 text-kya-white font-bold px-8 py-4">{dictionary.footer.newsletter.button}</FancyButton>
               </label>
             </form>
           </div>
