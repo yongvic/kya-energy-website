@@ -81,7 +81,7 @@ export default async function ProductsAndServicesPage({
           <h2 className={styles.section_title}>{t.products["product-range"]}</h2>
           <p className={styles.section_subtitle}>{t.products["product-subtitle"]}</p>
         </div>
-  
+
         <ProductAccordion products={products} />
         <div className={styles.catalogue_banner}>
           <p className={styles.catalogue_text}>{t.products["catalog-prompt"]}</p>
@@ -116,9 +116,9 @@ export default async function ProductsAndServicesPage({
               <div className={styles.service_card_content}>
                 <h3 className={styles.service_card_title}>{service.title}</h3>
                 <p className={styles.service_card_description}>{service.description}</p>
-                <a href="#" className={styles.service_card_cta}>
+                {/*<a href="#" className={styles.service_card_cta}>
                   {t.services["learn-more"]}
-                </a>
+                </a>*/}
               </div>
             </MotionDiv>
           ))}
@@ -136,9 +136,9 @@ export default async function ProductsAndServicesPage({
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-          > 
+          >
             <div className={`${styles.iconWrapper} ${styles.orang}`}>
-              <RiCoinsLine className={styles.icon}/>
+              <RiCoinsLine className={styles.icon} />
             </div>
             <div className={`${styles.financing_card_value} ${styles.orange}`}>15%</div>
             <div className={styles.financing_card_label}>{t.financing["down-payment"]}</div>
@@ -151,7 +151,7 @@ export default async function ProductsAndServicesPage({
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className={`${styles.iconWrapper} ${styles.gren}`}>
-              <FiClock className={styles.icon}/>
+              <FiClock className={styles.icon} />
             </div>
             <div className={`${styles.financing_card_value} ${styles.green}`}>10 ans</div>
             <div className={styles.financing_card_label}>{t.financing["repayment-period"]}</div>
@@ -164,7 +164,7 @@ export default async function ProductsAndServicesPage({
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <div className={`${styles.iconWrapper} ${styles.ble}`}>
-              <LuInbox className={styles.icon}/>
+              <LuInbox className={styles.icon} />
             </div>
             <div className={`${styles.financing_card_value} ${styles.blue}`}>100%</div>
             <div className={styles.financing_card_label}>{t.financing["maintenance-included"]}</div>
