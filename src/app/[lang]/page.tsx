@@ -22,6 +22,7 @@ import { GiVillage } from "react-icons/gi";
 import { LiaUserGraduateSolid } from "react-icons/lia";
 import { MdCardMembership, MdCo2 } from "react-icons/md";
 import { SiEnterprisedb } from "react-icons/si";
+import FancyButton from "@/components/FancyButton";
 
 export default async function Home({
   params,
@@ -34,7 +35,7 @@ export default async function Home({
   return (
     <main>
       <section className="bg-[url(/background-homepage.avif)] bg-cover bg-center bg-no-repeat relative">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-kya-white h-8 w-4/5 z-10 rounded-t-4xl"></div>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-kya-white dark:bg-gray-900 h-8 w-4/5 z-10 rounded-t-4xl"></div>
         <div className="min-h-screen z-0 p-16 backdrop-blur w-full h-full flex flex-col justify-between gap-16 text-kya-white">
           <div className="space-y-4">
             <h1 className="font-bold text-3xl md:text-6xl">
@@ -50,12 +51,15 @@ export default async function Home({
               {dictionary.home.hero.vision}
             </span>
           </p>
-          <Link
+          <FancyButton
             href="/products-and-services"
-            className="group w-max flex items-center gap-4 text-lg font-bold text-kya-white bg-kya-orange p-4 hover:bg-kya-green hover:text-kya-white transition-all duration-300">
-            <span>{dictionary.home.hero.cta}</span>
-            <FaArrowRight className="-translate-x-2 group-hover:translate-0 transition-all duration-300" />
-          </Link>
+            bgColor="#1ca18c"
+            className="group w-max text-lg font-bold text-kya-white bg-kya-orange hover:text-kya-white rounded">
+            <span className="flex items-center p-4 gap-4">
+              <span>{dictionary.home.hero.cta}</span>
+              <FaArrowRight className="-translate-x-2 group-hover:translate-0 transition-all duration-300" />
+            </span>
+          </FancyButton>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="flex flex-col justify-center items-center gap-4">
               <FaSolarPanel size={64} className="text-kya-white" />
@@ -91,7 +95,7 @@ export default async function Home({
         </div>
       </section>
       {/* Mission and values */}
-      <section className="bg-kya-white py-16 px-8">
+      <section className="bg-kya-white dark:bg-gray-900 py-16 px-8">
         <div className="container mx-auto text-center mb-12">
           <h2 className="font-bold text-4xl text-kya-coffee mb-2">
             {dictionary.home["mission-and-values"].title}
@@ -214,9 +218,8 @@ export default async function Home({
               <iframe
                 className="w-full aspect-video"
                 loading="lazy"
-                src="https://www.youtube.com/embed/ayX_GLi40K8?list=TLGGgUtPL6h5MB8yNTA3MjAyNQ"
+                src="https://www.youtube.com/embed/ayX_GLi40K8"
                 title="Video institutionnelle KYA Energy Group"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen></iframe>
