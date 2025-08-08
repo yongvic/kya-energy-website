@@ -10,6 +10,7 @@ import { LuMenu, LuX } from "react-icons/lu";
 import { AnimatePresence, motion } from "framer-motion";
 import { Navlink } from "@/components/Navlink";
 import NavbarDesktop from "./NavbarDesktop";
+import FancyButton from "./FancyButton";
 
 export default function Header({
   dictionary,
@@ -28,8 +29,8 @@ export default function Header({
             alt={dictionary.header.logo} />
         </div>
         <div className="flex items-center justify-center gap-2">
-          <Link href="" className="px-4 py-2 font-bold text-kya-green text-lg">{dictionary.header.qualityPolicy}</Link>
-          <Link href="" className="px-4 py-2 text-lg rounded bg-kya-green hover:bg-kya-green-light text-white font-bold transition-colors duration-300">{dictionary.header.contact}</Link>
+          <FancyButton href="" className="px-4 py-2 text-kya-green text-lg font-bold">{dictionary.header.qualityPolicy}</FancyButton>
+          <FancyButton href="" className="px-4 py-2 text-lg rounded bg-kya-green text-white font-bold" bgColor="#f99d32">{dictionary.header.contact}</FancyButton>
           <div className="hidden md:flex items-center">
             <LocaleSwitcherButton dictionary={dictionary} />
             <ThemeSwitcherButton dictionary={dictionary} />
