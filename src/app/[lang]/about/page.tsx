@@ -16,7 +16,9 @@ export default async function AboutPage({
 
 export async function generateMetadata({
   params
-}: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+}: {
+  params: Promise<{ lang: Locale }>
+}): Promise<Metadata> {
   const { lang } = await params;
   const dictionary = await getTranslation(lang);
 
