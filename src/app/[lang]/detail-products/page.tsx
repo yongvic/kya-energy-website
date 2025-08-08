@@ -6,6 +6,7 @@ import { getTranslation } from '@/lib/get-translation'
 import { Locale } from '@/lib/i18n.config'
 import styles from '@/styles/products-and-services.module.css';
 import Link from "next/link";
+import { Metadata } from 'next'
 
 
 
@@ -133,4 +134,18 @@ const DetailProducts = async ({ params }: { params: Promise<{ lang: Locale }> })
   )
 }
 
-export default DetailProducts
+export default DetailProducts;
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ lang: Locale }>
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const dictionary = await getTranslation(lang);
+
+  return {
+    title: dictionary['detail-products'].metadata.title,
+    description: dictionary['detail-products'].metadata.title,
+  };
+}
