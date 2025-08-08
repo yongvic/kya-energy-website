@@ -244,6 +244,10 @@ type TranslationsType = {
     "maintenance-included": string;
   };
   home: {
+    metadata: {
+      title: string;
+      description: string;
+    };
     hero: {
       title: string;
       subtitle: string;

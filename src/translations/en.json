@@ -456,6 +456,10 @@
     "maintenance-included": "Installation and maintenance included"
   },
   "home": {
+    "metadata": {
+      "title": "Home • KYA-Energy Group",
+      "description": "Home page of KYA-Energy Group, pioneer of solar energy in Togo"
+    },
     "hero": {
       "title": "With our <span className=\"text-kya-orange\">KYA-SoP</span> solar power systems",
       "subtitle": "Become <span className=\"text-kya-green\">green</span> <span className=\"text-kya-orange text-shadow-2xs text-shadow-kya-coffee\">energy owners</span>.",
