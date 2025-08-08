@@ -529,7 +529,7 @@
     "discover": {
       "title": "Découvrez KYA-Energy Group",
       "text1": "KYA-ENERGY GROUP est une entreprise internationale spécialisée dans les énergies renouvelables (énergie solaire en particulier) et l’efficacité énergétique. Elle œuvre pour relever le défi de l’électrification en Afrique de façon durable.",
-      "text2": "Membre fondateur de la <Link href=\"https://saer-togo.org\" className=\"text-kya-green hover:underline font-semibold\">Synergie des Acteurs des Energies Renouvelables (SAER-TOGO)<\/span>, et d'associations internationales comme <Link href=\"https://gogla.org\" className=\"text-kya-green hover:underline font-semibold\">Global Off Grid Lightning Association (GOGLA)<\/span> et <Link href=\"https://gogla.org\" className=\"text-kya-green hover:underline font-semibold\">Africa Minigrid Developers Association (AMDA)<\/span>."
+      "text2": "Membre fondateur de la <a href=\"https://saer-togo.org\" class=\"text-kya-green hover:underline font-semibold\">Synergie des Acteurs des Energies Renouvelables (SAER-TOGO)</a>, et d'associations internationales comme <a href=\"https://gogla.org\" class=\"text-kya-green hover:underline font-semibold\">Global Off Grid Lightning Association (GOGLA)</a> et <a href=\"https://gogla.org\" class=\"text-kya-green hover:underline font-semibold\">Africa Minigrid Developers Association (AMDA)</a>."
     },
     "why-choose-us": {
       "title": "Pourquoi choisir KYA-Energy Group ?",
@@ -573,6 +573,51 @@
           "description": "Projet d'envergure pour collectivités et institutions."
         }
       ]
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "À propos de KYA-Energy Group",
+      "subtitle": "Pionnier des solutions énergétiques durables pour un avenir plus radieux"
+    },
+    "story": {
+      "title": "Notre histoire",
+      "paragraph1": "Fondé en 2010 par le professeur Yao AZOUMAH, KYA-Energy Group est né d'une vision visant à lutter contre la pauvreté énergétique et à promouvoir le développement durable en Afrique. Ce qui a commencé comme une petite initiative de recherche est devenu un fournisseur de premier plan de solutions innovantes en matière d'énergies renouvelables.",
+      "paragraph2": "Notre parcours est fait de passion, de persévérance et d'un engagement profond envers nos communautés. Nous pensons que l'accès à une énergie propre et fiable est un moteur fondamental de progrès, et nous nous engageons à en faire une réalité pour tous."
+    },
+    "mission_vision": {
+      "title": "Notre Mission & Vision",
+      "mission": {
+        "title": "Notre Mission",
+        "text": "Transformer de manière innovante les ressources énergétiques renouvelables pour produire une énergie propre, fiable et abordable pour tous. Nous nous engageons à créer un avenir énergétique durable qui profite aux communautés et préserve notre planète."
+      },
+      "vision": {
+        "title": "Notre Vision",
+        "text": "Être un leader de la transition énergétique en Afrique, en démocratisant l'accès à une énergie verte et durable, et en donnant aux communautés les moyens de prospérer dans un monde neutre en carbone."
+      }
+    },
+    "values": {
+      "title": "Nos valeurs fondamentales",
+      "items": [
+        "Professionnalisme",
+        "Esprit d'équipe",
+        "Intégrité",
+        "Équité",
+        "Rigueur",
+        "Orientation client",
+        "Transparence",
+        "Innovation"
+      ]
+    },
+    "team": {
+      "title": "Rencontrez notre direction",
+      "cta": "Voir toute notre équipe"
+    },
+    "cta": {
+      "title": "Rejoignez-nous dans notre mission",
+      "subtitle": "Travaillons ensemble pour construire un avenir durable. Découvrez nos solutions ou contactez notre équipe.",
+      "solutions_button": "Nos Solutions",
+      "contact_button": "Contactez-nous"
     }
   },
   "footer": {

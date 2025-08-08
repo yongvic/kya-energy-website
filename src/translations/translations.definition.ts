@@ -367,6 +367,42 @@ type TranslationsType = {
     description: string;
     homeButton: string;
   };
+  about: {
+    hero: {
+      title: string;
+      subtitle: string;
+    };
+    story: {
+      title: string;
+      paragraph1: string;
+      paragraph2: string;
+    };
+    mission_vision: {
+      title: string;
+      mission: {
+        title: string;
+        text: string;
+      };
+      vision: {
+        title: string;
+        text: string;
+      };
+    };
+    values: {
+      title: string;
+      items: string[];
+    };
+    team: {
+      title: string;
+      cta: string;
+    };
+    cta: {
+      title: string;
+      subtitle: string;
+      solutions_button: string;
+      contact_button: string;
+    };
+  };
 };
 
 export default TranslationsType;

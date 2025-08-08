@@ -520,7 +520,7 @@
     "discover": {
       "title": "Discover KYA-Energy Group",
       "text1": "KYA-ENERGY GROUP is an international company specializing in renewable energies (particularly solar energy) and energy efficiency. It works to meet the challenge of electrification in Africa in a sustainable way.",
-      "text2": "Founding member of the <Link href=\"https://saer-togo.org\" className=\"text-kya-green hover:underline font-semibold\">Synergy of Renewable Energy Actors (SAER-TOGO)</Link>, and of international associations like the <Link href=\"https://gogla.org\" className=\"text-kya-green hover:underline font-semibold\">Global Off-Grid Lighting Association (GOGLA)</Link> and the <Link href=\"https://africamda.org\" className=\"text-kya-green hover:underline font-semibold\">Africa Minigrid Developers Association (AMDA)</Link>."
+      "text2": "Founding member of the <a href=\"https://saer-togo.org\" class=\"text-kya-green hover:underline font-semibold\">Synergy of Renewable Energy Actors (SAER-TOGO)</a>, and of international associations like the <a href=\"https://gogla.org\" class=\"text-kya-green hover:underline font-semibold\">Global Off-Grid Lighting Association (GOGLA)</a> and the <a href=\"https://africamda.org\" class=\"text-kya-green hover:underline font-semibold\">Africa Minigrid Developers Association (AMDA)</a>."
     },
     "why-choose-us": {
       "title": "Why Choose KYA-Energy Group?",
@@ -564,6 +564,51 @@
           "description": "Large-scale project for communities and institutions."
         }
       ]
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About KYA-Energy Group",
+      "subtitle": "Pioneering Sustainable Energy Solutions for a Brighter Future"
+    },
+    "story": {
+      "title": "Our Story",
+      "paragraph1": "Founded in 2010 by Professor Yao AZOUMAH, KYA-Energy Group was born from a vision to combat energy poverty and promote sustainable development in Africa. What started as a small research initiative has grown into a leading provider of innovative renewable energy solutions.",
+      "paragraph2": "Our journey is one of passion, perseverance, and a deep-seated commitment to our communities. We believe that access to clean, reliable energy is a fundamental driver of progress, and we are dedicated to making this a reality for all."
+    },
+    "mission_vision": {
+      "title": "Our Mission & Vision",
+      "mission": {
+        "title": "Our Mission",
+        "text": "To innovatively transform renewable energy resources to produce clean, reliable, and affordable energy for all. We are committed to creating a sustainable energy future that benefits communities and preserves our planet."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "text": "To be a leader in the energy transition in Africa, democratizing access to green and sustainable energy, and empowering communities to thrive in a carbon-neutral world."
+      }
+    },
+    "values": {
+      "title": "Our Core Values",
+      "items": [
+        "Professionalism",
+        "Team Spirit",
+        "Integrity",
+        "Equity",
+        "Rigor",
+        "Customer Focus",
+        "Transparency",
+        "Innovation"
+      ]
+    },
+    "team": {
+      "title": "Meet Our Leadership",
+      "cta": "See Our Full Team"
+    },
+    "cta": {
+      "title": "Join Us on Our Mission",
+      "subtitle": "Let's work together to build a sustainable future. Explore our solutions or get in touch with our team.",
+      "solutions_button": "Our Solutions",
+      "contact_button": "Contact Us"
     }
   },
   "footer": {
