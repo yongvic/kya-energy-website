@@ -23,6 +23,7 @@ import { LiaUserGraduateSolid } from "react-icons/lia";
 import { MdCardMembership, MdCo2 } from "react-icons/md";
 import { SiEnterprisedb } from "react-icons/si";
 import FancyButton from "@/components/FancyButton";
+import { Metadata } from "next";
 
 export default async function Home({
   params,
@@ -338,4 +339,18 @@ export default async function Home({
       </section>
     </main>
   );
+}
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ lang: Locale }>
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const dictionary = await getTranslation(lang);
+
+  return {
+    title: dictionary.home.metadata.title,
+    description: dictionary.home.metadata.description,
+  };
 }
