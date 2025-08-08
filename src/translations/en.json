@@ -571,6 +571,10 @@
     }
   },
   "about": {
+    "metadata": {
+      "title": "About • KYA-Energy Group",
+      "description": "Discover our vision, our team and above all our impact. KYA-Energy Group, move beyond the sky"
+    },
     "hero": {
       "title": "About KYA-Energy Group",
       "subtitle": "Pioneering Sustainable Energy Solutions for a Brighter Future"

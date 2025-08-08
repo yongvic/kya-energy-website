@@ -372,6 +372,10 @@ type TranslationsType = {
     homeButton: string;
   };
   about: {
+    metadata: {
+      title: string;
+      description: string;
+    };
     hero: {
       title: string;
       subtitle: string;
