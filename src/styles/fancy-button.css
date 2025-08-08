@@ -1,0 +1,32 @@
+.fancy-button {
+  --bg-color: green;
+}
+
+.fancy-button::before,
+.fancy-button::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  transition: all 500ms;
+  background-color: var(--bg-color);
+  z-index: 1;
+  transform-origin: center;
+}
+
+.fancy-button::before {
+  top: 0;
+  left: 0;
+}
+
+.fancy-button::after {
+  bottom: 0;
+  right: 0;
+}
+
+.fancy-button:hover::before,
+.fancy-button:hover::after {
+  width: 100%;
+  height: 100%;
+  transform: rotate(180deg);
+}
