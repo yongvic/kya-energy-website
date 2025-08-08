@@ -5,6 +5,7 @@ import { Locale } from "@/lib/i18n.config";
 import { Suspense } from "react";
 import { FaSearch } from "react-icons/fa";
 import TranslationsType from "@/translations/translations.definition";
+import { Metadata } from "next";
 
 function ActuPageContent({ dictionary }: { dictionary: TranslationsType }) {
   return (
@@ -48,4 +49,32 @@ export default async function Actu({
       <ActuPageContent dictionary={dictionary} />
     </Suspense>
   );
+}
+
+export const metadata: Metadata = {
+  title: "",
+  description: "",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+    notranslate: false
+  }
+};
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ lang: Locale }>
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const dictionary = await getTranslation(lang);
+
+  return {
+    title: `${dictionary.actu.title} • KYA-Energy Group`,
+    description: dictionary.actu.description,
+  };
 }
