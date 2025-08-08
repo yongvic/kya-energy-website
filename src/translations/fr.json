@@ -220,6 +220,10 @@
     }
   },
   "faq": {
+    "metadata": {
+      "title": "Questions fréquentes • KYA-Energy Group",
+      "description": "Vous avez une question, vous trouverez sûrement la réponse."
+    },
     "hero": {
       "title": "FAQ",
       "subtitle": "Une question ?<br/>On a déjà sûrement la réponse.",

@@ -85,6 +85,10 @@ type TranslationsType = {
     };
   };
   faq: {
+    metadata: {
+      title: string;
+      description: string;
+    };
     hero: {
       title: string;
       subtitle: string;
