@@ -5,6 +5,10 @@
     "contact": "Contact"
   },
   "detail-products": {
+    "metadata": {
+      "title": "En savoir plus sur nos produits • KYA-Energy Group",
+      "description": "Vous voulez en savoir plus sur nos produits ? C'est par ici. Découvrez les détails sur tous les produits que nous commercialisons ici à KYA-Energy Group"
+    },
     "certified_title": "KYA-Energy GROUP certifié ISO 9001:2015",
     "certified_description": "Les groupes électrosolaires KYA-SoP sont des systèmes solaires intelligents conçus de façon optimale (avec une nouvelle approche de dimensionnement) et assemblés localement par KYA Energy Group pour des applications productives, tant pour le milieu rural qu’urbain. Ils sont composés de :",
     "certified_item1": "Un générateur solaire PV composé de modules solaires PV",

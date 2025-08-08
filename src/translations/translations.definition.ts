@@ -5,6 +5,10 @@ type TranslationsType = {
     contact: string;
   };
   "detail-products": {
+    metadata: {
+      title: string;
+      description: string;
+    };
     certified_title: string;
     certified_description: string;
     certified_item1: string;

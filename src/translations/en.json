@@ -5,6 +5,10 @@
     "contact": "Contact"
   },
   "detail-products": {
+    "metadata": {
+      "title": "Learn more about our products • KYA-Energy Group",
+      "description": "Want to learn more about our products ? It's here. Discover more about on the products we sell here at KYA-Energy Group"
+    },
     "certified_title": "KYA-Energy GROUP ISO 9001:2015 Certified",
     "certified_description": "KYA-SoP solar power systems are intelligent, optimally designed (with a new sizing approach) and locally assembled by KYA Energy Group for productive applications in both rural and urban areas. They consist of:",
     "certified_item1": "A solar PV generator composed of solar PV modules",
