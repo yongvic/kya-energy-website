@@ -1,5 +1,6 @@
 "use client";
 
+import config from "@/lib/config";
 import TranslationsType from "@/translations/translations.definition";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,12 +14,12 @@ export default function Promotions({
 }) {
 
   type Promo = {
-    image: string;
+    image?: string;
     title: string;
     link: string;
   };
 
-  const promotions: Promo[] = [
+  let promotions: Promo[] = [
     {
       image: "/products/pub.png",
       title: "Special Offer on KYA-SoP Systems",
@@ -35,6 +36,39 @@ export default function Promotions({
       link: "https://kya-energy-market.com"
     },
   ];
+
+  async function fetchPromotions() {
+    const request = await fetch(
+      `${config.strapiUrl}/api/promotions?populate=*`
+    );
+
+    if (!request.ok) {
+      console.log("Error while fetching promotions data");
+    }
+
+    const response = await request.json();
+    // If there is no promotions, display the default array
+    // contents instead
+    if (response.data && response.data.length > 0) {
+      // Clear promotions before proceed
+      promotions = [];
+      response.data.forEach((promotion: {
+        titre: string;
+        lien_de_redirection: string;
+        image?: {
+          url: string;
+        };
+      }) => {
+        promotions.push({
+          title: promotion.titre,
+          link: promotion.lien_de_redirection,
+          image: promotion.image?.url
+        });
+      })
+    }
+  }
+
+  fetchPromotions();
 
   const [currentPromo, setCurrentPromo] = useState<number>(0);
 
