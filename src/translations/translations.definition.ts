@@ -46,6 +46,10 @@ type TranslationsType = {
     image: string;
   }[];
   kyaFoundation: {
+    metadata: {
+      title: string;
+      description: string;
+    },
     hero: {
       title: string;
       description: string;

@@ -157,6 +157,10 @@
     }
   ],
   "kyaFoundation": {
+    "metadata": {
+      "title": "Fondation KYA • KYA-Energy Group",
+      "description": "Découvrez nos objectifs, nos moyens d'action, nos domaines d'intervention ainsi que les actions que nous avons mené jusqu'a ce jour"
+    },
     "hero": {
       "title": "NOS INITIATIVES",
       "description": "La Fondation KYA est créée en octobre 2022. Elle a pour but de contribuer au développement socio-économique des populations africaines, issues des groupes les plus vulnérables par des interventions en faveur du développement en matière d'énergie, d'agriculture, de médecine, d'éducation et de l'environnement.",
