@@ -51,20 +51,6 @@ export default async function Actu({
   );
 }
 
-export const metadata: Metadata = {
-  title: "",
-  description: "",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-    notranslate: false
-  }
-};
-
 export async function generateMetadata({
   params
 }: {
