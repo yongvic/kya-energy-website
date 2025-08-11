@@ -39,7 +39,7 @@ export default function PinnedPost() {
         );
 
         if (!request.ok) {
-          throw new Error("Failed to fetch pinned post");
+          console.log("Failed to fetch pinned post");
         }
 
         const responseJson = await request.json();
