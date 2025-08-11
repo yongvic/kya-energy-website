@@ -1,6 +1,7 @@
 import { getTranslation } from "@/lib/get-translation";
 import { Locale } from "@/lib/i18n.config";
 import KyaFoundationClientPage from "@/components/KyaFoundationClientPage";
+import { Metadata } from "next";
 
 const KyaFoundationPage = async ({
   params,
@@ -60,3 +61,17 @@ const KyaFoundationPage = async ({
 };
 
 export default KyaFoundationPage;
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ lang: Locale }>
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const dictionary = await getTranslation(lang);
+
+  return {
+    title: dictionary.kyaFoundation.metadata.title,
+    description: dictionary.kyaFoundation.metadata.description,
+  };
+}
