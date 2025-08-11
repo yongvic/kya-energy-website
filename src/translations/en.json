@@ -473,8 +473,8 @@
       "description": "Home page of KYA-Energy Group, pioneer of solar energy in Togo"
     },
     "hero": {
-      "title": "With our <span className=\"text-kya-orange\">KYA-SoP</span> solar power systems",
-      "subtitle": "Become <span className=\"text-kya-green\">green</span> <span className=\"text-kya-orange text-shadow-2xs text-shadow-kya-coffee\">energy owners</span>.",
+      "title": "With our <span class=\"text-kya-orange\">KYA-SoP</span> solar power systems",
+      "subtitle": "Become <span class=\"text-kya-green\">green</span> <span class=\"text-kya-orange text-shadow-2xs text-shadow-kya-coffee\">energy owners</span>.",
       "vision": "Our vision: to democratize access to green and sustainable energy",
       "cta": "Discover our solutions"
     },

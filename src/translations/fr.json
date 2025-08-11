@@ -482,8 +482,8 @@
       "description": "Page d'acceuil de KYA-Energy Group, pionner de l'énergie solaire au Togo"
     },
     "hero": {
-      "title": "Avec nos groupes électrosolaires <span className=\"text-kya-orange\">KYA-SoP<\/span>",
-      "subtitle": "Devenez <span className=\"text-kya-orange text-shadow-2xs text-shadow-kya-coffee\"propriétaires énergétiques<\/span> <span className=\"text-kya-green\">verts<\/span>.",
+      "title": "Avec nos groupes électrosolaires <span class=\"text-kya-orange\">KYA-SoP<\/span>",
+      "subtitle": "Devenez <span class=\"text-kya-orange text-shadow-2xs text-shadow-kya-coffee\">propriétaires énergétiques<\/span> <span class=\"text-kya-green\">verts<\/span>.",
       "vision": "Notre vision: démocratiser l'accès à l'énergie verte et durable",
       "cta": "Découvrir nos solutions"
     },
