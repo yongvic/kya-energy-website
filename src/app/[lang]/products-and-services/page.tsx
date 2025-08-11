@@ -8,6 +8,7 @@ import { MotionDiv } from "./ClientMotion"; // Corrected import
 import { RiCoinsLine } from "react-icons/ri";
 import { FiClock } from "react-icons/fi";
 import { LuInbox } from "react-icons/lu";
+import { Metadata } from "next";
 
 
 export default async function ProductsAndServicesPage({
@@ -174,3 +175,18 @@ export default async function ProductsAndServicesPage({
     </main>
   );
 }
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ lang: Locale }>
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const dictionary = await getTranslation(lang);
+
+  return {
+    title: dictionary.kyaFoundation.hero.title,
+    description: dictionary.kyaFoundation.hero.description,
+  };
+}
+
