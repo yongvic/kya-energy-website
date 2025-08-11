@@ -15,3 +15,4 @@ export default async function AwardsPage({
 
   return <AwardsTimeline awards={awards} />;
 }
+
