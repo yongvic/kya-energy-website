@@ -2,13 +2,13 @@ import Image from "next/image";
 import { getTranslation } from "@/lib/get-translation";
 import type { Locale } from "@/lib/i18n.config";
 import styles from "@/styles/products-and-services.module.css";
-import PromotionalCarousel from "./PromotionalCarousel";
 import ProductAccordion from "./ProductAccordion";
 import { MotionDiv } from "./ClientMotion"; // Corrected import
 import { RiCoinsLine } from "react-icons/ri";
 import { FiClock } from "react-icons/fi";
 import { LuInbox } from "react-icons/lu";
 import { Metadata } from "next";
+import Promotions from "./Promotions";
 
 
 export default async function ProductsAndServicesPage({
@@ -68,13 +68,17 @@ export default async function ProductsAndServicesPage({
   return (
     <main>
       {/* 1. Promotional Offers Section */}
-      <section className={styles.section}>
+      <section>
+        <h2 className={styles.section_title}>{t.products["promotional-offers"]}</h2>
+        <Promotions t={t} />
+      </section>
+      {/*<section className={styles.section}>
         <h2 className={styles.section_title}>{t.products["promotional-offers"]}</h2>
         <div className={styles.promo_container}>
           <PromotionalCarousel t={t} />
           <button className={styles.promo_button}>{t.services["learn-more"]}</button>
         </div>
-      </section>
+      </section>*/}
 
       {/* 2. Product Lines Section */}
       <section className={styles.section}>
