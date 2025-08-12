@@ -229,7 +229,7 @@ form.onsubmit = (e) => {
             hideLoading();
             addMessage(r.trim() || "Une erreur est survenue.", r.trim() ? 'bot' : 'error');
         })
-        .catch(e => {
+        .catch(() => {
             hideLoading();
             addMessage("Une erreur est survenue.", 'error');
         })
