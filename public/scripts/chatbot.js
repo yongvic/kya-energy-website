@@ -223,7 +223,7 @@ form.onsubmit = (e) => {
         redirect: "follow"
     };
 
-    fetch("https://kya-bot.vercel.app/api/message", requestOptions)
+    fetch("https://grateful-aphid-nationally.ngrok-free.app/webhook/chatbot", requestOptions)
         .then(r => r.text())
         .then(r => {
             hideLoading();
