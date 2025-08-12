@@ -2,6 +2,7 @@ import { Libre_Franklin } from "next/font/google";
 import "@/styles/globals.css";
 import NextTopLoader from "nextjs-toploader";
 import localFont from "next/font/local";
+import Chatbot from "@/components/Chatbot";
 
 const libreFranklin = Libre_Franklin({
   subsets: ["latin"],
@@ -73,6 +74,7 @@ export default async function RootLayout({
         className={`bg-gray-100 dark:bg-gray-900 ${libreFranklin.variable} ${libreFranklin.className} ${facebookSans.variable} ${arialNarrow.variable} ${timesNewRoman.variable} antialiased`}>
         <NextTopLoader showForHashAnchor color="#f9ad32" showSpinner={false} />
         {children}
+        <Chatbot />
       </body>
     </html>
   );
