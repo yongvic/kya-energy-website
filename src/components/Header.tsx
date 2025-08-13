@@ -3,7 +3,7 @@
 import TranslationsType from "@/translations/translations.definition";
 import Image from "next/image";
 import Link from "next/link";
-import ThemeSwitcherButton from "@/components/ThemeSwitcherButton";
+// import ThemeSwitcherButton from "@/components/ThemeSwitcherButton";
 import LocaleSwitcherButton from "@/components/LocaleSwitcherButton";
 import { useState } from "react";
 import { LuMenu, LuX } from "react-icons/lu";
