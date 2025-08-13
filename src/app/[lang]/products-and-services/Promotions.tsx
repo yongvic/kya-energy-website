@@ -95,7 +95,7 @@ export default function Promotions({
       <div className="mt-4 container mx-auto px-4 flex items-center justify-center w-full *:transition-colors duration-300">
         <button className="bg-kya-white text-kya-green hover:bg-kya-green hover:text-kya-white text-2xl p-4 rounded-full" onClick={previousPromo}><LuArrowLeft /></button>
         <div className="w-full p-4 h-96 flex items-center justify-center overflow-hidden">
-          <Image width="1200" height="400" alt={promotions[currentPromo].title} src={promotions[currentPromo]?.image} className="w-full h-full object-contain transition-all duration-300" />
+          <Image width="1200" height="400" alt={promotions[currentPromo].title} src={promotions[currentPromo].image!} className="w-full h-full object-contain transition-all duration-300" />
         </div>
         {promotions[currentPromo].image?.trim() != "" && <button className="bg-kya-white text-kya-green hover:bg-kya-green hover:text-kya-white text-2xl p-4 rounded-full" onClick={nextPromo}><LuArrowRight /></button>}
       </div>
