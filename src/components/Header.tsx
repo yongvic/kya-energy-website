@@ -29,7 +29,7 @@ export default function Header({
             alt={dictionary.header.logo} />
         </div>
         <div className="flex items-center justify-center gap-2">
-          <FancyButton href="" className="px-4 py-2 text-kya-green text-lg font-bold">{dictionary.header.qualityPolicy}</FancyButton>
+          <Link href="" className="px-4 py-2 text-kya-green text-lg font-bold">{dictionary.header.qualityPolicy}</Link>
           <FancyButton href="" className="px-4 py-2 text-lg rounded bg-kya-green text-white font-bold" bgColor="#f99d32">{dictionary.header.contact}</FancyButton>
           <div className="hidden md:flex items-center">
             <LocaleSwitcherButton dictionary={dictionary} />
