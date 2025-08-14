@@ -107,7 +107,7 @@ export default function Header({
                     <Link href="/kya-foundation" className="font-bold text-xl">
                       La Fondation KYA
                     </Link>
-                    <Link href="#" className="flex flex-col justify-center items-center gap-2">
+                    <Link href="/actu" className="flex flex-col justify-center items-center gap-2">
                       <Image width={300} height={300} src="https://static.wixstatic.com/media/2fcfb1_aca3321056bb4a33b40806f4d2060990~mv2.jpg/v1/fill/w_514,h_386,fp_0.50_0.50,q_90,enc_avif,quality_auto/2fcfb1_aca3321056bb4a33b40806f4d2060990~mv2.jpg" alt="Notre info" className="w-32 object-contain" />
                       <p>Voir nos infos</p>
                     </Link>

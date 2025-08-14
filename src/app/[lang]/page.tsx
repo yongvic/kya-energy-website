@@ -217,12 +217,13 @@ export default async function Home({
             </Link>
             <div className="overflow-hidden shadow-lg z-[1] relative">
               <iframe
-                className="w-full aspect-video"
+                className="w-full aspect-video h-full"
                 loading="lazy"
                 src="https://www.youtube.com/embed/ayX_GLi40K8"
                 title="Video institutionnelle KYA Energy Group"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
+                width={800}
                 allowFullScreen></iframe>
             </div>
           </div>
