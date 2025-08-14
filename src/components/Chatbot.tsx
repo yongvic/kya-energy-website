@@ -28,7 +28,7 @@ export default function Chatbot() {
       <div id="chat" className="hidden">
         <div className="chat-header">
           <div className="justify-self-start">
-            <Link href="wa.me" className="text-white font-bold text-[10px] flex items-center justify-center flex-col-reverse text-center">
+            <Link href="https://api.whatsapp.com/send?phone=22898263330" target="_blank" className="text-white font-bold text-[10px] flex items-center justify-center flex-col-reverse text-center">
               <span>Whatsapp</span> <FaWhatsapp className="text-2xl" />
             </Link>
           </div>
