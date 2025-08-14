@@ -6,7 +6,7 @@
   bottom: 144px;
   right: 32px;
   padding: 20px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #1ca18c 0%, #059669 100%);
   border-radius: 16px;
   box-shadow:
     0 20px 25px -5px rgba(0, 0, 0, 0.1),
@@ -86,10 +86,13 @@
 /* Header du chat */
 .chat-header {
   height: 56px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background: linear-gradient(135deg, #1ca18c 0%, #059669 100%);
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
   padding: 0 16px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
@@ -161,13 +164,13 @@
 
 #historique a,
 #historique a {
-  color: #f59e0b;
+  color: #f99d32;
   font-weight: bold;
 }
 
 #historique a:visited,
 #historique a:visited {
-  color: #f59e0b;
+  color: #f99d32;
 }
 
 #historique::-webkit-scrollbar {
@@ -201,7 +204,7 @@
 
 .message.user {
   align-self: flex-end;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #1ca18c 0%, #059669 100%);
   color: white;
   border-bottom-right-radius: 4px;
 }
@@ -291,7 +294,7 @@
 }
 
 #message:focus {
-  border-bottom-color: #10b981;
+  border-bottom-color: #1ca18c;
 }
 
 #message::placeholder {
@@ -308,7 +311,7 @@
 
 /* Bouton micro */
 #bouton-micro {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  background: linear-gradient(135deg, #f99d32 0%, #d97706 100%);
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -386,7 +389,7 @@
 
 /* Bouton envoyer */
 #envoyer {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #1ca18c 0%, #059669 100%);
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -425,7 +428,7 @@
   height: 64px;
   bottom: 64px;
   right: 32px;
-  /* background: linear-gradient(135deg, #10b981 0%, #059669 100%); */
+  /* background: linear-gradient(135deg, #1ca18c 0%, #059669 100%); */
   /* background-color: var(--kya-green); */
   border: none;
   border-radius: 50%;
@@ -558,7 +561,7 @@
   right: -8px;
   bottom: -8px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #1ca18c 0%, #059669 100%);
   opacity: 0.3;
   animation: haloPulse 1.5s infinite ease-in-out;
   z-index: -1;
@@ -584,7 +587,7 @@
   bottom: 70px;
   left: 16px;
   right: 16px;
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  background: linear-gradient(135deg, #f99d32 0%, #d97706 100%);
   color: white;
   padding: 12px 16px;
   border-radius: 12px;

@@ -3,7 +3,9 @@
 import "@/styles/chatbot.css";
 import Script from "next/script";
 import { useRef } from "react";
+import { FaComments, FaWhatsapp } from "react-icons/fa6";
 import { RiInformation2Line } from "react-icons/ri";
+import Link from "next/link";
 
 export default function Chatbot() {
   const message = useRef<HTMLInputElement>(null);
@@ -25,12 +27,11 @@ export default function Chatbot() {
       {/* Interface de chat */}
       <div id="chat" className="hidden">
         <div className="chat-header">
-          <button id="bouton-chat-close">
-            <svg viewBox="0 0 16 16">
-              <path
-                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-            </svg>
-          </button>
+          <div className="justify-self-start">
+            <Link href="wa.me" className="text-white font-bold text-[10px] flex items-center justify-center flex-col-reverse text-center">
+              <span>Whatsapp</span> <FaWhatsapp className="text-2xl" />
+            </Link>
+          </div>
           <div className="chat-title">
             <svg viewBox="0 0 16 16">
               <path
@@ -40,7 +41,12 @@ export default function Chatbot() {
             </svg>
             <p>KYA Bot</p>
           </div>
-          <div style={{ width: "32px" }}></div>
+          <button id="bouton-chat-close" className="justify-self-end">
+            <svg viewBox="0 0 16 16">
+              <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
+          </button>
         </div>
 
         <div className="messages-container">
@@ -54,8 +60,8 @@ export default function Chatbot() {
                       message.current!.value = value;
                       envoyer.current!.click();
                     }} key={index} style={{
-                      background: "linear-gradient(135deg, #10b981 0%, #059669 100%)"
-                    }} className="rounded-xl p-2 shadow bg-green-600 text-white cursor-pointer hover:scale-105 transition-all duration-300">
+                      background: "linear-gradient(135deg, #1ca18c 0%, #059669 100%)"
+                    }} className="rounded-xl p-2 shadow bg-kya-green text-white cursor-pointer hover:scale-105 transition-all duration-300">
                       <p className="mb-1"><RiInformation2Line /></p>
                       <p>{value}</p>
                     </div>
@@ -95,7 +101,9 @@ export default function Chatbot() {
       <button id="bouton-chat">
         <div className="absolute top-1/2 left-1/2 -translate-1/2 size-full overflow-hidden rounded-full">
           <div className="bouton-chat-animate size-[calc(100%-0.5rem)] rounded-full absolute top-1/2 left-1/2 -translate-1/2 bg-kya-green">
-            <div className="absolute top-0 left-0 size-full rounded-full z-10 bg-kya-green"></div>
+            <div className="absolute top-0 left-0 size-full rounded-full z-10 bg-kya-green flex items-center justify-center">
+              <FaComments />
+            </div>
           </div>
         </div>
       </button>
