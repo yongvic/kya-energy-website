@@ -25,21 +25,6 @@ export default async function ProductsAndServicesPage({
       image: "/products/kya-sop.png",
       description: t.products["kya-sop-description"],
     },
-    {
-      label: "KYA-SolDesign",
-      image: "/products/kya-sol-design.png",
-      description: t.products["kya-soldesign-description"],
-    },
-    {
-      label: "KYA-EcoLabel",
-      image: "/products/kya-eco-label.png",
-      description: t.products["kya-ecolabel-description"],
-    },
-    {
-      label: "KYA-FlexyControl",
-      image: "/products/kya-flexy-control.png",
-      description: t.products["kya-flexycontrol-description"],
-    },
   ];
 
   const services = [

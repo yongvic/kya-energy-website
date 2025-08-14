@@ -19,56 +19,48 @@ export default function Promotions({
     link: string;
   };
 
-  let promotions: Promo[] = [
+  const [promotions, setPromotions] = useState<Promo[]>([
     {
       image: "/products/pub.png",
       title: "Special Offer on KYA-SoP Systems",
       link: "/detail-products"
     },
-    {
-      image: "/products/kya-sop.png",
-      title: "Discover our KYA-SoP",
-      link: "/detail-products"
-    },
-    {
-      image: "/products/kya-sol-design.png",
-      title: "Free Solar Design Consultation",
-      link: "https://kya-energy-market.com"
-    },
-  ];
+  ]);
 
-  async function fetchPromotions() {
-    const request = await fetch(
-      `${config.strapiUrl}/api/promotions?populate=*`
-    );
+  useEffect(() => {
+    async function fetchPromotions() {
+      const request = await fetch(
+        `${config.strapiUrl}/api/promotions?populate=*`
+      );
 
-    if (!request.ok) {
-      console.log("Error while fetching promotions data");
+      if (!request.ok) {
+        console.log("Error while fetching promotions data");
+      }
+
+      const response = await request.json();
+      // If there is no promotions, display the default array
+      // contents instead
+      if (response.data && response.data.length > 0) {
+        // Clear promotions before proceed
+        setPromotions([]);
+        response.data.forEach((promotion: {
+          titre: string;
+          lien_de_redirection: string;
+          image?: {
+            url: string;
+          };
+        }) => {
+          setPromotions([...promotions, {
+            title: promotion.titre,
+            link: promotion.lien_de_redirection,
+            image: `${config.strapiUrl}${promotion.image?.url}`
+          }]);
+        })
+      }
     }
 
-    const response = await request.json();
-    // If there is no promotions, display the default array
-    // contents instead
-    if (response.data && response.data.length > 0) {
-      // Clear promotions before proceed
-      promotions = [];
-      response.data.forEach((promotion: {
-        titre: string;
-        lien_de_redirection: string;
-        image?: {
-          url: string;
-        };
-      }) => {
-        promotions.push({
-          title: promotion.titre,
-          link: promotion.lien_de_redirection,
-          image: `${config.strapiUrl}${promotion.image?.url}`
-        });
-      })
-    }
-  }
-
-  fetchPromotions();
+    fetchPromotions();
+  }, []);
 
   const [currentPromo, setCurrentPromo] = useState<number>(0);
 
