@@ -178,7 +178,7 @@ export default function Footer({
           </div>
         </div>
         {/* Contact and maps */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8" id="contact">
           <div className="space-y-8">
             <div className="space-y-2 text-xl ">
               <h1 className="text-2xl font-bold underline">
