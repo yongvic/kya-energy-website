@@ -67,8 +67,7 @@ export default function ProductAccordion({ products }: ProductAccordionProps) {
               >
                 <div className={styles.accordion_content_inner}>
                   {/* You can add more detailed content here if needed */}
-                  <p>
-                    {product.description}
+                  <p dangerouslySetInnerHTML={{ __html: product.description }}>
                   </p>
                 </div>
               </motion.div>
