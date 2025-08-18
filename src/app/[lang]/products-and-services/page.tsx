@@ -9,7 +9,13 @@ import { FiClock } from "react-icons/fi";
 import { LuInbox } from "react-icons/lu";
 import { Metadata } from "next";
 import Promotions from "./Promotions";
+import config from "@/lib/config";
 
+interface ProductItem {
+  label: string; // eq `title` on strapi
+  image: string; // The link
+  description: string;
+};
 
 export default async function ProductsAndServicesPage({
   params,
@@ -19,13 +25,27 @@ export default async function ProductsAndServicesPage({
   const { lang } = await params;
   const t = await getTranslation(lang);
 
-  const products = [
-    {
-      label: "KYA-SoP",
-      image: "/products/kya-sop.png",
-      description: t.products["kya-sop-description"],
-    },
-  ];
+  async function fetchProductsData() {
+    const request = await fetch(`${config.strapiUrl}/api/produits?populate=*`);
+    const response = await request.json();
+    const returnData: ProductItem[] = [];
+    response.data.forEach((data: {
+      nom: string;
+      description: string;
+      photo: {
+        url: string;
+      };
+    }) => {
+      returnData.push({
+        label: data.nom,
+        description: data.description,
+        image: `${config.strapiUrl}${data.photo.url}`
+      });
+    });
+    return returnData;
+  }
+
+  const products = await fetchProductsData();
 
   const services = [
     {
