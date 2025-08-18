@@ -135,43 +135,43 @@ export default function Footer({
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col gap-2 text-lg *:hover:text-kya-green *:transition-all *:duration-300">
-              <Link href="#" className="font-bold text-2xl">
+              <Link href="/products-and-services" className="font-bold text-2xl">
                 {dictionary.footer.solutions.title}
               </Link>
-              <Link href="#">
+              <Link href="/detail-products">
                 {dictionary.footer.solutions.items.solarKits}
               </Link>
-              <Link href="#">
+              <Link href="/products-and-services#services">
                 {dictionary.footer.solutions.items.installation}
               </Link>
-              <Link href="#">
+              <Link href="/products-and-services#services">
                 {dictionary.footer.solutions.items.maintenance}
               </Link>
-              <Link href="#">
+              <Link href="/products-and-services#services">
                 {dictionary.footer.solutions.items.consulting}
               </Link>
             </div>
             <div className="flex flex-col gap-2 text-lg *:hover:text-kya-green *:transition-all *:duration-300">
-              <Link href="#" className="font-bold text-2xl">
+              <Link href="/about" className="font-bold text-2xl">
                 {dictionary.footer.company.title}
               </Link>
-              <Link href="#">{dictionary.footer.company.items.about}</Link>
-              <Link href="#">{dictionary.footer.company.items.team}</Link>
-              <Link href="#">
+              <Link href="/about">{dictionary.footer.company.items.about}</Link>
+              <Link href="/about#equipe">{dictionary.footer.company.items.team}</Link>
+              <Link href="/certifications">
                 {dictionary.footer.company.items.certifications}
               </Link>
-              <Link href="#">
+              <Link href="/kya-foundation">
                 {dictionary.footer.company.items.foundation}
               </Link>
             </div>
             <div className="flex flex-col gap-2 text-lg *:hover:text-kya-green *:transition-all *:duration-300">
-              <Link href="#" className="font-bold text-2xl">
+              <Link href="#contact" className="font-bold text-2xl">
                 {dictionary.footer.contact.title}
               </Link>
-              <Link href="#">{dictionary.footer.contact.items.contactUs}</Link>
-              <Link href="#">{dictionary.footer.contact.items.support}</Link>
-              <Link href="#">{dictionary.footer.contact.items.news}</Link>
-              <Link href="#">
+              <Link href="#contact">{dictionary.footer.contact.items.contactUs}</Link>
+              <Link href="#contact">{dictionary.footer.contact.items.support}</Link>
+              <Link href="#contact">{dictionary.footer.contact.items.news}</Link>
+              <Link href="#contact">
                 {dictionary.footer.contact.items.qualityPolicy}
               </Link>
             </div>
