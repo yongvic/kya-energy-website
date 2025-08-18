@@ -45,7 +45,7 @@ export default function ProductAccordion({ products }: ProductAccordionProps) {
                 height={120}
                 className={styles.accordion_image}
               />
-              <p className={styles.accordion_description}>{product.description}</p>
+              <p className={styles.accordion_description}>{product.label}</p>
             </div>
             <div className={styles.accordion_icon}>
               {openIndex === index ? <FaMinus /> : <FaPlus />}
@@ -68,8 +68,7 @@ export default function ProductAccordion({ products }: ProductAccordionProps) {
                 <div className={styles.accordion_content_inner}>
                   {/* You can add more detailed content here if needed */}
                   <p>
-                    More detailed information about {product.label} can be placed here. 
-                    This section expands to show more content, as requested by the accordion functionality.
+                    {product.description}
                   </p>
                 </div>
               </motion.div>
