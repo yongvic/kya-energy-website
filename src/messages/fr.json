@@ -41,5 +41,11 @@
       "titre": "SEO",
       "description": "Transformer les ressources énergétiques renouvelables de manière innovante pour produire une énergie propre, fiable et abordable pour tous. Nous nous engageons à créer un avenir énergétique durable qui profite aux communautés et préserve notre planète."
     }
+  },
+
+  "introuvable": {
+    "titre": "Page introuvable",
+    "description": "Vérifiez l'URL du site internet et réessayez, ou trouvez ce dont vous avez besoin sur notre page d'accueil.",
+    "retour à l'accueil": "Retournez à la page d'acceuil"
   }
 }
