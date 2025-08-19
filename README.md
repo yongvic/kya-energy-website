@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KYA-Energy Group Next.js Website
+
+This repository contains the Next.js frontend website for KYA-Energy Group. It is responsible for providing the user interface and interacting with the backend services.
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Development Server](#running-the-development-server)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Getting Started
 
-First, run the development server:
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (LTS version recommended)
+- npm or Yarn
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/georgesnoe/kya-energy.git
+   cd kya-energy/nextjs
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+### Running the Development Server
+
+To start the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+.
+├── public/ # Static assets (images, fonts, etc.)
+├── src/
+│ ├── app/ # Next.js App Router (pages, layouts, etc.)
+│ ├── components/ # Reusable UI components
+│ ├── lib/ # Utility functions and helpers
+│ ├── styles/ # Global styles and Tailwind CSS configuration
+│ └── types/ # TypeScript type definitions
+├── .env.local.example # Example environment variables
+├── next.config.js # Next.js configuration
+├── package.json # Project dependencies and scripts
+├── postcss.config.js # PostCSS configuration
+├── tailwind.config.ts # Tailwind CSS configuration
+├── tsconfig.json # TypeScript configuration
+└── README.md # Project README
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologies Used
 
-## Learn More
+This project leverages the following key technologies:
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js**: A React framework for building production-ready applications with server-side rendering and static site generation capabilities.
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A strongly typed superset of JavaScript that enhances code quality and maintainability.
+- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
+- **Next-Intl**: A library for internationalization (i18n) in Next.js applications.
+- **React icons**: A collection of popular icon packs.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To contribute to this project, please follow these guidelines:
 
-## Deploy on Vercel
+- Fork the repository.
+- Create a new branch for your feature or bug fix: `git checkout -b feature/your-feature-name` or `bugfix/your-bug-name`.
+- Make your changes.
+- Commit your changes: `git commit -m "feat: Add your feature"` or `fix: Fix your bug`.
+- Push to the branch: `git push origin feature/your-feature-name`.
+- Open a pull request to the `main` branch.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
