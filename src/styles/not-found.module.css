@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 0; /* Changed from height: 100vh */
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  /* background-color: #fff; */
+  color: #333;
+}
+
+.errorCode {
+  font-size: 15rem;
+  font-weight: 700;
+  color: #ff9900;
+  animation: bounce 2s infinite;
+  position: relative;
+  z-index: 1;
+}
+
+.errorCode::after {
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  filter: blur(25px);
+  z-index: -1;
+}
+
+.errorMessage {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff9900;
+  margin-top: -2rem;
+  animation: slideInUp 1s ease-out;
+}
+
+.errorDescription {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  max-width: 500px;
+  animation: fadeIn 2s ease-in;
+}
+
+.homeButton {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #ff9900;
+  background-color: transparent;
+  border: 2px solid #ff9900;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeIn 2.5s ease-in;
+}
+
+.homeButton:hover {
+  background-color: #ff9900;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
