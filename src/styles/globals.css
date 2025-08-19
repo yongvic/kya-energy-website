@@ -1,15 +1,23 @@
 @import "tailwindcss";
 
 :root {
+  --kya-green: #1ca18c;
+  --kya-orange: #f99d32;
+  --kya-white: #ffffff;
+  --kya-yellow: #e8e748;
+  --kya-coffee: #875028;
   --font-family: var(--font-libre-franklin), Manrope, Poppins, Montserrat Roboto, Oxygen, Ubuntu, "Helveltica Neue", sans-serif;
 }
 
 @theme inline {
+  --color-kya-green: var(--kya-green);
+  --color-kya-orange: var(--kya-orange);
+  --color-kya-white: var(--kya-white);
+  --color-kya-yellow: var(--kya-yellow);
+  --color-kya-coffee: var(--kya-coffee);
   --font-sans: var(--font-family);
 }
 
 * {
-  transition: all 300ms;
   box-sizing: border-box;
-  font-family: var(--font-family);
 }
