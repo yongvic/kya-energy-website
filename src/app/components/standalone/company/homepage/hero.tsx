@@ -4,7 +4,7 @@ import { FaCalendar, FaCheckCircle, FaHeadphones, FaSolarPanel } from "react-ico
 import { FaFaceSmile } from "react-icons/fa6";
 
 export default function Hero() {
-  const t = useTranslations("Page d'acceuil.hero");
+  const t = useTranslations("page d'acceuil.hero");
   return (
     <section className="relative bg-gray-900">
       {/* Décoration du bas */}

@@ -45,7 +45,7 @@ async function getMission(locale: string): Promise<Mission> {
 
 export default async function MissionEtValeurs() {
   const locale = await getLocale();
-  const t = await getTranslations("Page d'acceuil.mission et valeurs");
+  const t = await getTranslations("page d'acceuil.mission et valeurs");
   const mission = await getMission(locale);
   const valeurs = await getValeurs(locale);
 
