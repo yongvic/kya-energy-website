@@ -1,5 +1,16 @@
 {
   "Page d'acceuil": {
-    "titre": "Salut"
+    "hero": {
+      "titre": "Avec nos groupes électrosolaires KYA-SoP",
+      "sous titre": "Devenez propriétaires énergétiques verts.",
+      "vision": "Notre vision: démocratiser l'accès à l'énergie verte et durable",
+      "appel à l'action": "Découvrir nos solutions",
+      "statistiques": {
+        "installations réalisées": "Installations réalisées",
+      "années d'expertise": "Années d'expertise",
+        "satisfaction client": "Satisfaction client",
+        "support client": "Support client"
+      }
+    }
   }
 }
