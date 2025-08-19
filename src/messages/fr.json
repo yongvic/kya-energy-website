@@ -7,7 +7,7 @@
       "appel à l'action": "Découvrir nos solutions",
       "statistiques": {
         "installations réalisées": "Installations réalisées",
-      "années d'expertise": "Années d'expertise",
+        "années d'expertise": "Années d'expertise",
         "satisfaction client": "Satisfaction client",
         "support client": "Support client"
       }
@@ -29,6 +29,17 @@
       "titre": "Découvrez KYA-Energy Group",
       "texte descriptif": "KYA-ENERGY GROUP est une entreprise internationale spécialisée dans les énergies renouvelables (énergie solaire en particulier) et l’efficacité énergétique. Elle œuvre pour relever le défi de l’électrification en Afrique de façon durable. Membre fondateur de la Synergie des Acteurs des Energies Renouvelables (SAER-TOGO), et d'associations internationales comme Global Off Grid Lightning Association (GOGLA) et Africa Minigrid Developers Association (AMDA).",
       "description de la vidéo": "Video institutionnelle KYA Energy Group"
+    },
+    "pourquoi kya": {
+      "titre": "Pourquoi choisir KYA-Energy Group ?"
+    },
+    "produits phares": {
+      "titre": "Nos produits phares",
+      "sous titre": "Découvrez notre gamme complète de groupes électrosolaires adaptés à tous vos besoins énergetiques."
+    },
+    "seo": {
+      "titre": "SEO",
+      "description": "Transformer les ressources énergétiques renouvelables de manière innovante pour produire une énergie propre, fiable et abordable pour tous. Nous nous engageons à créer un avenir énergétique durable qui profite aux communautés et préserve notre planète."
     }
   }
 }
