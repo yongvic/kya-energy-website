@@ -1,5 +1,10 @@
 # KYA-Energy Group Next.js Website
 
+<!-- Add a section to show total commits on the project and center it -->
+<p align="center">
+  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/t/georgesnoe/kya-energy">
+</p>
+
 This repository contains the Next.js frontend website for KYA-Energy Group. It is responsible for providing the user interface and interacting with the backend services.
 
 ## Table of Contents
