@@ -20,10 +20,10 @@
       },
       "valeurs": {
         "titre": "Nos valeurs"
-      },
-      "impacts": {
-        "titre": "Notre impact"
       }
+    },
+    "impacts": {
+      "titre": "Nos impacts"
     }
   }
 }
