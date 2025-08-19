@@ -15,27 +15,27 @@ interface IValeurs {
   liste: string[];
 }
 
-async function getValeurs(locale: string): Promise<Valeurs> {
+async function getValeurs(locale: string): Promise<IValeurs> {
   const request = await fetch(`${strapiUrl}/api/valeur?locale=${locale}`);
   const response = await request.json();
-  const result: Valeurs = {
+  const result: IValeurs = {
     icone: response.data?.icone,
     titre: response.data.titre,
     liste: response.data.liste_des_valeurs[0]?.children.map(
       (item: {
         children: {
           text: string;
-        }[]
-      }) => item.children[0].text
+        }[];
+      }) => item.children[0].text,
     ),
   };
   return result;
 }
 
-async function getMission(locale: string): Promise<Mission> {
+async function getMission(locale: string): Promise<IMission> {
   const request = await fetch(`${strapiUrl}/api/mission?locale=${locale}`);
   const response = await request.json();
-  const result: Mission = {
+  const result: IMission = {
     icone: response.data?.icone,
     titre: response.data.titre,
     description: response.data.description,
