@@ -1,5 +1,13 @@
 import "@/styles/globals.css";
 
+import { Libre_Franklin } from "next/font/google";
+
+const libreFranklin = Libre_Franklin({
+  display: "swap",
+  variable: "--font-libre-franklin",
+  subsets: ["latin"],
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -7,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body>
+      <body className={`${libreFranklin.className} antialiased`}>
         {children}
       </body>
     </html>
