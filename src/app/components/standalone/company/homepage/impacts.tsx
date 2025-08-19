@@ -19,7 +19,7 @@ async function getImpacts(locale: string): Promise<IImpact[]> {
 
 export default async function Impacts() {
   const locale = await getLocale();
-  const t = await getTranslations("page d'acceuil.impact");
+  const t = await getTranslations("page d'acceuil.impacts");
   const impacts = await getImpacts(locale);
 
   return (
