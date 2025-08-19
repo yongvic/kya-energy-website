@@ -60,20 +60,21 @@ yarn dev
 
 ```
 .
-├── public/ # Static assets (images, fonts, etc.)
+├── public/             # Static assets (images, fonts, etc.)
 ├── src/
-│ ├── app/ # Next.js App Router (pages, layouts, etc.)
-│ ├── components/ # Reusable UI components
-│ ├── lib/ # Utility functions and helpers
-│ ├── styles/ # Global styles and Tailwind CSS configuration
-│ └── types/ # TypeScript type definitions
-├── .env.local.example # Example environment variables
-├── next.config.js # Next.js configuration
-├── package.json # Project dependencies and scripts
-├── postcss.config.js # PostCSS configuration
-├── tailwind.config.ts # Tailwind CSS configuration
-├── tsconfig.json # TypeScript configuration
-└── README.md # Project README
+│ ├── app/              # Next.js App Router (pages, layouts, etc.)
+│ ├── components/       # Reusable UI components
+│ ├── lib/              # Utility functions and helpers
+│ ├── styles/           # CSS styles
+│ └── utils/            # Global styles and Tailwind CSS configuration
+│ └── types/            # TypeScript type definitions
+├── .env.local.example  # Example environment variables
+├── next.config.js      # Next.js configuration
+├── package.json        # Project dependencies and scripts
+├── postcss.config.js   # PostCSS configuration
+├── tailwind.config.ts  # Tailwind CSS configuration
+├── tsconfig.json       # TypeScript configuration
+└── README.md           # Project README
 ```
 
 ## Technologies Used
