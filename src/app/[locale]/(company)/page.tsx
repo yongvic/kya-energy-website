@@ -1,4 +1,5 @@
 import Hero from "@/app/components/standalone/company/homepage/hero";
+import Impacts from "@/app/components/standalone/company/homepage/impacts";
 import MissionEtValeurs from "@/app/components/standalone/company/homepage/mission-et-valeurs";
 
 export default function Homepage() {
@@ -6,6 +7,7 @@ export default function Homepage() {
     <>
       <Hero />
       <MissionEtValeurs />
+      <Impacts />
     </>
   )
 }
