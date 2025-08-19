@@ -3,13 +3,13 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { FaCheckCircle, FaGlobe } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
 
-interface Mission {
+interface IMission {
   icone?: string;
   titre: string;
   description: string;
 }
 
-interface Valeurs {
+interface IValeurs {
   icone?: string;
   titre: string;
   liste: string[];
