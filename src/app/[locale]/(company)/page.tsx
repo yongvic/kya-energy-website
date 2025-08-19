@@ -4,6 +4,8 @@ import MissionEtValeurs from "@/app/components/standalone/company/homepage/missi
 import PourquoiKya from "@/app/components/standalone/company/homepage/pourquoi-kya";
 import ProduitsPhares from "@/app/components/standalone/company/homepage/produits-phares";
 import YoutubeVideo from "@/app/components/standalone/company/homepage/youtube-video";
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
 export default function Homepage() {
   return (
@@ -16,4 +18,12 @@ export default function Homepage() {
       <ProduitsPhares />
     </>
   );
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("page d'acceuil.seo");
+  return {
+    title: t("titre"),
+    description: t("description"),
+  };
 }
