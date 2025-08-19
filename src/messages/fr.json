@@ -11,6 +11,16 @@
         "satisfaction client": "Satisfaction client",
         "support client": "Support client"
       }
+    },
+    "mission et valeurs": {
+      "titre": "Mission et Valeurs",
+      "mission": {
+        "titre": "Notre mission",
+        "description": "Transformer les ressources énergétiques renouvelables de manière innovante pour produire une énergie propre, fiable et abordable pour tous. Nous nous engageons à créer un avenir énergétique durable qui profite aux communautés et préserve notre planète."
+      },
+      "valeurs": {
+        "titre": "Nos valeurs"
+      }
     }
   }
 }
