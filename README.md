@@ -58,6 +58,7 @@ yarn dev
 
 ## Project Structure
 
+```
 .
 ├── public/ # Static assets (images, fonts, etc.)
 ├── src/
@@ -73,6 +74,7 @@ yarn dev
 ├── tailwind.config.ts # Tailwind CSS configuration
 ├── tsconfig.json # TypeScript configuration
 └── README.md # Project README
+```
 
 ## Technologies Used
 
