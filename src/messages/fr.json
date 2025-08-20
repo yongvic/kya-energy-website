@@ -99,6 +99,42 @@
       "visualiser notre portfolio": "Visualiser notre portfolio"
     }
   },
+  "certification iso 9001": {
+    "hero": {
+      "titre": "La seule entreprise certifiée ISO 9001:2015 en <div class=\"text-kya-orange\">énergie solaire au Togo</div>",
+      "description": "KYA-Energy Group est la première entreprise certifiée ISO 9001:2015 dans la conception, l'assemblage et la commercialisation de produits et systèmes énergétiques à base d'énergies renouvelables."
+    },
+    "certificat": {
+      "titre": "KYA-Energy GROUP certifié ISO 9001:2015",
+      "sous titre": "Une reconnaissance de notre engagement envers la qualité",
+      "titre certificat": "Certification ISO 9001:2015",
+      "annonce": {
+        "paragraphe 1": "Nous sommes fiers d'annoncer que KYA-Energy GROUP a obtenu la certification ISO 9001 : 2015 en 2024, délivrée par TÜV Rheinland. Cette certification témoigne de notre engagement indéfectible envers l'excellence, l'amélioration continue et la satisfaction de nos clients et partenaires.",
+        "paragraphe 2": "Une reconnaissance de notre démarche qualité",
+        "paragraphe 3": "Depuis sa création, KYA-Energy GROUP s'est engagé à fournir des solutions innovantes et durables... nous garantissons que nos services répondent aux exigences les plus strictes en matière de performance, de fiabilité et d'amélioration continue."
+      }
+    },
+    "pourquoi": {
+      "titre": "Pourquoi cette certification est essentielle ?",
+      "description": "L'obtention de cette certification est le fruit d'un travail collectif et d'une volonté constante de renforcer nos pratiques internes. Elle nous permet de :"
+    },
+    "engagement": {
+      "engagement": {
+        "titre": "Notre engagement QHSE",
+        "sous titre": "Un avenir durable et responsable",
+        "texte": "Au-delà de la qualité, notre engagement intègre également les aspects Hygiène, Sécurité et Environnement (HSE). Nous œuvrons chaque jour pour améliorer nos performances environnementales et sécuritaires..."
+      },
+      "remerciements": {
+        "titre": "Un grand merci à nos équipes et partenaires !",
+        "sous titre": "Chez KYA-Energy GROUP, nous continuons à viser l'excellence et à repousser les limites de l'innovation pour un avenir énergétique durable.",
+        "texte": "Cette certification est avant tout une réussite collective. Nous remercions chaleureusement tous nos collaborateurs... Nous remercions également nos clients et partenaires pour leur confiance et leur soutien indéfectible."
+      }
+    },
+    "confiance": {
+      "titre": "Faites Confiance à l'Excellence Certifiée",
+      "sous titre": "Choisissez KYA Energy Group pour vos projets d'énergie solaire et bénéficiez de notre expertise certifiée ISO 9001:2015."
+    }
+  },
   "introuvable": {
     "titre": "Page introuvable",
     "description": "Vérifiez l'URL du site internet et réessayez, ou trouvez ce dont vous avez besoin sur notre page d'accueil.",
