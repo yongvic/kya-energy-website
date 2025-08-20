@@ -71,6 +71,34 @@
       "rejoindre": "Nous rejoindre"
     }
   },
+  "récompenses": {
+    "introduction": {
+      "excellence": "Excellence reconnue",
+      "nos prix": "Nos prix",
+      "et": "et",
+      "distinctions": "distinctions",
+      "reconnaissance": "Que ce soit par la reconnaissance de nos employés, de nos clients ou par les prix internationaux qui nous ont été remis, nous sommes fiers de notre travail et des distinctions par lesquelles nous avons été reconnus."
+    },
+    "prix et distinctions": {
+      "titre": "NOS PRIX ET DISTINCTIONS"
+    },
+    "impact": {
+      "titre": "Notre impact",
+      "sous titre": "Des chiffres qui parlent",
+      "description": "Nos récompenses témoignent de notre engagement constant vers l'excellence et l'innovation."
+    },
+    "domaines d'excellence": {
+      "titre": "Domaines d'Excellence",
+      "sous titre": "Nos Catégories de Récompenses",
+      "description": "Nos prix couvrent tous les aspects de notre activité, de l'innovation technologique à l'impact social."
+    },
+    "rejoindre": {
+      "titre": "Rejoignez l'Excellence",
+      "sous titre": "Découvrez comment nos solutions primées peuvent transformer vos projets énergétiques et contribuer à un avenir plus durable.",
+      "démarrer un projet": "Démarrer un projet",
+      "visualiser notre portfolio": "Visualiser notre portfolio"
+    }
+  },
   "introuvable": {
     "titre": "Page introuvable",
     "description": "Vérifiez l'URL du site internet et réessayez, ou trouvez ce dont vous avez besoin sur notre page d'accueil.",
