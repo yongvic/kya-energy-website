@@ -135,6 +135,19 @@
       "sous titre": "Choisissez KYA Energy Group pour vos projets d'énergie solaire et bénéficiez de notre expertise certifiée ISO 9001:2015."
     }
   },
+  "detail produits": {
+    "hero": {
+      "titre": "KYA-Energy GROUP certifié ISO 9001:2015",
+      "description": "Les groupes électrosolaires KYA-SoP sont des systèmes solaires intelligents conçus de façon optimale (avec une nouvelle approche de dimensionnement) et assemblés localement par KYA Energy Group pour des applications productives, tant pour le milieu rural qu’urbain. Ils sont composés de :"
+    },
+    "details": {
+      "titre": "Les différentes gammes de nos produits"
+    },
+    "temoignages": {
+      "titre": "Témoignages de nos clients",
+      "erreur video": "Désolé. Votre navigateur ne supporte pas l'affichage des vidéos. Veuillez installer un navigateur compatible"
+    }
+  },
   "introuvable": {
     "titre": "Page introuvable",
     "description": "Vérifiez l'URL du site internet et réessayez, ou trouvez ce dont vous avez besoin sur notre page d'accueil.",
