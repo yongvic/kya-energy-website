@@ -148,6 +148,16 @@
       "erreur video": "Désolé. Votre navigateur ne supporte pas l'affichage des vidéos. Veuillez installer un navigateur compatible"
     }
   },
+  "blog": {
+    "hero": {
+      "titre": "Page d'actualités",
+      "description": "Retrouvez ici nos actualités, innovations et conseils autour de l’énergie solaire et de nos solutions durables."
+    },
+    "dernier post": {
+      "titre": "Notre dernier post",
+      "lire": "Lire"
+    }
+  },
   "introuvable": {
     "titre": "Page introuvable",
     "description": "Vérifiez l'URL du site internet et réessayez, ou trouvez ce dont vous avez besoin sur notre page d'accueil.",
