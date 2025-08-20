@@ -42,7 +42,35 @@
       "description": "Transformer les ressources énergétiques renouvelables de manière innovante pour produire une énergie propre, fiable et abordable pour tous. Nous nous engageons à créer un avenir énergétique durable qui profite aux communautés et préserve notre planète."
     }
   },
-
+  "à propos": {
+    "vision": {
+      "titre": "Notre vision",
+      "sous titre": "Transformer l'Afrique par l'Énergie Solaire",
+      "description": "KYA-Energy Group s&apos;engage dans la révolution énergétique africaine avec une ambition claire: devenir un leader incontournable des énergies renouvelables sur le continent."
+    },
+    "fondateur": {
+      "nom": "Prof. Yao K. AZOUMAH",
+      "titre": "Fondateur et CEO",
+      "fonction": "Fondateur et Directeur Général de KYA-Energy Group",
+      "description": "Visionnaire et pionnier de l'énergie renouvelable en Afrique, le Professeur Yao K. AZOUMAH combine expertise académique et vision entrepreneuriale pour révolutionner le secteur énergétique africain."
+    },
+    "valeurs": {
+      "titre": "Nos valeurs",
+      "sous titre": "Les Piliers de notre Excellence",
+      "description": "Des principes fondamentaux qui guident chacune de nos actions et décisions."
+    },
+    "impact": {
+      "titre": "Notre impact",
+      "sous titre": "Résultats concrets",
+      "description": "Des chiffres qui témoignent de notre engagement et de notre impact positif."
+    },
+    "cta": {
+      "appel": "Rejoignez l'Aventure de KYA-Energy Group",
+      "description": "Découvrez nos opportunités et participez à la révolution énergétique africaine",
+      "organigramme": "Voir l'organigramme",
+      "rejoindre": "Nous rejoindre"
+    }
+  },
   "introuvable": {
     "titre": "Page introuvable",
     "description": "Vérifiez l'URL du site internet et réessayez, ou trouvez ce dont vous avez besoin sur notre page d'accueil.",
