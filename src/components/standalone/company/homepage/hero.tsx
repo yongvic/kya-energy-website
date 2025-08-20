@@ -1,4 +1,4 @@
-import AnimatedButton from "@/app/components/ui/AnimatedButton";
+import AnimatedButton from "@/components/ui/AnimatedButton";
 import { useTranslations } from "next-intl";
 import { FaCalendar, FaCheckCircle, FaHeadphones, FaSolarPanel } from "react-icons/fa";
 import { FaFaceSmile } from "react-icons/fa6";
@@ -55,7 +55,7 @@ export default function Hero() {
             </p>
           </div>
         </div>
-     </div>
+      </div>
     </section>
   );
 }

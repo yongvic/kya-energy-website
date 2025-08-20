@@ -1,8 +1,8 @@
-import Certificat from "@/app/components/standalone/company/certification-iso9001/certificat";
-import Confiance from "@/app/components/standalone/company/certification-iso9001/confiance";
-import Engagement from "@/app/components/standalone/company/certification-iso9001/engagement";
-import Hero from "@/app/components/standalone/company/certification-iso9001/hero";
-import Pourquoi from "@/app/components/standalone/company/certification-iso9001/pourquoi";
+import Certificat from "@/components/standalone/company/certification-iso9001/certificat";
+import Confiance from "@/components/standalone/company/certification-iso9001/confiance";
+import Engagement from "@/components/standalone/company/certification-iso9001/engagement";
+import Hero from "@/components/standalone/company/certification-iso9001/hero";
+import Pourquoi from "@/components/standalone/company/certification-iso9001/pourquoi";
 
 export default function CertificationISO9001() {
   return (
