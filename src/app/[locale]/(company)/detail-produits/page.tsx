@@ -1,0 +1,12 @@
+import Details from "@/components/standalone/company/detail-produits/details";
+import Hero from "@/components/standalone/company/detail-produits/hero";
+import Temoignages from "@/components/standalone/company/detail-produits/temoignages";
+import styles from "@/styles/detail-produits.module.css";
+
+export default function DetailProduits() {
+  return <div className={styles.detailContainer}>
+    <Hero />
+    <Details />
+    <Temoignages />
+  </div>;
+}
