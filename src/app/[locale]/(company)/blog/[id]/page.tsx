@@ -127,7 +127,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
   );
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Metadata {
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const { article } = await getArticleData(id);
   let titre: string;
