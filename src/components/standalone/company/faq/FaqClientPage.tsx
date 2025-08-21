@@ -26,7 +26,7 @@ interface Props {
   };
 }
 
-const FaqClientPage: FC<Props> = () => {
+const FaqClientPage = () => {
   const t = useTranslations("faq");
   const [activeCategory, setActiveCategory] = useState("general");
   const [searchTerm, setSearchTerm] = useState("");
