@@ -5,6 +5,7 @@ import { FaHeart } from "react-icons/fa6";
 import "@/styles/post.css";
 import Script from "next/script";
 import { Metadata } from "next";
+import { useTranslations } from "next-intl";
 
 type ArticleRecord = {
   documentId: string;
@@ -41,11 +42,12 @@ async function getArticleData(id: string) {
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ id: string }> }) {
+  const t = useTranslations("blog.article");
   const { id } = await params;
   const { article, recommendations } = await getArticleData(id);
 
   if (!article) {
-    return <div>Article not found</div>;
+    return <div>{t("inexistant")}</div>;
   }
 
   const { Titre, Contenu, Like, Date: publishedAt, PhotoCouverture } = article;
@@ -93,7 +95,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
         <aside>
           <div className="sticky top-24">
             <h2 className="text-2xl font-bold text-kya-coffee mb-4 mx-4">
-              Autres articles
+              {t("autres articles")}
             </h2>
             <div className="space-y-6">
               {recommendations.map((rec: ArticleRecord) => (
@@ -125,16 +127,23 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
   );
 }
 
-export const metadata: Metadata = {
-  title: "",
-  description: "",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-    notranslate: false
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Metadata {
+  const { id } = await params;
+  const { article } = await getArticleData(id);
+  let titre: string;
+  let description: string;
+
+  if (!article) {
+    titre = "404, Not Found • KYA-Energy Group",
+      description = "404, Not Found on the server"
   }
-};
+
+  const { Titre, Contenu } = article;
+  titre = `${Titre}`;
+  description = `${Contenu}`.slice(0, 30);
+
+  return {
+    title: titre,
+    description: description,
+  };
+}

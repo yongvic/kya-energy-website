@@ -38,7 +38,7 @@
       "sous titre": "Découvrez notre gamme complète de groupes électrosolaires adaptés à tous vos besoins énergetiques."
     },
     "seo": {
-      "titre": "SEO",
+      "titre": "Acceuil • KYA-Energy Group",
       "description": "Transformer les ressources énergétiques renouvelables de manière innovante pour produire une énergie propre, fiable et abordable pour tous. Nous nous engageons à créer un avenir énergétique durable qui profite aux communautés et préserve notre planète."
     }
   },
@@ -97,6 +97,10 @@
       "sous titre": "Découvrez comment nos solutions primées peuvent transformer vos projets énergétiques et contribuer à un avenir plus durable.",
       "démarrer un projet": "Démarrer un projet",
       "visualiser notre portfolio": "Visualiser notre portfolio"
+    },
+    "seo": {
+      "titre": "Nos récompenses • KYA-Energy Group",
+      "description": "Découvrez les récompenses que nous avons reçu au cours des années et qui sont la preuve de notre travail acharné"
     }
   },
   "certification iso 9001": {
@@ -133,6 +137,10 @@
     "confiance": {
       "titre": "Faites Confiance à l'Excellence Certifiée",
       "sous titre": "Choisissez KYA Energy Group pour vos projets d'énergie solaire et bénéficiez de notre expertise certifiée ISO 9001:2015."
+    },
+    "seo": {
+      "titre": "Certification ISO 9001:2015 • KYA-Energy Group",
+      "description": "Nous sommes la seule entreprise dans l'énergie solaire à avoir une certification ISO 9001. Cette certification est la preuve de l'innovation que nous apportons afin de rendre l'énergie solaire encore plus accessible"
     }
   },
   "detail produits": {
@@ -146,6 +154,10 @@
     "temoignages": {
       "titre": "Témoignages de nos clients",
       "erreur video": "Désolé. Votre navigateur ne supporte pas l'affichage des vidéos. Veuillez installer un navigateur compatible"
+    },
+    "seo": {
+      "titre": "Nos produits • KYA-Energy Group",
+      "description": "Plongez plus en détail sur les produits qui font de nous, un pionnier de l'énergie solaire au Togo et en Afrique occidentale"
     }
   },
   "blog": {
@@ -156,7 +168,57 @@
     "dernier post": {
       "titre": "Notre dernier post",
       "lire": "Lire"
+    },
+    "tous les posts": {
+      "lire": "Lire",
+      "precedent": "Précedent",
+      "suivant": "Suivant"
+    },
+    "article": {
+      "inexistant": "Article non trouvé",
+      "autres articles": "Autres articles interessants"
+    },
+    "seo": {
+      "titre": "Actualités • KYA-Energy Group",
+      "description": "Découvrez les dernières actualités de l'entreprise pionnière de l'énergie solaire au Togo, KYA-Energy Group"
     }
+  },
+  "faq": {
+    "titre": "FAQ",
+    "sous titre": "Une question ?<br/>On a sûrement la réponse.",
+    "placeholder": "Rechercher",
+    "seo": {
+      "titre": "Questions fréquentes • KYA-Energy Group",
+      "description": "Vous avez une question ? Vous trouverez sûrement la réponse. Notre assistant IA vous accompagnera tout au long de ce parcours"
+    }
+  },
+  "produits et services": {
+    "acceuil": {
+      "voir plus": "Voir plus"
+    }
+  },
+  "kya backup": {
+    "seo": {
+      "titre": "KYA-Backup • KYA-Energy Group",
+      "description": "Notre groupe secours, destiné à toutes sortes d'usage"
+    }
+  },
+  "kya sop institutions": {
+    "seo": {
+      "titre": "KYA-SoP pour institutions • KYA-Energy Group",
+      "description": "Vous êtes une entreprise ou une institution ? Découvrez la gamme de produits adaptée à vos besoins"
+    }
+  },
+  "kya sop menages": {
+    "seo": {
+      "titre": "KYA-SoP pour les ménages • KYA-Energy Group",
+      "description": "L'énergie solaire, votre maison en a aussi besoin. Saisissez enfin l'opportunité de réduire vos factures d'électricité tout en contribuant à un monde meilleur"
+    }
+  },
+  "popup": {
+    "saisir le numero de telephone": "Veuillez entrer votre numéro de téléphone. Notre équipe se chargera de vous contacter",
+    "numero de telephone": "Votre numéro de téléphone",
+    "contactez moi": "Contactez moi dès que possible"
   },
   "introuvable": {
     "titre": "Page introuvable",

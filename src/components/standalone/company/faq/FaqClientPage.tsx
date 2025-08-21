@@ -4,6 +4,7 @@ import { FC, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaSearch } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa6";
+import { useTranslations } from "next-intl";
 
 interface Props {
   t: {
@@ -25,7 +26,8 @@ interface Props {
   };
 }
 
-const FaqClientPage: FC<Props> = ({ t }) => {
+const FaqClientPage: FC<Props> = () => {
+  const t = useTranslations("faq");
   const [activeCategory, setActiveCategory] = useState("general");
   const [searchTerm, setSearchTerm] = useState("");
   const [openQuestion, setOpenQuestion] = useState<number | null>(0);
@@ -47,7 +49,7 @@ const FaqClientPage: FC<Props> = ({ t }) => {
       <section className="bg-linear-to-r  from-[#1e9983] from-[19%] to-[#197867] to-[100%] text-white py-30 px-4 text-center relative overflow-hidden">
         <motion.div className="z-10 absolute w-full h-max -bottom-40 overflow-hidden left-0 flex flex-col justify-end items-start">
           <p className="faq-effect font-black font-facebook-sans select-none text-shadow[100px_0_1000px_#fff] text-[25rem] container mx-auto flex justify-between items-center">
-            <span>{t.hero.title.toLowerCase()}</span>
+            <span>{t("titre").toLowerCase()}</span>
             <span className="skew-6 rotate-12">?</span>
           </p>
           {/* <div className="h-[30%] absolute w-full bottom-[40%] bg-linear-to-r  from-[#1e9983a0] from-[19%] to-[#197867a0] to-[100%]"></div> */}
@@ -57,13 +59,13 @@ const FaqClientPage: FC<Props> = ({ t }) => {
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}>
-          {t.hero.title}
+          {t("titre")}
         </motion.h1>
         <motion.p
           className="z-20 relative text-2xl md:text-4xl mb-8 font-semibold"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }} dangerouslySetInnerHTML={{ __html: t.hero.subtitle }} />
+          transition={{ duration: 0.5, delay: 0.2 }} dangerouslySetInnerHTML={{ __html: t("sous titre") }} />
         <motion.div
           className="z-20 absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] sm:w-xl bg-kya-white rounded-full shadow-lg outline-none lg:w-2xl mx-auto"
           initial={{ scale: 0.9, opacity: 0 }}
@@ -72,7 +74,7 @@ const FaqClientPage: FC<Props> = ({ t }) => {
           <FaSearch className="absolute top-1/2 left-4 -translate-y-1/2 text-gray-400" />
           <input
             type="text"
-            placeholder={t.hero.searchPlaceholder}
+            placeholder={t("placeholder")}
             className="w-full py-3 pl-12 pr-4 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-kya-orange"
             onChange={(e) => setSearchTerm(e.target.value)}
           />

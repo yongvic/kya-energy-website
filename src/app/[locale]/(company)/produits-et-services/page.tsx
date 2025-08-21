@@ -17,7 +17,7 @@ interface ProductItem {
 };
 
 export default async function ProductsAndServicesPage() {
-  const t = await getTranslations("");
+  const t = await getTranslations("produits et services.acceuil");
 
   async function fetchProductsData() {
     const request = await fetch(`${strapiUrl}/api/produits?populate=*`);
@@ -69,7 +69,7 @@ export default async function ProductsAndServicesPage() {
       {/* 1. Promotional Offers Section */}
       <section>
         <h2 className={styles.section_title}>{t.products["promotional-offers"]}</h2>
-        <Promotions t={t} />
+        <Promotions />
       </section>
       {/*<section className={styles.section}>
         <h2 className={styles.section_title}>{t.products["promotional-offers"]}</h2>
@@ -90,7 +90,7 @@ export default async function ProductsAndServicesPage() {
         <div className={styles.catalogue_banner}>
           <p className={styles.catalogue_text}>{t.products["catalog-prompt"]}</p>
           <a href="#" className={styles.catalogue_link}>
-            {t.products["see-more"]}
+            {t("voir plus")}
           </a>
         </div>
       </section>

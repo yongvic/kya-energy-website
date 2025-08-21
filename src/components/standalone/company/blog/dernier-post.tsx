@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { IoHeartOutline } from "react-icons/io5";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 interface DernierPost {
   documentId: string;
@@ -19,6 +19,7 @@ interface DernierPost {
 }
 
 export default function DernierPost() {
+  const locale = useLocale();
   const t = useTranslations("blog.dernier post");
   const [post, setPost] = useState<DernierPost | null>(null);
   const [loading, setLoading] = useState(true);
@@ -82,7 +83,7 @@ export default function DernierPost() {
 
   const imageUrl = PhotoCouverture.url;
 
-  const publicationDate = new Date(publishedAt).toLocaleDateString("fr-FR", {
+  const publicationDate = new Date(publishedAt).toLocaleDateString(locale, {
     year: "numeric",
     month: "long",
     day: "numeric",

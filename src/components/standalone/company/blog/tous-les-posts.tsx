@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import "@/styles/post.css";
+import { useTranslations } from "use-intl";
 
 interface Post {
   id: string;
@@ -27,6 +28,7 @@ interface Pagination {
 }
 
 export default function TousLesPosts() {
+  const t = useTranslations("blog.tous les posts");
   const [posts, setPosts] = useState<Post[]>([]);
   const [pagination, setPagination] = useState<Pagination | null>(null);
   const [loading, setLoading] = useState(true);
@@ -183,7 +185,7 @@ export default function TousLesPosts() {
                     <span className="font-medium">{post.Like}</span>
                   </div>
                   <div className="flex items-center gap-2 text-kya-orange font-bold">
-                    <span>Lire</span>
+                    <span>{t("lire")}</span>
                     <FaArrowRight />
                   </div>
                 </div>
@@ -198,7 +200,7 @@ export default function TousLesPosts() {
           disabled={page <= 1}
           className="px-4 py-2 bg-kya-green text-kya-white rounded-lg disabled:opacity-50"
         >
-          Précédent
+          {t("precedent")}
         </button>
         {paginationLinks && paginationLinks.map((p, i) =>
           p === "..." ? (
@@ -218,7 +220,7 @@ export default function TousLesPosts() {
           disabled={page >= (pagination?.pageCount || 1)}
           className="px-4 py-2 bg-kya-green text-kya-white rounded-lg disabled:opacity-50"
         >
-          Suivant
+          {t("suivant")}
         </button>
       </div>
     </section>
