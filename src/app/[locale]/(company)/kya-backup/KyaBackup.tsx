@@ -1,10 +1,12 @@
 "use client";
 import Popup from "@/components/ui/Popup";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 
 
 export default function KyaBackup() {
+  const t = useTranslations("kya backup");
   const kyaSopList = [
     {
       imgSrc: "/kya-sop/kya-backup-1.avif",
@@ -70,7 +72,7 @@ export default function KyaBackup() {
                 ))}
               </ul>
               <button onClick={() => setClicked(index)}>
-                <div className="bg-kya-orange p-4 w-max hover:-translate-0.5 font-bold text-kya-white">Demander un devis</div>
+                <div className="bg-kya-orange p-4 w-max hover:-translate-0.5 font-bold text-kya-white">{t("demander un devis")}</div>
               </button>
             </div>
           </div>
