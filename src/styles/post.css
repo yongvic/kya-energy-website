@@ -1,0 +1,32 @@
+.post img,
+.post iframe,
+.post embed,
+.post video,
+.post audio {
+  display: none;
+}
+
+.carousel {
+  overflow-x: hidden;
+  margin: 2rem 0;
+  width: 100%;
+  /* Ensure the container takes full width */
+}
+
+.article .carousel img {
+  display: inline;
+  width: 300px;
+  object-fit: cover;
+  /* Ensure the image covers the area without distortion */
+  border-radius: 0.5rem;
+  /* Optional: for rounded corners */
+}
+
+.article blockquote {
+  border-left: 0.25rem solid var(--color-kya-orange);
+  padding: 2rem;
+}
+
+.article a {
+  color: blue;
+}
