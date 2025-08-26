@@ -29,7 +29,7 @@ export default function Equipe({ locale }: { locale: string }) {
   const t = useTranslations("à propos.equipe");
   useEffect(() => {
     fetchTeamMembers(locale).then((data) => setTeamMembers(data));
-  });
+  }, []);
   const [teamScope, animateTeam] = useAnimate();
   const isTeamInView = useInView(teamScope, { once: true, amount: 0.1 });
   useEffect(() => {
