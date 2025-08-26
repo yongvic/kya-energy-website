@@ -6,7 +6,9 @@
   --kya-white: #ffffff;
   --kya-yellow: #e8e748;
   --kya-coffee: #875028;
-  --font-family: var(--font-libre-franklin), Manrope, Poppins, Montserrat Roboto, Oxygen, Ubuntu, "Helveltica Neue", sans-serif;
+  --font-family:
+    var(--font-libre-franklin), Manrope, Poppins, Montserrat Roboto, Oxygen,
+    Ubuntu, "Helveltica Neue", sans-serif;
 }
 
 @theme inline {
@@ -16,8 +18,80 @@
   --color-kya-yellow: var(--kya-yellow);
   --color-kya-coffee: var(--kya-coffee);
   --font-sans: var(--font-family);
+  --font-serif: var(--font-times-new-roman), "Times New Roman", serif;
+  --font-facebook-sans: var(--font-facebook-sans);
+}
+
+@layer utilities {
+  .clip-path-polygon {
+    clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+  }
 }
 
 * {
   box-sizing: border-box;
+}
+
+.faq-effect {
+  color: #1ca18c;
+  text-shadow: 0 1px 10px #fff;
+}
+
+:root {
+  /* KYA Palette color */
+  --kya-green: #1ca18c;
+  --kya-orange: #f99d32;
+  --kya-white: #ffffff;
+  --kya-yellow: #e8e748;
+  --kya-coffee: #875028;
+}
+
+.navlink {
+  @apply font-semibold relative;
+}
+
+.navlink::before {
+  content: "";
+  transition-duration: 300ms;
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--kya-green);
+}
+
+.navlink:hover::before {
+  width: 100%;
+}
+
+@keyframes bounce-right {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(2px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.team-member:hover {
+  transform: scale(1.1) !important;
+}
+
+.magic-3d-pattern {
+  background-color: #18181b;
+  opacity: 0.8;
+  background-image:
+    linear-gradient(#18181b 1px, transparent 1px),
+    linear-gradient(to right, #18181b 1px, #e5e5f7 1px);
+  background-size: 20px 20px;
+}
+
+.swiper-3d .swiper-slide-shadow {
+  background-color: #0000 !important;
 }
