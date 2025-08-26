@@ -1,4 +1,5 @@
 import { strapiUrl } from "@/lib/config";
+import { marked } from "marked";
 import { getTranslations } from "next-intl/server";
 
 interface IYoutubeVideo {
@@ -35,9 +36,11 @@ export default async function YoutubeVideo() {
         <div className="space-y-4">
           <h2 className="text-3xl font-bold text-kya-coffee">{t("titre")}</h2>
           <p
-            className="text-gray-700"
+            className="text-gray-700 no-img-markdown"
             dangerouslySetInnerHTML={{
-              __html: youtubeVideo.texteDescriptif ?? t("texte descriptif"),
+              __html: marked(
+                youtubeVideo.texteDescriptif ?? t("texte descriptif"),
+              ),
             }}
           />
         </div>
