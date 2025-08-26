@@ -15,18 +15,21 @@ interface TeamMember {
 }
 
 // A function for fetching team members from strapi
-async function fetchTeamMembers() {
-  const res = await fetch(`${strapiUrl}/equipe?populate=*`);
+async function fetchTeamMembers(locale: string) {
+  const res = await fetch(
+    `${strapiUrl}/api/membres-du-comites?locale=${locale}&populate=*`,
+  );
   const data = await res.json();
-  return data;
+  return data.data;
 }
 
-export default function Equipe() {
+export default function Equipe({ locale }: { locale: string }) {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
   const [teamMember, setTeamMember] = useState(0);
+  const t = useTranslations("à propos.equipe");
   useEffect(() => {
-    fetchTeamMembers().then((data) => setTeamMembers(data));
-  }, []);
+    fetchTeamMembers(locale).then((data) => setTeamMembers(data));
+  });
   const [teamScope, animateTeam] = useAnimate();
   const isTeamInView = useInView(teamScope, { once: true, amount: 0.1 });
   useEffect(() => {
@@ -40,7 +43,6 @@ export default function Equipe() {
         ],
       ]);
   }, [isTeamInView, animateTeam]);
-  const t = useTranslations("à propos.equipe");
 
   return (
     <section
@@ -73,12 +75,12 @@ export default function Equipe() {
                 <Image
                   width={296}
                   height={361}
-                  src={`/team/${value.photo}`}
+                  src={`${strapiUrl}${value.photo.url}`}
                   alt={value.nom}
                   className="object-contain w-full lg:w-max"
                 />
                 <div className="text-center p-4 bg-green-50 w-full flex flex-col justify-center items-center">
-                  <h3 className="font-bold text-xl">{value.name}</h3>
+                  <h3 className="font-bold text-xl">{value.nom}</h3>
                   <p className="text-lg text-gray-600">{value.role}</p>
                 </div>
               </div>
@@ -91,7 +93,7 @@ export default function Equipe() {
                 <Image
                   width={296}
                   height={361}
-                  src={`/team/${value.photo}`}
+                  src={`${strapiUrl}${value.photo.url}`}
                   alt={value.nom}
                   className="object-contain w-full h-full"
                 />
