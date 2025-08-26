@@ -1,41 +1,56 @@
 export default function AnimatedButton({
   children,
-  className = '',
   href,
-  animateColor,
 }: {
   children: React.ReactNode;
-  className?: string;
   href?: string;
-  animateColor: string;
 }) {
-  const commonClasses = `transition-all duration-500 relative overflow-hidden rounded-lg ${animateColor}`;
-
-  const rippleClasses = `absolute top-0 left-0 w-full h-full bg-opacity-50 rounded-lg opacity-0 transition-opacity duration-500`;
-
   if (href) {
     return (
-      <a href={href} className={commonClasses}>
-        <span className="relative z-10">{children}</span>
-        <span
-          className={`${rippleClasses} ${animateColor}`}
-          style={{
-            animation: 'ripple 0.5s ease-in-out',
-          }}
-        />
+      <a
+        href={href}
+        className='
+        relative z-0 flex items-center gap-2 overflow-hidden rounded-lg border-[1px] 
+        border-kya-orange px-4 py-2 font-semibold
+        uppercase text-kya-orange transition-all duration-500
+        
+        before:absolute before:inset-0
+        before:-z-10 before:translate-x-[150%]
+        before:translate-y-[150%] before:scale-[2.5]
+        before:rounded-[100%] before:bg-kya-orange
+        before:transition-transform before:duration-1000
+        before:content-[""]
+
+        hover:scale-105 hover:text-neutral-900
+        hover:before:translate-x-[0%]
+        hover:before:translate-y-[0%]
+        active:scale-95 w-max'
+      >
+        {children}
       </a>
     );
   }
 
   return (
-    <button className={commonClasses}>
-      <span className="relative z-10">{children}</span>
-      <span
-        className={`${rippleClasses} ${animateColor}`}
-        style={{
-          animation: 'ripple 0.5s ease-in-out',
-        }}
-      />
+    <button
+      className='
+        relative z-0 flex items-center gap-2 overflow-hidden rounded-lg border-[1px] 
+        border-kya-orange px-4 py-2 font-semibold
+        uppercase text-kya-orange transition-all duration-500
+        
+        before:absolute before:inset-0
+        before:-z-10 before:translate-x-[150%]
+        before:translate-y-[150%] before:scale-[2.5]
+        before:rounded-[100%] before:bg-kya-orange
+        before:transition-transform before:duration-1000
+        before:content-[""]
+
+        hover:scale-105 hover:text-neutral-900
+        hover:before:translate-x-[0%]
+        hover:before:translate-y-[0%]
+        active:scale-95'
+    >
+      {children}
     </button>
   );
 }
