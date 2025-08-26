@@ -1,5 +1,6 @@
 import { strapiUrl } from "@/lib/config";
 import { getLocale, getTranslations } from "next-intl/server";
+import Image from "next/image";
 
 interface IPourquoiKya {
   titre: string;
@@ -19,7 +20,7 @@ async function getPourquoiKya(locale: string): Promise<IPourquoiKya[]> {
     sous_titre: item.sous_titre,
     icone: {
       url: item.icone.url,
-    }
+    },
   }));
   return result;
 }
@@ -39,16 +40,26 @@ export default async function PourquoiKya() {
       </div>
       <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pourquois.map((item) => (
-          <div
+          <article
             key={item.titre}
             className="bg-gray-50 p-6 rounded-lg shadow-md text-center flex flex-col items-center"
           >
-            <div className="text-kya-green mb-4">{item.icone.url}</div>
-            <h3 className="text-xl font-bold text-kya-coffee mb-2">
-              {item.titre}
-            </h3>
-            <p className="text-gray-600">{item.sous_titre}</p>
-          </div>
+            <div className="text-kya-green mb-4">
+              <div className="flex items-center justify-center">
+                <Image
+                  src={strapiUrl + item.icone.url}
+                  alt={item.titre}
+                  width={48}
+                  height={48}
+                  className="size-12 object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-kya-coffee mb-2">
+                {item.titre}
+              </h3>
+              <p className="text-gray-600">{item.sous_titre}</p>
+            </div>
+          </article>
         ))}
       </div>
     </section>
