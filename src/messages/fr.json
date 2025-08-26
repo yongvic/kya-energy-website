@@ -43,6 +43,16 @@
     }
   },
   "à propos": {
+    "equipe": {
+      "leadership": "Leadership",
+      "comité": "Comité de direction",
+      "description": "Une équipe d'experts chevronnés avec plus de 15 ans d'expérience collective, unis par une vision commune d'excellence et d'innovation."
+    },
+    "carousel": {
+      "notre équipe": "Notre equipe",
+      "excellence": "d'excellence",
+      "découverte": "Découvrez les experts qui façonnent l'avenir énergétique de l'Afrique avec passion, innovation et professionnalisme."
+    },
     "vision": {
       "titre": "Notre vision",
       "sous titre": "Transformer l'Afrique par l'Énergie Solaire",
@@ -193,8 +203,22 @@
     }
   },
   "produits et services": {
+    "seo": {
+      "titre": "Produits et Services • KYA-Energy Group",
+      "description": "Découvrez notre gamme de produits et services et laissez-vous inspirer par notre expertise et notre savoir-faire."
+    },
     "acceuil": {
-      "voir plus": "Voir plus"
+      "voir plus": "Voir plus",
+      "offres promotionnelles": "Découvrez nos offres promotionnelles",
+      "produits": {
+        "titre": "Notre gamme de produits",
+        "sous titre": "Découvrez notre gamme complète de groupes électrosolaires adaptés à tous vos besoins énergétiques.",
+        "savoir plus": "Vous voulez en savoir plus ?"
+      },
+      "services": {
+        "titre": "Nos services",
+        "sous titre": "Un accompagnement personnalisé pour vos projets énergétiques."
+      }
     }
   },
   "kya backup": {
