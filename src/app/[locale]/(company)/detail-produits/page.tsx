@@ -3,7 +3,7 @@ import Hero from "@/components/standalone/company/detail-produits/hero";
 import Temoignages from "@/components/standalone/company/detail-produits/temoignages";
 import styles from "@/styles/detail-produits.module.css";
 import { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 export default function DetailProduits() {
   return (
@@ -15,8 +15,8 @@ export default function DetailProduits() {
   );
 }
 
-export function generateMetadata(): Metadata {
-  const t = useTranslations("detail produits.seo");
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("detail produits.seo");
 
   return {
     title: t("titre"),

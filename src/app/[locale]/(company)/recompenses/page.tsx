@@ -4,7 +4,7 @@ import Introduction from "@/components/standalone/company/recompenses/introducti
 import PrixEtDistinctions from "@/components/standalone/company/recompenses/prix-et-distinctions";
 import Rejoindre from "@/components/standalone/company/recompenses/rejoindre";
 import { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 export default function Awards() {
   return (
@@ -18,8 +18,8 @@ export default function Awards() {
   );
 }
 
-export function generateMetadata(): Metadata {
-  const t = useTranslations("récompenses.seo");
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("récompenses.seo");
 
   return {
     title: t("titre"),

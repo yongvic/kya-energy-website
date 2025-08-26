@@ -1,3 +1,4 @@
+"use client";
 import { useTranslations } from "next-intl";
 import styles from "@/styles/detail-produits.module.css";
 import { useState } from "react";
@@ -15,7 +16,7 @@ export default function Temoignages() {
     "KYA-SoP KYA-Energy GROUP-06",
     "KYA-SoP KYA-Energy GROUP-07",
     "KYA-SoP KYA-Energy GROUP-08",
-    "KYA-SoP KYA-Energy GROUP"
+    "KYA-SoP KYA-Energy GROUP",
   ];
   const [selectedVideo, setSelectedVideo] = useState(videos[0]);
 
@@ -42,7 +43,7 @@ export default function Temoignages() {
             {videos.map((video) => (
               <div
                 key={video}
-                className={`${styles.thumbnailItem} ${selectedVideo === video ? styles.thumbnailItemSelected : ''}`}
+                className={`${styles.thumbnailItem} ${selectedVideo === video ? styles.thumbnailItemSelected : ""}`}
                 onClick={() => setSelectedVideo(video)}
               >
                 <div className={styles.thumbnailOverlay}></div>
@@ -56,7 +57,7 @@ export default function Temoignages() {
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.onerror = null;
-                    target.src = '/products/kya-sop.png';
+                    target.src = "/products/kya-sop.png";
                   }}
                 />
               </div>

@@ -1,47 +1,46 @@
 "use client";
 
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaSearch } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa6";
 import { useTranslations } from "next-intl";
+import { strapiUrl } from "@/lib/config";
 
-interface Props {
-  t: {
-    hero: {
-      title: string;
-      subtitle: string;
-      searchPlaceholder: string;
-    };
-    categories: {
-      general: string;
-      maintenance: string;
-      financing: string;
-      installation: string;
-    };
-    questions: {
-      question: string;
-      answer: string;
-    }[];
-  };
+interface Faq {
+  question: string;
+  reponse: string;
+}
+
+async function fetchFaqs() {
+  try {
+    const response = await fetch(`${strapiUrl}/api/faqs`);
+    const data = await response.json();
+
+    return data.data.map((faq: Faq) => ({
+      question: faq.question,
+      reponse: faq.reponse,
+    }));
+  } catch (error) {
+    console.error("Error fetching FAQs:", error);
+    return [];
+  }
 }
 
 const FaqClientPage = () => {
   const t = useTranslations("faq");
-  const [activeCategory, setActiveCategory] = useState("general");
+  const [faqs, setFaqs] = useState<Faq[]>([]);
+  useEffect(() => {
+    fetchFaqs().then((fetchedFaqs) => {
+      setFaqs(fetchedFaqs);
+    });
+  }, []);
   const [searchTerm, setSearchTerm] = useState("");
   const [openQuestion, setOpenQuestion] = useState<number | null>(0);
 
-  const filteredQuestions = t.questions.filter((q) =>
-    q.question.toLowerCase().includes(searchTerm.toLowerCase()),
+  const filteredQuestions = faqs.filter((faq: Faq) =>
+    faq.question.toLowerCase().includes(searchTerm.toLowerCase()),
   );
-
-  const categories = [
-    { id: "general", label: t.categories.general },
-    { id: "maintenance", label: t.categories.maintenance },
-    { id: "financing", label: t.categories.financing },
-    { id: "installation", label: t.categories.installation },
-  ];
 
   return (
     <div className="bg-white dark:bg-gray-900">
@@ -58,19 +57,23 @@ const FaqClientPage = () => {
           className="z-20 container relative mx-auto text-6xl md:text-8xl font-black mb-4 w-full lowercase text-left"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}>
+          transition={{ duration: 0.5 }}
+        >
           {t("titre")}
         </motion.h1>
         <motion.p
           className="z-20 relative text-2xl md:text-4xl mb-8 font-semibold"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }} dangerouslySetInnerHTML={{ __html: t("sous titre") }} />
+          transition={{ duration: 0.5, delay: 0.2 }}
+          dangerouslySetInnerHTML={{ __html: t("sous titre") }}
+        />
         <motion.div
           className="z-20 absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] sm:w-xl bg-kya-white rounded-full shadow-lg outline-none lg:w-2xl mx-auto"
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}>
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
           <FaSearch className="absolute top-1/2 left-4 -translate-y-1/2 text-gray-400" />
           <input
             type="text"
@@ -83,19 +86,7 @@ const FaqClientPage = () => {
 
       {/* FAQ Content Section */}
       <section className="py-20 px-4 container mx-auto">
-        <div className="flex justify-center flex-wrap gap-4 mb-12">
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setActiveCategory(cat.id)}
-              className={`py-2 px-6 rounded-full font-bold transition-colors ${activeCategory === cat.id
-                ? "bg-kya-green text-white"
-                : "bg-gray-200 text-gray-700 hover:bg-kya-green/80 hover:text-white dark:bg-gray-700 dark:text-gray-300"
-                }`}>
-              {cat.label}
-            </button>
-          ))}
-        </div>
+        <div className="flex justify-center flex-wrap gap-4 mb-12"></div>
 
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
           <div className="space-y-4">
@@ -105,7 +96,7 @@ const FaqClientPage = () => {
                 <AccordionItem
                   key={i}
                   question={q.question}
-                  answer={q.answer}
+                  answer={q.reponse}
                   isOpen={openQuestion === i}
                   onClick={() => setOpenQuestion(openQuestion === i ? null : i)}
                 />
@@ -120,7 +111,7 @@ const FaqClientPage = () => {
                   <AccordionItem
                     key={globalIndex}
                     question={q.question}
-                    answer={q.answer}
+                    answer={q.reponse}
                     isOpen={openQuestion === globalIndex}
                     onClick={() =>
                       setOpenQuestion(
@@ -147,11 +138,13 @@ const AccordionItem: FC<{
     <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
       <button
         onClick={onClick}
-        className="w-full flex justify-between items-center p-4 gap-1 text-left font-bold text-kya-coffee dark:text-kya-white">
+        className="w-full flex justify-between items-center p-4 gap-1 text-left font-bold text-kya-coffee dark:text-kya-white"
+      >
         <span>{question}</span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.3 }}>
+          transition={{ duration: 0.3 }}
+        >
           <FaChevronDown />
         </motion.div>
       </button>
@@ -162,7 +155,8 @@ const AccordionItem: FC<{
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="overflow-hidden">
+            className="overflow-hidden"
+          >
             <div className="p-4 pt-0 text-gray-600 dark:text-gray-300 font-medium">
               {answer}
             </div>

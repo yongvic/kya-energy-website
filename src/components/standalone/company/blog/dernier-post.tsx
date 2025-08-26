@@ -1,3 +1,4 @@
+"use client";
 import { strapiUrl } from "@/lib/config";
 import Image from "next/image";
 import { MdPushPin } from "react-icons/md";
@@ -79,7 +80,14 @@ export default function DernierPost() {
     return null;
   }
 
-  const { documentId, Titre, Contenu, Like, Date: publishedAt, PhotoCouverture } = post;
+  const {
+    documentId,
+    Titre,
+    Contenu,
+    Like,
+    Date: publishedAt,
+    PhotoCouverture,
+  } = post;
 
   const imageUrl = PhotoCouverture.url;
 

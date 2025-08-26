@@ -9,35 +9,33 @@ export default function AnimatedButton({
   href?: string;
   animateColor: string;
 }) {
-  const commonClasses = `transition-all duration-500 absolute size-0 origin-center group-hover:size-full group-hover:rotate-180 ${animateColor}`;
+  const commonClasses = `transition-all duration-500 relative overflow-hidden rounded-lg ${animateColor}`;
 
-  const contents = (
-    <span className="overflow-hidden">
-      <span className={`relative size-full overflow-hidden group ${className}`}>
-        <span className="absolute top-0 left-0 size-full overflow-hidden">
-          {/* ::before */}
-          <span className={`top-0 left-0 ${commonClasses}`}></span>
-          {/* ::after */}
-          <span className={`bottom-0 right-0 ${commonClasses}`}></span>
-        </span>
-        {/* Contents */}
-        <span className="size-full relative">{children}</span>
-      </span>
-    </span>
-  );
+  const rippleClasses = `absolute top-0 left-0 w-full h-full bg-opacity-50 rounded-lg opacity-0 transition-opacity duration-500`;
 
   if (href) {
     return (
-      <a>
-        {contents}
+      <a href={href} className={commonClasses}>
+        <span className="relative z-10">{children}</span>
+        <span
+          className={`${rippleClasses} ${animateColor}`}
+          style={{
+            animation: 'ripple 0.5s ease-in-out',
+          }}
+        />
       </a>
     );
   }
 
   return (
-    <button>
-      {contents}
+    <button className={commonClasses}>
+      <span className="relative z-10">{children}</span>
+      <span
+        className={`${rippleClasses} ${animateColor}`}
+        style={{
+          animation: 'ripple 0.5s ease-in-out',
+        }}
+      />
     </button>
   );
-};
-
+}

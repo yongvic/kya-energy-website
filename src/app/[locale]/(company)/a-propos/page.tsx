@@ -6,7 +6,7 @@ import Impact from "@/components/standalone/company/a-propos/impact";
 import Valeurs from "@/components/standalone/company/a-propos/valeurs";
 import Vision from "@/components/standalone/company/a-propos/vision";
 import { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 export default function Page() {
   return (
@@ -22,11 +22,11 @@ export default function Page() {
   );
 }
 
-export function generateMetadata(): Metadata {
-  const t = useTranslations("a propos.seo");
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("a propos.seo");
 
   return {
     title: t("titre"),
-    description: t("description")
+    description: t("description"),
   };
 }

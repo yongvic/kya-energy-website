@@ -5,8 +5,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, EffectCreative } from "swiper/modules";
 import styles from "@/styles/products-and-services.module.css";
-import PromoModal from "./PromoModal";
-import TranslationsType from "@/translations/translations.definition";
+import Modal from "./Modal";
 
 type Promo = {
   image: string;
@@ -28,7 +27,7 @@ const promotions: Promo[] = [
   },
 ];
 
-export default function Carousel({ t }: { t: TranslationsType }) {
+export default function PCarousel() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPromo, setSelectedPromo] = useState<Promo | null>(null);
 
@@ -89,11 +88,10 @@ export default function Carousel({ t }: { t: TranslationsType }) {
         <div className={styles.swiper_button_prev} />
         <div className={styles.swiper_button_next} />
       </div>
-      <PromoModal
+      <Modal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         promo={selectedPromo}
-        t={t}
       />
     </>
   );

@@ -3,19 +3,23 @@ import { getLocale, getTranslations } from "next-intl/server";
 
 interface IPourquoiKya {
   titre: string;
-  description: string;
-  icone: string;
+  sous_titre: string;
+  icone: {
+    url: string;
+  };
 }
 
 async function getPourquoiKya(locale: string): Promise<IPourquoiKya[]> {
   const request = await fetch(
-    `${strapiUrl}/api/pourquoi-kyas?locale=${locale}`,
+    `${strapiUrl}/api/pourquoi-kyas?locale=${locale}&populate=*`,
   );
   const response = await request.json();
   const result: IPourquoiKya[] = response.data.map((item: IPourquoiKya) => ({
     titre: item.titre,
-    description: item.description,
-    icone: item.icone,
+    sous_titre: item.sous_titre,
+    icone: {
+      url: item.icone.url,
+    }
   }));
   return result;
 }
@@ -34,16 +38,16 @@ export default async function PourquoiKya() {
         <div className="w-24 h-1 bg-kya-green mx-auto"></div>
       </div>
       <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {pourquois.map((item, index) => (
+        {pourquois.map((item) => (
           <div
-            key={index}
+            key={item.titre}
             className="bg-gray-50 p-6 rounded-lg shadow-md text-center flex flex-col items-center"
           >
-            <div className="text-kya-green mb-4">{item.icone}</div>
+            <div className="text-kya-green mb-4">{item.icone.url}</div>
             <h3 className="text-xl font-bold text-kya-coffee mb-2">
               {item.titre}
             </h3>
-            <p className="text-gray-600">{item.description}</p>
+            <p className="text-gray-600">{item.sous_titre}</p>
           </div>
         ))}
       </div>

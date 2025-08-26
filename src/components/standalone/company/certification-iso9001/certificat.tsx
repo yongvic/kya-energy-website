@@ -1,8 +1,12 @@
+"use client";
 import { motion } from "framer-motion";
 import { FaAward } from "react-icons/fa";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { containerVariants, itemVariants } from "@/lib/certification-iso9001-utils";
+import {
+  containerVariants,
+  itemVariants,
+} from "@/lib/certification-iso9001-utils";
 
 export default function Certificat() {
   const t = useTranslations("certification iso 9001.certificat");

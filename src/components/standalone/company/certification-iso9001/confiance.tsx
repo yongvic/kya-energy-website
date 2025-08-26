@@ -1,3 +1,4 @@
+"use client";
 import { itemVariants } from "@/lib/certification-iso9001-utils";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";

@@ -4,31 +4,19 @@ import { FaCheckCircle, FaGlobe } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
 
 interface IMission {
-  icone?: string;
-  titre: string;
-  description: string;
+  texte: string;
 }
 
 interface IValeurs {
-  icone?: string;
-  titre: string;
-  liste: string[];
+  nom: string;
 }
 
-async function getValeurs(locale: string): Promise<IValeurs> {
-  const request = await fetch(`${strapiUrl}/api/valeur?locale=${locale}`);
+async function getValeurs(locale: string): Promise<IValeurs[]> {
+  const request = await fetch(`${strapiUrl}/api/valeurs?locale=${locale}`);
   const response = await request.json();
-  const result: IValeurs = {
-    icone: response.data?.icone,
-    titre: response.data.titre,
-    liste: response.data.liste_des_valeurs[0]?.children.map(
-      (item: {
-        children: {
-          text: string;
-        }[];
-      }) => item.children[0].text,
-    ),
-  };
+  const result: IValeurs[] = response.data.map((item: IValeurs) => ({
+    nom: item.nom,
+  }));
   return result;
 }
 
@@ -36,9 +24,7 @@ async function getMission(locale: string): Promise<IMission> {
   const request = await fetch(`${strapiUrl}/api/mission?locale=${locale}`);
   const response = await request.json();
   const result: IMission = {
-    icone: response.data?.icone,
-    titre: response.data.titre,
-    description: response.data.description,
+    texte: response.data.texte,
   };
   return result;
 }
@@ -66,10 +52,10 @@ export default async function MissionEtValeurs() {
             </span>
           </div>
           <h3 className="text-2xl font-bold text-kya-green mb-4">
-            {mission.titre ?? t("mission.titre")}
+            {t("mission.titre")}
           </h3>
           <p className="text-gray-700 text-lg">
-            {mission.description ?? t("mission.description")}
+            {mission.texte ?? t("mission.texte")}
           </p>
         </div>
         {/* Values */}
@@ -80,13 +66,13 @@ export default async function MissionEtValeurs() {
             </span>
           </div>
           <h3 className="text-2xl font-bold text-kya-orange mb-4">
-            {valeurs.titre ?? t("valeurs.titre")}
+            {t("valeurs.titre")}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
-            {valeurs.liste.map((value) => (
-              <p key={value} className="flex items-center gap-3">
+            {valeurs.map((item: IValeurs) => (
+              <p key={item.nom} className="flex items-center gap-3">
                 <FaCheckCircle className="text-kya-green" />
-                <span className="text-gray-700">{value}</span>
+                <span className="text-gray-700">{item.nom}</span>
               </p>
             ))}
           </div>

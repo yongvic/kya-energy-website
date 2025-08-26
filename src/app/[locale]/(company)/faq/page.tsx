@@ -1,6 +1,6 @@
 import FaqClientPage from "@/components/standalone/company/faq/FaqClientPage";
 import { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 const Faq = async () => {
   return <FaqClientPage />;
@@ -8,8 +8,8 @@ const Faq = async () => {
 
 export default Faq;
 
-export function generateMetadata(): Metadata {
-  const t = useTranslations("faq.seo");
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("faq.seo");
 
   return {
     title: t("titre"),

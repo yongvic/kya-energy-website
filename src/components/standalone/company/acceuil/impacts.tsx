@@ -1,20 +1,25 @@
 import { strapiUrl } from "@/lib/config";
 import { getLocale, getTranslations } from "next-intl/server";
+import Image from "next/image";
 
 interface IImpact {
-  icone: string;
+  icone: {
+    url: string;
+  };
   titre: string;
-  description: string;
+  sous_titre: string;
 }
 
 async function getImpacts(locale: string): Promise<IImpact[]> {
-  const request = await fetch(`${strapiUrl}/api/impacts?locale=${locale}`);
+  const request = await fetch(`${strapiUrl}/api/impacts?locale=${locale}&populate=*`);
   const response = await request.json();
   const result: IImpact[] = response.data.map(
     (impact: IImpact) => ({
       titre: impact.titre,
-      description: impact.description,
-      icone: impact.icone,
+      sous_titre: impact.sous_titre,
+      icone: {
+        url: `${strapiUrl}${impact.icone.url}`,
+      },
     })
   );
   return result;
@@ -38,9 +43,12 @@ export default async function Impacts() {
           <div
             key={impact.titre}
             className="bg-gray-50 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-            <div className="text-kya-orange mb-4">{impact.icone}</div>
+            <div className="text-kya-orange mb-4">
+              {/* Show fetched image url as a tiny 32x32 sized icon */}
+              <Image src={impact.icone.url} alt={impact.titre} width={32} height={32} />
+            </div>
             <p className="text-3xl font-bold text-kya-green">{impact.titre}</p>
-            <p className="text-gray-600">{impact.description}</p>
+            <p className="text-gray-600">{impact.sous_titre}</p>
           </div>
         ))}
       </div>

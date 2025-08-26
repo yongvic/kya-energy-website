@@ -1,6 +1,6 @@
 import AnimatedButton from "@/components/ui/AnimatedButton";
 import { useTranslations } from "next-intl";
-import { FaCalendar, FaCheckCircle, FaHeadphones, FaSolarPanel } from "react-icons/fa";
+import { FaArrowRight, FaCalendar, FaCheckCircle, FaHeadphones, FaSolarPanel } from "react-icons/fa";
 import { FaFaceSmile } from "react-icons/fa6";
 
 export default function Hero() {
@@ -20,8 +20,11 @@ export default function Hero() {
             {t("vision")}
           </span>
         </p>
-        <AnimatedButton animateColor="bg-kya-green" className="bg-kya-orange py-4">
-          {t("appel à l'action")}
+        <AnimatedButton href="/produits-et-services" animateColor="bg-kya-green" className="bg-kya-orange py-4 group w-max text-lg font-bold text-kya-white hover:text-kya-white rounded">
+          <span className="flex items-center p-4 gap-4">
+            <span>{t("appel à l'action")}</span>
+            <FaArrowRight className="-translate-x-2 group-hover:translate-0 transition-all duration-300" />
+          </span>
         </AnimatedButton>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="flex flex-col justify-center items-center gap-4">

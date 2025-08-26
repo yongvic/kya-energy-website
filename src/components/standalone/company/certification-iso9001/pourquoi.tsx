@@ -1,4 +1,8 @@
-import { containerVariants, itemVariants } from "@/lib/certification-iso9001-utils";
+"use client";
+import {
+  containerVariants,
+  itemVariants,
+} from "@/lib/certification-iso9001-utils";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { FaChartLine, FaLeaf } from "react-icons/fa";
@@ -16,23 +20,35 @@ export default function Pourquoi() {
       viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
     >
-      <motion.h3 variants={itemVariants} className='essentials-title'>{t("titre")}</motion.h3>
-      <motion.p variants={itemVariants} className='essentials-subtitle'>{t("description")}</motion.p>
+      <motion.h3 variants={itemVariants} className="essentials-title">
+        {t("titre")}
+      </motion.h3>
+      <motion.p variants={itemVariants} className="essentials-subtitle">
+        {t("description")}
+      </motion.p>
       <div className="essentials-grid">
         <motion.div className="essential-item" variants={itemVariants}>
-          <div><FaUserGroup /></div>
+          <div>
+            <FaUserGroup />
+          </div>
           <p>{t.certifications.essentials.items.customerSatisfaction}</p>
         </motion.div>
         <motion.div className="essential-item" variants={itemVariants}>
-          <div><FaChartLine /></div>
+          <div>
+            <FaChartLine />
+          </div>
           <p>{t.certifications.essentials.items.processImprovement}</p>
         </motion.div>
         <motion.div className="essential-item" variants={itemVariants}>
-          <div><HiAcademicCap /></div>
+          <div>
+            <HiAcademicCap />
+          </div>
           <p>{t.certifications.essentials.items.teamCohesion}</p>
         </motion.div>
         <motion.div className="essential-item" variants={itemVariants}>
-          <div><FaLeaf /></div>
+          <div>
+            <FaLeaf />
+          </div>
           <p>{t.certifications.essentials.items.healthyEnvironment}</p>
         </motion.div>
       </div>

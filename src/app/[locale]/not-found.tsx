@@ -11,7 +11,7 @@ export default async function NotFound() {
       <div className={styles.errorMessage}>{t("titre")}</div>
       <p className={styles.errorDescription}>{t("description")}</p>
       <Link href={`/`} passHref>
-        <button className={styles.homeButton}>{t("retour à l'acceuil")}</button>
+        <button className={styles.homeButton}>{t("retour à l'accueil")}</button>
       </Link>
     </section>
   );
