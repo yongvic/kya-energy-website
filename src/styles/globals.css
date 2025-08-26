@@ -95,3 +95,12 @@
 .swiper-3d .swiper-slide-shadow {
   background-color: #0000 !important;
 }
+
+.no-img-markdown a {
+  color: var(--kya-green);
+  font-weight: 500;
+}
+
+.no-img-markdown img {
+  display: none;
+}
