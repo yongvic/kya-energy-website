@@ -176,7 +176,7 @@
       "style": {
         "recommended": false,
         "noCommonJs": "error",
-        "noDefaultExport": "error",
+        "noDefaultExport": "off",
         "noDescendingSpecificity": "error",
         "noDoneCallback": "error",
         "noEnum": "error",
@@ -374,7 +374,7 @@
         "useAnchorHref": "error",
         "useConsistentTypeDefinitions": "error",
         "useExhaustiveSwitchCases": "error",
-        "useExplicitType": "error",
+        "useExplicitType": "off",
         "useImageSize": "error",
         "useMaxParams": "error",
         "useQwikClasslist": "error",
