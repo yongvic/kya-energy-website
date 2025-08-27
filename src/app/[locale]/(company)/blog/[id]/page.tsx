@@ -13,13 +13,16 @@ type ArticleRecord = {
   Titre: string;
   PhotoCouverture: {
     url: string;
-  }
+  };
 };
 
 async function getArticleData(id: string) {
-  const articleResponse = await fetch(`${strapiUrl}/api/articles/${id}?populate=*`, {
-    cache: "force-cache",
-  });
+  const articleResponse = await fetch(
+    `${strapiUrl}/api/articles/${id}?populate=*`,
+    {
+      cache: "force-cache",
+    },
+  );
 
   if (!articleResponse.ok) {
     throw new Error("Failed to fetch article");
@@ -28,9 +31,10 @@ async function getArticleData(id: string) {
   const articleJson = await articleResponse.json();
 
   const recommendationsResponse = await fetch(
-    `${strapiUrl}/api/articles?sort=Date:desc&pagination[limit]=3&populate=*&filters[id][$ne]=${articleJson.data.id}`, {
-    cache: "force-cache",
-  }
+    `${strapiUrl}/api/articles?sort=Date:desc&pagination[limit]=3&populate=*&filters[id][$ne]=${articleJson.data.id}`,
+    {
+      cache: "no-store",
+    },
   );
 
   const recommendationsJson = await recommendationsResponse.json();
@@ -41,7 +45,13 @@ async function getArticleData(id: string) {
   };
 }
 
-export default async function ArticlePage({ params }: { params: Promise<{ id: string }> }) {
+export default async function ArticlePage({
+  params,
+}: {
+  params: Promise<{
+    id: string;
+  }>;
+}) {
   const t = useTranslations("blog.article");
   const { id } = await params;
   const { article, recommendations } = await getArticleData(id);
@@ -79,12 +89,15 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
               <span className="text-lg font-semibold text-kya-orange text-nowrap self-end">
                 {publicationDate}
               </span>
-              <h1 className="text-2xl font-bold text-kya-coffee text-justify">{Titre}</h1>
+              <h1 className="text-2xl font-bold text-kya-coffee text-justify">
+                {Titre}
+              </h1>
             </div>
             <div
               className="article prose prose-lg max-w-none text-justify leading-8"
-
-              dangerouslySetInnerHTML={{ __html: marked(Contenu) }}
+              dangerouslySetInnerHTML={{
+                __html: marked(Contenu),
+              }}
             />
             <div className="mt-8 flex items-center gap-2 text-gray-500">
               <FaHeart className="text-red-500" />
@@ -99,7 +112,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
             </h2>
             <div className="space-y-6">
               {recommendations.map((rec: ArticleRecord) => (
-                <Link href={`/actu/${rec.documentId}`} key={rec.id} className="inline-block">
+                <Link
+                  href={`/actu/${rec.documentId}`}
+                  key={rec.id}
+                  className="inline-block">
                   <div className="bg-kya-white p-4 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer">
                     {rec.PhotoCouverture.url && (
                       <div className="mb-4 overflow-hidden rounded-lg">
@@ -122,20 +138,29 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
           </div>
         </aside>
       </div>
-      <Script src="/scripts/actu.js" defer />
+      <Script
+        src="/scripts/actu.js"
+        defer
+      />
     </main>
   );
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{
+    id: string;
+  }>;
+}): Promise<Metadata> {
   const { id } = await params;
   const { article } = await getArticleData(id);
   let titre: string;
   let description: string;
 
   if (!article) {
-    titre = "404, Not Found • KYA-Energy Group",
-      description = "404, Not Found on the server"
+    (titre = "404, Not Found • KYA-Energy Group"),
+      (description = "404, Not Found on the server");
   }
 
   const { Titre, Contenu } = article;

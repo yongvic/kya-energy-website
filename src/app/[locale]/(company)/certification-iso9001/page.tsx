@@ -5,6 +5,8 @@ import Hero from "@/components/standalone/company/certification-iso9001/hero";
 import Pourquoi from "@/components/standalone/company/certification-iso9001/pourquoi";
 import { Metadata } from "next";
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import "@/styles/certification.css";
 
 export default function CertificationISO9001() {
   return (
@@ -18,8 +20,8 @@ export default function CertificationISO9001() {
   );
 }
 
-export function generateMetadata(): Metadata {
-  const t = useTranslations("certification iso 9001.seo");
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("certification iso 9001.seo");
   return {
     title: t("titre"),
     description: t("description"),
