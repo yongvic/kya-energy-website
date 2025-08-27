@@ -1,6 +1,12 @@
 import AnimatedButton from "@/components/ui/AnimatedButton";
 import { useTranslations } from "next-intl";
-import { FaArrowRight, FaCalendar, FaCheckCircle, FaHeadphones, FaSolarPanel } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaCalendar,
+  FaCheckCircle,
+  FaHeadphones,
+  FaSolarPanel,
+} from "react-icons/fa";
 import { FaFaceSmile } from "react-icons/fa6";
 
 export default function Hero() {
@@ -16,11 +22,9 @@ export default function Hero() {
         </div>
         <p className="flex items-center gap-2 text-xl md:text-2xl font-bold text-kya-green">
           <FaCheckCircle />
-          <span>
-            {t("vision")}
-          </span>
+          <span>{t("vision")}</span>
         </p>
-        <AnimatedButton href="/produits-et-services" animateColor="bg-kya-green" className="bg-kya-orange py-4 group w-max text-lg font-bold text-kya-white hover:text-kya-white rounded">
+        <AnimatedButton href="/produits-et-services">
           <span className="flex items-center p-4 gap-4">
             <span>{t("appel à l'action")}</span>
             <FaArrowRight className="-translate-x-2 group-hover:translate-0 transition-all duration-300" />
@@ -31,7 +35,9 @@ export default function Hero() {
             <FaSolarPanel size={64} className="text-kya-white" />
             <p className="flex items-center gap-2">
               <span className="text-kya-orange font-bold text-4xl">500+</span>
-              <span className="text-xl">{t("statistiques.installations réalisées")}</span>
+              <span className="text-xl">
+                {t("statistiques.installations réalisées")}
+              </span>
             </p>
           </div>
           <div className="flex flex-col justify-center items-center gap-4">
@@ -40,21 +46,27 @@ export default function Hero() {
               <span className="text-kya-orange font-bold text-4xl">
                 {new Date().getFullYear() - 2015}
               </span>
-              <span className="text-xl">{t("statistiques.années d'expertise")}</span>
+              <span className="text-xl">
+                {t("statistiques.années d'expertise")}
+              </span>
             </p>
           </div>
           <div className="flex flex-col justify-center items-center gap-4">
             <FaFaceSmile size={64} className="text-kya-white" />
             <p className="flex items-center gap-2">
               <span className="text-kya-orange font-bold text-4xl">98%</span>
-              <span className="text-xl">{t("statistiques.satisfaction client")}</span>
+              <span className="text-xl">
+                {t("statistiques.satisfaction client")}
+              </span>
             </p>
           </div>
           <div className="flex flex-col justify-center items-center gap-4">
             <FaHeadphones size={64} className="text-kya-white" />
             <p className="flex items-center gap-2">
               <span className="text-kya-orange font-bold text-4xl">24/7</span>
-              <span className="text-xl">{t("statistiques.support client")}</span>
+              <span className="text-xl">
+                {t("statistiques.support client")}
+              </span>
             </p>
           </div>
         </div>

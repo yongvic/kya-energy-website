@@ -1,11 +1,11 @@
 "use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
 import {
   containerVariants,
   itemVariants,
 } from "@/lib/certification-iso9001-utils";
-import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
 
 export default function Engagement() {
   const t = useTranslations("certification iso 9001.engagement");
@@ -15,9 +15,11 @@ export default function Engagement() {
       className="commitment-section"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
-      variants={containerVariants}
-    >
+      viewport={{
+        once: true,
+        amount: 0.2,
+      }}
+      variants={containerVariants}>
       <div className="commitment-content">
         <motion.div variants={itemVariants}>
           <p>

@@ -105,7 +105,7 @@ export default function DernierPost() {
         </p>
         <p>{t("titre")}</p>
       </div>
-      <Link href={`/actu/${documentId}`}>
+      <Link href={`/blog/${documentId}`}>
         <article className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-kya-white p-6 rounded-b-lg rounded-tr-lg shadow-lg cursor-pointer">
           <div className="overflow-hidden rounded-lg">
             {imageUrl ? (
@@ -132,7 +132,9 @@ export default function DernierPost() {
               </h1>
               <div
                 className="prose prose-sm line-clamp-3 text-gray-600"
-                dangerouslySetInnerHTML={{ __html: Contenu }}
+                dangerouslySetInnerHTML={{
+                  __html: Contenu,
+                }}
               />
             </div>
             <div className="flex justify-between items-center mt-4">

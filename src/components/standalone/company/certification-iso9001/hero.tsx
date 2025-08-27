@@ -14,18 +14,18 @@ export default function Hero() {
       className="certification-page"
       initial="hidden"
       animate="visible"
-      variants={containerVariants}
-    >
+      variants={containerVariants}>
       <section className="hero-section">
         <motion.h1
           variants={itemVariants}
           className="hero-title"
-          dangerouslySetInnerHTML={{ __html: t("titre") }}
+          dangerouslySetInnerHTML={{
+            __html: t.raw("titre"),
+          }}
         />
         <motion.div
           variants={itemVariants}
-          className="hero-subtitle backdrop-blur-md bg-white/20 p-10 rounded-2xl shadow-xl text-white max-w-md text-center"
-        >
+          className="hero-subtitle backdrop-blur-md bg-white/20 p-10 rounded-2xl shadow-xl text-white max-w-md text-center">
           {t("sous titre")}
         </motion.div>
       </section>

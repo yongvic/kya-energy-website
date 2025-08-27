@@ -1,3 +1,4 @@
+"use client";
 import { stagger, useAnimate, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";

@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import "@/styles/post.css";
 import { useTranslations } from "use-intl";
+import { marked } from "marked";
 
 interface Post {
   id: string;
@@ -90,7 +91,10 @@ export default function TousLesPosts() {
     };
 
     fetchPosts();
-  }, [page, pinnedPostId]);
+  }, [
+    page,
+    pinnedPostId,
+  ]);
 
   const handlePageChange = (newPage: number) => {
     router.push(`${pathname}?page=${newPage}`);
@@ -133,8 +137,12 @@ export default function TousLesPosts() {
     return (
       <section className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[...Array(6)].map((_, i) => (
-            <div key={i} className="w-full h-96 bg-gray-200 animate-pulse rounded-lg"></div>
+          {[
+            ...Array(6),
+          ].map((_, i) => (
+            <div
+              key={i}
+              className="w-full h-96 bg-gray-200 animate-pulse rounded-lg"></div>
           ))}
         </div>
       </section>
@@ -151,7 +159,9 @@ export default function TousLesPosts() {
     <section className="container mx-auto my-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => (
-          <Link href={`/actu/${post.documentId}`} key={post.id}>
+          <Link
+            href={`/blog/${post.documentId}`}
+            key={post.id}>
             <article className="bg-kya-white rounded-lg shadow-lg overflow-hidden cursor-pointer h-full flex flex-col">
               <div className="overflow-hidden">
                 <Image
@@ -176,7 +186,9 @@ export default function TousLesPosts() {
                   </h1>
                   <div
                     className="post prose prose-sm line-clamp-3 text-gray-600"
-                    dangerouslySetInnerHTML={{ __html: marked(post.Contenu) }}
+                    dangerouslySetInnerHTML={{
+                      __html: marked(post.Contenu),
+                    }}
                   />
                 </div>
                 <div className="flex justify-between items-center mt-4">
@@ -198,28 +210,30 @@ export default function TousLesPosts() {
         <button
           onClick={() => handlePageChange(page - 1)}
           disabled={page <= 1}
-          className="px-4 py-2 bg-kya-green text-kya-white rounded-lg disabled:opacity-50"
-        >
+          className="px-4 py-2 bg-kya-green text-kya-white rounded-lg disabled:opacity-50">
           {t("precedent")}
         </button>
-        {paginationLinks && paginationLinks.map((p, i) =>
-          p === "..." ? (
-            <span key={i} className="px-4 py-2">...</span>
-          ) : (
-            <button
-              key={i}
-              onClick={() => handlePageChange(p as number)}
-              className={`px-4 py-2 rounded-lg ${p === page ? 'bg-kya-orange text-kya-white' : 'bg-kya-green text-kya-white'}`}
-            >
-              {p}
-            </button>
-          )
-        )}
+        {paginationLinks &&
+          paginationLinks.map((p, i) =>
+            p === "..." ? (
+              <span
+                key={i}
+                className="px-4 py-2">
+                ...
+              </span>
+            ) : (
+              <button
+                key={i}
+                onClick={() => handlePageChange(p as number)}
+                className={`px-4 py-2 rounded-lg ${p === page ? "bg-kya-orange text-kya-white" : "bg-kya-green text-kya-white"}`}>
+                {p}
+              </button>
+            ),
+          )}
         <button
           onClick={() => handlePageChange(page + 1)}
           disabled={page >= (pagination?.pageCount || 1)}
-          className="px-4 py-2 bg-kya-green text-kya-white rounded-lg disabled:opacity-50"
-        >
+          className="px-4 py-2 bg-kya-green text-kya-white rounded-lg disabled:opacity-50">
           {t("suivant")}
         </button>
       </div>
