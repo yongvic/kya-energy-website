@@ -7,6 +7,7 @@ import { strapiUrl } from "@/lib/config";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 // --- Skeleton Component for Loading State (with Tailwind CSS) ---
 function PourquoiSkeleton() {
@@ -22,11 +23,11 @@ function PourquoiSkeleton() {
         {/* Animated placeholder for the grid */}
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <div className="grid grid-cols-1 gap-y-10 gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
-            {Array.from({
+            {Array.from<number>({
               length: 4,
-            }).map((_, index) => (
+            }).map((_) => (
               <div
-                key={index}
+                key={_}
                 className="flex flex-col items-center gap-4 animate-pulse">
                 <div className="size-12 rounded-lg bg-gray-300" />
                 <div className="h-4 w-3/4 bg-gray-300 rounded-md" />
@@ -42,7 +43,7 @@ function PourquoiSkeleton() {
 // --- Main Component (with Tailwind CSS) ---
 export default function Pourquoi() {
   const t = useTranslations("certification iso 9001.pourquoi");
-  const [content, setContent] = useState(null);
+  const [content, setContent] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -106,27 +107,35 @@ export default function Pourquoi() {
           <motion.div
             variants={containerVariants} // Re-use container for staggering children
             className="grid grid-cols-1 gap-y-10 gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
-            {content.map((item) => (
-              <motion.div
-                key={item.id}
-                variants={itemVariants}
-                className="flex flex-col items-center text-center gap-4">
-                {/* Image Icon */}
-                <div className="flex size-16 items-center justify-center rounded-lg bg-green-100">
-                  <img
-                    src={strapiUrl + item.icone.url}
-                    alt={item.texte}
-                    className="size-12 object-contain" // size-12 is 48px
-                    width={48}
-                    height={48}
-                  />
-                </div>
-                {/* Text */}
-                <p className="text-base font-semibold leading-7 text-gray-900">
-                  {item.texte}
-                </p>
-              </motion.div>
-            ))}
+            {content?.map(
+              (item: {
+                id: string;
+                icone: {
+                  url: string;
+                };
+                texte: string;
+              }) => (
+                <motion.div
+                  key={item.id}
+                  variants={itemVariants}
+                  className="flex flex-col items-center text-center gap-4">
+                  {/* Image Icon */}
+                  <div className="flex size-16 items-center justify-center rounded-lg bg-green-100">
+                    <Image
+                      src={strapiUrl + item.icone.url}
+                      alt={item.texte}
+                      className="size-12 object-contain" // size-12 is 48px
+                      width={48}
+                      height={48}
+                    />
+                  </div>
+                  {/* Text */}
+                  <p className="text-base font-semibold leading-7 text-gray-900">
+                    {item.texte}
+                  </p>
+                </motion.div>
+              ),
+            )}
           </motion.div>
         </div>
       </div>

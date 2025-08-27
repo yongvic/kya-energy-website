@@ -1,15 +1,17 @@
 export default function AnimatedButton({
   children,
   href,
+  className = "",
 }: {
   children: React.ReactNode;
   href?: string;
+  className?: string;
 }) {
   if (href) {
     return (
       <a
         href={href}
-        className='
+        className={`
         relative z-0 flex items-center gap-2 overflow-hidden rounded-lg border-[1px] 
         border-kya-orange px-4 py-2 font-semibold
         uppercase text-kya-orange transition-all duration-500
@@ -24,8 +26,7 @@ export default function AnimatedButton({
         hover:scale-105 hover:text-neutral-900
         hover:before:translate-x-[0%]
         hover:before:translate-y-[0%]
-        active:scale-95 w-max'
-      >
+        active:scale-95 w-max ${className}`}>
         {children}
       </a>
     );
@@ -33,7 +34,8 @@ export default function AnimatedButton({
 
   return (
     <button
-      className='
+      type="button"
+      className={`
         relative z-0 flex items-center gap-2 overflow-hidden rounded-lg border-[1px] 
         border-kya-orange px-4 py-2 font-semibold
         uppercase text-kya-orange transition-all duration-500
@@ -48,8 +50,7 @@ export default function AnimatedButton({
         hover:scale-105 hover:text-neutral-900
         hover:before:translate-x-[0%]
         hover:before:translate-y-[0%]
-        active:scale-95'
-    >
+        active:scale-95 ${className}`}>
       {children}
     </button>
   );

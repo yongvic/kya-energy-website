@@ -10,16 +10,27 @@ export default function Financement() {
   const t = useTranslations("produits et services.financement");
   return (
     <section className={styles.section}>
-      <h2 className={styles.section_title}>{t.financing["title"]}</h2>
-      <p className={styles.section_subtitle}>{t.financing["subtitle"]}</p>
+      <h2 className={styles.section_title}>{t("titre")}</h2>
+      <p className={styles.section_subtitle}>{t("description")}</p>
       <div className={styles.financing_grid}>
         <MotionDiv
           className={styles.financing_card}
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
+          initial={{
+            opacity: 0,
+            scale: 0.9,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.5,
+          }}
+          transition={{
+            duration: 0.5,
+            delay: 0.1,
+          }}>
           <div className={`${styles.iconWrapper} ${styles.orang}`}>
             <RiCoinsLine className={styles.icon} />
           </div>
@@ -27,16 +38,27 @@ export default function Financement() {
             15%
           </div>
           <div className={styles.financing_card_label}>
-            {t.financing["down-payment"]}
+            {t("apport initial")}
           </div>
         </MotionDiv>
         <MotionDiv
           className={styles.financing_card}
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
+          initial={{
+            opacity: 0,
+            scale: 0.9,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.5,
+          }}
+          transition={{
+            duration: 0.5,
+            delay: 0.2,
+          }}>
           <div className={`${styles.iconWrapper} ${styles.gren}`}>
             <FiClock className={styles.icon} />
           </div>
@@ -44,16 +66,27 @@ export default function Financement() {
             10 ans
           </div>
           <div className={styles.financing_card_label}>
-            {t.financing["repayment-period"]}
+            {t("remboursement")}
           </div>
         </MotionDiv>
         <MotionDiv
           className={styles.financing_card}
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
+          initial={{
+            opacity: 0,
+            scale: 0.9,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.5,
+          }}
+          transition={{
+            duration: 0.5,
+            delay: 0.3,
+          }}>
           <div className={`${styles.iconWrapper} ${styles.ble}`}>
             <LuInbox className={styles.icon} />
           </div>
@@ -61,7 +94,7 @@ export default function Financement() {
             100%
           </div>
           <div className={styles.financing_card_label}>
-            {t.financing["maintenance-included"]}
+            {t("maintenance incluse")}
           </div>
         </MotionDiv>
       </div>

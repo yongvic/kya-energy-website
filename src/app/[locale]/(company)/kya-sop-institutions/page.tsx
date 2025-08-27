@@ -1,13 +1,13 @@
-import { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import KyaSopInstitutions from "./KyaSopInstitutions";
 
 export default function KyaSoP() {
-  return <KyaSopInstitutions />
+  return <KyaSopInstitutions />;
 }
 
-export function generateMetadata(): Metadata {
-  const t = useTranslations("kya sop institutions.seo");
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("kya sop institutions.seo");
 
   return {
     title: t("titre"),

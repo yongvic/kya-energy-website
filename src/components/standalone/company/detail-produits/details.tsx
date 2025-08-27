@@ -1,8 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { FaPlus } from "react-icons/fa";
 import styles from "@/styles/detail-produits.module.css";
-import Image from "next/image";
-import { useTranslations } from "next-intl";
 
 export default function Details() {
   const t = useTranslations("detail produits.details");
@@ -11,29 +11,30 @@ export default function Details() {
     <section className={styles.detailSection}>
       <div className={styles.detailSectionTitle}>
         <h3>{t("titre")}</h3>
-        <div></div>
+        <div />
       </div>
       <div className={styles.productGrid}>
-
         <Link href="/kya-sop-menages">
           <div className={styles.productCard}>
             <div className={styles.productCardImageContainer}>
               <Image
                 src="/products/gamme-kya-sop/kya-sop-residentiel.png"
-                alt={t['detail-products'].residential_title}
+                alt={t("kya sop menage.titre")}
                 layout="fill"
                 className={styles.productCardImage}
               />
             </div>
             <div className={styles.productCardContent}>
               <p className={styles.productCardTitle}>
-                {t['detail-products'].residential_title}
+                {t("kya sop menage.titre")}
               </p>
               <p className={styles.productCardDescription}>
-                {t['detail-products'].residential_description}
+                {t("kya sop menage.description")}
               </p>
               <div className={styles.productCardButtonContainer}>
-                <button className={styles.productCardButton}>
+                <button
+                  className={styles.productCardButton}
+                  type="button">
                   <FaPlus />
                 </button>
               </div>
@@ -46,20 +47,22 @@ export default function Details() {
             <div className={styles.productCardImageContainer}>
               <Image
                 src="/products/gamme-kya-sop/kya-sop-commercial.png"
-                alt={t['detail-products'].commercial_title}
+                alt={t("kya sop commercial.titre")}
                 layout="fill"
                 className={styles.productCardImage}
               />
             </div>
             <div className={styles.productCardContent}>
               <p className={styles.productCardTitle}>
-                {t['detail-products'].commercial_title}
+                {t("kya sop commercial.titre")}
               </p>
               <p className={styles.productCardDescription}>
-                {t['detail-products'].commercial_description}
+                {t("kya sop commercial.description")}
               </p>
               <div className={styles.productCardButtonContainer}>
-                <button className={styles.productCardButton}>
+                <button
+                  className={styles.productCardButton}
+                  type="button">
                   <FaPlus />
                 </button>
               </div>
@@ -71,7 +74,7 @@ export default function Details() {
             <div className={styles.productCardImageContainer}>
               <Image
                 src="/products/gamme-kya-sop/kya-sop-communautaire.png"
-                alt={t['detail-products'].community_title}
+                alt={t("kya sop communautaire.titre")}
                 width="157"
                 height="119"
                 className={styles.productCardImage}
@@ -79,13 +82,15 @@ export default function Details() {
             </div>
             <div className={styles.productCardContent}>
               <p className={styles.productCardTitle}>
-                {t['detail-products'].community_title}
+                {t("kya sop communautaire.titre")}
               </p>
               <p className={styles.productCardDescription}>
-                {t['detail-products'].community_description}
+                {t("kya sop communautaire.description")}
               </p>
               <div className={styles.productCardButtonContainer}>
-                <button className={styles.productCardButton}>
+                <button
+                  className={styles.productCardButton}
+                  type="button">
                   <FaPlus />
                 </button>
               </div>

@@ -1,11 +1,16 @@
+import Header from "@/components/shared/header";
+import Footer from "@/components/shared/footer";
+
 export default function CompanyLayout({
-  children
+  children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <main>
-      {children}
-    </main>
+    <>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </>
   );
 }

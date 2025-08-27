@@ -1,7 +1,7 @@
 "use client";
 
 import { strapiUrl } from "@/lib/config";
-import { useAnimate } from "framer-motion";
+import { stagger, useAnimate, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { FaTrophy, FaCalendarAlt } from "react-icons/fa";
@@ -37,6 +37,52 @@ async function fetchAwards(): Promise<Award[]> {
 
 export default function Impact() {
   const [impactScope, animateImpact] = useAnimate();
+  const isImpactInView = useInView(impactScope, {
+    once: true,
+    amount: 0.2,
+  });
+  useEffect(() => {
+    if (isImpactInView)
+      animateImpact([
+        [
+          ".section-title",
+          {
+            opacity: [
+              0,
+              1,
+            ],
+            y: [
+              20,
+              0,
+            ],
+          },
+          {
+            duration: 0.6,
+          },
+        ],
+        [
+          ".impact-card",
+          {
+            opacity: [
+              0,
+              1,
+            ],
+            scale: [
+              0.9,
+              1,
+            ],
+          },
+          {
+            duration: 0.5,
+            delay: stagger(0.1),
+            at: "-0.2",
+          },
+        ],
+      ]);
+  }, [
+    isImpactInView,
+    animateImpact,
+  ]);
   const [length, setLength] = useState(0);
   useEffect(() => {
     fetchAwards().then((data) => {
@@ -48,8 +94,7 @@ export default function Impact() {
   return (
     <div
       ref={impactScope}
-      className="bg-gradient-to-tr from-orange-100 to-green-100 py-32"
-    >
+      className="bg-gradient-to-tr from-orange-100 to-green-100 py-32">
       <div className="container mx-auto px-4">
         <div className="section-title opacity-0 px-4 lg:px-48">
           <div className="flex items-center justify-center my-4">
@@ -94,8 +139,7 @@ export default function Impact() {
           ].map((value, index) => (
             <div
               key={index}
-              className="impact-card opacity-0 p-8 rounded-xl shadow hover:shadow-xl bg-white/70 backdrop-blur-sm text-center flex flex-col items-center gap-2"
-            >
+              className="impact-card opacity-0 p-8 rounded-xl shadow hover:shadow-xl bg-white/70 backdrop-blur-sm text-center flex flex-col items-center gap-2">
               <div className="text-3xl w-max bg-kya-green p-4 rounded-full text-white">
                 {value.icon}
               </div>

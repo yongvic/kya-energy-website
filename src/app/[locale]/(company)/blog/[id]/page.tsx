@@ -1,11 +1,12 @@
-import { strapiUrl } from "@/lib/config";
 import Image from "next/image";
 import Link from "next/link";
 import { FaHeart } from "react-icons/fa6";
+import { strapiUrl } from "@/lib/config";
 import "@/styles/post.css";
+import { marked } from "marked";
+import type { Metadata } from "next";
 import Script from "next/script";
-import { Metadata } from "next";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 type ArticleRecord = {
   documentId: string;
@@ -52,7 +53,7 @@ export default async function ArticlePage({
     id: string;
   }>;
 }) {
-  const t = useTranslations("blog.article");
+  const t = await getTranslations("blog.article");
   const { id } = await params;
   const { article, recommendations } = await getArticleData(id);
 
@@ -140,7 +141,7 @@ export default async function ArticlePage({
       </div>
       <Script
         src="/scripts/actu.js"
-        defer
+        defer={true}
       />
     </main>
   );
@@ -169,6 +170,6 @@ export async function generateMetadata({
 
   return {
     title: titre,
-    description: description,
+    description,
   };
 }

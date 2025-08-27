@@ -166,7 +166,19 @@
       "description": "Les groupes électrosolaires KYA-SoP sont des systèmes solaires intelligents conçus de façon optimale (avec une nouvelle approche de dimensionnement) et assemblés localement par KYA Energy Group pour des applications productives, tant pour le milieu rural qu’urbain. Ils sont composés de :"
     },
     "details": {
-      "titre": "Les différentes gammes de nos produits"
+      "titre": "Les différentes gammes de nos produits",
+      "kya sop menage": {
+        "titre": "KYA-SoP pour les ménages",
+        "description": "Solutions adaptées aux maisons individuelles et petits bâtiments."
+      },
+      "kya sop commercial": {
+        "titre": "KYA-SoP pour les institutions (PME/PMI)",
+        "description": "Systèmes haute performance pour entreprises et industries."
+      },
+      "kya sop communautaire": {
+        "titre": "Les groupes secours KYA-Backup",
+        "description": "Solutions conçues pour les besoins énergétiques des communautés et des infrastructures publiques."
+      }
     },
     "temoignages": {
       "titre": "Témoignages de nos clients",
@@ -210,6 +222,15 @@
     }
   },
   "produits et services": {
+    "financement": {
+      "titre": "Solutions de financement",
+      "description": "Des options flexibles pour concrétiser vos projets",
+      "apport initial": "Apport initial",
+      "remboursement": "Jusqu'à 10 ans pour le remboursement",
+      "maintenance incluse": "Maintenance et entretien inclus"
+    },
+    "en savoir plus": "En savoir plus",
+    "promotion": "Découvrez nos promotions exclusives sur une sélection de produits KYA-SoP. Valable pour une durée limitée.",
     "seo": {
       "titre": "Produits et Services • KYA-Energy Group",
       "description": "Découvrez notre gamme de produits et services et laissez-vous inspirer par notre expertise et notre savoir-faire."

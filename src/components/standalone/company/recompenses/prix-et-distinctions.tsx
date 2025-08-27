@@ -1,7 +1,7 @@
 "use client";
 
 import { strapiUrl } from "@/lib/config";
-import { useAnimate } from "framer-motion";
+import { stagger, useAnimate, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -36,6 +36,33 @@ async function fetchAwards() {
 
 export default function PrixEtDistinctions() {
   const [awardsScope, animateAwards] = useAnimate();
+  const isAwardsInView = useInView(awardsScope, {
+    once: true,
+    amount: 0.1,
+  });
+  useEffect(() => {
+    if (isAwardsInView)
+      animateAwards(
+        ".award-card",
+        {
+          opacity: [
+            0,
+            1,
+          ],
+          y: [
+            30,
+            0,
+          ],
+        },
+        {
+          duration: 0.5,
+          delay: stagger(0.08),
+        },
+      );
+  }, [
+    isAwardsInView,
+    animateAwards,
+  ]);
   const t = useTranslations("récompenses.prix et distinctions");
   const [awards, setAwards] = useState<Award[]>([]);
   useEffect(() => {
@@ -53,13 +80,14 @@ export default function PrixEtDistinctions() {
       </div>
 
       {/* Nos prix et distinctions */}
-      <div ref={awardsScope} className="container mx-auto px-4 my-32">
+      <div
+        ref={awardsScope}
+        className="container mx-auto px-4 my-32">
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {awards.map((value, index) => (
             <article
               key={index}
-              className="award-card opacity-0 relative flex flex-col bg-white shadow rounded-xl hover:shadow-xl border-2 border-transparent hover:border-kya-green transition-all"
-            >
+              className="award-card opacity-0 relative flex flex-col bg-white shadow rounded-xl hover:shadow-xl border-2 border-transparent hover:border-kya-green transition-all">
               <div className="absolute -top-3 left-3"></div>
               <div className="relative bg-gray-50 p-4 h-48 flex items-center justify-center rounded-t-xl">
                 <Image

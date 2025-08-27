@@ -87,7 +87,9 @@ export default async function ProductsAndServicesPage() {
         <Accordion products={products} />
         <div className={styles.catalogue_banner}>
           <p className={styles.catalogue_text}>{t("produits.savoir plus")}</p>
-          <a href="#" className={styles.catalogue_link}>
+          <a
+            href="#"
+            className={styles.catalogue_link}>
             {t("voir plus")}
           </a>
         </div>
@@ -98,34 +100,54 @@ export default async function ProductsAndServicesPage() {
         <h2 className={styles.section_title}>{t("services.titre")}</h2>
         <p className={styles.section_subtitle}>{t("services.sous titre")}</p>
         <div className={styles.services_grid}>
-          {services.map((service) => (
-            <MotionDiv
-              key={index}
-              className={styles.service_card}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <div className={styles.service_card_image_container}>
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  layout="fill"
-                  className={styles.service_card_image}
-                />
-              </div>
-              <div className={styles.service_card_content}>
-                <h3 className={styles.service_card_title}>{service.title}</h3>
-                <p className={styles.service_card_description}>
-                  {service.description}
-                </p>
-                {/*<a href="#" className={styles.service_card_cta}>
+          {services.map(
+            (
+              service: {
+                image: string;
+                titre: string;
+                description: string;
+              },
+              index: number,
+            ) => (
+              <MotionDiv
+                key={service.titre}
+                className={styles.service_card}
+                initial={{
+                  opacity: 0,
+                  y: 50,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.3,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}>
+                <div className={styles.service_card_image_container}>
+                  <Image
+                    src={service.image}
+                    alt={service.titre}
+                    layout="fill"
+                    className={styles.service_card_image}
+                  />
+                </div>
+                <div className={styles.service_card_content}>
+                  <h3 className={styles.service_card_title}>{service.titre}</h3>
+                  <p className={styles.service_card_description}>
+                    {service.description}
+                  </p>
+                  {/*<a href="#" className={styles.service_card_cta}>
                   {t.services["learn-more"]}
                 </a>*/}
-              </div>
-            </MotionDiv>
-          ))}
+                </div>
+              </MotionDiv>
+            ),
+          )}
         </div>
       </section>
 

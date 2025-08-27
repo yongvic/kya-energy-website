@@ -29,27 +29,62 @@ export default function Equipe({ locale }: { locale: string }) {
   const t = useTranslations("à propos.equipe");
   useEffect(() => {
     fetchTeamMembers(locale).then((data) => setTeamMembers(data));
-  }, []);
+  }, [
+    locale,
+  ]);
   const [teamScope, animateTeam] = useAnimate();
-  const isTeamInView = useInView(teamScope, { once: true, amount: 0.1 });
+  const isTeamInView = useInView(teamScope, {
+    once: true,
+    amount: 0.1,
+  });
   useEffect(() => {
     if (isTeamInView)
       animateTeam([
-        [".section-title", { opacity: [0, 1], y: [20, 0] }, { duration: 0.6 }],
+        [
+          ".section-title",
+          {
+            opacity: [
+              0,
+              1,
+            ],
+            y: [
+              20,
+              0,
+            ],
+          },
+          {
+            duration: 0.6,
+          },
+        ],
         [
           ".team-card",
-          { opacity: [0, 1], scale: [0.9, 1] },
-          { duration: 0.5, delay: stagger(0.1), at: "-0.2" },
+          {
+            opacity: [
+              0,
+              1,
+            ],
+            scale: [
+              0.9,
+              1,
+            ],
+          },
+          {
+            duration: 0.5,
+            delay: stagger(0.1),
+            at: "-0.2",
+          },
         ],
       ]);
-  }, [isTeamInView, animateTeam]);
+  }, [
+    isTeamInView,
+    animateTeam,
+  ]);
 
   return (
     <section
       ref={teamScope}
       id="equipe"
-      className="bg-gradient-to-tr from-orange-200 to-green-200 py-32"
-    >
+      className="bg-gradient-to-tr from-orange-200 to-green-200 py-32">
       <div className="container mx-auto px-4">
         <div className="section-title opacity-0 px-4 lg:px-48">
           <div className="flex items-center justify-center my-4">
@@ -70,8 +105,7 @@ export default function Equipe({ locale }: { locale: string }) {
             teamMember === index ? (
               <div
                 key={index}
-                className="w-full flex flex-col lg:flex-row bg-gray-100 rounded-xl shadow hover:shadow-xl overflow-hidden"
-              >
+                className="w-full flex flex-col lg:flex-row bg-gray-100 rounded-xl shadow hover:shadow-xl overflow-hidden">
                 <Image
                   width={296}
                   height={361}
@@ -88,8 +122,7 @@ export default function Equipe({ locale }: { locale: string }) {
               <div
                 key={index}
                 className="group relative overflow-hidden w-32 h-max hover:scale-125 bg-white rounded-xl"
-                onClick={() => setTeamMember(index)}
-              >
+                onClick={() => setTeamMember(index)}>
                 <Image
                   width={296}
                   height={361}
@@ -98,10 +131,13 @@ export default function Equipe({ locale }: { locale: string }) {
                   className="object-contain w-full h-full"
                 />
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="absolute top-0 left-0 w-full h-full hidden group-hover:flex flex-col justify-center items-center overflow-hidden text-center bg-[#0009] text-kya-white"
-                >
+                  initial={{
+                    opacity: 0,
+                  }}
+                  animate={{
+                    opacity: 1,
+                  }}
+                  className="absolute top-0 left-0 w-full h-full hidden group-hover:flex flex-col justify-center items-center overflow-hidden text-center bg-[#0009] text-kya-white">
                   <h1 className="font-bold text-[8px]">{value.nom}</h1>
                   <p className="text-[8px]">{value.role}</p>
                 </motion.div>
