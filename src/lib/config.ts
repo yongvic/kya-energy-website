@@ -1,1 +1,1 @@
-export const strapiUrl = "http://localhost:1337";
+export const strapiUrl = "http://192.168.101.65:1337";
