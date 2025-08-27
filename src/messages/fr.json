@@ -52,7 +52,8 @@
     "carousel": {
       "notre équipe": "Notre equipe",
       "excellence": "d'excellence",
-      "découverte": "Découvrez les experts qui façonnent l'avenir énergétique de l'Afrique avec passion, innovation et professionnalisme."
+      "découverte": "Découvrez les experts qui façonnent l'avenir énergétique de l'Afrique avec passion, innovation et professionnalisme.",
+      "description photo": "Photo d'équipe"
     },
     "vision": {
       "titre": "Notre vision",
@@ -80,6 +81,10 @@
       "description": "Découvrez nos opportunités et participez à la révolution énergétique africaine",
       "organigramme": "Voir l'organigramme",
       "rejoindre": "Nous rejoindre"
+    },
+    "seo": {
+      "titre": "À propos de nous • KYA-Energy Group",
+      "description": "Découvrez nos experts qui façonnent l'avenir énergétique de l'Afrique avec passion, innovation et professionnalisme."
     }
   },
   "récompenses": {
@@ -117,7 +122,8 @@
   "certification iso 9001": {
     "hero": {
       "titre": "La seule entreprise certifiée ISO 9001:2015 en <div class=\"text-kya-orange\">énergie solaire au Togo</div>",
-      "description": "KYA-Energy Group est la première entreprise certifiée ISO 9001:2015 dans la conception, l'assemblage et la commercialisation de produits et systèmes énergétiques à base d'énergies renouvelables."
+      "description": "KYA-Energy Group est la première entreprise certifiée ISO 9001:2015 dans la conception, l'assemblage et la commercialisation de produits et systèmes énergétiques à base d'énergies renouvelables.",
+      "sous titre": "KYA-Energy Group est la première entreprise certifiée ISO 9001:2015 dans la conception, l'assemblage et la commercialisation de produits et systèmes énergétiques à base d'énergies renouvelables."
     },
     "certificat": {
       "titre": "KYA-Energy GROUP certifié ISO 9001:2015",
