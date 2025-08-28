@@ -21,7 +21,6 @@ export default function Vision() {
         <p className="text-center text-xl">{t("description")}</p>
       </div>
       <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-3">
-        {/** biome-ignore lint/performance/useSolidForComponent: React Component */}
         {[
           {
             desc: "Ambition de figurer parmi les 10 leaders de l'industrie énergétique en Afrique",
@@ -29,7 +28,6 @@ export default function Vision() {
             title: "Leadership Continental",
           },
           {
-            // biome-ignore lint/nursery/noSecrets: string litteral
             desc: "Développement de solutions solaires de pointe adaptées au contexte africain",
             icon: <LuTabletSmartphone />,
             title: "Innovation Technologique",

@@ -43,13 +43,17 @@ export default function Carousel() {
       {/* The container is no longer needed as the section is now the relative parent */}
 
       {/* Image with AnimatePresence for smooth transitions */}
-      <Image
-        // Add a unique key to the image for AnimatePresence to track it
-        alt={t("description photo")}
-        className="absolute inset-0 size-full object-cover"
-        key={imageUrls[index]}
-        src={imageUrls[index]}
-      />
+      {imageUrls.length > 0 && (
+        <Image
+          // Add a unique key to the image for AnimatePresence to track it
+          alt={t("description photo")}
+          className="absolute inset-0 size-full object-cover"
+          key={imageUrls[index]}
+          src={imageUrls[index]}
+          width={1000}
+          height={500}
+        />
+      )}
 
       {/* Text Overlay */}
       <div className="absolute inset-0 z-10 flex items-center justify-center bg-gradient-to-r from-[#05df72a0] to-[#fffa]/20 p-4 sm:p-6 md:p-8">
@@ -69,7 +73,6 @@ export default function Carousel() {
           <div className="flex w-full items-center justify-between">
             {/* Indicators */}
             <div className="flex items-center justify-center gap-3">
-              {/** biome-ignore lint/performance/useSolidForComponent: React Component */}
               {imageUrls.map((_, i) => (
                 <button
                   aria-label={`Go to slide ${i + 1}`}

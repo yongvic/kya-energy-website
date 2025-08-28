@@ -22,6 +22,26 @@
   --font-facebook-sans: var(--font-facebook-sans);
 }
 
+@layer utilities {
+  .tech-pattern-bg {
+    background-color: #f8fafc; /* bg-slate-50 */
+    background-image:
+      linear-gradient(rgba(28, 161, 140, 0.1) 1px, transparent 1px),
+      linear-gradient(to right, rgba(28, 161, 140, 0.1) 1px, transparent 1px);
+    background-size: 3rem 3rem;
+    animation: pan-pattern 30s linear infinite;
+  }
+
+  @keyframes pan-pattern {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+}
+
 * {
   box-sizing: border-box;
   transition: all 300ms;

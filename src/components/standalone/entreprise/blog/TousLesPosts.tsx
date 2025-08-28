@@ -1,15 +1,14 @@
 "use client";
 
+import { marked } from "marked";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { IoHeartOutline } from "react-icons/io5";
 import { strapiUrl } from "@/data/strapi";
-import "@/styles/post.css";
-import { marked } from "marked";
-import { useTranslations } from "next-intl";
 
 interface Post {
   id: string;
@@ -28,7 +27,6 @@ interface Pagination {
   pageCount: number;
 }
 
-// biome-ignore lint/complexity/noExcessiveLinesPerFunction: React Component
 export default function TousLesPosts() {
   const t = useTranslations("blog.tous les posts");
   const [posts, setPosts] = useState<Post[]>([]);
@@ -43,11 +41,10 @@ export default function TousLesPosts() {
   const page = Number.parseInt(searchParams.get("page") || "1", 10);
 
   useEffect(() => {
-    // biome-ignore lint/nursery/noFloatingPromises: Used only once
     (async () => {
       try {
         const request = await fetch(
-          `${strapiUrl}/api/articles?sort=Date:desc&pagination[limit]=1`,
+          `${strapiUrl}/api/articles?sort=date:desc&pagination[limit]=1`,
           {
             cache: "no-store",
           },
@@ -67,13 +64,12 @@ export default function TousLesPosts() {
       return;
     }
 
-    // biome-ignore lint/nursery/noFloatingPromises: Used only once
     (async () => {
       setLoading(true);
       try {
         const pinnedPostFilter = `&filters[id][$ne]=${pinnedPostId}`;
         const request = await fetch(
-          `${strapiUrl}/api/articles?sort=Date:desc&pagination[page]=${page}&pagination[pageSize]=6&populate=*${pinnedPostFilter}`,
+          `${strapiUrl}/api/articles?sort=date:desc&pagination[page]=${page}&pagination[pageSize]=6&populate=*${pinnedPostFilter}`,
           {
             cache: "no-store",
           },
@@ -101,13 +97,11 @@ export default function TousLesPosts() {
     router.push(`${pathname}?page=${newPage}`);
   };
 
-  // biome-ignore lint/complexity/noExcessiveCognitiveComplexity: Necessary
   function generatePagination(): (string | number)[] | null {
     if (!pagination) {
       return null;
     }
 
-    // biome-ignore lint/nursery/noShadow: Has relationships
     const { page, pageCount } = pagination;
     const pages: (number | string)[] = [];
 
@@ -142,13 +136,17 @@ export default function TousLesPosts() {
     return (
       <section className="container mx-auto">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {/** biome-ignore lint/performance/useSolidForComponent: React Component */}
           {[
-            ...new Array(6),
+            ...Array.from(
+              {
+                length: 6,
+              },
+              (_, index) => index,
+            ),
           ].map((_) => (
             <div
               className="h-96 w-full animate-pulse rounded-lg bg-gray-200"
-              key={`${_}`}
+              key={_}
             />
           ))}
         </div>
@@ -165,7 +163,6 @@ export default function TousLesPosts() {
   return (
     <section className="container mx-auto my-8">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {/** biome-ignore lint/performance/useSolidForComponent: Required */}
         {posts.map((post) => (
           <Link
             href={`/blog/${post.documentId}`}
@@ -222,7 +219,6 @@ export default function TousLesPosts() {
           type="button">
           {t("precedent")}
         </button>
-        {/** biome-ignore lint/performance/useSolidForComponent: Required */}
         {paginationLinks?.map((p) =>
           p === "..." ? (
             <span

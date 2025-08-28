@@ -39,7 +39,6 @@ export default async function Impacts() {
         <div className="mx-auto h-1 w-24 bg-kya-green" />
       </div>
       <div className="container mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {/** biome-ignore lint/performance/useSolidForComponent: React Component */}
         {impacts.map((impact: Impact) => (
           <div
             className="flex flex-col items-center rounded-lg bg-gray-50 p-6 text-center shadow-md"

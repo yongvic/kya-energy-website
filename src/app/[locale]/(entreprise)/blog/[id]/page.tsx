@@ -1,12 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
-import { FaHeart } from "react-icons/fa6";
-import { strapiUrl } from "@/data/strapi";
-import "@/styles/post.css";
 import { marked } from "marked";
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 import { getTranslations } from "next-intl/server";
+import { FaHeart } from "react-icons/fa6";
+import { strapiUrl } from "@/data/strapi";
 
 interface ArticleRecord {
   documentId: string;
@@ -32,7 +31,7 @@ async function getArticleData(id: string) {
   const articleJson = await articleResponse.json();
 
   const recommendationsResponse = await fetch(
-    `${strapiUrl}/api/articles?sort=Date:desc&pagination[limit]=3&populate=*&filters[id][$ne]=${articleJson.data.id}`,
+    `${strapiUrl}/api/articles?sort=date:desc&pagination[limit]=3&populate=*&filters[id][$ne]=${articleJson.data.id}`,
     {
       cache: "no-store",
     },
@@ -61,10 +60,10 @@ export default async function ArticlePage({
     return <div>{t("inexistant")}</div>;
   }
 
-  const { titre, contenu, like, Date: publishedAt, photoCouverture } = article;
+  const { titre, contenu, like, date, photoCouverture } = article;
   const imageUrl = photoCouverture.url;
 
-  const publicationDate = new Date(publishedAt).toLocaleDateString("fr-FR", {
+  const publicationDate = new Date(date).toLocaleDateString("fr", {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -112,17 +111,15 @@ export default async function ArticlePage({
               {t("autres articles")}
             </h2>
             <div className="space-y-6">
-              {/** biome-ignore lint/performance/useSolidForComponent: Required */}
               {recommendations.map((rec: ArticleRecord) => (
                 <Link
                   className="inline-block"
-                  href={`/actu/${rec.documentId}`}
+                  href={`/blog/${rec.documentId}`}
                   key={rec.id}>
                   <div className="cursor-pointer rounded-lg bg-kya-white p-4 shadow-md transition-shadow duration-300 hover:shadow-xl">
                     {rec.photoCouverture.url && (
                       <div className="mb-4 overflow-hidden rounded-lg">
                         <Image
-                          /* biome-ignore lint/nursery/noSecrets: Only string litteral */
                           alt={rec.titre || "Recommendation image"}
                           className="h-auto w-full object-cover"
                           height={200}

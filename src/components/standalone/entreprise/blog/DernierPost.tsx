@@ -19,7 +19,6 @@ interface DernierPost {
   };
 }
 
-// biome-ignore lint/complexity/noExcessiveLinesPerFunction: React Component
 export default function DernierPost() {
   const locale = useLocale();
   const t = useTranslations("blog.dernier post");
@@ -28,11 +27,10 @@ export default function DernierPost() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // biome-ignore lint/nursery/noFloatingPromises: Callback
     (async () => {
       try {
         const request = await fetch(
-          `${strapiUrl}/api/articles?sort=Date:desc&pagination[limit]=1&populate=*`,
+          `${strapiUrl}/api/articles?sort=date:desc&pagination[limit]=1&populate=*`,
           {
             cache: "no-store",
           },
@@ -72,8 +70,21 @@ export default function DernierPost() {
     );
   }
 
-  if (error || !post) {
-    return null;
+  if (error) {
+    return (
+      <section className="container mx-auto my-8 text-center text-red-500">
+        <p>{t("erreur de chargement")}</p>{" "}
+        {/* Pense à ajouter cette traduction */}
+      </section>
+    );
+  }
+
+  if (!post) {
+    return (
+      <section className="container mx-auto my-8">
+        <p>{t("aucun article récent")}</p>
+      </section>
+    );
   }
 
   const {

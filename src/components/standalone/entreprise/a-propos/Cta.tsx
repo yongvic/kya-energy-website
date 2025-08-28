@@ -1,108 +1,43 @@
 "use client";
-import Image from "next/image";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
-import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
-import { strapiUrl } from "@/data/strapi";
+import { RiOrganizationChart, RiShakeHandsLine } from "react-icons/ri";
 
-async function fetchTeamMembers(): Promise<string[]> {
-  const request = await fetch(`${strapiUrl}/api/photos-de-groupes?populate=*`);
-  const response = await request.json();
-  const imageUrls = response.data.map(
-    (data: {
-      photo: {
-        url: string;
-      };
-    }) => `${strapiUrl}${data.photo.url}`,
-  );
-  return imageUrls;
-}
-
-export default function Carousel() {
-  const t = useTranslations("à propos.carousel");
-  const [imageUrls, setImageUrls] = useState<string[]>([]);
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    fetchTeamMembers().then((teamMembers) => setImageUrls(teamMembers));
-  }, []);
-
-  function handlePrev() {
-    setIndex(
-      (prevIndex) => (prevIndex - 1 + imageUrls.length) % imageUrls.length,
-    );
-  }
-
-  function handleNext() {
-    setIndex((prevIndex) => (prevIndex + 1) % imageUrls.length);
-  }
+export default function Cta() {
+  const t = useTranslations("à propos.cta");
 
   return (
-    <section className="relative h-screen bg-black">
-      {/* Carousel */}
-      {/* The container is no longer needed as the section is now the relative parent */}
-
-      {/* Image with AnimatePresence for smooth transitions */}
-      <Image
-        // Add a unique key to the image for AnimatePresence to track it
-        alt={t("description photo")}
-        className="absolute inset-0 size-full object-cover"
-        key={imageUrls[index]}
-        src={imageUrls[index]}
-      />
-
-      {/* Text Overlay */}
-      <div className="absolute inset-0 z-10 flex items-center justify-center bg-gradient-to-r from-[#05df72a0] to-[#fffa]/20 p-4 sm:p-6 md:p-8">
-        {/* Main Content Wrapper */}
-        <div className="flex w-full max-w-lg flex-col gap-8 text-white md:gap-12 lg:max-w-2xl">
-          {/* Text block */}
-          <div className="space-y-4">
-            <h1 className="font-bold text-3xl sm:text-4xl lg:text-6xl">
-              {t("notre équipe")}
-              <br />
-              {t("excellence")}
-            </h1>
-            <p className="text-base sm:text-lg lg:text-xl">{t("découverte")}</p>
+    <div className="bg-gray-100 py-32">
+      <div className="container mx-auto px-4">
+        <div className="px-4 lg:px-48">
+          <h2 className="text-center text-4xl font-bold w-full">
+            {t("appel")}
+          </h2>
+          <div className="flex justify-center items-center my-8">
+            <p className="text-center text-xl">{t("description")}</p>
           </div>
-
-          {/* Controls block */}
-          <div className="flex w-full items-center justify-between">
-            {/* Indicators */}
-            <div className="flex items-center justify-center gap-3">
-              {/** biome-ignore lint/performance/useSolidForComponent: React Component */}
-              {imageUrls.map((_, i) => (
-                <button
-                  aria-label={`Go to slide ${i + 1}`}
-                  className={`size-3 rounded-full transition-all duration-300 md:size-4 ${
-                    index === i ? "scale-125 bg-white" : "bg-green-300/70"
-                  }`}
-                  key={_}
-                  onClick={() => setIndex(i)} // Assuming you have a setIndex function
-                  type="button"
-                />
-              ))}
-            </div>
-
-            {/* Buttons */}
-            <div className="flex items-center justify-center gap-3 text-2xl text-kya-green md:text-4xl">
-              <button
-                aria-label="Previous Slide"
-                className="rounded-full bg-white/60 p-3 transition-colors hover:bg-green-300 md:p-4"
-                onClick={handlePrev}
-                type="button">
-                <RiArrowLeftLine />
-              </button>
-              <button
-                aria-label="Next Slide"
-                className="rounded-full bg-white/60 p-3 transition-colors hover:bg-green-300 md:p-4"
-                onClick={handleNext}
-                type="button">
-                <RiArrowRightLine />
-              </button>
+          <div className="my-16">
+            <div className="flex flex-wrap items-center justify-center gap-8 my-8 text-white font-facebook-sans">
+              <Link href="#equipe">
+                <div className="w-max px-6 py-4 gap-3 flex items-center justify-center rounded-full bg-kya-orange transition-colors duration-300">
+                  <p className="text-2xl">
+                    <RiOrganizationChart />
+                  </p>
+                  <p>{t("organigramme")}</p>
+                </div>
+              </Link>
+              <Link href="">
+                <div className="w-max px-6 py-4 gap-3 flex items-center justify-center rounded-full bg-kya-green transition-colors duration-300">
+                  <p className="text-2xl">
+                    <RiShakeHandsLine />
+                  </p>
+                  <p>{t("rejoindre")}</p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

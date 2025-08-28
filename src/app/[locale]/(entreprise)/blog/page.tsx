@@ -1,8 +1,8 @@
-import Hero from "@/components/standalone/entreprise/accueil/Hero";
-import DernierPost from "@/components/standalone/entreprise/blog/DernierPost";
-import TousLesPosts from "@/components/standalone/entreprise/blog/TousLesPosts";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import Hero from "@/components/standalone/entreprise/blog/Hero";
+import DernierPost from "@/components/standalone/entreprise/blog/DernierPost";
+import TousLesPosts from "@/components/standalone/entreprise/blog/TousLesPosts";
 
 export default function Blog() {
   return (

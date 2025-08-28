@@ -1,3 +1,285 @@
 {
-  "hello": "world"
+  "blog": {
+    "article": {
+      "autres articles": "Autres articles interessants",
+      "inexistant": "Article non trouvé"
+    },
+    "dernier post": {
+      "aucun article récent": "Aucun article n'a récemment été publié",
+      "erreur de chargement": "Désolé, il semble que le contenu n'ait pas pu être chargé",
+      "lire": "Lire",
+      "titre": "Notre dernier post"
+    },
+    "hero": {
+      "description": "Retrouvez ici nos actualités, innovations et conseils autour de l’énergie solaire et de nos solutions durables.",
+      "titre": "Page d'actualités"
+    },
+    "seo": {
+      "description": "Découvrez les dernières actualités de l'entreprise pionnière de l'énergie solaire au Togo, KYA-Energy Group",
+      "titre": "Actualités • KYA-Energy Group"
+    },
+    "tous les posts": {
+      "lire": "Lire",
+      "precedent": "Précedent",
+      "suivant": "Suivant"
+    }
+  },
+  "certification iso 9001": {
+    "certificat": {
+      "annonce": {
+        "paragraphe 1": "Nous sommes fiers d'annoncer que KYA-Energy GROUP a obtenu la certification ISO 9001 : 2015 en 2024, délivrée par TÜV Rheinland. Cette certification témoigne de notre engagement indéfectible envers l'excellence, l'amélioration continue et la satisfaction de nos clients et partenaires.",
+        "paragraphe 2": "Une reconnaissance de notre démarche qualité",
+        "paragraphe 3": "Depuis sa création, KYA-Energy GROUP s'est engagé à fournir des solutions innovantes et durables... nous garantissons que nos services répondent aux exigences les plus strictes en matière de performance, de fiabilité et d'amélioration continue."
+      },
+      "sous titre": "Une reconnaissance de notre engagement envers la qualité",
+      "titre": "KYA-Energy GROUP certifié ISO 9001:2015",
+      "titre certificat": "Certification ISO 9001:2015"
+    },
+    "confiance": {
+      "bouton": "Contactez-nous",
+      "sous titre": "Choisissez KYA Energy Group pour vos projets d'énergie solaire et bénéficiez de notre expertise certifiée ISO 9001:2015.",
+      "titre": "Faites Confiance à l'Excellence Certifiée"
+    },
+    "engagement": {
+      "engagement": {
+        "sous titre": "Un avenir durable et responsable",
+        "texte": "Au-delà de la qualité, notre engagement intègre également les aspects Hygiène, Sécurité et Environnement (HSE). Nous œuvrons chaque jour pour améliorer nos performances environnementales et sécuritaires...",
+        "titre": "Notre engagement QHSE"
+      },
+      "remerciements": {
+        "sous titre": "Chez KYA-Energy GROUP, nous continuons à viser l'excellence et à repousser les limites de l'innovation pour un avenir énergétique durable.",
+        "texte": "Cette certification est avant tout une réussite collective. Nous remercions chaleureusement tous nos collaborateurs... Nous remercions également nos clients et partenaires pour leur confiance et leur soutien indéfectible.",
+        "titre": "Un grand merci à nos équipes et partenaires !"
+      }
+    },
+    "hero": {
+      "description": "KYA-Energy Group est la première entreprise certifiée ISO 9001:2015 dans la conception, l'assemblage et la commercialisation de produits et systèmes énergétiques à base d'énergies renouvelables.",
+      "sous titre": "KYA-Energy Group est la première entreprise certifiée ISO 9001:2015 dans la conception, l'assemblage et la commercialisation de produits et systèmes énergétiques à base d'énergies renouvelables.",
+      "titre": "La seule entreprise certifiée ISO 9001:2015 en <div class=\"text-kya-orange\">énergie solaire au Togo</div>"
+    },
+    "pourquoi": {
+      "description": "L'obtention de cette certification est le fruit d'un travail collectif et d'une volonté constante de renforcer nos pratiques internes. Elle nous permet de :",
+      "titre": "Pourquoi cette certification est essentielle ?"
+    },
+    "seo": {
+      "description": "Nous sommes la seule entreprise dans l'énergie solaire à avoir une certification ISO 9001. Cette certification est la preuve de l'innovation que nous apportons afin de rendre l'énergie solaire encore plus accessible",
+      "titre": "Certification ISO 9001:2015 • KYA-Energy Group"
+    }
+  },
+  "detail produits": {
+    "details": {
+      "kya sop commercial": {
+        "description": "Systèmes haute performance pour entreprises et industries.",
+        "titre": "KYA-SoP pour les institutions (PME/PMI)"
+      },
+      "kya sop communautaire": {
+        "description": "Solutions conçues pour les besoins énergétiques des communautés et des infrastructures publiques.",
+        "titre": "Les groupes secours KYA-Backup"
+      },
+      "kya sop menage": {
+        "description": "Solutions adaptées aux maisons individuelles et petits bâtiments.",
+        "titre": "KYA-SoP pour les ménages"
+      },
+      "titre": "Les différentes gammes de nos produits"
+    },
+    "hero": {
+      "description": "Les groupes électrosolaires KYA-SoP sont des systèmes solaires intelligents conçus de façon optimale (avec une nouvelle approche de dimensionnement) et assemblés localement par KYA Energy Group pour des applications productives, tant pour le milieu rural qu’urbain. Ils sont composés de :",
+      "titre": "KYA-Energy GROUP certifié ISO 9001:2015"
+    },
+    "seo": {
+      "description": "Plongez plus en détail sur les produits qui font de nous, un pionnier de l'énergie solaire au Togo et en Afrique occidentale",
+      "titre": "Nos produits • KYA-Energy Group"
+    },
+    "temoignages": {
+      "erreur video": "Désolé. Votre navigateur ne supporte pas l'affichage des vidéos. Veuillez installer un navigateur compatible",
+      "titre": "Témoignages de nos clients"
+    }
+  },
+  "faq": {
+    "placeholder": "Rechercher",
+    "seo": {
+      "description": "Vous avez une question ? Vous trouverez sûrement la réponse. Notre assistant IA vous accompagnera tout au long de ce parcours",
+      "titre": "Questions fréquentes • KYA-Energy Group"
+    },
+    "sous titre": "Une question ?<br/>On a sûrement la réponse.",
+    "titre": "FAQ"
+  },
+  "introuvable": {
+    "description": "Vérifiez l'URL du site internet et réessayez, ou trouvez ce dont vous avez besoin sur notre page d'accueil.",
+    "retour à l'accueil": "Retournez à la page d'acceuil",
+    "titre": "Page introuvable"
+  },
+  "kya backup": {
+    "demander un devis": "Demander un devis",
+    "seo": {
+      "description": "Notre groupe secours, destiné à toutes sortes d'usage",
+      "titre": "KYA-Backup • KYA-Energy Group"
+    }
+  },
+  "kya sop institutions": {
+    "seo": {
+      "description": "Vous êtes une entreprise ou une institution ? Découvrez la gamme de produits adaptée à vos besoins",
+      "titre": "KYA-SoP pour institutions • KYA-Energy Group"
+    }
+  },
+  "kya sop menages": {
+    "seo": {
+      "description": "L'énergie solaire, votre maison en a aussi besoin. Saisissez enfin l'opportunité de réduire vos factures d'électricité tout en contribuant à un monde meilleur",
+      "titre": "KYA-SoP pour les ménages • KYA-Energy Group"
+    }
+  },
+  "page d'acceuil": {
+    "hero": {
+      "appel à l'action": "Découvrir nos solutions",
+      "sous titre": "Devenez propriétaires énergétiques verts.",
+      "statistiques": {
+        "années d'expertise": "Années d'expertise",
+        "installations réalisées": "Installations réalisées",
+        "satisfaction client": "Satisfaction client",
+        "support client": "Support client"
+      },
+      "titre": "Avec nos groupes électrosolaires KYA-SoP",
+      "vision": "Notre vision: démocratiser l'accès à l'énergie verte et durable"
+    },
+    "impacts": {
+      "titre": "Nos impacts"
+    },
+    "mission et valeurs": {
+      "mission": {
+        "description": "Transformer les ressources énergétiques renouvelables de manière innovante pour produire une énergie propre, fiable et abordable pour tous. Nous nous engageons à créer un avenir énergétique durable qui profite aux communautés et préserve notre planète.",
+        "titre": "Notre mission"
+      },
+      "titre": "Mission et Valeurs",
+      "valeurs": {
+        "titre": "Nos valeurs"
+      }
+    },
+    "pourquoi kya": {
+      "titre": "Pourquoi choisir KYA-Energy Group ?"
+    },
+    "produits phares": {
+      "savoir plus": "En savoir plus",
+      "sous titre": "Découvrez notre gamme complète de groupes électrosolaires adaptés à tous vos besoins énergetiques.",
+      "titre": "Nos produits phares"
+    },
+    "seo": {
+      "description": "Transformer les ressources énergétiques renouvelables de manière innovante pour produire une énergie propre, fiable et abordable pour tous. Nous nous engageons à créer un avenir énergétique durable qui profite aux communautés et préserve notre planète.",
+      "titre": "Acceuil • KYA-Energy Group"
+    },
+    "youtube": {
+      "description de la vidéo": "Video institutionnelle KYA Energy Group",
+      "texte descriptif": "KYA-ENERGY GROUP est une entreprise internationale spécialisée dans les énergies renouvelables (énergie solaire en particulier) et l’efficacité énergétique. Elle œuvre pour relever le défi de l’électrification en Afrique de façon durable. Membre fondateur de la Synergie des Acteurs des Energies Renouvelables (SAER-TOGO), et d'associations internationales comme Global Off Grid Lightning Association (GOGLA) et Africa Minigrid Developers Association (AMDA).",
+      "titre": "Découvrez KYA-Energy Group"
+    }
+  },
+  "popup": {
+    "contactez moi": "Contactez moi dès que possible",
+    "numero de telephone": "Votre numéro de téléphone",
+    "saisir le numero de telephone": "Veuillez entrer votre numéro de téléphone. Notre équipe se chargera de vous contacter"
+  },
+  "produits et services": {
+    "acceuil": {
+      "offres promotionnelles": "Découvrez nos offres promotionnelles",
+      "produits": {
+        "savoir plus": "Vous voulez en savoir plus ?",
+        "sous titre": "Découvrez notre gamme complète de groupes électrosolaires adaptés à tous vos besoins énergétiques.",
+        "titre": "Notre gamme de produits"
+      },
+      "services": {
+        "sous titre": "Un accompagnement personnalisé pour vos projets énergétiques.",
+        "titre": "Nos services"
+      },
+      "voir plus": "Voir plus"
+    },
+    "en savoir plus": "En savoir plus",
+    "financement": {
+      "apport initial": "Apport initial",
+      "description": "Des options flexibles pour concrétiser vos projets",
+      "maintenance incluse": "Maintenance et entretien inclus",
+      "remboursement": "Jusqu'à 10 ans pour le remboursement",
+      "titre": "Solutions de financement"
+    },
+    "promotion": "Découvrez nos promotions exclusives sur une sélection de produits KYA-SoP. Valable pour une durée limitée.",
+    "seo": {
+      "description": "Découvrez notre gamme de produits et services et laissez-vous inspirer par notre expertise et notre savoir-faire.",
+      "titre": "Produits et Services • KYA-Energy Group"
+    }
+  },
+  "récompenses": {
+    "domaines d'excellence": {
+      "description": "Nos prix couvrent tous les aspects de notre activité, de l'innovation technologique à l'impact social.",
+      "sous titre": "Nos Catégories de Récompenses",
+      "titre": "Domaines d'Excellence"
+    },
+    "impact": {
+      "description": "Nos récompenses témoignent de notre engagement constant vers l'excellence et l'innovation.",
+      "sous titre": "Des chiffres qui parlent",
+      "titre": "Notre impact"
+    },
+    "introduction": {
+      "distinctions": "distinctions",
+      "et": "et",
+      "excellence": "Excellence reconnue",
+      "nos prix": "Nos prix",
+      "reconnaissance": "Que ce soit par la reconnaissance de nos employés, de nos clients ou par les prix internationaux qui nous ont été remis, nous sommes fiers de notre travail et des distinctions par lesquelles nous avons été reconnus."
+    },
+    "prix et distinctions": {
+      "description": "Notre engagement envers l'excellence est reconnu par les plus grandes institutions. Chaque distinction renforce la confiance de nos clients et la fierté de nos équipes.",
+      "titre": "NOS PRIX ET DISTINCTIONS"
+    },
+    "rejoindre": {
+      "démarrer un projet": "Démarrer un projet",
+      "sous titre": "Découvrez comment nos solutions primées peuvent transformer vos projets énergétiques et contribuer à un avenir plus durable.",
+      "titre": "Rejoignez l'Excellence",
+      "visualiser notre portfolio": "Visualiser notre portfolio"
+    },
+    "seo": {
+      "description": "Découvrez les récompenses que nous avons reçu au cours des années et qui sont la preuve de notre travail acharné",
+      "titre": "Nos récompenses • KYA-Energy Group"
+    }
+  },
+  "à propos": {
+    "carousel": {
+      "description photo": "Photo d'équipe",
+      "découverte": "Découvrez les experts qui façonnent l'avenir énergétique de l'Afrique avec passion, innovation et professionnalisme.",
+      "excellence": "d'excellence",
+      "notre équipe": "Notre equipe"
+    },
+    "cta": {
+      "appel": "Rejoignez l'Aventure de KYA-Energy Group",
+      "description": "Découvrez nos opportunités et participez à la révolution énergétique africaine",
+      "organigramme": "Voir l'organigramme",
+      "rejoindre": "Nous rejoindre"
+    },
+    "equipe": {
+      "comité": "Comité de direction",
+      "description": "Une équipe d'experts chevronnés avec plus de 15 ans d'expérience collective, unis par une vision commune d'excellence et d'innovation.",
+      "leadership": "Leadership"
+    },
+    "fondateur": {
+      "description": "Visionnaire et pionnier de l'énergie renouvelable en Afrique, le Professeur Yao K. AZOUMAH combine expertise académique et vision entrepreneuriale pour révolutionner le secteur énergétique africain.",
+      "fonction": "Fondateur et Directeur Général de KYA-Energy Group",
+      "nom": "Prof. Yao K. AZOUMAH",
+      "titre": "Fondateur et CEO"
+    },
+    "impact": {
+      "description": "Des chiffres qui témoignent de notre engagement et de notre impact positif.",
+      "sous titre": "Résultats concrets",
+      "titre": "Notre impact"
+    },
+    "seo": {
+      "description": "Découvrez nos experts qui façonnent l'avenir énergétique de l'Afrique avec passion, innovation et professionnalisme.",
+      "titre": "À propos de nous • KYA-Energy Group"
+    },
+    "valeurs": {
+      "description": "Des principes fondamentaux qui guident chacune de nos actions et décisions.",
+      "sous titre": "Les Piliers de notre Excellence",
+      "titre": "Nos valeurs"
+    },
+    "vision": {
+      "description": "KYA-Energy Group s&apos;engage dans la révolution énergétique africaine avec une ambition claire: devenir un leader incontournable des énergies renouvelables sur le continent.",
+      "sous titre": "Transformer l'Afrique par l'Énergie Solaire",
+      "titre": "Notre vision"
+    }
+  }
 }
