@@ -5,10 +5,74 @@ import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa6";
 import { strapiUrl } from "@/data/strapi";
+import Link from "next/link";
 
 interface Faq {
   question: string;
   reponse: string;
+}
+
+function AccordionItem({
+  question,
+  answer,
+  isOpen,
+  onClick,
+}: {
+  question: string;
+  answer: string;
+  isOpen: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <div className="group rounded-xl border border-gray-200 bg-kya-white transition-shadow duration-300 hover:shadow-lg">
+      {/* 
+        Header Cliquable: 
+        - J'utilise un `div` avec un `role="button"` pour une meilleure sémantique et accessibilité.
+        - Le padding est plus généreux pour une meilleure zone de clic.
+      */}
+      <button
+        aria-expanded={isOpen}
+        className="flex cursor-pointer items-center justify-between gap-4 p-6"
+        onClick={onClick}
+        onKeyDown={(e) => e.key === "Enter" && onClick()}
+        tabIndex={0}
+        type="button">
+        <h3 className="text-lg font-semibold text-kya-coffee">{question}</h3>
+        <FaChevronDown
+          className={`
+            flex-shrink-0 text-xl text-kya-green transition-transform duration-500 ease-in-out 
+            ${isOpen ? "rotate-180" : ""}
+          `}
+        />
+      </button>
+
+      {/* 
+        Conteneur de la Réponse: 
+        - La transition `grid-rows` est la clé pour une animation fluide et robuste.
+      */}
+      <div
+        className={`
+          grid overflow-hidden transition-all duration-500 ease-in-out
+          ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}
+        `}>
+        {/* Cet enfant est nécessaire pour que l'animation grid fonctionne correctement */}
+        <div className="min-h-0">
+          {/*
+            Contenu de la réponse: 
+            - Le padding est à l'intérieur pour ne pas être écrasé par l'animation.
+            - La classe `prose` (du plugin @tailwindcss/typography) style joliment le contenu HTML.
+          */}
+          <div
+            className="prose max-w-none border-t border-gray-100 px-6 pb-6 pt-4 text-kya-coffee/80"
+            // Assurez-vous que le HTML dans 'answer' est sécurisé !
+            dangerouslySetInnerHTML={{
+              __html: answer,
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 async function fetchFaqs() {
@@ -25,7 +89,7 @@ async function fetchFaqs() {
   }
 }
 
-function FaqClientPage() {
+export default function FaqClientPage() {
   const t = useTranslations("faq");
   const [faqs, setFaqs] = useState<Faq[]>([]);
   useEffect(() => {
@@ -41,29 +105,28 @@ function FaqClientPage() {
   );
 
   return (
-    <div className="bg-white dark:bg-gray-900">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-linear-to-r from-[#1e9983] from-[19%] to-[#197867] to-[100%] px-4 py-30 text-center text-white">
-        <div className="-bottom-40 absolute left-0 z-10 flex h-max w-full flex-col items-start justify-end overflow-hidden">
-          <p className="faq-effect container mx-auto flex select-none items-center justify-between font-black font-facebook-sans text-[25rem] text-shadow[100px_0_1000px_#fff]">
-            <span>{t("titre").toLowerCase()}</span>
-            <span className="skew-6 rotate-12">?</span>
+    <div className="bg-white">
+      {/* --- HERO SECTION (INCHANGÉ) --- */}
+      <section className="relative bg-gradient-to-r from-[#1e9983] to-[#197867] px-4 py-32 text-center text-white overflow-hidden">
+        <div className="absolute -bottom-40 left-0 z-10 flex h-full w-full flex-col items-start justify-end">
+          <p className="container text-kya-green mx-auto flex select-none items-center justify-between font-black text-[25rem] text-shadow-[0_1px_10px_#fff]">
+            <span className="lowercase">{t("titre")}</span>
+            <span className="skew-x-6 rotate-12">?</span>
           </p>
-          {/* <div className="h-[30%] absolute w-full bottom-[40%] bg-linear-to-r  from-[#1e9983a0] from-[19%] to-[#197867a0] to-[100%]"></div> */}
         </div>
-        <h1 className="container relative z-20 mx-auto mb-4 w-full text-left font-black text-6xl lowercase md:text-8xl">
+        <h1 className="container relative z-20 mx-auto w-full text-left text-6xl font-black lowercase md:text-8xl">
           {t("titre")}
         </h1>
         <p
-          className="relative z-20 mb-8 font-semibold text-2xl md:text-4xl"
+          className="relative z-20 mb-8 text-2xl font-semibold md:text-4xl"
           dangerouslySetInnerHTML={{
             __html: t("sous titre"),
           }}
         />
-        <div className="-bottom-4 -translate-x-1/2 absolute left-1/2 z-20 mx-auto w-[90%] rounded-full bg-kya-white shadow-lg outline-none sm:w-xl lg:w-2xl">
-          <FaSearch className="-translate-y-1/2 absolute top-1/2 left-4 text-gray-400" />
+        <div className="absolute bottom-4 left-1/2 z-20 mx-auto w-[90%] -translate-x-1/2 rounded-full bg-kya-white shadow-lg sm:w-xl lg:w-2xl">
+          <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
           <input
-            className="w-full rounded-full py-3 pr-4 pl-12 text-gray-800 focus:outline-none focus:ring-2 focus:ring-kya-orange"
+            className="w-full rounded-full py-3 pl-12 pr-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-kya-orange"
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder={t("placeholder")}
             type="text"
@@ -71,11 +134,34 @@ function FaqClientPage() {
         </div>
       </section>
 
-      {/* FAQ Content Section */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="mb-12 flex flex-wrap justify-center gap-4" />
+      {/* --- NOUVELLE SECTION DE CATÉGORIES --- */}
+      {/*<section className="bg-gradient-to-b from-gray-50 to-white pt-24 pb-16">
+        <div className="container mx-auto px-4 text-center">
+           <h2 className="text-3xl font-bold text-kya-coffee mb-12">Parcourir par catégorie</h2>
+           <div className="flex flex-wrap justify-center gap-4">
+             {categories.map(category => (
+               <button
+                className={`flex items-center gap-3 rounded-full border-2 px-6 py-3 font-semibold transition-all duration-300
+                   ${activeCategory === category.name
+                     ? 'border-kya-green bg-kya-green text-kya-white shadow-lg'
+                     : 'border-gray-200 bg-kya-white text-kya-coffee hover:border-kya-green/50 hover:shadow-md'}`
+                 }
+                 key={category.name}
+                 onClick={() => setActiveCategory(category.name)}
+                 type="button"
+               >
+                 <category.icon />
+                 <span>{category.name}</span>
+               </button>
+             ))}
+           </div>
+        </div>
+      </section>*/}
 
+      {/* --- SECTION ACCORDÉON AMÉLIORÉE --- */}
+      <section className="container mx-auto px-4 py-24">
         <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
+          {/* Colonne 1 */}
           <div className="space-y-4">
             {filteredQuestions
               .slice(0, Math.ceil(filteredQuestions.length / 2))
@@ -89,6 +175,7 @@ function FaqClientPage() {
                 />
               ))}
           </div>
+          {/* Colonne 2 */}
           <div className="space-y-4">
             {filteredQuestions
               .slice(Math.ceil(filteredQuestions.length / 2))
@@ -110,42 +197,35 @@ function FaqClientPage() {
               })}
           </div>
         </div>
+
+        {/* Message si aucun résultat */}
+        {filteredQuestions.length === 0 && (
+          <div className="mt-12 text-center text-gray-500">
+            <p className="text-xl">
+              Aucune question ne correspond à votre recherche.
+            </p>
+            <p>Essayez avec d'autres mots-clés.</p>
+          </div>
+        )}
+      </section>
+
+      {/* --- NOUVELLE SECTION CTA "CONTACT" --- */}
+      <section className="tech-pattern-bg py-24">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-kya-coffee">
+            Vous ne trouvez pas de réponse ?
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-kya-coffee/70">
+            Notre équipe est là pour vous aider. Contactez-nous directement pour
+            toute question spécifique.
+          </p>
+          <Link
+            className="mt-8 inline-block rounded-full bg-kya-orange px-8 py-3 font-bold text-kya-white shadow-lg transition-transform hover:scale-105"
+            href="/contact">
+            Contacter le support
+          </Link>
+        </div>
       </section>
     </div>
   );
 }
-
-function AccordionItem({
-  question,
-  answer,
-  isOpen,
-  onClick,
-}: {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onClick: () => void;
-}) {
-  return (
-    <div className="overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
-      <button
-        className="flex w-full items-center justify-between gap-1 p-4 text-left font-bold text-kya-coffee dark:text-kya-white"
-        onClick={onClick}
-        type="button">
-        <span>{question}</span>
-        <div>
-          <FaChevronDown />
-        </div>
-      </button>
-      {isOpen && (
-        <div className="overflow-hidden">
-          <div className="p-4 pt-0 font-medium text-gray-600 dark:text-gray-300">
-            {answer}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
-export default FaqClientPage;

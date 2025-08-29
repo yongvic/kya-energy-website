@@ -23,13 +23,11 @@ export default function Modal({ isOpen, onClose, promo }: ModalProps) {
 
   return (
     // biome-ignore lint/a11y/noStaticElementInteractions: Needed
-    // biome-ignore lint/a11y/noNoninteractiveElementInteractions: Needed
     // biome-ignore lint/a11y/useKeyWithClickEvents: Needed
     <div
       className={styles.modal_overlay}
       onClick={onClose}>
       {/* biome-ignore lint/a11y/noStaticElementInteractions: Needed */}
-      {/* biome-ignore lint/a11y/noNoninteractiveElementInteractions: Needed */}
       {/* biome-ignore lint/a11y/useKeyWithClickEvents: Needed */}
       <div
         className={styles.modal_content}

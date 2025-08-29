@@ -3,10 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
-import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight, FaHeart } from "react-icons/fa6";
 import { IoHeartOutline } from "react-icons/io5";
 import { MdPushPin } from "react-icons/md";
 import { strapiUrl } from "@/data/strapi";
+import { marked } from "marked";
+import { motion } from "framer-motion";
 
 interface DernierPost {
   documentId: string;
@@ -105,60 +107,130 @@ export default function DernierPost() {
   });
 
   return (
-    <section className="container mx-auto my-8">
-      <div className="flex items-center gap-2 rounded-t-lg bg-kya-green px-4 py-2 font-medium text-kya-white *:w-max">
-        <p>
-          <MdPushPin className="text-xl" />
-        </p>
-        <p>{t("titre")}</p>
-      </div>
-      <Link href={`/blog/${documentId}`}>
-        <article className="grid cursor-pointer grid-cols-1 gap-4 rounded-b-lg rounded-tr-lg bg-kya-white p-6 shadow-lg md:grid-cols-2">
-          <div className="overflow-hidden rounded-lg">
-            {imageUrl ? (
-              <Image
-                alt={titre || "Pinned post image"}
-                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-                height={500}
-                src={`${strapiUrl}${imageUrl}`}
-                width={500}
-              />
-            ) : (
-              <div className="h-full w-full animate-pulse bg-gray-200" />
-            )}
+    <section className="py-24 sm:py-32">
+      <div className="container mx-auto px-4">
+        {/* En-tête de section (réutilisable et animé) */}
+        <motion.div
+          className="mb-12"
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.6,
+            ease: "easeOut",
+          }}>
+          <div className="flex items-center gap-3 text-kya-green">
+            <MdPushPin className="text-2xl" />
+            <span className="text-sm font-bold uppercase tracking-wider">
+              {t("titre")}
+            </span>
           </div>
-          <div className="flex flex-col justify-between">
-            <div>
-              <p className="mb-2 flex items-center justify-end gap-4">
-                <span className="font-semibold text-kya-orange text-sm">
-                  {publicationDate}
-                </span>
-              </p>
-              <h1 className="mb-2 line-clamp-2 font-bold text-2xl text-kya-coffee">
-                {titre}
-              </h1>
-              <div
-                className="prose prose-sm line-clamp-3 text-gray-600"
-                dangerouslySetInnerHTML={{
-                  __html: contenu,
-                }}
-              />
-            </div>
-            <div className="mt-4 flex items-center justify-between">
-              <button
-                className="flex items-center gap-2 rounded-full bg-kya-orange px-4 py-2 font-bold text-kya-white transition-colors duration-300 hover:bg-kya-yellow hover:text-kya-coffee"
-                type="button">
-                <span>{t("lire")}</span>
-                <FaArrowRight />
-              </button>
-              <div className="flex items-center gap-2 text-gray-500">
-                <IoHeartOutline className="text-red-500" />
-                <span className="font-medium">{like}</span>
+        </motion.div>
+
+        {/* --- La Carte d'Article Épinglé --- */}
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 50,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.8,
+            delay: 0.2,
+            ease: "easeOut",
+          }}>
+          {/* Le Link entoure toute la carte */}
+          <Link
+            href={`/blog/${documentId}`}
+            className="group block">
+            {/* 
+              On utilise motion.article pour les animations de survol.
+              `whileHover="hover"` activera la variante 'hover' définie ci-dessous.
+            */}
+            <motion.article
+              className="relative grid grid-cols-1 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg lg:grid-cols-2"
+              initial="initial"
+              whileHover="hover">
+              {/* --- Colonne Image --- */}
+              <div className="relative aspect-video lg:aspect-auto">
+                {imageUrl ? (
+                  <Image
+                    alt={titre || "Pinned post image"}
+                    src={`${strapiUrl}${imageUrl}`}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="h-full w-full bg-slate-200" />
+                )}
+                {/* Overlay pour l'image */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent transition-opacity duration-300 group-hover:from-black/40" />
               </div>
-            </div>
-          </div>
-        </article>
-      </Link>
+
+              {/* --- Colonne Contenu --- */}
+              <div className="flex flex-col p-8">
+                {/* Date et Likes */}
+                <div className="flex items-center justify-between text-sm">
+                  <p className="font-semibold text-kya-orange">
+                    {publicationDate}
+                  </p>
+                  <div className="flex items-center gap-2 text-slate-500">
+                    <FaHeart className="text-red-400" />
+                    <span>{like}</span>
+                  </div>
+                </div>
+
+                {/* Titre */}
+                <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-kya-coffee">
+                  {titre}
+                </h1>
+
+                {/* Extrait (prose pour un bon styling) */}
+                <div
+                  className="post prose prose-slate mt-4 line-clamp-4 max-w-none text-slate-600"
+                  dangerouslySetInnerHTML={{
+                    __html: marked(contenu),
+                  }}
+                />
+
+                {/* Bouton CTA qui s'anime au survol de la carte */}
+                <motion.div
+                  className="mt-8 flex w-max items-center gap-2 font-bold text-kya-green"
+                  variants={{
+                    initial: {
+                      x: 0,
+                    },
+                    hover: {
+                      x: 5,
+                      transition: {
+                        type: "spring",
+                        stiffness: 300,
+                      },
+                    },
+                  }}>
+                  <span>{t("lire")}</span>
+                  <FaArrowRight />
+                </motion.div>
+              </div>
+            </motion.article>
+          </Link>
+        </motion.div>
+      </div>
     </section>
   );
 }

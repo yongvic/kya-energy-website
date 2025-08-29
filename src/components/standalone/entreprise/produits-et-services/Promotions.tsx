@@ -40,7 +40,7 @@ export default function Promotions() {
             ...promotions,
             {
               image: `${strapiUrl}${promotion.image?.url}`,
-              link: promotion.lienDeRedirection,
+              link: promotion.lien_de_redirection,
               title: promotion.titre,
             },
           ]);
@@ -49,9 +49,7 @@ export default function Promotions() {
     }
 
     fetchPromotions();
-  }, [
-    promotions,
-  ]);
+  }, []);
 
   const [currentPromo, setCurrentPromo] = useState<number>(0);
 

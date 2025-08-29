@@ -25,11 +25,7 @@ export default function Introduction() {
 
         {/* Le conteneur du contenu */}
         <div className="relative z-10 flex h-full w-full flex-col items-center justify-center p-4 text-kya-white">
-          {/*
-            Conteneur pour l'animation. On met 'opacity-0' pour que les éléments
-            soient invisibles avant que l'animation ne démarre.
-          */}
-          <div className="animate-fade-in-up w-full max-w-4xl text-center opacity-0">
+          <div className="w-full max-w-4xl text-center">
             {/* Badge */}
             <div className="mb-6 flex w-max items-center gap-3 rounded-full border border-kya-orange/50 bg-kya-orange/20 px-6 py-2 text-sm backdrop-blur-sm md:text-base mx-auto">
               <FaTrophy className="text-kya-orange" />

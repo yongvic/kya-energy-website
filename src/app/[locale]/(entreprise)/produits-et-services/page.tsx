@@ -6,12 +6,7 @@ import Accordion from "@/components/standalone/entreprise/produits-et-services/A
 import Financement from "@/components/standalone/entreprise/produits-et-services/Financement";
 import Promotions from "@/components/standalone/entreprise/produits-et-services/Promotions";
 import { strapiUrl } from "@/data/strapi";
-
-interface ProductItem {
-  label: string; // eq `title` on strapi
-  image: string; // The link
-  description: string;
-}
+import { FaArrowRight } from "react-icons/fa";
 
 export default async function ProductsAndServicesPage() {
   const t = await getTranslations("produits et services.acceuil");
@@ -46,9 +41,11 @@ export default async function ProductsAndServicesPage() {
         photo: {
           url: string;
         };
+        lien: string;
       }) => ({
         description: data.description,
         image: `${strapiUrl}${data.photo.url}`,
+        lien: data.lien,
         titre: data.titre,
       }),
     );
@@ -90,59 +87,74 @@ export default async function ProductsAndServicesPage() {
           </p>
           <Link
             className="text-lg font-bold text-sky-500 hover:underline"
-            href="#test">
+            href="/detail-produits">
             {t("voir plus")}
           </Link>
         </div>
       </section>
 
       {/* --- 3. Services Section --- */}
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
-        {/* Titre et sous-titre de la section */}
-        <div className="text-center">
-          <h2 className="relative mb-8 text-4xl font-bold text-kya-coffee">
-            {t("services.titre")}
-            <span className="absolute -bottom-3 left-1/2 h-1 w-20 -translate-x-1/2 rounded-full bg-kya-green" />
-          </h2>
-          <p className="mx-auto mb-12 max-w-2xl text-lg text-kya-coffee/70">
-            {t("services.sous titre")}
-          </p>
-        </div>
+      <section className="bg-slate-50 py-24 sm:py-32">
+        <div className="container mx-auto px-4">
+          {/* En-tête de section */}
+          <div className="animate-fade-in-up mb-16 max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl font-extrabold tracking-tight text-kya-coffee sm:text-5xl">
+              {t("titre")}
+            </h2>
+            <div className="mx-auto mt-4 h-1.5 w-24 rounded-full bg-gradient-to-r from-kya-green to-kya-orange" />
+            <p className="mt-6 text-lg leading-8 text-slate-600">
+              {t("description")}
+            </p>
+          </div>
 
-        {/* Grille des services */}
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            // Anciennement .service_card
-            <div
-              className="overflow-hidden rounded-lg bg-kya-white text-center shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              key={service.titre}>
-              {/* Anciennement .service_card_image_container */}
-              <div className="relative h-52 w-full">
-                <Image
-                  alt={service.titre}
-                  className="object-cover"
-                  fill
-                  src={service.image} // object-fit: cover
-                />
-              </div>
-              {/* Anciennement .service_card_content */}
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-bold text-kya-orange">
-                  {service.titre}
-                </h3>
-                <p className="mb-6 text-kya-coffee/70">{service.description}</p>
-                {/* 
-                  Le CTA était commenté dans votre code original, 
-                  mais voici comment le styler.
-                */}
-                {/* 
-                <Link href="#" className="rounded-full bg-kya-green px-6 py-2 font-semibold text-kya-white transition hover:bg-kya-green/90">
-                  En savoir plus
+          {/* Grille des cartes de service */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {services.map(
+              (
+                service: {
+                  lien: string;
+                  titre: string;
+                  image: string;
+                  description: string;
+                },
+                index: number,
+              ) => (
+                <Link
+                  className="animate-fade-in-up group flex flex-col rounded-2xl border border-slate-200 bg-white p-8 text-left transition-all duration-300 hover:border-kya-green hover:shadow-2xl hover:-translate-y-2"
+                  href={service.lien}
+                  key={service.titre}
+                  style={{
+                    animationDelay: `${150 * index}ms`,
+                  }}>
+                  {/* Icône */}
+                  <div className="flex w-full items-center justify-center rounded-full bg-kya-green/10 mb-6">
+                    <Image
+                      src={service.image}
+                      alt={service.titre}
+                      width={300}
+                      height={200}
+                    />
+                  </div>
+
+                  {/* Titre */}
+                  <h3 className="text-2xl font-bold text-kya-coffee">
+                    {service.titre}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="mt-4 flex-grow text-slate-600">
+                    {service.description}
+                  </p>
+
+                  {/* Lien CTA "Découvrir" hidden by flex */}
+                  <div className="mt-8 hidden items-center gap-2 font-semibold text-kya-green">
+                    <span>Découvrir le service</span>
+                    <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                  </div>
                 </Link>
-                */}
-              </div>
-            </div>
-          ))}
+              ),
+            )}
+          </div>
         </div>
       </section>
 

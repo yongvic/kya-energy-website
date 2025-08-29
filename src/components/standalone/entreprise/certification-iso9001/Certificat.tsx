@@ -12,7 +12,7 @@ export default function Certificat() {
       <div className="mb-20 text-center">
         {/* J'ai inversé le titre et le sous-titre pour un design plus moderne (kicker text) */}
         <p className="text-lg font-semibold text-accent">{t("sous titre")}</p>
-        <h3 className="mt-2 text-3xl font-bold text-primary sm:text-4xl lg:text-5xl">
+        <h3 className="mt-2 text-3xl font-bold text-primary sm:text-4xl lg:text-5xl text-kya-coffee">
           {t("titre")}
         </h3>
       </div>

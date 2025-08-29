@@ -76,46 +76,53 @@ export default function Pourquoi() {
   }
 
   return (
-    <section
-      className="bg-white py-16 sm:py-20 lg:py-24" // Section padding
-    >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h3 className="font-bold text-3xl text-gray-900 tracking-tight sm:text-4xl">
+    <section className="bg-white py-24 sm:py-32">
+      <div className="container mx-auto px-4">
+        {/* --- En-tête de section, maintenant plus audacieux --- */}
+        <div className="animate-fade-in-up mx-auto max-w-3xl text-center">
+          <h2 className="text-4xl font-extrabold tracking-tight text-kya-coffee sm:text-5xl">
             {t("titre")}
-          </h3>
-          <p className="mt-4 text-gray-600 text-lg leading-8">
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-slate-600">
             {t("description")}
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+        {/* --- Grille des bénéfices --- */}
+        <div className="mx-auto mt-20 max-w-7xl">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-4">
             {content?.map(
-              (item: {
-                id: string;
-                icone: {
-                  url: string;
-                };
-                texte: string;
-              }) => (
+              (
+                item: {
+                  id: string;
+                  icone: {
+                    url: string;
+                  };
+                  texte: string;
+                },
+                index: number,
+              ) => (
                 <div
-                  className="flex flex-col items-center gap-4 text-center"
-                  key={item.id}>
-                  {/* Image Icon */}
-                  <div className="flex size-16 items-center justify-center rounded-lg bg-green-100">
-                    <Image
-                      alt={item.texte}
-                      className="size-12 object-contain"
-                      height={48} // size-12 is 48px
-                      src={strapiUrl + item.icone.url}
-                      width={48}
-                    />
+                  key={item.id}
+                  className="animate-fade-in-up flex flex-col items-center text-center"
+                  style={{
+                    animationDelay: `${150 * index}ms`,
+                  }}>
+                  {/* --- Cadre de l'icône, inspiré de votre maquette --- */}
+                  <div className="mb-6 rounded-2xl border border-slate-200 bg-slate-100/80 p-3 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+                    <div className="flex size-24 items-center justify-center overflow-hidden rounded-xl">
+                      <Image
+                        alt={item.texte}
+                        src={strapiUrl + item.icone.url}
+                        width={96} // size-24
+                        height={96}
+                        className="object-contain"
+                      />
+                    </div>
                   </div>
-                  {/* Text */}
-                  <p className="font-semibold text-base text-gray-900 leading-7">
+
+                  {/* --- Texte du bénéfice --- */}
+                  <p className="text-lg font-medium leading-relaxed text-slate-700">
                     {item.texte}
                   </p>
                 </div>

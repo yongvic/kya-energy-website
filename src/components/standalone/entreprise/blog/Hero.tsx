@@ -1,13 +1,17 @@
+import { strapiUrl } from "@/data/strapi";
 import { useTranslations } from "next-intl";
 import { useId } from "react";
 import { FaSearch } from "react-icons/fa";
 
-export default function Hero() {
+export default async function Hero() {
   const t = useTranslations("blog.hero");
   const formId = useId();
+  const request = await fetch(`${strapiUrl}/api/personnalisation`);
+  const data = await request.json();
+  const background = `${strapiUrl}/${data.arrierePlanBlog.url}`;
 
   return (
-    <section className="relative h-svh bg-[url(/actu/background-actu.png)]">
+    <section className={`relative h-svh bg-[url(${background})]`}>
       <div className="absolute top-0 left-0 h-full w-full bg-linear-to-r from-gray-600/50 to-gray-50/50 text-white">
         <div className="container mx-auto flex h-full flex-col justify-center p-4 *:py-8">
           <h1 className="w-max border-b-2 border-b-white font-extrabold text-4xl">

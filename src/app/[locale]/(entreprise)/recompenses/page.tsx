@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import Impact from "@/components/standalone/entreprise/a-propos/Impact";
 import DomainesExcellence from "@/components/standalone/entreprise/recompenses/DomainesExcellence";
+import Impact from "@/components/standalone/entreprise/recompenses/Impact";
 import Introduction from "@/components/standalone/entreprise/recompenses/Introduction";
 import PrixEtDistinctions from "@/components/standalone/entreprise/recompenses/PrixEtDistinctions";
 import Rejoindre from "@/components/standalone/entreprise/recompenses/Rejoindre";

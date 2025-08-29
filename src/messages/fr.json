@@ -19,6 +19,8 @@
       "titre": "Actualités • KYA-Energy Group"
     },
     "tous les posts": {
+      "titre": "Notre blog",
+      "description": "Découvrez nos dernières actualités, analyses et études de cas. Plongez au cœur de l'innovation énergétique avec nos experts.",
       "lire": "Lire",
       "precedent": "Précedent",
       "suivant": "Suivant"
@@ -55,7 +57,7 @@
     "hero": {
       "description": "KYA-Energy Group est la première entreprise certifiée ISO 9001:2015 dans la conception, l'assemblage et la commercialisation de produits et systèmes énergétiques à base d'énergies renouvelables.",
       "sous titre": "KYA-Energy Group est la première entreprise certifiée ISO 9001:2015 dans la conception, l'assemblage et la commercialisation de produits et systèmes énergétiques à base d'énergies renouvelables.",
-      "titre": "La seule entreprise certifiée ISO 9001:2015 en <div class=\"text-kya-orange\">énergie solaire au Togo</div>"
+      "titre": "La première entreprise certifiée ISO 9001:2015 en <span class=\"text-kya-orange\">énergie solaire au Togo</span>"
     },
     "pourquoi": {
       "description": "L'obtention de cette certification est le fruit d'un travail collectif et d'une volonté constante de renforcer nos pratiques internes. Elle nous permet de :",
@@ -104,6 +106,79 @@
     "sous titre": "Une question ?<br/>On a sûrement la réponse.",
     "titre": "FAQ"
   },
+  "fondation": {
+    "actions et objectifs": {
+      "titre": "Nos actions et objectifs",
+      "description": "Découvrez les actions que nous menons depuis notre création ainsi que les objectifs qui nous motivent",
+      "actions": {
+        "titre": "Nos moyens d'action"
+      },
+      "objectifs": {
+        "titre": "Nos objectifs"
+      }
+    },
+    "domaines d'interventions": {
+      "titre": "Nos domaines d'intervention",
+      "description": "Bâtir l'avenir de l'Afrique exige une vision audacieuse et des actions concrètes. Nos domaines d'intervention sont les fondations sur lesquelles nous construisons un continent plus juste, plus instruit et plus autonome énergétiquement."
+    },
+    "gallerie": {
+      "titre": "Nos Moments Forts, en Images",
+      "description": "Revivez avec nous les événements, les rencontres et les projets qui marquent le parcours de notre fondation. Chaque image est le témoignage de notre engagement commun."
+    },
+    "hero": {
+      "description": "La Fondation KYA est créée en octobre 2022. Elle a pour but de contribuer au développement socio-économique des populations africaines, issues des groupes les plus vulnérables par des interventions en faveur du développement en matière d'énergie, d'agriculture, de médecine, d'éducation et de l'environnement.",
+      "employés": "Employés recrutés",
+      "experience": "Années d'expérience",
+      "fondation": "Fondation KYA",
+      "mission": "Une mission",
+      "monde meilleur": "Fondation KYA, pour un monde meilleur",
+      "regarder la vidéo": "Regarder la vidéo",
+      "titre": "NOS INITIATIVES",
+      "télécharger la lettre": "Télécharger la lettre d'engagement"
+    },
+    "presentation video": {
+      "titre": "Notre mission, en vidéo",
+      "description": "Plongez au cœur de nos projets et découvrez comment nous transformons notre vision d'un avenir durable en actions concrètes sur le terrain."
+    },
+    "seo": {
+      "description": "Découvrez les objectifs, les moyens d'action, les domaines d'intervention ainsi que les actions qu'a mené jusqu'a ce jour la fondation KYA",
+      "titre": "Fondation KYA • KYA-Energy Group"
+    },
+    "sponsors": {
+      "titre": "Ils soutiennent notre Vision",
+      "description": "Notre impact est le fruit d'une collaboration étroite avec des partenaires qui partagent nos valeurs et notre engagement. Nous sommes fiers de construire l'avenir à leurs côtés."
+    }
+  },
+  "header": {
+    "politique qualité": "Politique qualité",
+    "accueil": "Accueil",
+    "approche durable": "Approche durable",
+    "blog": "Blog",
+    "certification iso 9001": "Certification ISO 9001",
+    "engagement pour la communauté": "Notre engagement pour la communauté",
+    "engagement pour la qualité": "Notre engagement pour la qualité",
+    "engagements": "Engagements",
+    "explorez notre offre complète": "Explorez notre offre complète",
+    "faq": "FAQ",
+    "fondation kya": "Fondation KYA",
+    "kya backup": "KYA-Backup",
+    "mission et vision": "Découvrez notre mission et notre vision",
+    "notre histoire": "Notre histoire",
+    "pour les institutions": "Pour les institutions",
+    "pour les ménages": "Pour les ménages",
+    "reconnaissance de l'excellence": "La reconnaissance de notre excellence",
+    "récompenses": "Nos récompenses",
+    "réponses aux questions": "Trouvez les réponses à vos questions",
+    "solutions": "Nos solutions",
+    "solutions pour l'avenir": "Des solutions énergétiques pour l'avenir",
+    "solutions solaires résidentielles": "Solutions solaires résidentielles",
+    "solutions sur mesure": "Solutions sur mesure",
+    "support et maintenance": "Support et maintenance",
+    "systèmes de secours": "Systèmes de secours énergétiques",
+    "systèmes pour entreprises": "Systèmes pour entreprises et collectivités",
+    "tous nos produits et services": "Tous nos produits et services",
+    "à propos": "À propos"
+  },
   "introuvable": {
     "description": "Vérifiez l'URL du site internet et réessayez, ou trouvez ce dont vous avez besoin sur notre page d'accueil.",
     "retour à l'accueil": "Retournez à la page d'acceuil",
@@ -142,9 +217,11 @@
       "vision": "Notre vision: démocratiser l'accès à l'énergie verte et durable"
     },
     "impacts": {
-      "titre": "Nos impacts"
+      "titre": "Notre impact, votre confiance",
+      "description": "Nous mesurons notre succès non seulement par notre croissance, mais surtout par l'impact tangible que nous créons pour nos clients, nos partenaires et nos communautés."
     },
     "mission et valeurs": {
+      "description": "Au cœur de chaque projet et de chaque décision se trouvent une mission claire et des valeurs fondamentales qui guident notre engagement envers l'excellence et un avenir durable.",
       "mission": {
         "description": "Transformer les ressources énergétiques renouvelables de manière innovante pour produire une énergie propre, fiable et abordable pour tous. Nous nous engageons à créer un avenir énergétique durable qui profite aux communautés et préserve notre planète.",
         "titre": "Notre mission"
@@ -155,7 +232,8 @@
       }
     },
     "pourquoi kya": {
-      "titre": "Pourquoi choisir KYA-Energy Group ?"
+      "titre": "Pourquoi choisir KYA-Energy Group ?",
+      "description": "Nous combinons une expertise technique de pointe, des solutions entièrement personnalisées et une innovation constante pour garantir le succès de chaque projet."
     },
     "produits phares": {
       "savoir plus": "En savoir plus",
@@ -168,8 +246,9 @@
     },
     "youtube": {
       "description de la vidéo": "Video institutionnelle KYA Energy Group",
+      "description": "Nos experts partagent leurs analyses et leurs visions sur les défis énergétiques de demain. Découvrez les stratégies et les technologies qui façonnent l'avenir de notre secteur.",
       "texte descriptif": "KYA-ENERGY GROUP est une entreprise internationale spécialisée dans les énergies renouvelables (énergie solaire en particulier) et l’efficacité énergétique. Elle œuvre pour relever le défi de l’électrification en Afrique de façon durable. Membre fondateur de la Synergie des Acteurs des Energies Renouvelables (SAER-TOGO), et d'associations internationales comme Global Off Grid Lightning Association (GOGLA) et Africa Minigrid Developers Association (AMDA).",
-      "titre": "Découvrez KYA-Energy Group"
+      "titre": "Plongez au coeur de l'innovation"
     }
   },
   "popup": {
@@ -179,6 +258,8 @@
   },
   "produits et services": {
     "acceuil": {
+      "titre": "Un accompagnement complet",
+      "description": "De la conception à la maintenance, notre gamme de services est conçue pour garantir la performance et la pérennité de votre investissement énergétique.",
       "offres promotionnelles": "Découvrez nos offres promotionnelles",
       "produits": {
         "savoir plus": "Vous voulez en savoir plus ?",
@@ -265,7 +346,23 @@
     "impact": {
       "description": "Des chiffres qui témoignent de notre engagement et de notre impact positif.",
       "sous titre": "Résultats concrets",
-      "titre": "Notre impact"
+      "titre": "Notre impact",
+      "installations": {
+        "titre": "Installations solaires",
+        "description": "Systèmes déployés avec succès"
+      },
+      "foyers": {
+        "titre": "Foyers alimentés",
+        "description": "Familles bénéficiant d'énergie propre"
+      },
+      "co2": {
+        "titre": "CO₂ évitées",
+        "description": "Impact environnemental"
+      },
+      "pays": {
+        "titre": "Pays d'intervention",
+        "description": "Présence continentale active"
+      }
     },
     "seo": {
       "description": "Découvrez nos experts qui façonnent l'avenir énergétique de l'Afrique avec passion, innovation et professionnalisme.",
@@ -274,10 +371,34 @@
     "valeurs": {
       "description": "Des principes fondamentaux qui guident chacune de nos actions et décisions.",
       "sous titre": "Les Piliers de notre Excellence",
-      "titre": "Nos valeurs"
+      "titre": "Nos valeurs",
+      "excellence": {
+        "titre": "Excellence",
+        "description": "Professionnalisme et rigueur dans chaque projet"
+      },
+      "integrite": {
+        "titre": "Intégrité",
+        "description": "Transparence et honnêteté en toutes circonstances"
+      },
+      "innovation": {
+        "titre": "Innovation",
+        "description": "Créativité et solutions avant-gardistes"
+      },
+      "collaboration": {
+        "titre": "Collaboration",
+        "description": "Esprit d'équipe et synergie collective"
+      },
+      "durabilite": {
+        "titre": "Durabilité",
+        "description": "Responsabilité environnementale et sociale"
+      },
+      "equite": {
+        "titre": "Équité",
+        "description": "Justice et équité dans toutes nos relations"
+      }
     },
     "vision": {
-      "description": "KYA-Energy Group s&apos;engage dans la révolution énergétique africaine avec une ambition claire: devenir un leader incontournable des énergies renouvelables sur le continent.",
+      "description": "KYA-Energy Group s'engage dans la révolution énergétique africaine avec une ambition claire: devenir un leader incontournable des énergies renouvelables sur le continent.",
       "sous titre": "Transformer l'Afrique par l'Énergie Solaire",
       "titre": "Notre vision"
     }

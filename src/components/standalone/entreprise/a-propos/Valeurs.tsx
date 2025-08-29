@@ -1,80 +1,93 @@
 "use client";
+
 import { useTranslations } from "next-intl";
+// Icônes
 import {
   LuAward,
-  LuGroup,
-  LuLeaf,
-  LuRocket,
-  LuScale,
   LuShield,
+  LuRocket,
+  LuUsers, // Remplacé LuGroup pour une meilleure consistance de style
+  LuLeaf,
+  LuScale,
 } from "react-icons/lu";
 
-export default function Valeurs() {
+// --- Données pour l'exemple ---
+const values = [
+  {
+    icon: LuAward,
+    titre: "excellence.titre",
+    description: "excellence.description",
+  },
+  {
+    icon: LuShield,
+    titre: "integrite.titre",
+    description: "integrite.description",
+  },
+  {
+    icon: LuRocket,
+    titre: "innovation.titre",
+    description: "innovation.description",
+  },
+  {
+    icon: LuUsers,
+    titre: "collaboration.titre",
+    description: "collaboration.description",
+  },
+  {
+    icon: LuLeaf,
+    titre: "durabilite.titre",
+    description: "durabilite.description",
+  },
+  {
+    icon: LuScale,
+    titre: "equite.titre",
+    description: "equite.description",
+  },
+];
+
+export default function Values() {
   const t = useTranslations("à propos.valeurs");
 
   return (
-    <section className="container mx-auto my-32 px-4">
-      <div className="section-title px-4 opacity-0 lg:px-48">
-        <div className="my-4 flex items-center justify-center">
-          <p className="w-max rounded-full bg-kya-green px-4 py-2 font-bold text-sm text-white">
+    <section className="bg-white py-24 sm:py-32">
+      <div className="container mx-auto px-4">
+        {/* 1. En-tête de la section */}
+        <div className="animate-fade-in-up mb-20 max-w-3xl mx-auto text-center">
+          <h2 className="text-4xl font-extrabold tracking-tight text-kya-coffee sm:text-5xl">
             {t("titre")}
+          </h2>
+          <div className="mx-auto mt-4 h-1.5 w-24 rounded-full bg-gradient-to-r from-kya-green to-kya-orange" />
+          <p className="mt-6 text-lg leading-8 text-slate-600">
+            {t("sous titre")}
           </p>
         </div>
-        <h2 className="w-full text-center font-bold text-4xl">
-          {t("sous titre")}
-        </h2>
-        <div className="my-4 flex items-center justify-center">
-          <div className="h-1 w-32 bg-green-300" />
-        </div>
-        <p className="text-center text-xl">{t("description")}</p>
-      </div>
-      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {/** biome-ignore lint/performance/useSolidForComponent: React Component */}
-        {[
-          {
-            // biome-ignore lint/nursery/noSecrets: string litteral
-            desc: "Professionnalisme et rigueur dans chaque projet",
-            icon: <LuAward />,
-            title: "Excellence",
-          },
-          {
-            desc: "Transparence et honnêteté en toutes circonstances",
-            icon: <LuShield />,
-            title: "Intégrité",
-          },
-          {
-            desc: "Créativité et solutions avant-gardistes",
-            icon: <LuRocket />,
-            title: "Innovation",
-          },
-          {
-            desc: "Esprit d'équipe et synergie collective",
-            icon: <LuGroup />,
-            // biome-ignore lint/nursery/noSecrets: string litteral
-            title: "Collaboration",
-          },
-          {
-            // biome-ignore lint/nursery/noSecrets: Just string litteral
-            desc: "Responsabilité environnementale et sociale",
-            icon: <LuLeaf />,
-            title: "Durabilité",
-          },
-          {
-            desc: "Justice et fairness dans toutes nos relations",
-            icon: <LuScale />,
-            title: "Équité",
-          },
-        ].map((value) => (
-          <div
-            className="value-card hover:-translate-y-1 flex flex-col items-center gap-4 rounded-xl bg-white p-8 text-center opacity-0 shadow transition-all duration-300 hover:shadow-xl"
-            key={value.title}>
-            <div className="w-max rounded-full bg-green-200 p-4 text-3xl text-kya-green">
-              {value.icon}
+
+        {/* 2. Grille des Valeurs (2 colonnes sur desktop) */}
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-x-12 gap-y-16 lg:grid-cols-2">
+          {values.map((value, index) => (
+            <div
+              key={value.titre}
+              className="animate-fade-in-up flex items-start gap-6"
+              style={{
+                animationDelay: `${150 * index}ms`,
+              }}>
+              {/* Icône */}
+              <div className="flex size-12 flex-shrink-0 items-center justify-center rounded-full bg-kya-green/10">
+                <value.icon className="text-2xl text-kya-green" />
+              </div>
+
+              {/* Contenu textuel */}
+              <div>
+                <h3 className="text-xl font-bold text-kya-coffee">
+                  {t(`${value.titre}`)}
+                </h3>
+                <p className="mt-2 text-slate-600">
+                  {t(`${value.description}`)}
+                </p>
+              </div>
             </div>
-            <h3 className="font-bold text-2xl">{value.title}</h3>
-            <p className="text-gray-500 text-xl">{value.desc}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

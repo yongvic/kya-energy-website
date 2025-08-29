@@ -113,7 +113,7 @@ export default async function ArticlePage({
             <div className="space-y-6">
               {recommendations.map((rec: ArticleRecord) => (
                 <Link
-                  className="inline-block"
+                  className="inline-block post"
                   href={`/blog/${rec.documentId}`}
                   key={rec.id}>
                   <div className="cursor-pointer rounded-lg bg-kya-white p-4 shadow-md transition-shadow duration-300 hover:shadow-xl">

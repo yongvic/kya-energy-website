@@ -20,6 +20,11 @@
   --font-sans: var(--font-family);
   --font-serif: var(--font-times-new-roman), "Times New Roman", serif;
   --font-facebook-sans: var(--font-facebook-sans);
+  --animate-infinite-scroll: infinite-scroll 40s linear infinite;
+  --animate-spin-slow: spin 20s linear infinite;
+  --animate-bounce-slow: bounce 20s linear infinite;
+  --animate-wave-slow: wave-animation 30s linear infinite;
+  --animate-wave-medium: wave-animation 20s linear infinite reverse;
 }
 
 @layer utilities {
@@ -32,6 +37,11 @@
     animation: pan-pattern 30s linear infinite;
   }
 
+  .liens-colores a {
+    font-weight: 500;
+    color: var(--kya-green);
+  }
+
   @keyframes pan-pattern {
     0% {
       background-position: 0% 0%;
@@ -40,9 +50,32 @@
       background-position: 100% 0%;
     }
   }
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes wave-animation {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 * {
   box-sizing: border-box;
   transition: all 300ms;
+  font-family: var(--font-family);
+}
+
+.post img {
+  display: none;
 }

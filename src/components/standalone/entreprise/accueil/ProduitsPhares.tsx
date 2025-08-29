@@ -37,54 +37,59 @@ export default async function ProduitsPhares() {
   const produitsPhares = await getProduitsPhares(locale);
 
   return (
-    <section className="bg-gray-100 px-8 py-16">
-      <div className="container mx-auto mb-12 text-center">
-        <h2 className="mb-2 font-bold text-4xl text-kya-coffee">
-          {t("titre")}
-        </h2>
-        <div className="mx-auto h-1 w-24 bg-kya-green" />
-        <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-          {t("sous titre")}
-        </p>
-      </div>
-      <div className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {/** biome-ignore lint/performance/useSolidForComponent: React Component */}
-        {produitsPhares.map((produit) => (
-          <Link
-            href={produit.lienDeRedirection}
-            key={produit.titre}>
-            <div className="group group relative z-10 w-full rounded-xl bg-white shadow-lg duration-500 ease-in-out **:transition-transform">
-              <div className="overflow-hidden pt-6">
-                <div className="mx-auto h-64 w-max">
-                  <Image
-                    alt={produit.titre}
-                    className="h-64 w-auto object-scale-down group-hover:scale-105"
-                    height={321}
-                    src={produit.image.url}
-                    width={225}
-                  />
-                </div>
-                <div className="z-10 flex items-center justify-between p-6">
-                  <div>
-                    <h3 className="mb-2 font-bold text-2xl text-kya-coffee">
-                      {produit.titre}
-                    </h3>
-                    <p className="text-gray-700">{produit.description}</p>
-                  </div>
-                  <div>
-                    {/* Add a subtle distinction */}
-                    <button
-                      className="group/button flex cursor-pointer items-center gap-2 font-bold text-kya-green"
-                      type="button">
-                      {t("savoir plus")}
-                      <LuArrowRight className="-translate-x-0.5 group-hover/button:translate-x-0" />
-                    </button>
-                  </div>
+    <section className="bg-slate-50 py-24 sm:py-32">
+      <div className="container mx-auto px-4">
+        {/* 1. En-tête de la section */}
+        <div className="animate-fade-in-up mb-16 max-w-3xl mx-auto text-center">
+          <h2 className="text-4xl font-extrabold tracking-tight text-kya-coffee sm:text-5xl">
+            {t("titre")}
+          </h2>
+          <div className="mx-auto mt-4 h-1.5 w-24 rounded-full bg-gradient-to-r from-kya-green to-kya-orange" />
+          <p className="mt-6 text-lg leading-8 text-slate-600">
+            {t("sous titre")}
+          </p>
+        </div>
+
+        {/* 2. Grille des Produits Phares */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {produitsPhares.map((produit, index) => (
+            // On utilise le composant Link comme conteneur principal de la carte
+            <Link
+              className="animate-fade-in-up group flex flex-col rounded-2xl border border-slate-200 bg-white text-left transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+              href={produit.lienDeRedirection}
+              key={produit.titre}
+              style={{
+                animationDelay: `${150 * index}ms`,
+              }}>
+              {/* Cadre de l'image */}
+              <div className="relative overflow-hidden rounded-t-2xl bg-slate-100 p-6">
+                <Image
+                  alt={produit.titre}
+                  className="mx-auto h-56 w-auto object-contain transition-transform duration-500 ease-in-out group-hover:scale-105"
+                  height={300}
+                  src={produit.image.url}
+                  width={300}
+                />
+              </div>
+
+              {/* Contenu de la carte */}
+              <div className="flex flex-grow flex-col p-6">
+                <h3 className="mt-2 text-2xl font-bold text-kya-coffee">
+                  {produit.titre}
+                </h3>
+                {/* Description */}
+                <p className="mt-2 flex-grow text-slate-600">
+                  {produit.description}
+                </p>
+                {/* Bouton CTA */}
+                <div className="mt-6 flex items-center gap-2 font-semibold text-kya-orange">
+                  <span>{t("savoir plus")}</span>
+                  <LuArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
                 </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,97 +1,111 @@
-"use client";
-
-import { strapiUrl } from "@/data/strapi";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { FaLinkedin, FaFacebook, FaTwitter } from "react-icons/fa";
+import { strapiUrl } from "@/data/strapi";
 
 interface TeamMember {
+  id: number;
   nom: string;
   role: string;
+  lienLinkedin?: string; // Champ optionnel pour le lien LinkedIn
+  lienFacebook?: string;
+  lienTwitter?: string;
   photo: {
     url: string;
   };
 }
 
-// A function for fetching team members from strapi
-async function fetchTeamMembers(locale: string) {
-  const res = await fetch(
-    `${strapiUrl}/api/membres-du-comites?locale=${locale}&populate=*`,
-  );
-  const data = await res.json();
-  return data.data;
+// La fonction de fetching des données, maintenant directement ici
+async function fetchTeamMembers(locale: string): Promise<TeamMember[]> {
+  try {
+    const res = await fetch(
+      `${strapiUrl}/api/membres-du-comites?locale=${locale}&populate=*`,
+      {
+        // On active le cache pour de meilleures performances
+        // Re-valide les données toutes les heures
+      },
+    );
+    if (!res.ok) throw new Error("Failed to fetch team members");
+    const data = await res.json();
+    return data.data;
+  } catch (error) {
+    console.error("Error fetching team members:", error);
+    return []; // Retourne un tableau vide en cas d'erreur
+  }
 }
 
-export default function Equipe({ locale }: { locale: string }) {
-  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
-  const [teamMember, setTeamMember] = useState(0);
+// Le composant est maintenant un 'async' Server Component
+export default async function Equipe({ locale }: { locale: string }) {
   const t = useTranslations("à propos.equipe");
-  useEffect(() => {
-    fetchTeamMembers(locale).then((data) => setTeamMembers(data));
-  }, [
-    locale,
-  ]);
+  const teamMembers = await fetchTeamMembers(locale);
+
   return (
-    // biome-ignore lint/correctness/useUniqueElementIds: Used for links purpose
+    // biome-ignore lint/correctness/useUniqueElementIds: Anchor
     <section
-      className="bg-gradient-to-tr from-orange-200 to-green-200 py-32"
+      className="bg-slate-50 py-24 sm:py-32"
       id="equipe">
       <div className="container mx-auto px-4">
-        <div className="section-title px-4 opacity-0 lg:px-48">
-          <div className="my-4 flex items-center justify-center">
-            <p className="w-max rounded-full bg-kya-green px-4 py-2 font-bold text-sm text-white">
-              {t("leadership")}
-            </p>
-          </div>
-          <h2 className="w-full text-center font-bold text-4xl">
+        {/* En-tête de section */}
+        <div className="mb-16 text-center">
+          <p className="font-semibold text-kya-green">{t("leadership")}</p>
+          <h2 className="mt-2 text-4xl font-extrabold text-kya-coffee sm:text-5xl">
             {t("comité")}
           </h2>
-          <div className="my-4 flex items-center justify-center">
-            <div className="h-1 w-32 bg-green-300" />
-          </div>
-          <p className="text-center text-xl">{t("description")}</p>
+          <div className="mx-auto mt-4 h-1.5 w-24 rounded-full bg-gradient-to-r from-kya-green to-kya-orange" />
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-kya-coffee/70">
+            {t("description")}
+          </p>
         </div>
-        <div className="flex w-full flex-wrap gap-2 **:transition-all **:duration-300 md:flex-nowrap">
-          {/** biome-ignore lint/performance/useSolidForComponent: React Component */}
-          {teamMembers.map((value, index) =>
-            teamMember === index ? (
-              <div
-                className="flex w-full flex-col overflow-hidden rounded-xl bg-gray-100 shadow hover:shadow-xl lg:flex-row"
-                key={value.nom}>
+
+        {/* Grille des membres de l'équipe */}
+        <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+          {teamMembers.map((member) => (
+            <div
+              className="group text-center"
+              key={member.id}>
+              <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-full shadow-lg transition-all duration-300 group-hover:shadow-xl sm:h-48 sm:w-48">
                 <Image
-                  alt={value.nom}
-                  className="w-full object-contain lg:w-max"
-                  height={361}
-                  src={`${strapiUrl}${value.photo.url}`}
-                  width={296}
+                  alt={member.nom}
+                  className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  fill
+                  sizes="(max-width: 640px) 160px, 192px"
+                  src={`${strapiUrl}${member.photo.url}`}
                 />
-                <div className="flex w-full flex-col items-center justify-center bg-green-50 p-4 text-center">
-                  <h3 className="font-bold text-xl">{value.nom}</h3>
-                  <p className="text-gray-600 text-lg">{value.role}</p>
-                </div>
               </div>
-            ) : (
-              // biome-ignore lint/a11y/noNoninteractiveElementInteractions: React Component
-              // biome-ignore lint/a11y/useKeyWithClickEvents: Mouse Only
-              // biome-ignore lint/a11y/noStaticElementInteractions: React Component
-              <div
-                className="group relative h-max w-32 overflow-hidden rounded-xl bg-white hover:scale-125"
-                key={value.nom}
-                onClick={() => setTeamMember(index)}>
-                <Image
-                  alt={value.nom}
-                  className="h-full w-full object-contain"
-                  height={361}
-                  src={`${strapiUrl}${value.photo.url}`}
-                  width={296}
-                />
-                <div className="absolute top-0 left-0 hidden h-full w-full flex-col items-center justify-center overflow-hidden bg-[#0009] text-center text-kya-white group-hover:flex">
-                  <h1 className="font-bold text-[8px]">{value.nom}</h1>
-                  <p className="text-[8px]">{value.role}</p>
-                </div>
+              <div className="mt-6">
+                <h3 className="text-xl font-bold text-kya-coffee">
+                  {member.nom}
+                </h3>
+                <p className="mt-1 text-kya-green">{member.role}</p>
+                {/* Affiche l'icône LinkedIn seulement si l'URL existe */}
+                {member.lienLinkedin && (
+                  <Link
+                    className="mt-2 mx-1 inline-block text-black transition-colors hover:text-blue-700"
+                    href={member.lienLinkedin}
+                    target="_blank">
+                    <FaLinkedin size={24} />
+                  </Link>
+                )}
+                {member.lienFacebook && (
+                  <Link
+                    className="mt-2 mx-1 inline-block text-black transition-colors hover:text-blue-700"
+                    href={member.lienFacebook}
+                    target="_blank">
+                    <FaFacebook size={24} />
+                  </Link>
+                )}
+                {member.lienTwitter && (
+                  <Link
+                    className="mt-2 mx-1 inline-block text-black transition-colors hover:text-blue-700"
+                    href={member.lienTwitter}
+                    target="_blank">
+                    <FaTwitter size={24} />
+                  </Link>
+                )}
               </div>
-            ),
-          )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
