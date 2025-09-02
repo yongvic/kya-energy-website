@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { FaGlobeAfrica } from "react-icons/fa";
 import { FaDownload, FaHeart, FaPlay } from "react-icons/fa6";
+import { strapiUrl } from "@/data/strapi";
 
 export default function Hero() {
   const t = useTranslations("fondation.hero");
@@ -15,7 +16,7 @@ export default function Hero() {
         muted
         playsInline>
         <source
-          src="/kya-foundation/kya-foundation-video-1.mp4"
+          src={`${strapiUrl}/uploads/file_7e747c089f.mp4`}
           type="video/mp4"
         />
         Votre navigateur ne supporte pas la vidéo.
@@ -47,15 +48,15 @@ export default function Hero() {
               <span>{t("monde meilleur")}</span>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <button
+              <Link
                 className="group flex items-center gap-3 rounded-full bg-kya-green px-8 py-4 font-bold shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-                type="button">
+                href="#video">
                 <FaPlay className="transition-transform duration-300 group-hover:scale-125" />
                 <span>{t("regarder la vidéo")}</span>
-              </button>
+              </Link>
               <Link
                 className="group flex items-center gap-3 rounded-full border-2 border-kya-white/80 bg-transparent px-8 py-4 font-bold transition-all duration-300 hover:-translate-y-1 hover:border-kya-white hover:bg-kya-white/10"
-                href="/kya-foundation/lettre-d-engagement.pdf">
+                href={`${strapiUrl}/uploads/Lettre_d_engagement_pour_la_formation_1ere_vague_2025_OK_70a2129def.pdf`}>
                 <FaDownload className="transition-transform duration-300 group-hover:rotate-6" />
                 <span>{t("télécharger la lettre")}</span>
               </Link>
