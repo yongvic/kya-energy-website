@@ -202,7 +202,7 @@ export default function DernierPost() {
 
                 {/* Extrait (prose pour un bon styling) */}
                 <div
-                  className="post prose prose-slate mt-4 line-clamp-4 max-w-none text-slate-600"
+                  className="no-img prose prose-slate mt-4 line-clamp-4 max-w-none text-slate-600"
                   dangerouslySetInnerHTML={{
                     __html: marked(contenu),
                   }}
