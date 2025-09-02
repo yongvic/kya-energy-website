@@ -6,7 +6,6 @@ import { ReactNode } from "react";
 interface Impact {
   icone: string;
   titre: string;
-  sousTitre: string;
   stat: string;
 }
 
@@ -17,9 +16,8 @@ async function getImpacts(locale: string): Promise<Impact[]> {
   const response = await request.json();
   const result: Impact[] = response.data.map((impact: any) => ({
     icone: `${strapiUrl}${impact.icone.url}`,
-    sousTitre: impact.sousTitre,
     titre: impact.titre,
-    stat: `${impact.statistique}+`,
+    stat: impact.statistique,
   }));
   return result;
 }
@@ -79,7 +77,7 @@ export default async function Impacts() {
               </h3>
 
               {/* Sous-titre */}
-              <p className="mt-2 text-slate-600">{impact.sousTitre}</p>
+              {/* <p className="mt-2 text-slate-600">{impact.sousTitre}</p> */}
             </div>
           ))}
         </div>
