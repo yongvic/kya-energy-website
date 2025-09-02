@@ -76,6 +76,6 @@
   font-family: var(--font-family);
 }
 
-.post img {
+.no-img img {
   display: none;
 }
