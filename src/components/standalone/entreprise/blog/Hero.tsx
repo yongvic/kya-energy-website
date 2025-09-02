@@ -1,17 +1,25 @@
+"use client";
+
 import { strapiUrl } from "@/data/strapi";
 import { useTranslations } from "next-intl";
-import { useId } from "react";
+import { useEffect, useId, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
-export default async function Hero() {
+export default function Hero() {
   const t = useTranslations("blog.hero");
   const formId = useId();
-  const request = await fetch(`${strapiUrl}/api/personnalisation`);
-  const data = await request.json();
-  const background = `${strapiUrl}/${data.arrierePlanBlog.url}`;
+  const [background, setBackground] = useState("");
+  useEffect(() => {
+    (async () => {
+      const request = await fetch(`${strapiUrl}/api/configuration?populate=*`);
+      const data = await request.json();
+      setBackground(`${strapiUrl}${data.data.arrierePlanBlog.url}`);
+    })();
+  }, []);
 
   return (
-    <section className={`relative h-svh bg-[url(${background})]`}>
+    <section className={`relative h-svh blog-hero bg-center bg-cover`}>
+      <style>{`.blog-hero {background-image: url(${background});}`}</style>
       <div className="absolute top-0 left-0 h-full w-full bg-linear-to-r from-gray-600/50 to-gray-50/50 text-white">
         <div className="container mx-auto flex h-full flex-col justify-center p-4 *:py-8">
           <h1 className="w-max border-b-2 border-b-white font-extrabold text-4xl">
