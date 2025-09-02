@@ -3,6 +3,8 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import type { ReactNode } from "react";
 import Footer from "@/components/shared/Footer";
 import { routing } from "@/i18n/routing";
+import Reveal from "@/components/ui/Reveal";
+import Chatbot from "@/components/shared/Chatbot";
 
 export default async function LocaleLayout({
   children,
@@ -22,8 +24,11 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body>
         <NextIntlClientProvider>
-          {children}
-          <Footer />
+          <Reveal>
+            {children}
+            <Footer />
+            <Chatbot />
+          </Reveal>
         </NextIntlClientProvider>
       </body>
     </html>
