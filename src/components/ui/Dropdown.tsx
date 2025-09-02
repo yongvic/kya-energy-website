@@ -13,7 +13,8 @@ export default function Dropdown({ item }: DropdownProps) {
 
   return (
     <div className="absolute top-full left-1/2 -translate-x-1/2 w-max hidden lg:block">
-      <div className="bg-white rounded-xl shadow-2xl border border-gray-100 p-6 grid grid-cols-2 gap-8">
+      <div
+        className={`bg-white rounded-xl shadow-2xl border border-gray-100 p-6 grid ${item.megaMenuContent ? "grid-cols-2" : "grid-cols-1"} gap-8`}>
         {/* Left Side: Links */}
         <div className="flex flex-col gap-2 w-[320px]">
           {item.children.map((child) => (
