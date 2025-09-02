@@ -12,19 +12,19 @@ export default async function ProductsAndServicesPage() {
   const t = await getTranslations("produits et services.acceuil");
 
   async function fetchProductsData() {
-    const request = await fetch(`${strapiUrl}/api/produits?populate=*`);
+    const request = await fetch(`${strapiUrl}/api/produits-phares?populate=*`);
     const response = await request.json();
     return response.data.map(
       (data: {
-        nom: string;
+        titre: string;
         description: string;
-        photo: {
+        image: {
           url: string;
         };
       }) => ({
         description: data.description,
-        image: `${strapiUrl}${data.photo.url}`,
-        label: data.nom,
+        image: `${strapiUrl}${data.image.url}`,
+        label: data.titre,
       }),
     );
   }
@@ -73,7 +73,7 @@ export default async function ProductsAndServicesPage() {
             {t("produits.titre")}
             <span className="absolute -bottom-3 left-1/2 h-1 w-20 -translate-x-1/2 rounded-full bg-kya-green" />
           </h2>
-          <p className="mx-auto mb-12 max-w-2xl text-lg text-kya-coffee/70">
+          <p className="mx-auto mb-12 max-w-2xl text-lg text-slate-60 text-slate-600">
             {t("produits.sous titre")}
           </p>
         </div>
@@ -142,9 +142,7 @@ export default async function ProductsAndServicesPage() {
                   </h3>
 
                   {/* Description */}
-                  <p className="mt-4 flex-grow text-slate-600">
-                    {service.description}
-                  </p>
+                  <p className="mt-4 flex-grow">{service.description}</p>
 
                   {/* Lien CTA "Découvrir" hidden by flex */}
                   <div className="mt-8 hidden items-center gap-2 font-semibold text-kya-green">
