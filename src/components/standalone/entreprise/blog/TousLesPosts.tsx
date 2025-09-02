@@ -172,7 +172,7 @@ export default function TousLesPosts() {
     <section className="bg-slate-50 py-24 sm:py-32">
       <div className="container mx-auto px-4">
         {/* En-tête de la section (optionnel, mais recommandé) */}
-        <motion.div
+        {/*<motion.div
           className="mb-16 max-w-3xl mx-auto text-center"
           initial={{
             opacity: 0,
@@ -194,7 +194,7 @@ export default function TousLesPosts() {
           <p className="mt-6 text-lg leading-8 text-slate-600">
             {t("description")}
           </p>
-        </motion.div>
+        </motion.div>*/}
 
         {/* --- Grille des Articles --- */}
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -244,7 +244,7 @@ export default function TousLesPosts() {
                     {post.titre}
                   </h2>
                   <div
-                    className="post prose prose-slate prose-sm mt-4 line-clamp-3 max-w-none flex-grow text-slate-600"
+                    className="no-img prose prose-slate prose-sm mt-4 line-clamp-3 max-w-none flex-grow text-slate-600"
                     dangerouslySetInnerHTML={{
                       __html: marked(post.contenu),
                     }}
