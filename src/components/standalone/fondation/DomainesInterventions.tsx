@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { FaCheck } from "react-icons/fa6";
+import { strapiUrl } from "@/data/strapi";
 
 export default function DomainesInterventions() {
   const t = useTranslations("fondation.domaines d'interventions");
@@ -8,7 +9,7 @@ export default function DomainesInterventions() {
     {
       description:
         "La Fondation KYA soutient l’éducation des jeunes filles en sciences et technologies, en valorisant les talents et en offrant des bourses aux plus vulnérables.",
-      image: "/path/to/education.jpg", // J'ai mis un chemin plus réaliste
+      image: `${strapiUrl}/uploads/4528f8_7b1e1a9ca95b4a1fb9f92895ce206b7b_mv2_914a29eeac.webp`, // J'ai mis un chemin plus réaliste
       points: [
         "Bourses d'études pour les jeunes filles",
         "Programmes de mentorat en STEM",
@@ -19,7 +20,7 @@ export default function DomainesInterventions() {
     {
       description:
         "La Fondation KYA facilite l’accès à l’énergie durable en zones rurales et forme gratuitement des filles à l’installation et à la maintenance de systèmes solaires.",
-      image: "/path/to/energy.jpg",
+      image: `${strapiUrl}/uploads/c86a81_751bbaf123a34384b8ba99aba4f03e29_mv2_92daa307fe.avif`,
       points: [
         "Accès à l'énergie en zones rurales",
         "Formation professionnelle gratuite",
@@ -30,7 +31,7 @@ export default function DomainesInterventions() {
     {
       description:
         "La Fondation KYA œuvre pour les Objectifs de Développement Durable, en se concentrant sur 7 priorités : lutte contre la pauvreté, éducation, égalité des sexes, énergie durable, emploi, climat et partenariats.",
-      image: "/path/to/development.jpg",
+      image: `${strapiUrl}/uploads/image_b960fa7d0c.jpeg`,
       points: [
         "Alignement sur les ODD de l'ONU",
         "Focus sur 7 priorités stratégiques",
