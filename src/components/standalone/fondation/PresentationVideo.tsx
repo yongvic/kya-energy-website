@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { FaPlay, FaPause, FaCheck } from "react-icons/fa";
+import { strapiUrl } from "@/data/strapi";
 
 // --- Données pour l'exemple ---
 const keyTakeaways = [
@@ -32,7 +33,9 @@ export default function VideoShowcase() {
   };
 
   return (
-    <section className="bg-slate-50 py-24 sm:py-32">
+    <section
+      className="bg-slate-50 py-24 sm:py-32"
+      id="video">
       <div className="container mx-auto px-4">
         {/* 1. En-tête de la section */}
         <div className="animate-fade-in-up mb-16 max-w-3xl mx-auto text-center">
@@ -62,7 +65,7 @@ export default function VideoShowcase() {
               onClick={handlePlayPause}
               onEnded={handleVideoEnd}>
               <source
-                src="/kya-foundation/kya-foundation-video-1.mp4"
+                src={`${strapiUrl}/uploads/file_28baadc8b2.mp4`}
                 type="video/mp4"
               />
             </video>
