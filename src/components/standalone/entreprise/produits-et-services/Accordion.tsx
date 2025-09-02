@@ -42,7 +42,7 @@ export default function Accordion({ products }: AccordionProps) {
             <div className="flex items-center gap-6">
               <Image
                 alt={product.label}
-                className="hidden rounded-lg bg-kya-white p-2 shadow-sm sm:block object-contain"
+                className="hidden rounded-lg bg-kya-white p-2 shadow-sm sm:block object-contain size-32"
                 height={120}
                 src={product.image}
                 // Anciennement .accordion_image
