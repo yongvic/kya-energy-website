@@ -61,7 +61,7 @@ export default async function PourquoiKya() {
               {/* La carte de contenu, avec un effet de verre dépoli */}
               <div className="relative z-10 flex h-full flex-col rounded-2xl border border-slate-200 bg-white/80 p-8 shadow-sm backdrop-blur-sm transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl">
                 {/* Icône */}
-                <div className="flex size-14 items-center justify-center rounded-full bg-kya-green/10 mb-6">
+                <div className="flex size-14 items-center justify-center rounded-full bg-none mb-6 w-full">
                   <Image
                     alt={item.titre}
                     height={56}
