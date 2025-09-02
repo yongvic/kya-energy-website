@@ -1,13 +1,12 @@
-import { Manrope } from "next/font/google";
+import { Libre_Franklin } from "next/font/google";
 import "@/styles/globals.css";
-import Reveal from "@/components/ui/Reveal";
 
-const manrope = Manrope({
+const libreFranklin = Libre_Franklin({
   display: "swap",
   subsets: [
     "latin",
   ],
-  variable: "--font-manrope",
+  variable: "--font-libre-franklin",
 });
 
 export default function RootLayout({
@@ -18,8 +17,8 @@ export default function RootLayout({
   return (
     // biome-ignore lint/a11y/useHtmlLang: no duplicate
     <html>
-      <body className={`${manrope.className} antialiased`}>
-        <Reveal>{children}</Reveal>
+      <body className={`${libreFranklin.className} antialiased`}>
+        {children}
       </body>
     </html>
   );
