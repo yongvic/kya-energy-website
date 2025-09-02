@@ -5,20 +5,40 @@ import { useTranslations } from "next-intl";
 import { useRef } from "react";
 // Icônes
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { strapiUrl } from "@/data/strapi";
 
 // --- Données pour l'exemple (ajoutez plus d'images pour un meilleur effet) ---
-const evenements = [
-  {
-    date: "Mai 2024",
-    lieu: "Lomé, Togo",
-    photo: "/kya-foundation/image-4.png",
-    titre: "Soirée caritative de la fondation KYA",
-  },
-];
 
 export default function GalleryCarousel() {
   const t = useTranslations("fondation.gallerie");
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const evenements = [
+    {
+      date: "2024",
+      lieu: "Lomé, Togo",
+      photo: `${strapiUrl}/uploads/3191ca_4d56fc6a114044bc8a3502f342b95655_mv2_bb9a0fa8b9.jpg`,
+      titre: t("soirée caritative"),
+    },
+    {
+      date: "2024",
+      lieu: "Lomé, Togo",
+      photo: `${strapiUrl}/uploads/3191ca_479993ae30644a3495b6f30383473335_mv2_922b4659be.jpg`,
+      titre: t("formation des jeunes filles"),
+    },
+    {
+      date: "2022",
+      lieu: "Lomé, Togo",
+      photo: `${strapiUrl}/uploads/3191ca_7d14cf90b4714f0fa25a58f067c4d02c_mv2_968033e7cf.jpg`,
+      titre: t("remise des bourses par la fondation"),
+    },
+    {
+      date: "Mai 2024",
+      lieu: "Lomé, Togo",
+      photo: `${strapiUrl}/uploads/background_actu_e4811e9b1b.png`,
+      titre: t("lancement de la fondation"),
+    },
+  ];
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
