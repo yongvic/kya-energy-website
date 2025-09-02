@@ -1,42 +1,20 @@
+import { strapiUrl } from "@/data/strapi";
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
-// --- Données pour l'exemple ---
-const sponsors = [
-  {
-    nom: "ASECNA",
-    logo: "/sponsors/asecna.png",
-    description:
-      "L’ASECNA est une agence panafricaine qui assure la sécurité de la navigation aérienne dans 17 pays africains.",
-  },
-  {
-    nom: "ONOMO",
-    logo: "/sponsors/onomo.png",
-    description:
-      "ONOMO Hôtel Lomé offre un cadre moderne et convivial au cœur de la capitale, idéal pour affaires et loisirs.",
-  },
-  {
-    nom: "CETEF",
-    logo: "/sponsors/cetef.png",
-    description:
-      "Le CETEF Togo 2000 est le principal centre d'expositions du Togo, dédié aux événements économiques et culturels.",
-  },
-  {
-    nom: "Moov",
-    logo: "/sponsors/moov.avif",
-    description:
-      "Moov Africa Togo est un leader en téléphonie mobile, internet 4G et services financiers.",
-  },
-];
-
-// On duplique la liste pour créer la boucle infinie
-const extendedSponsors = [
-  ...sponsors,
-  ...sponsors,
-];
-
-export default function Sponsors() {
-  const t = useTranslations("fondation.sponsors");
+export default async function Sponsors() {
+  const request = await fetch(`${strapiUrl}/api/confiances?populate=*`);
+  const response = await request.json();
+  const sponsors = response.data.map((sponsor: any) => ({
+    nom: sponsor.nom_de_entreprise,
+    logo: `${strapiUrl}${sponsor.logo.url}`,
+  }));
+  const extendedSponsors = [
+    ...sponsors,
+    ...sponsors,
+  ];
+  const t = await getTranslations("fondation.sponsors");
 
   return (
     <section className="bg-slate-50 py-24 sm:py-32">
@@ -64,7 +42,7 @@ export default function Sponsors() {
             - `group-hover:[animation-play-state:paused]` met en pause l'animation au survol.
           */}
           <div className="flex w-max animate-infinite-scroll group-hover:[animation-play-state:paused]">
-            {extendedSponsors.map((sponsor, index) => (
+            {extendedSponsors.map((sponsor: any) => (
               <div
                 key={sponsor.nom}
                 className="group/card relative mx-8 flex-shrink-0">
@@ -83,7 +61,7 @@ export default function Sponsors() {
                 <div className="absolute -top-4 left-1/2 w-64 -translate-x-1/2 -translate-y-full rounded-lg bg-kya-coffee p-4 text-kya-white opacity-0 shadow-xl transition-all duration-300 group-hover/card:opacity-100 group-hover/card:-translate-y-[110%]">
                   <h4 className="font-bold text-kya-orange">{sponsor.nom}</h4>
                   <p className="mt-1 text-sm text-kya-white/80">
-                    {sponsor.description}
+                    {sponsor.nom}
                   </p>
                   {/* Petit triangle pour l'effet tooltip */}
                   <div className="absolute left-1/2 top-full -translate-x-1/2 border-x-8 border-t-8 border-x-transparent border-t-kya-coffee" />
