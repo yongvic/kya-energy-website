@@ -9,6 +9,7 @@ import { generateNavigationData } from "@/data/navigation";
 import { useTranslations } from "next-intl";
 import MobileNav from "@/components/ui/MobileNav";
 import MobileNavToggle from "@/components/ui/MobileNavToggle";
+import PromoTopBar from "@/components/ui/PromoTopBar";
 
 export default function Header() {
   // State to track if the user has scrolled down
@@ -59,6 +60,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
+      <PromoTopBar />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Left Side (Stays the same) */}
