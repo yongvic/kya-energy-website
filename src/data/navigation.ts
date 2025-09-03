@@ -67,7 +67,7 @@ export function generateNavigationData(t: any): NavItem[] {
             label: t("support et maintenance"),
           },
         ],
-        imageUrl: "/mega-menu/solutions-showcase.jpg",
+        imageUrl: "/kya-sop-commercial.avif",
         title: t("solutions pour l'avenir"),
       },
     },
