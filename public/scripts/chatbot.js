@@ -68,7 +68,9 @@ boutonMicro.addEventListener("click", async () => {
 
   if (!isRecording) {
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const stream = await navigator.mediaDevices.getUserMedia({
+        audio: true,
+      });
       mediaRecorder = new MediaRecorder(stream);
       audioChunks = [];
 
@@ -77,7 +79,9 @@ boutonMicro.addEventListener("click", async () => {
       };
 
       mediaRecorder.onstop = async () => {
-        const audioBlob = new Blob(audioChunks, { type: "audio/wav" });
+        const audioBlob = new Blob(audioChunks, {
+          type: "audio/wav",
+        });
         stream.getTracks().forEach((track) => track.stop());
         await transcribeAudio(audioBlob);
       };
@@ -112,7 +116,9 @@ async function transcribeAudio(audioBlob) {
     // ÉTAPE 1: Uploader le fichier audio
     const uploadResponse = await fetch(`${assemblyAIBaseUrl}/v2/upload`, {
       method: "POST",
-      headers: { authorization: assemblyAIApiKey },
+      headers: {
+        authorization: assemblyAIApiKey,
+      },
       body: audioBlob,
     });
     const uploadData = await uploadResponse.json();
@@ -128,7 +134,10 @@ async function transcribeAudio(audioBlob) {
           authorization: assemblyAIApiKey,
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ audio_url: audioUrl, language_code: "fr" }),
+        body: JSON.stringify({
+          audio_url: audioUrl,
+          language_code: "fr",
+        }),
       },
     );
     const transcriptData = await transcriptResponse.json();
@@ -138,7 +147,9 @@ async function transcribeAudio(audioBlob) {
     const pollingEndpoint = `${assemblyAIBaseUrl}/v2/transcript/${transcriptId}`;
     while (true) {
       const pollingResponse = await fetch(pollingEndpoint, {
-        headers: { authorization: assemblyAIApiKey },
+        headers: {
+          authorization: assemblyAIApiKey,
+        },
       });
       const transcriptionResult = await pollingResponse.json();
 
@@ -166,7 +177,10 @@ async function transcribeAudio(audioBlob) {
 
 // --- FONCTIONS UTILITAIRES POUR LE CHAT ---
 function scrollToBottom() {
-  historique.scrollTo({ top: historique.scrollHeight, behavior: "smooth" });
+  historique.scrollTo({
+    top: historique.scrollHeight,
+    behavior: "smooth",
+  });
 }
 
 function addMessage(text, type = "user") {
@@ -215,7 +229,7 @@ form.onsubmit = (e) => {
   // Empêcher l'envoi si une autre action est en cours
   if (isSendingMessage || isTranscribing) return;
 
-  let text = message.value.trim();
+  const text = message.value.trim();
   if (!text) return;
 
   clearTimeout(typingTimer);
@@ -230,15 +244,16 @@ form.onsubmit = (e) => {
 
   const requestOptions = {
     method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({ message: text }),
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({
+      message: text,
+    }),
     redirect: "follow",
   };
 
-  fetch(
-    "https://grateful-aphid-nationally.ngrok-free.app/webhook/chatbot",
-    requestOptions,
-  )
+  fetch("https://e6c94c025289c7.lhr.life/webhook/chatbot", requestOptions)
     .then((r) => r.text())
     .then((r) => {
       fetch("/api/convert", {
@@ -279,4 +294,6 @@ const observer = new MutationObserver((mutations) => {
     }
   });
 });
-observer.observe(chat, { attributes: true });
+observer.observe(chat, {
+  attributes: true,
+});
