@@ -253,7 +253,7 @@ form.onsubmit = (e) => {
     redirect: "follow",
   };
 
-  fetch("https://e6c94c025289c7.lhr.life/webhook/chatbot", requestOptions)
+  fetch("https://78bf64cd70fdd8.lhr.life/webhook/chatbot", requestOptions)
     .then((r) => r.text())
     .then((r) => {
       fetch("/api/convert", {
